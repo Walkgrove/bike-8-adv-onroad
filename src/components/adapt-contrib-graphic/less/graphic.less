@@ -1,0 +1,43 @@
+.graphic__image-container {
+    position: relative;
+}
+
+.graphic__popup-icon, .graphic__link-icon {
+    background-color: @item-color;
+    color: @item-color-inverted;
+
+    .no-touch &:hover {
+        background-color: @item-color-hover;
+        color: @item-color-inverted-hover;
+        .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+
+    border-radius: 100%;
+    padding: 0.5rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    .icon-search;
+
+    .highlight-animation;
+    animation-iteration-count: infinite;
+
+    cursor: pointer;
+
+    &.is-selected {
+        animation: none;
+        background-color: @item-color-selected;
+        color: @item-color-inverted-selected;
+    } 
+}
+
+.graphic__link-icon {
+    .icon-forward-arrow;
+}
+
+

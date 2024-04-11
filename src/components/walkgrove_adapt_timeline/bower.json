@@ -1,0 +1,19 @@
+{
+    "name": "walkgrove_adapt_timeline",
+    "authors": [
+      "Laura Hooper <laura.hooper@walkgrove.co.uk>"
+    ],
+    "description": "An information component. This component displays content in a timeline format down the page. Can be set to show one item at a time as a button is selected.",
+    "main": "/js/walkgrove_adapt_timeline.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "version": "2.0.1",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_timeline",
+    "framework": ">=5.0",
+    "component": "timeline",
+    "displayName": "Timeline",
+    "license": "",
+    "private": true
+  }

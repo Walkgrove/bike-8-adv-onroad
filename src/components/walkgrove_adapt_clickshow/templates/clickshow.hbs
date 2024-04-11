@@ -1,0 +1,80 @@
+<div class="component__inner clickshow__inner">
+  {{> component this}} 
+
+  <div class="clickshow__main {{#if_eq _layoutPosition "column"}}column{{/if_eq}} {{_styling._item-wrap}}" >
+
+    {{#if_eq _layoutPosition "row"}}
+
+    {{#any _leftHeading.title _rightHeading.title}}
+    
+    <div class="clickshow__headings">
+
+      {{#if _leftHeading.title}}
+      <div class="clickshow__heading left" style="width: {{_styling._left-width}}; color: {{_leftHeading._font-color}}; background-color: {{_leftHeading._background-color}}; {{#if _leftHeading._graphic}}background-image: url({{_leftHeading._graphic}});{{/if}}">
+        
+        <div class="clickshow__heading-title">
+          {{{_leftHeading.title}}}
+        </div>
+
+      </div>
+      {{/if}}
+
+      {{#if _rightHeading.title}}
+      <div class="clickshow__heading right" style="width: {{_styling._right-width}}; color: {{_rightHeading._font-color}}; background-color: {{_rightHeading._background-color}}; {{#if _rightHeading._graphic}}background-image: url({{_rightHeading._graphic}});{{/if}}">
+        
+        <div class="clickshow__heading-title">
+          {{{_rightHeading.title}}}
+        </div>
+
+      </div>
+      {{/if}}
+
+    </div>
+
+    {{/any}}
+
+    {{/if_eq}}
+
+    {{#each _items}}
+    <div class="clickshow__widget {{#if_eq ../_layoutPosition "column"}} column{{/if_eq}} {{#if ../_styling._item-background-color}}js-clickshow-item{{/if}}" style="background-color: {{../_styling._item-background-color}}; min-width: {{../_styling._item-width}};max-width: {{../_styling._item-width}};" data-index="{{@index}}">
+      <div class="clickshow__item left js-clickshow-image" style="width: {{../_styling._left-width}}">
+        <button role="button" tabindex="0" style="color: {{../_styling._left-font-color}}; background-color: {{../_styling._left-background-color}};">
+          {{#if_eq ../_layoutType "image"}}
+          <img class="clickshow__item-image graphic" src="{{{leftGraphic}}}" aria-label="{{{leftAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._left-font-color}}; background-color: {{../_styling._left-background-color}}; padding: {{../_styling._left-padding}};" />
+          {{#if leftGraphicHover}}<img class="graphic-hover" src="{{{leftGraphicHover}}}" aria-label="{{{leftAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._left-font-color}}; background-color: {{../_styling._left-background-color}}; padding: {{../_styling._left-padding}};" />{{/if}}
+          {{/if_eq}}
+          {{#if_eq ../_layoutType "image-text"}}
+          <img class="clickshow__item-image graphic" src="{{{leftGraphic}}}" aria-label="{{{leftAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._left-font-color}}; background-color: {{../_styling._left-background-color}}; padding: {{../_styling._left-padding}};"/>
+          {{#if leftGraphicHover}}<img class="graphic-hover" src="{{{leftGraphicHover}}}" aria-label="{{{leftAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._left-font-color}}; background-color: {{../_styling._left-background-color}}; padding: {{../_styling._left-padding}};" />{{/if}}
+          {{/if_eq}}
+          {{#if_eq ../_layoutType "text"}}
+          <div class="text{{#if ../_leftHeading._graphic}} has-image{{/if}}" style="{{#if ../_leftHeading._graphic}}background-image: url({{../_leftHeading._graphic}}); {{/if}}object-fit: {{../_styling._graphic}}; color: {{../_styling._left-font-color}}; background-color: {{../_styling._left-background-color}}; padding: {{../_styling._left-padding}};">{{{leftText}}}</div>
+          {{/if_eq}}
+          {{#if_eq ../_layoutType "text-image"}}
+          <div class="text{{#if ../_leftHeading._graphic}} has-image{{/if}}" style="{{#if ../_leftHeading._graphic}}background-image: url({{../_leftHeading._graphic}}); {{/if}}object-fit: {{../_styling._graphic}}; color: {{../_styling._left-font-color}}; background-color: {{../_styling._left-background-color}}; padding: {{../_styling._left-padding}};">{{{leftText}}}</div>
+          {{/if_eq}}
+        </button>
+      </div>
+       <div class="clickshow__item right{{#if_eq ../_hideRightContent false}} show{{/if_eq}}">
+        {{#if_eq ../_layoutType "image"}}
+        <img class="clickshow__item-image graphic" src="{{{rightGraphic}}}" aria-label="{{{rightAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._right-font-color}}; background-color: {{../_styling._right-background-color}}; padding: {{../_styling._right-padding}};" />
+        {{#if rightGraphicHover}}<img class="graphic-hover" src="{{{rightGraphicHover}}}" aria-label="{{{rightAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._right-font-color}}; background-color: {{../_styling._right-background-color}}; padding: {{../_styling._right-padding}};" />{{/if}}
+        {{/if_eq}}
+        {{#if_eq ../_layoutType "text-image"}}
+        <img class="clickshow__item-image graphic" src="{{{rightGraphic}}}" aria-label="{{{rightAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._right-font-color}}; background-color: {{../_styling._right-background-color}}; padding: {{../_styling._right-padding}};" />
+        {{#if rightGraphicHover}}<img class="graphic-hover" src="{{{rightGraphicHover}}}" aria-label="{{{rightAlt}}}" style="object-fit: {{../_styling._graphic}}; color: {{../_styling._right-font-color}}; background-color: {{../_styling._right-background-color}}; padding: {{../_styling._right-padding}};" />{{/if}}
+        {{/if_eq}}
+        {{#if_eq ../_layoutType "text"}}
+        <div class="text{{#if ../_rightHeading._graphic}} has-image{{/if}}" style="{{#if ../_rightHeading._graphic}}background-image: url({{../_rightHeading._graphic}}); {{/if}}object-fit: {{../_styling._graphic}}; color: {{../_styling._right-font-color}}; background-color: {{../_styling._right-background-color}}; padding: {{../_styling._right-padding}};">{{{rightText}}}</div>
+        {{/if_eq}}
+        {{#if_eq ../_layoutType "image-text"}}
+        <div class="text{{#if ../_rightHeading._graphic}} has-image{{/if}}" style="{{#if ../_rightHeading._graphic}}background-image: url({{../_rightHeading._graphic}}); {{/if}}object-fit: {{../_styling._graphic}}; color: {{../_styling._right-font-color}}; background-color: {{../_styling._right-background-color}}; padding: {{../_styling._right-padding}};">{{{rightText}}}</div>
+        {{/if_eq}}
+      </div>
+    </div>
+    {{/each}}
+  </div> 
+  
+  {{!--  --}}
+
+</div>

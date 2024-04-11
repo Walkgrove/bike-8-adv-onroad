@@ -1,0 +1,65 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "submenu",
+        "_classes": "",
+        "_layout": "left",
+        "title": "Submenu",
+        "displayTitle": "Submenu",
+        "body": "",
+        "instruction": "",
+        "instruction2": "Select the <strong>next</strong> topic to begin.",
+        "instruction3": "Select the <strong>home button</strong> to continue.",
+        "_backgroundImage": "https://via.placeholder.com/1920x1000",
+        "_items": [
+            {
+                "title": "Questions",
+                "_href": "co-01_02",
+                "_unlockBy": "co-01_01",
+                "_appearance": {
+                    "_width": "20%",
+                    "_height": "50%",
+                    "_top": "25%",
+                    "_left": "12.5%"
+                },
+                "_graphic": {
+                    "src": "https://via.placeholder.com/200x200/FFF/000",
+                    "over": "https://via.placeholder.com/200x200/000000/FFFFFF"
+                }
+            },
+            {
+                "title": "Information",
+                "_href": "co-01_03",
+                "_unlockBy": "co-01_01",
+                "_appearance": {
+                    "_width": "20%",
+                    "_height": "50%",
+                    "_top": "25%",
+                    "_left": "37.5%"
+                },
+                "_graphic": {
+                    "src": "https://via.placeholder.com/200x200/FFF/000",
+                    "over": "https://via.placeholder.com/200x200/000000/FFFFFF"
+                }
+            },
+            {
+                "title": "Scenario",
+                "_href": "co-01_04",
+                "_unlockBy": "co-01_01",
+                "_appearance": {
+                    "_width": "20%",
+                    "_height": "50%",
+                    "_top": "25%",
+                    "_left": "67.5%"
+                },
+                "_graphic": {
+                    "src": "https://via.placeholder.com/200x200/FFF/000",
+                    "over": "https://via.placeholder.com/200x200/000000/FFFFFF"
+                }
+            }
+        ],
+         "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }

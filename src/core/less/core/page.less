@@ -1,0 +1,16 @@
+.page {
+  .l-container-responsive(@max-width);
+
+  &__header-inner {
+    .l-container-responsive(@device-width-large);
+  }
+  
+  .hero-image {
+    visibility:hidden;
+    min-width:100%;
+    max-width:100%;
+    width:100%;
+    height:auto;
+    object-fit: contain;
+  }
+}

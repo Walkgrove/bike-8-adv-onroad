@@ -1,0 +1,15 @@
+{
+    "name": "walkgrove_adapt_submenu",
+    "framework": ">=5",
+    "version": "2.0.0",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_submenu.git",
+    "component": "submenu",
+    "displayName": "Submenu",
+    "description": "",
+    "main": "/js/walkgrove_adapt_submenu.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPL-3.0"
+}

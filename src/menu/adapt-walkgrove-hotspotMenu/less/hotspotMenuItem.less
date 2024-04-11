@@ -1,0 +1,142 @@
+.hotspotmenu-item {
+  width: 100%;
+  height: 100%;
+
+  .hotspotmenu-item__inner {
+    transform: translate(-50%;-50%);
+    position: absolute;
+    z-index: 1;
+
+    @media (max-width: 1024px){ // @device-width-medium) {
+      transform: none;
+      width: 90%!important;
+      height: auto!important;
+      position: relative;
+      top: auto!important;
+      left: auto!important;
+      margin: 0 auto;
+    }
+
+    @media (max-width: @device-width-small) {
+      max-width: 80%;
+    }
+
+  }
+
+  position: absolute;
+  top:0;
+  left:0;
+
+  @media (max-width:  1024px){ // @device-width-medium) {
+    //width: 50%;
+    position: relative;
+    top: auto!important;
+    left: auto!important;
+    width: auto!important;
+    height: auto!important;
+    max-width: 33%;
+  }
+
+  @media (max-width: @device-width-medium) {
+    max-width: 50%;
+  }
+
+  @media (max-width: @device-width-small) {
+    max-width: 100%;
+  }
+
+  .hotspotmenu-item__button {
+    width: 100%;
+    height: 100%;
+    background: transparent!important;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+  }
+
+  .hotspotmenu-item__details {
+    background-color: @menu-title-background;
+    color: @menu-title-colour;
+    border-radius: 1rem;
+    padding: 0.25em 0.5em 0 0.5em;
+    margin: 0 auto;
+    width: 75%;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2;
+
+    @media (max-width:  1024px){ // @device-width-medium) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 85%;
+      text-align: left;
+
+      background-color: @secondary-colour;
+
+      padding: 0.5em 1em;
+
+      &:after {
+        content: "";
+        background: url('course/en/images/menu/00_00_01_symbol_mob.png');
+        width: 2rem;
+        height: 2rem;
+        background-size: contain;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.3rem;
+        z-index: 1;
+      }
+
+      .hotspotmenu-item__progress {
+        width: 80%;
+      }
+    }
+  }
+
+  .hotspotmenu-item__progress {
+    padding-top: 0.25em;
+  }
+
+  .pagelevelprogress__indicator {
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+    height: 10px;
+
+    @media (max-width:  1024px){ // @device-width-medium) {
+      border-radius: 5px;
+      height: 6px;
+
+      .pagelevelprogress__indicator-inner {
+        background-color: @white!important;
+      }
+
+      .pagelevelprogress__indicator-bar {
+        background-color: @font-color!important;
+      }
+    }
+  }
+
+  &__image {
+    @media (max-width:  1024px){ // @device-width-medium) {
+      display: none;
+    }
+  }
+
+  &__image-mobile {
+    display: none;
+    @media (max-width:  1024px){ // @device-width-medium) {
+      display: block;
+    }
+  }
+
+  &.is-locked {
+    .hotspotmenu-item__image {
+      opacity: 0.5;
+    }
+  }
+
+
+}

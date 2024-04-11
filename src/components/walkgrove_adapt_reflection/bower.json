@@ -1,0 +1,19 @@
+{
+    "name": "walkgrove_adapt_reflection",
+    "authors": [
+      "Laura Hooper <laura.hooper@walkgrove.co.uk>"
+    ],
+    "description": "An interactive component. Learner input can be collected, with an option to allow the export of all ‘reflection’ data to a PDF.",
+    "main": "/js/walkgrove_adapt_reflection.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "version": "2.0.0",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_reflection",
+    "framework": ">=5.0",
+    "component": "reflection",
+    "displayName": "Reflection",
+    "license": "",
+    "private": true
+  }

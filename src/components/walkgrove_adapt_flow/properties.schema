@@ -1,0 +1,105 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Step title",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "content": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Step content",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_layout": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Step layout",
+            "inputType": {"type": "Select", "options": ["image-left", "image-right", "image-full", "no-image-full"]},
+            "validators": [],
+            "help": "The image/text layout for this item"
+          },
+          "_graphic": {
+            "type": "array",
+            "required": true,
+            "title": "Step graphic",
+            "items": {
+              "type": "object",
+              "required": true,
+              "properties": {
+                "src": {
+                  "type": "string",
+                  "required": true,
+                  "default": "",
+                  "title": "Graphic URL",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": false
+                },
+                "alt": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Graphic alt description",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

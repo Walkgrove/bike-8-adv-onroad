@@ -1,0 +1,177 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "Sub menu. A list of links to further content.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "instruction2": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text once the first item is complete",
+      "translatable": true
+    },
+    "instruction3": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text once all items are complete",
+      "translatable": true
+    },
+    "_backgroundImage": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "title": "Background image",
+      "inputType": "Asset:image",
+      "validators": ["required"],
+      "help": "",
+      "translatable": false
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Submenu items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Menu item title",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_href": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Menu item URL",
+            "inputType": "Text",
+            "validators": [],
+            "help": ""
+          },
+          "_unlockBy": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Unlocked By",
+            "inputType": "Text",
+            "validators": [],
+            "help": ""
+          },
+          "_appearance": {
+            "type": "object",
+            "required": true,
+            "properties": {
+              "_width": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Item width",
+                "inputType": "Text",
+                "validators": [],
+                "help": ""
+              },
+              "_height": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Item height",
+                "inputType": "Text",
+                "validators": [],
+                "help": ""
+              },
+              "_top": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Item top positon",
+                "inputType": "Text",
+                "validators": [],
+                "help": ""
+              },
+              "_left": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Item left position",
+                "inputType": "Text",
+                "validators": [],
+                "help": ""
+              }
+            }
+          },
+          "_graphic": {
+            "type": "object",
+            "required": true,
+            "properties": {
+              "src": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Item image",
+                "inputType": "Text",
+                "validators": [],
+                "help": ""
+              },
+              "over": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Item over image",
+                "inputType": "Text",
+                "validators": [],
+                "help": ""
+              },
+              "alt": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Alternative Text",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{{! make the _globals object in course.json available to this template}}
+{{import_globals}}
+
+<div class="sectionprogress__inner">
+  {{{a11y_aria_label _globals._extensions._sectionProgress.sectionProgress}}}
+
+  <div role="list" class="sectionprogress-nodes js-children">
+    {{!-- PLP Drawer items rendered here --}}
+  </div>
+
+</div>

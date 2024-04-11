@@ -1,0 +1,236 @@
+.splash {
+    width: 100%;
+    height: calc(100vh-@navigation-height);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: @white;
+
+    position: relative;
+    
+    &__inner {
+        height: 100%;
+        width: 100%;
+    }
+    
+    &__main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            object-position: left top;
+            width: 100%;
+            height: 100%;            
+        }
+
+        .splash__image_large {
+            display: block;
+
+            @media (max-width: 823px) {
+                display: none;
+            }
+
+            @media (orientation: portrait) {
+                display: none;
+            }
+        }
+
+        .splash__image_small {
+            display: none;
+
+            @media (max-width: 823px) and (orientation: landscape) {
+                display: block;
+            }
+        }
+
+        .splash__image_portrait {
+            display: none;
+
+            @media (orientation: portrait) {
+                display: block;
+            }
+
+            @media (max-width: @device-width-small) and (orientation: portrait) {
+                display: none;
+            }
+        }
+
+        .splash__image_mobile {
+            display: none;
+            
+            @media (max-width: @device-width-small) and (orientation: portrait) {
+                display: block;
+            }
+        }
+
+    }
+
+    &__main-title {
+        position: absolute;
+        top: 2%;
+        left: 24%;
+        width: 70%;
+
+        @media (max-width: 1024px) and (orientation: landscape) {
+            font-size: 0.8em;
+            top: 0%;
+            left: 25%;
+        }
+
+        @media (max-width: 1024px) and (orientation: portrait) {
+            font-size: 0.9em;
+            top: 10%;
+            left: 29%;
+        }
+        
+        @media (max-width: @device-width-medium) and (orientation: portrait) {
+            top: 7%;
+            left: 31%;
+            width: 65%;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: @device-width-medium) and (orientation: landscape) {
+            font-size: 0.7em;
+            top: 3%;
+            left: 27%;
+        }
+        
+        
+        @media (max-width: @device-width-small) {
+            left: 4%;
+            top: 24%;
+            width: 90%;
+            font-size: 0.7em;
+        }
+    }
+
+    &_logo {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+
+        min-width: 0;
+
+        width: 30%!important;
+        height: auto!important;
+
+        @media (max-width: @device-width-medium) and (orientation: portrait) {
+            width: 40%!important;
+        }
+
+        @media (max-width: 900px) and (orientation: landscape) {
+            bottom: 52%;
+            right: 1rem;
+        }
+        @media (max-width: @device-width-small) {
+            bottom: auto;
+            top: 1rem;
+            right: 1rem;
+            width: 50%!important;
+        }
+    }
+
+    &__button {
+        // position: absolute;
+        // top: 22%;
+        // left: 25%;
+
+        //transform: translate(-50%,-50%);
+
+        // @media (max-width: 1024px) {
+        //     top: 26%;
+        //     left: 32%;
+        // }
+        
+        // @media (max-width: @device-width-medium) {
+        //     top: 26%;
+        //     left: 32%;
+        // }
+
+        // @media (max-width: 823px) and (orientation: landscape)  {
+        //     top: 40%;
+        //     left: 85%;
+        // }
+
+        // @media (max-width: 700px) {
+        //     top: 40%;
+        //     left: 75%;
+        // }
+
+        // @media (max-width: @device-width-small) {
+        //     top: 50%;
+        //     left: 75%;
+        // }
+        
+        .splash__start-btn {
+            
+        }
+
+    }
+
+    .js-splash-start-click {
+        cursor: pointer;
+    }
+    
+}
+
+.dir-rtl {
+
+    .splash {
+
+        &__main-title {
+            position: absolute;
+            top:10%;
+            right: 7%;
+            left: auto;
+
+            @media (max-width: @device-width-medium) and (orientation: landscape) {
+                right: 6.5%;
+            }
+            @media (max-width: @device-width-medium) and (orientation: portrait) {
+                right: 5%;
+            }
+
+            @media (max-width: @device-width-small) and (orientation: landscape) {
+                right: 5.5%;
+            }
+            @media (max-width: @device-width-small) and (orientation: portrait) {
+                right: 5%;
+            }
+        }
+
+        &__button {
+            position: absolute;
+            top: 60%;
+            left: auto;
+            right: 7%;
+
+            @media (max-width: @device-width-medium) and (orientation: landscape) {
+                right: 6.5%;
+            }
+            @media (max-width: @device-width-medium) and (orientation: portrait) {
+                right: 5%;
+            }
+
+            @media (max-width: @device-width-small) and (orientation: landscape) {
+                right: 5.5%;
+            }
+            @media (max-width: @device-width-small) and (orientation: portrait) {
+                right: 5%;
+            }
+        }
+
+    }
+
+
+}
+
+
+
+

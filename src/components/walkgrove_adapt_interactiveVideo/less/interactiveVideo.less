@@ -1,0 +1,235 @@
+.interactivevideo {
+
+    &__main {
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: relative;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    &__content {
+        // position: absolute;
+        // top:0;
+        // left:0;
+        width: 100%;
+        height: auto;
+
+        padding: 0rem 1rem;
+        max-width: 90%;
+
+        h2 {
+            margin-block-start: 0rem!important;
+        }
+    }
+
+    &__bg-image {
+        opacity: 1;
+
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: auto;
+        
+        &.is-hidden {
+            opacity: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            
+        }
+    }
+
+    &__widget {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // user-select: none;
+        // speak-as: never;
+
+        // &.visible {
+        //     user-select:auto;
+        //     speak-as: spell-out;
+        // }
+    }
+
+    &__stages {
+        width: 90%;
+        height: 100%;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: @device-width-phoneland) {
+            width: 100%;
+        }
+    }
+
+    &__step-bg {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: auto;
+
+        display: inline-block;
+        
+        // opacity: 0;
+    }
+
+    &__controls {
+        padding: 1rem;
+        width: 10%;
+        position:absolute;
+        right:0;
+        top:0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: @device-width-phoneland) {
+            width: 100%;
+            flex-direction: row;
+            height: auto;
+            position: relative;
+        }
+
+        justify-content: center;
+    }
+
+    &__controls-btn {
+        flex: 0 0 auto;
+        border-radius: 100%;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0 auto;
+
+        background-color: @item-color;
+        color: @item-color-inverted;
+
+        .no-touch &:not(.is-disabled):hover {
+            background-color: @item-color-hover;
+            color: @item-color-inverted-hover;
+            .transition(background-color @duration ease-in, color @duration ease-in;);
+        }
+
+        &.js-prev-stage {
+            .icon {
+                .icon-controls-up;
+
+                @media (max-width: @device-width-phoneland) {
+                    .icon-controls-left;
+                }
+            }
+        }
+        
+        &.js-next-stage {
+            .icon {
+                .icon-controls-down;
+
+                @media (max-width: @device-width-phoneland) {
+                    .icon-controls-right;
+                }
+            }
+            &:enabled {
+                .effect-scalePulse();
+                animation-iteration-count: 3;
+            }
+        }
+
+        &.js-click-reset {
+            margin-top: 2rem;
+            @media (max-width: @device-width-phoneland) {
+                margin-top: 0rem;
+            }
+
+            display: none;
+            &.is-visible {
+                display: flex;
+            }
+
+            .icon {
+                .icon-refresh;
+
+                transform: scaleX(-1);
+            }
+        }
+
+        &.is-disabled {
+            background-color: @disabled;
+            color: @disabled-inverted;
+
+            &:hover {
+                background-color: @disabled;
+                color: @disabled-inverted;
+            }
+        }
+    }
+
+    &__progress-dots {
+        flex: 0 0 auto;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: @device-width-phoneland) {
+            flex-direction: row;
+        }
+    }
+
+    &__progress-dot {
+        border-radius: 100%;
+        //border: 2px solid @disabled-inverted;
+        background-color: @disabled;
+        margin: 1rem;
+        width: 1rem;
+        height: 1rem;
+
+        &.is-active {
+            background-color: @item-color;
+        }
+
+        &.is-complete {
+            background-color: @item-color-selected;
+        }
+    }
+
+    .component {
+        opacity: 1;
+
+        animation-name: fadeIn;
+        animation-duration: 1s;
+
+        //padding: 1rem;
+    }
+
+    .hide {
+        display: none;
+    }
+
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0; }
+    to {opacity: 1; }
+}
+
+.dir-rtl {
+
+    .interactivevideo {
+        .interactivevideo__controls {
+            left: 0;
+            right: auto;
+        }
+    }
+
+}

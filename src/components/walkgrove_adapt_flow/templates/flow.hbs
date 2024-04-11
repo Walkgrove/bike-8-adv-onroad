@@ -1,0 +1,33 @@
+<div class="component__inner flow__inner">
+  {{> component this}} 
+
+  <div class="flow__main">
+
+    {{#each _items}}
+    <div class="flow__widget {{_layout}}" data-index="{{@index}}" >
+
+      <div class="flow__item-content">
+
+        {{#if title}}
+        <div class="flow__item-title">{{{title}}}</div>
+        {{/if}}
+
+        {{#if content}}
+        <div class="flow__item-body">{{{content}}}</div>
+        {{/if}}
+
+      </div>
+
+      {{#if _graphic}}
+      <img src="{{_graphic.src}}" class="flow__item-graphic" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+      {{/if}}
+      
+    </div>
+    {{/each}}
+    
+    <button class="btn-text flow__btn js-flow-click" aria-label="{{{flowText}}}">
+      <div class="icon"></div>
+    </button>
+  </div>
+
+</div>

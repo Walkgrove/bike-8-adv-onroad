@@ -1,0 +1,108 @@
+.hotspotmenu {
+  .l-container-responsive(@max-width);
+
+  position: relative;
+  height: calc(100% - @navigation-height);
+
+  @media (max-width: @device-width-medium) {
+    height: auto;
+    
+  }
+
+  @media (max-width: @device-width-small) {
+    
+  }
+
+  &_image {
+    opacity: 0;
+
+    @media (max-width: 1024px) { // @device-width-medium) {
+      display: none;
+    }
+  }
+
+  &__header-inner {
+    .l-container-responsive(@device-width-large);
+  }
+
+  .menu__title-inner {
+    margin-top: 2rem;
+  }
+
+  &__item-container-inner {
+    display: flex;
+    flex-wrap: wrap;
+    .l-container-responsive(@device-width-large);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__logo {
+    background: url('course/en/images/logo.svg');
+    position: absolute;
+    top: 7%;
+    left: 2.5%;
+    width: 7%;
+    height: 12%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: @device-width-medium) {
+      top: 1rem;
+      left: 1rem;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__header {
+
+    margin-left: 10%;
+    
+    @media (max-width: 900px) and (orientation: landscape) { 
+      width: 90%;
+      margin-left: 2%;
+    }
+
+    @media (max-width: @device-width-medium) {
+      width: 90%;
+      margin-left: 2%;
+    }
+
+    @media (max-width: @device-width-small) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  &__title, &__body, &__instruction {
+    display: flex;
+  }
+
+  &__title-inner, &__body-inner, &__instruction-inner {
+    padding: 0.5rem 1rem;
+  }
+
+  &__title-inner {
+    //font-weight: 900;
+    //margin-top: 1rem;
+    color: @font-color;
+    font-size: 1.8rem!important;
+    line-height: 1.3;
+  }
+
+  &__instruction {
+    margin-left: 1rem;
+  }
+
+  &__instruction-inner {
+    border-radius: 1rem;
+    background-color: @bike-blue-light;
+    
+    p {
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+  }
+  
+}

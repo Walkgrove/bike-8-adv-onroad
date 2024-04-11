@@ -1,0 +1,106 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "reflection",
+        "_classes": "",
+        "_layout": "full",
+        "title": "Reflection",
+        "displayTitle": "Reflection",
+        "body": "<p>An interactive component.</p><p>Learner input can be collected, with an option to allow the export of all ‘reflection’ data to a PDF.</p>",
+        "instruction": "Enter your thoughts and select save.",
+        "_buttons": {
+            "save": "Save",
+            "export": "Export as PDF",
+            "_exportEnabled": true
+        },
+        "_styling": {
+            "_input-width": "50%"
+        },
+        "placeholder": "Your thoughts ...",
+        "_message": {
+            "content": "You've saved your thoughts.",
+            "_inline": true
+        },
+        "_activity": {
+            "title": "Reflection 1",
+            "body": "Info about the refection for the PDF export ..."
+        },
+        //"_optional"
+        "pdf": { 
+            "filename": "Course Notes",
+            "_font": "helvetica",
+            "_fontSize": 13,
+            "_fontColour": "#000000",
+            "_header": {
+                "image": "ourse/en/images/reflection_header.png",
+                "_imageStyling": {
+                    "_width": 100,
+                    "_height": 20,
+                    "_left": 0,
+                    "_top": 0,
+                    "_marginBottom": 0
+                },
+                "title": "The main PDF title",
+                "_titleStyling": {
+                    "_fontSize": 20,
+                    "_fontAlign": "left",
+                    "_fontColour": "#FFFFFF",
+                    "_backgroundColour": "#117F93",
+                    "_width": 50,
+                    "_height": 25,
+                    "_left": 25,
+                    "_top": 0
+                }
+            },
+            "_items": {
+                "_titleStyling": {
+                    "_fontSize": 10,
+                    "_fontColour": "#117F93"
+                },
+                "_subtitleStyling": {
+                    "_fontSize": 10,
+                    "_fontColour": "#000000"
+                },
+                "_questionStyling": {
+                    "_fontSize": 10,
+                    "_fontColour": "#333333"
+                }
+            },
+            "_footer": {
+                "_fontSize": 10,
+                "_fontColour": "#117F93",
+                "image": "ourse/en/images/reflection_footer.png",
+                "_imageStyling": {
+                    "_width": 100,
+                    "_height": 5,
+                    "_left": 0,
+                    "_bottom": 5
+                }
+            }
+        },
+        "_items": [
+            {
+                "title": "Step 1",
+                "subtitle": "Subtitle content goes in here ...",
+                "question": "What are we asking ...?",
+                "_colour": "#fff",
+                "_bgcolour": "#000"
+            },
+            {
+                "title": "Step 2",
+                "question": "What are we asking for this reflection input ...?",
+                "_colour": "#fff",
+                "_bgcolour": "#333"
+            },
+            {
+                "_classes": "full-width",
+                "question": "Question ...?",
+                "_colour": "#000",
+                "_bgcolour": "#000"
+            }
+        ],
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }

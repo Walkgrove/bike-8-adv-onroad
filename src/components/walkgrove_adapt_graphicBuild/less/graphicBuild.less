@@ -1,0 +1,211 @@
+.graphicbuild {
+    // width: 100%;
+    // height: auto;
+    
+    &__inner {
+        width:100%;
+        height: auto;
+        position: relative;
+    }
+
+    &__main {
+        width:100%;
+        height:100%;
+        position: relative;
+
+        img {
+            min-width: 75%;
+            max-width: 75%;
+
+            @media (max-width: @device-width-tablet) {  
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__widget {
+        width: 100%;
+        height: auto; //100%;
+        // opacity: 0;
+        // top: 0;
+        // left:0;
+        // position:absolute;
+        position: relative;
+
+        display: none;
+
+        @media (max-width: @device-width-small) { 
+            position: relative;
+            //margin-bottom: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            opacity: 1;
+            display: block;
+        }
+
+        @media (max-width: 900px) and (orientation: landscape) { 
+            position: relative;
+            //margin-bottom: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            opacity: 1;
+            display: block;
+        }
+
+        &.is-visible {
+            display: block;
+            opacity: 1;
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
+    }
+
+    .graphicbuild__item-placeholder-graphic {
+        
+    }
+
+    &__item-bg-graphic {
+        &.is-hidden {
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    &__item-content {
+        background-color: @item-color-selected;
+        color: @item-color-inverted-selected;
+        padding: @component-body-margin;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25%;
+        height: 100%;
+
+        // border-radius: 1rem;
+
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+
+        &.is-hidden {
+            opacity: 0;
+            display: none;
+        }
+
+        @media (max-width: @device-width-tablet) { 
+            position: relative;
+
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: @device-width-phoneland) { 
+            font-size: 0.9em;
+        }
+
+        @media (max-width: @device-width-medium) { 
+            align-items: flex-start;
+        }
+
+        @media (max-width: @device-width-small) { 
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+        }
+       
+    }
+        
+    &__btn {
+        position: absolute;
+        top: 100%;
+        transform: translate(0%, -100%);
+        right: 25%;
+
+        @media (max-width: @device-width-tablet) {  
+            right: 0;
+            top: 0rem;
+            transform: translate(0%, 0%);
+        }
+
+        @media (max-width: @device-width-medium) { 
+            top: 0rem;
+            transform: translate(0%, 0%);
+        }
+
+        background-color: @item-color;
+        color: @item-color-inverted;
+
+        .no-touch &:hover {
+            background-color: @item-color-hover;
+            color: @item-color-inverted-hover;
+            .transition(background-color @duration ease-in, color @duration ease-in;);
+        }
+
+        .icon {
+            .icon-controls-right;
+        }
+    }
+
+    .js-graphicbuild-click, .js-click-reset, .js-graphicbuild-prev-click {
+
+        &.is-hidden {
+            display: none;
+        }
+
+        @media (max-width: 900px) and (orientation: landscape) { 
+            display: none;
+        }
+
+        @media (max-width: @device-width-small) { 
+            display: none;
+        }
+    }
+
+    .js-graphicbuild-prev-click {
+        right: auto;
+        left: 0%;
+
+        .icon {
+            .icon-controls-left;
+        }
+    }
+
+    .js-click-reset {
+
+        // margin-top: 2rem;
+        // @media (max-width: @device-width-phoneland) {
+        //     margin-top: 0rem;
+        // }
+
+        .icon {
+            .icon-refresh;
+
+            transform: scaleX(-1);
+        }
+    }
+}
+
+.dir-rtl {
+    .graphicbuild__item-content {
+        left: 0;
+        right: auto;
+    }
+    .graphicbuild__btn {
+        left: 25%;
+        right: auto;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}

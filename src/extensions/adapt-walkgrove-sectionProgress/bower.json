@@ -1,0 +1,17 @@
+{
+  "name": "adapt-walkgrove-sectionProgress",
+  "version": "5.0.2",
+  "framework": ">=5.5",
+  "homepage": "https://github.com/adaptlearning/adapt-walkgrove-sectionProgress",
+  "issues": "https://github.com/adaptlearning/adapt_framework/issues/new",
+  "extension": "SectionProgress",
+  "displayName": "Page Level Progress",
+  "description": "An extension to show a learner's progress through a page via a progress bar displayed in the top navigation area.",
+  "main": "/js/adapt-walkgrove-sectionProgress.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_sectionProgress"
+}

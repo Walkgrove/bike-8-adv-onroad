@@ -1,0 +1,107 @@
+// --------------------------------------------------
+// Add top padding equal to the height of the navigation bar
+// --------------------------------------------------
+#wrapper {
+  padding-top: @navigation-height;
+}
+// --------------------------------------------------
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 80;
+  background-color: red;
+
+  &__inner {
+    .l-container-responsive(@max-width);
+  }
+
+  &__back-btn {
+    .u-float-left;
+  }
+
+  &__back-btn .icon {
+    //background-image: url('course/en/images/Bike-Graphic.svg');
+    //background-size: contain;
+    //width: 3rem;
+    //height: 2rem;
+    //background-repeat: no-repeat;
+    .icon-home;
+  }
+  
+  &__logo {
+    height: 30px;
+    max-width: 120px;
+    min-width: 120px;
+    width: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  &__help-btn {
+    .u-float-right;
+  }
+
+  &__help-btn .icon {
+    .icon-question; //.icon-text-document-inverted;
+  }
+
+  &__drawer-btn {
+    .u-float-right;
+  }
+
+  &__drawer-btn .icon {
+    .icon-folder; //.icon-text-document-inverted;
+  }
+
+  &__audio-btn {
+    .u-float-right;
+  }
+
+  
+  &__audio-transcript-btn {
+    .u-float-right;
+    .icon {
+      .icon-video-captions-off;
+      //.icon-wechat;
+    }
+
+    &.showing {
+      .icon {
+        .icon-video-captions;
+        //.icon-wechat-2;
+      }
+      background-color: @black!important;
+      color: @white!important;
+    }
+  }
+
+  &__audio-playpause-btn {
+    .u-float-right;
+    .icon {
+      .icon-video-pause;
+
+      &.paused {
+        .icon-video-play;
+      }
+
+      &.rewind {
+        .icon-refresh;
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  &__audio-btn .icon {
+    .icon-sound;
+
+    &.mute {
+      .icon-sound-mute; 
+    }
+
+    
+  }
+}

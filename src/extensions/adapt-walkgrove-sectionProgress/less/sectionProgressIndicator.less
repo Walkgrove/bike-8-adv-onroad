@@ -1,0 +1,103 @@
+// --------------------------------------------------
+// Global indicator
+// --------------------------------------------------
+.sectionprogress {
+
+  &__indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+
+    font-size: 1rem;
+    //border: 1px solid @white;
+    overflow: hidden;
+
+    &.is-complete {
+      background-color: @primary-colour;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+
+      .icon {
+        background: url('course/en/images/icons/check-solid.svg');
+        background-repeat: no-repeat;
+        width: 0.75rem;
+        height: 0.75rem;
+        top: 0rem;
+      }
+    }
+
+    &.is-incomplete {
+      background-color: @primary-colour;
+
+      .icon {
+        //background: url('course/en/images/icons/heart-solid.svg');
+        background: @sectionProgress-background;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        width: 0.6rem;
+        height: 0.6rem;
+        top: 0rem;
+        position: relative;
+
+        animation-name: fadeIn;
+        animation-duration: 1s;
+      }
+    }
+
+    &.is-current {
+      background-color: @tertiary-colour;
+
+      .icon {
+        //background: url('course/en/images/icons/heart-solid.svg');
+        background: @white;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        width: 0.6rem;
+        height: 0.6rem;
+        top: 0rem;
+        position: relative;
+
+        animation-name: fadeIn;
+        animation-duration: 1s;
+      }
+
+      &.is-complete {
+        .icon {
+          background: url('course/en/images/icons/check-solid.svg');
+          background-repeat: no-repeat;
+          width: 0.75rem;
+          height: 0.75rem;
+          top: 0rem;
+        }
+        
+        background-color: @tertiary-colour;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+      }
+    }
+
+  }
+
+  &__indicator-inner {
+    position: relative;
+    padding: 0.45rem;
+    display: flex;
+    align-items: center;
+    justify-content: Center;
+  }
+
+  &__indicator-bar {
+    height: inherit;
+    width: 100%;
+    background-color: @secondary-colour;
+  }
+
+}
+
+
+// --------------------------------------------------
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}

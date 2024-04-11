@@ -1,0 +1,12 @@
+<button
+  class="sectionprogress__item-btn {{#unless _isVisible}} is-disabled{{/unless}} js-indicator js-sectionprogress-item-click"
+  data-sectionprogress-id="{{_id}}"
+  aria-label="{{#unless _isVisible}}{{_globals._accessibility._ariaLabels.locked}}.{{/unless}}{{#if _isOptional}} {{_globals._extensions._sectionProgress.optionalContent}}.{{else}}{{#if _isComplete}} {{_globals._accessibility._ariaLabels.complete}}.{{else}} {{_globals._accessibility._ariaLabels.incomplete}}.{{/if}}{{/if}} {{compile title}}">
+
+  <div class="sectionprogress__item-title">
+    <div class="sectionprogress__item-title-inner">
+      {{{compile title}}}
+    </div>
+  </div>
+
+</button>

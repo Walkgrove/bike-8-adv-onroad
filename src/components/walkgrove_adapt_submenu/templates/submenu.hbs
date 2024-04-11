@@ -1,0 +1,51 @@
+<div class="component__inner submenu__inner">
+  {{> component this}} 
+
+  <div class="submenu__main">
+    <img class="submenu__background" src="{{_backgroundImage}}" alt="" aria-hidden="true" tabindex="-1" />
+
+    <div class="submenu__items">
+      <div class="submenu__items-container">
+
+        {{#each _items}}
+          {{!-- <a href="{{_href}}" class="button submenu__link"> --}}
+            <div class="submenu__item js-menu-item"
+                  data-href="{{_href}}"
+                  data-index="{{@index}}"
+                  {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}}
+                  style="width: {{_appearance._width}};height: {{_appearance._height}};top: {{_appearance._top}};left: {{_appearance._left}};background: url('{{_graphic.src}}');background-size: contain;background-repeat: no-repeat;">
+              <button class="submenu__item-title" role="button" tabindex="0">
+                {{title}}
+                <div class="icon icon-tick"> </div>
+              </button>
+            </div>
+            <div class="submenu__item-over js-menu-item-over"
+                  data-href="{{_href}}"
+                  data-index="{{@index}}"
+                  aria-hidden="true" alt="" tabindex="-1"
+                  style="width: {{_appearance._width}};height: {{_appearance._height}};top: {{_appearance._top}};left: {{_appearance._left}};background: url('{{_graphic.over}}');background-size: contain;background-repeat: no-repeat;">
+              <div class="submenu__item-title" tabindex="-1">
+                {{title}}
+              </div>
+            </div>
+          {{!-- </a> --}}
+        {{/each}}
+
+      </div>
+    </div>
+
+    <div class="submenu__item-titles">
+      {{#each _items}}
+          <div data-href="{{_href}}"
+            data-index="{{@index}}"
+            class="submenu__item-title js-menu-mobile-item"
+            aria-label="{{title}}">
+            {{title}}
+            <div class="icon icon-tick"> </div>
+          </div>
+        {{/each}}
+    </div>
+
+  </div> 
+
+</div>

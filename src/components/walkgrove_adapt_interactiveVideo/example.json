@@ -1,0 +1,82 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "interactiveVideo",
+        "_classes": "",
+        "_layout": "full",
+        "title": "interactive-video",
+        "displayTitle": "interactive-video component",
+        "body": "<p>A component which shows a series of videos with questions at the end ...</p>",
+        "instruction": "<p>Follow the instructions on screen to move through the exercise.</p>",
+        "_canReset": true,
+        "_isResetOnRevisit": true,
+        "_stages": [
+            {
+                "title": "Stage 1"
+            }
+        ],
+        "_items": [
+            {
+                "_id": "c-01_01_085_1",
+                "_parentId": "b-01_01_085",
+                "_type": "component",
+                "_component": "media",
+                "stepTitle": "Video 1",
+                "stepBody": "<p>Watch the video below, before moving on to answer the related question.</p>",
+                "stepInstruction": "<p>Select the <strong>play</strong> button to start the video.</p>",
+                "_background": "course/en/video/website_promo_v3.png",
+                "_setCompletionOn": "ended",
+                "_useClosedCaptions": false,
+                "_allowFullScreen": false,
+                "_media": {
+                    "mp4": "course/en/video/website_promo_v3.mp4",
+                    "poster": "course/en/video/website_promo_v3.png"
+                },
+                "_playerOptions": {
+                    "alwaysShowControls": false,
+                    "toggleCaptionsButtonWhenOnlyOne": true,
+                    "iPadUseNativeControls": true,
+                    "iPhoneUseNativeControls": true,
+                    "AndroidUseNativeControls": true
+                }
+            },
+            {
+                "_id": "c-01_01_085_2",
+                "_parentId": "b-01_01_085",
+                "_type": "component",
+                "_component": "basicQuestion",
+                "stepTitle": "Question 1",
+                "stepBody": "<p>Answer the question below then move on to the next video clip.</p>",
+                "stepInstruction": "<p>Select the correct answer and then Submit.</p>",
+                "_background": "course/en/video/website_promo_v3.png",
+                "_selectable": 1,
+                "buttonText": "Submit",
+                "buttonFeedbackText": "Show Feedback",
+                "instructionAfter": "Select the arrow to continue.",
+                "question": "<p>Which is the correct answer? (Only single-choice)</p>",
+                "_items": [
+                {
+                    "text": "Incorrect",
+                    "_shouldBeSelected": false
+                },
+                {
+                    "text": "Correct",
+                    "_shouldBeSelected": true
+                },
+                {
+                    "text": "Incorrect",
+                    "_shouldBeSelected": false
+                }
+                ],
+                "_feedback": {
+                    "title": "Feedback",
+                    "correct": "<h3>That\u2019s right. </h3><p>Feedback ...</p>",
+                    "incorrect": "<h3>Unfortunately, that\u2019s not quite right.</h3><p>Feedback ...</p>"
+                }
+            }
+        ],
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }

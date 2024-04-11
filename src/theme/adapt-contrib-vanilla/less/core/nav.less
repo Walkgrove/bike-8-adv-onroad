@@ -1,0 +1,31 @@
+.nav {
+  background-color: @nav-bar;
+
+  &__inner {
+    max-width: inherit;
+  }
+
+  &__version {
+    position: absolute;
+    color: @grey;
+    font-size: 0.5em;
+    bottom:0;
+    right: 0;
+    font-style: italic;
+  }
+  
+  &__btn {
+    font-weight: @font-weight-regular;
+  }
+
+  &__btn:not(.is-disabled) {
+    background-color: @nav-bar;
+    color: @nav-bar-icons;
+
+    .no-touch &:hover {
+      background-color: @nav-bar-hover;
+      color: @nav-bar-icons-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+}

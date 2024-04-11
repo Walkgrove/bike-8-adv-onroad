@@ -1,0 +1,497 @@
+[
+   {
+      "_id": "co-01_00",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "",
+      "displayTitle": "",
+      "_graphic": {
+         "src": "",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": true,
+      "_hero": "",
+      "_hero_mobile": "",
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_01",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "1. Introduction",
+      "displayTitle": "1. Introduction",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt01_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt01_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_01.png",
+      "_hero_mobile": "course/en/images/heros/hero_01.png",
+      "_position": {
+         "_top": "17.5%",
+         "_left": "15%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_02",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "2. Delivery guidance and the National Standard",
+      "displayTitle": "2. Delivery guidance and the National Standard",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt02_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt02_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_02.png",
+      "_hero_mobile": "course/en/images/heros/hero_02.png",
+      "_position": {
+         "_top": "27.5%",
+         "_left": "37.5%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_03",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "3. Assessing rider readiness",
+      "displayTitle": "3. Assessing rider readiness",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt03_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt03_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_03.png",
+      "_hero_mobile": "course/en/images/heros/hero_03.png",
+      "_position": {
+         "_top": "24%",
+         "_left": "62%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_04",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "4. Strategies for delivery",
+      "displayTitle": "4. Strategies for delivery",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt04_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt04_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_04.png",
+      "_hero_mobile": "course/en/images/heros/hero_04.png",
+      "_position": {
+         "_top": "25%",
+         "_left": "83.5%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_05",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "5. Planning and stepping up ",
+      "displayTitle": "5. Planning and stepping up ",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt05_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt05_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_05.png",
+      "_hero_mobile": "course/en/images/heros/hero_05.png",
+      "_position": {
+         "_top": "60%",
+         "_left": "77.5%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_06",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "6. Advanced on-road training activities",
+      "displayTitle": "6. Advanced on-road training activities",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt06_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt06_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_06.png",
+      "_hero_mobile": "course/en/images/heros/hero_06.png",
+      "_position": {
+         "_top": "60%",
+         "_left": "59%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_06_1",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "Using traffic lights and passing queuing traffic",
+      "displayTitle": "Using traffic lights and passing queuing traffic",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt06_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt06_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": true,
+      "_hero": "https://via.placeholder.com/1280x500",
+      "_hero_mobile": "https://via.placeholder.com/675x375",
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_06_2",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "Multi-lane roads and roundabouts",
+      "displayTitle": "Multi-lane roads and roundabouts",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt06_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt06_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": true,
+      "_hero": "https://via.placeholder.com/1280x500",
+      "_hero_mobile": "https://via.placeholder.com/675x375",
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_06_3",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "Using cycling infrastructure",
+      "displayTitle": "Using cycling infrastructure",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt06_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt06_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": true,
+      "_hero": "https://via.placeholder.com/1280x500",
+      "_hero_mobile": "https://via.placeholder.com/675x375",
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_06_4",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "Being aware of driver blind spots and sharing bus lanes",
+      "displayTitle": "Being aware of driver blind spots and sharing bus lanes",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt06_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt06_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": true,
+      "_hero": "https://via.placeholder.com/1280x500",
+      "_hero_mobile": "https://via.placeholder.com/675x375",
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_06_5",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "Riding on roads with a speed limit above 30mph",
+      "displayTitle": "Riding on roads with a speed limit above 30mph",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt06_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt06_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": true,
+      "_hero": "https://via.placeholder.com/1280x500",
+      "_hero_mobile": "https://via.placeholder.com/675x375",
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_07",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "7. Risk benefit assessment (RBA)",
+      "displayTitle": "7. Risk benefit assessment (RBA)",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt07_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt07_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_07.png",
+      "_hero_mobile": "course/en/images/heros/hero_07.png",
+      "_position": {
+         "_top": "70%",
+         "_left": "37.5%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   },
+   {
+      "_id": "co-01_08",
+      "_parentId": "course",
+      "_type": "page",
+      "_classes": "",
+      "_htmlClasses": "",
+      "title": "8. Review and next steps",
+      "displayTitle": "8. Review and next steps",
+      "_graphic": {
+         "src": "course/en/images/menu/00_00_020_opt08_dtop.png",
+         "src_mobile": "course/en/images/menu/00_00_020_opt08_mob.png",
+         "alt": ""
+      },
+      "linkText": "",
+      "duration": "",
+      "_isHidden": false,
+      "_hero": "course/en/images/heros/hero_08.png",
+      "_hero_mobile": "course/en/images/heros/hero_08.png",
+      "_position": {
+         "_top": "62.5%",
+         "_left": "16%",
+         "_width": "15%",
+         "_height": "26%"
+      },
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_showPageCompletion": true,
+         "_excludeAssessments": false,
+         "_isCompletionIndicatorEnabled": false
+      },
+      "_overallProgress": {
+         "_isEnabled": false
+      },
+      "_sectionProgress": {
+         "_isEnabled": false
+      },
+      "_isOptional": false
+   }
+]

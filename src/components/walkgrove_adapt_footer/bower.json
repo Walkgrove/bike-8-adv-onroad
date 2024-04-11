@@ -1,0 +1,19 @@
+{
+    "name": "walkgrove_adapt_footer",
+    "authors": [
+      "Laura Hooper <laura.hooper@walkgrove.co.uk>"
+    ],
+    "description": "A navigation component. Show next, home and previous links at the bottom of a page – displayed as text or buttons.",
+    "main": "/js/walkgrove_adapt_footer.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "version": "2.0.0",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_footer",
+    "framework": ">=5.0",
+    "component": "footer",
+    "displayName": "Footer",
+    "license": "",
+    "private": true
+  }

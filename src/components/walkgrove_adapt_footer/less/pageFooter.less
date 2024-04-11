@@ -1,0 +1,149 @@
+.pagefooter {
+  
+  position: relative;
+  // bottom: 0;
+  left:0;
+  width: 100%;
+
+  &__inner {
+    
+    width: 100%;
+    height:auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.not-buttons {
+
+      &.no-next {
+        justify-content: flex-start;
+      }
+      &.no-prev {
+        justify-content: flex-end;
+      }
+
+      // padding: 1.25rem 2rem;
+
+      .pagefooter__previous {
+        left: 0;
+        .pagefooter__link-title {
+          text-align: left; 
+          left: 5%;
+          position: relative;
+        }
+    
+        &:before { 
+          content: "\e960"; 
+          left: 0;
+        } 
+      }
+    
+      .pagefooter__next {
+        right: 0;
+        .pagefooter__link-title {
+          text-align: right;
+          left: 5%;
+          position: relative;
+        }
+    
+        &:after { 
+          content: "\e961"; 
+          right: 0;
+        }
+      }
+  
+      .pagefooter__link {
+        width: 50%;
+        color: @white;
+        text-decoration: none!important;
+        font-weight: @font-weight-bold;
+
+        &:after, &:before {
+          font-family: "vanilla"; 
+          padding: 0 1rem; 
+          position: absolute;
+          top: 50%;
+          transform: translate(0%,-50%);
+        }
+      }
+    
+      .pagefooter__link-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 90%;
+        display: block;
+
+        @media (max-width: @device-width-small) {
+          display: none;
+        }
+      }
+  
+      &.home {
+        .pagefooter__link {
+          max-width: 33.3%;
+        }
+      }
+
+      .btn {
+        background-color: transparent;
+      }
+
+    }
+
+  
+    &.buttons {
+
+      padding: 0.5rem;
+
+      .btn {
+        margin: 0 0.5rem;
+        font-weight: 600;
+        border-radius: 100%;
+        padding: 0.5rem;
+        min-width: 0;
+    
+        font-family: "vanilla";
+      }
+  
+    }
+
+  }
+}
+
+
+.dir-rtl {
+  .pagefooter {
+
+    button {
+      direction: rtl;
+    }
+
+    .pagefooter__link-title {
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: unset;
+      // direction: rtl;
+    }
+
+    .pagefooter__previous {
+      .pagefooter__link-title {
+        text-align: right;
+        left: auto;
+        right: 5%;
+      }
+    }
+  
+    .pagefooter__next {
+      right: 0;
+      .pagefooter__link-title {
+        text-align: right;
+        left: auto;
+        right: 5%;
+      }
+    }
+
+  }
+}
+

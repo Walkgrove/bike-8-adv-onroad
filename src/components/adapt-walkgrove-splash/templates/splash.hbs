@@ -1,0 +1,31 @@
+<div class="component__inner splash__inner {{#if _button._full}}js-splash-start-click{{/if}}" {{#if _button._full}}tabindex="0"{{/if}}>
+  {{> component this}} 
+
+ <div class="splash__main">
+
+   {{component_description}}
+
+    <img class="splash__image_large" src="{{_graphic.large}}" aria-label="{{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}}" />
+    <img class="splash__image_small" src="{{_graphic.small}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+    <img class="splash__image_portrait" src="{{_graphic.portrait}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+    <img class="splash__image_mobile" src="{{_graphic.mobile}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+
+    {{#if _button._normal}}
+      <div class="splash__main-title">{{{splashTitle}}}
+
+        <div class="splash__button">
+          <button class="splash__start-btn btn js-splash-start-click" aria-label="{{{buttonText}}}" tabindex="0">
+            <span>{{{buttonText}}}</span>
+          </button>
+        </div>
+
+      </div>
+
+      
+    {{/if}}
+
+    {{!-- <img class="splash_logo" src="{{_logo.src}}" {{#if _logo.alt}}aria-label="{{_logo.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} /> --}}
+
+  </div> 
+
+</div>

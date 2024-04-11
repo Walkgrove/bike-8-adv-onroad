@@ -1,0 +1,19 @@
+{
+  "name": "adapt-footer",
+  "version": "1.0.0",
+  "framework": ">=5",
+  "component": "pageFooter",
+  "displayName": "Footer",
+  "description": "A simple core contributed text component",
+  "main": "/js/adapt-footer.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0",
+  "_release": "1.0.0",
+  "_source": "git://github.com/adaptlearning/adapt-contrib-text.git",
+  "_target": "1.0.0",
+  "_originalSource": "adapt-footer",
+  "_direct": true
+}

@@ -1,0 +1,61 @@
+<div class="component__inner quickfire__inner">
+  {{> component this}} 
+
+  <div class="quickfire__main">
+  {{#each _items}}
+    <div class="quickfire__question-container">
+
+      <div class="quickfire__question-title" id="quickfire-ques-number-{{../_id}}-{{@index}}" tabindex="0" ></div>
+      <div class="quickfire__question-stem" tabindex="0" >{{{stem}}}</div>
+
+      <div class="quickfire__option-buttons button" id="quickfire__buttons">
+        <button class="btn-text quickfire__option-btn js-option1-click" aria-label="{{{_options.option1}}}" role="button" tabindex="0">
+          <span>{{{_options.option1}}}</span>
+        </button>
+        <button class="btn-text quickfire__option-btn js-option2-click" aria-label="{{{_options.option2}}}" role="button" tabindex="0">
+          <span>{{{_options.option2}}}</span>
+        </button>
+      </div>
+
+    </div>
+  {{/each}}
+  </div> 
+  
+  <div class="quickfire__feedbacks">
+    <div class="quickfire__feedback-container">
+      {{#if _feedback.title}}
+        <div class="quickfire__feedback-title">{{{_feedback.title}}}</div>
+      {{/if}}
+      <div class="quickfire__feedback" tabindex="0"></div>
+      <div class="quickfire__feedback-complete-buttons button" id="quickfire__buttons">
+        <button class="btn-text quickfire__btn js-show-correct-click" aria-label="{{{_feedback.correctText}}}" role="button" tabindex="0">
+          <span>{{{_feedback.correctText}}}</span>
+        </button>
+      </div>
+      <div class="quickfire__feedback-buttons button" id="quickfire__buttons">
+        <button class="btn-text quickfire__btn js-retry-click" aria-label="{{{_feedback.retryText}}}" role="button" tabindex="0">
+          <span>{{{_feedback.retryText}}}</span>
+        </button>
+      </div>
+      <div class="quickfire__feedback-container-corrects">
+        <div class="btn-icon quickfire__feedback-container-corrects-close js-close-corrects-click">
+          <div class="icon"></div>
+        </div>
+      {{#each _items}}
+        <div class="quickfire__correct-container" >
+          <div class="quickfire__correct-title" id="quickfire-correct-title-{{../_id}}-{{@index}}"></div>
+          <div class="quickfire__correct-stem">{{{stem}}}</div>
+          <div class="quickfire__correct-answer"  id="quickfire-correct-answer-{{../_id}}-{{@index}}"></div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  </div>
+
+  <div class="quickfire__progress-container" aria-hidden="true">
+    {{#each _items}}
+      <div class="quickfire__progress-dot" id="quickfire-dot-{{../_id}}-{{@index}}"></div>
+    {{/each}}
+  </div>
+
+</div>

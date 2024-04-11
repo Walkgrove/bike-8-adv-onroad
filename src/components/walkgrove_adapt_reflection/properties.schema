@@ -1,0 +1,655 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "Reflection. Text inputs to enter your answers, then select the save button.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_buttons": {
+      "type": "array",
+      "required": true,
+      "title": "button labels",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "save": {
+            "type": "string",
+            "required": false,
+            "default": "Save",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The save button title",
+            "translatable": true
+          },
+          "export": {
+            "type": "string",
+            "required": false,
+            "default": "Export as PDF",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The export button title",
+            "translatable": true
+          },
+          "_exportEnabled": {
+            "type": "boolean",
+            "default": true,
+            "isSetting": false,
+            "inputType": "Checkbox",
+            "validators": [],
+            "title": "Enable the export of the PDF?",
+            "help": ""
+          }
+        }
+      }
+    },
+    "_styling": {
+      "type": "array",
+      "required": false,
+      "title": "Styling",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_input-width": {
+            "title": "Input Width",
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "default": "35%",
+            "help": "The Width for the input boxes"
+          }
+        }
+      }
+    },
+    "placeholder": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "The placeholder text for the input fields",
+      "translatable": true
+    },
+    "_message": {
+      "type": "array",
+      "required": true,
+      "title": "Message options",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "content": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "title": "Message content",
+            "translatable": true
+          },
+          "_inline": {
+            "type": "boolean",
+            "default": true,
+            "required": true,
+            "isSetting": false,
+            "inputType": "Checkbox",
+            "validators": ["required"],
+            "title": "Show the saved message inline i.e. under the input boxes",
+            "help": "If this is unchecked, the message shows in the notify popup"
+          }
+        }
+      }
+    },
+    "_activity": {
+      "type": "array",
+      "required": true,
+      "title": "Activity details (for PDF)",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "title": "Activity title",
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The title for this refection activity input, within the PDF",
+            "translatable": true
+          },
+          "body": {
+            "title": "Activity body content",
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The body content (if required) for this refection activity input, within the PDF",
+            "translatable": true
+          }
+        }
+      }
+    },
+    "pdf": {
+      "type": "array",
+      "required": true,
+      "title": "PDF details",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "filename": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Course name",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The file name when exported to PDF",
+            "translatable": true
+          },
+          "_font": {
+            "type": "string",
+            "required": true,
+            "default": "default",
+            "title": "PDF font",
+            "validators": ["required"],
+            "inputType": {
+              "type": "Select",
+              "options": [
+                "default",
+                "courier",
+                "helvetica",
+                "times"
+              ]
+            },
+            "translatable": false
+          },
+          "_fontSize": {
+            "type": "number",
+            "required": true,
+            "default": "13",
+            "title": "Font size",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "The main PDF body font size"
+          },
+          "_fontColour": {
+            "type": "string",
+            "required": true,
+            "default": "center",
+            "title": "Font HEX colour (input content)",
+            "validators": ["required"],
+            "inputType": "ColourPicker",
+            "help": "The main PDF body font colour",
+            "translatable": false
+          },
+          "_header": {
+            "type": "array",
+            "required": true,
+            "title": "PDF header",
+            "items": {
+              "type": "object",
+              "required": true,
+              "properties": {
+                "_image": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Header Image",
+                  "inputType": "Asset:image",
+                  "validators": [],
+                  "help": "The PDF hero image to render",
+                  "translatable": false
+                },
+                "_imageStyling": {
+                  "type": "array",
+                  "required": true,
+                  "title": "PDF header image styling",
+                  "items": {
+                    "type": "object",
+                    "required": true,
+                    "properties": {
+                      "_width": {
+                        "type": "number",
+                        "required": true,
+                        "default": "100",
+                        "title": "Image Width (in % of page width)",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_height": {
+                        "type": "number",
+                        "required": true,
+                        "default": "20",
+                        "title": "Image Height (in % of page height)",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_left": {
+                        "type": "number",
+                        "required": true,
+                        "default": "0",
+                        "title": "Image position from left (% of page width)",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_top": {
+                        "type": "number",
+                        "required": true,
+                        "default": "0",
+                        "title": "Image position from top (% of page height)",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_marginBottom": {
+                        "type": "number",
+                        "required": true,
+                        "default": "0",
+                        "title": "Space under the image, before the title",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      }
+                    }
+                  }
+                },
+                "title": {
+                  "type": "string",
+                  "required": true,
+                  "default": "",
+                  "title": "The PDF title",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                },
+                "_titleStyling": {
+                  "type": "array",
+                  "required": true,
+                  "title": "PDF header image styling",
+                  "items": {
+                    "type": "object",
+                    "required": true,
+                    "properties": {
+                      "_fontSize": {
+                        "type": "number",
+                        "required": true,
+                        "default": "20",
+                        "title": "Font size",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": "The main PDF title font size"
+                      },
+                      "_fontAlign": {
+                        "type": "string",
+                        "required": true,
+                        "default": "center",
+                        "title": "Text alignment",
+                        "validators": ["required"],
+                        "inputType": {
+                          "type": "Select",
+                          "options": [
+                            "center",
+                            "left",
+                            "right"
+                          ]
+                        }
+                      },
+                      "_fontColour": {
+                        "type": "string",
+                        "required": true,
+                        "default": "center",
+                        "title": "Font HEX colour",
+                        "validators": ["required"],
+                        "inputType": "ColourPicker",
+                        "help": "The main PDF title font colour",
+                        "translatable": false
+                      },
+                      "_backgroundColour": {
+                        "type": "string",
+                        "required": true,
+                        "default": "center",
+                        "title": "Background HEX colour",
+                        "validators": ["required"],
+                        "inputType": "ColourPicker",
+                        "help": "The main PDF title background colour",
+                        "translatable": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_items": {
+            "type": "array",
+            "required": true,
+            "title": "Item styling",
+            "items": {
+              "type": "object",
+              "required": true,
+              "properties": {
+                "_activityStyling": {
+                  "type": "array",
+                  "required": true,
+                  "title": "PDF activity title styling",
+                  "items": {
+                    "type": "object",
+                    "required": true,
+                    "properties": {
+                      "_fontSize": {
+                        "type": "number",
+                        "required": true,
+                        "default": "20",
+                        "title": "Font size",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_fontColour": {
+                        "type": "string",
+                        "required": true,
+                        "default": "center",
+                        "title": "Font HEX colour",
+                        "validators": ["required"],
+                        "inputType": "ColourPicker",
+                        "help": "",
+                        "translatable": false
+                      }
+                    }
+                  }
+                },
+                "_titleStyling": {
+                  "type": "array",
+                  "required": true,
+                  "title": "PDF item main title styling",
+                  "items": {
+                    "type": "object",
+                    "required": true,
+                    "properties": {
+                      "_fontSize": {
+                        "type": "number",
+                        "required": true,
+                        "default": "20",
+                        "title": "Font size",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_fontColour": {
+                        "type": "string",
+                        "required": true,
+                        "default": "center",
+                        "title": "Font HEX colour",
+                        "validators": ["required"],
+                        "inputType": "ColourPicker",
+                        "help": "",
+                        "translatable": false
+                      }
+                    }
+                  }
+                },
+                "_subtitleStyling": {
+                  "type": "array",
+                  "required": true,
+                  "title": "PDF item subtitle styling",
+                  "items": {
+                    "type": "object",
+                    "required": true,
+                    "properties": {
+                      "_fontSize": {
+                        "type": "number",
+                        "required": true,
+                        "default": "20",
+                        "title": "Font size",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_fontColour": {
+                        "type": "string",
+                        "required": true,
+                        "default": "center",
+                        "title": "Font HEX colour",
+                        "validators": ["required"],
+                        "inputType": "ColourPicker",
+                        "help": "",
+                        "translatable": false
+                      }
+                    }
+                  }
+                },
+                "_questionStyling": {
+                  "type": "array",
+                  "required": true,
+                  "title": "PDF item question styling",
+                  "items": {
+                    "type": "object",
+                    "required": true,
+                    "properties": {
+                      "_fontSize": {
+                        "type": "number",
+                        "required": true,
+                        "default": "20",
+                        "title": "Font size",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_fontColour": {
+                        "type": "string",
+                        "required": true,
+                        "default": "center",
+                        "title": "Font HEX colour",
+                        "validators": ["required"],
+                        "inputType": "ColourPicker",
+                        "help": "",
+                        "translatable": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_footer": {
+            "type": "array",
+            "required": true,
+            "title": "PDF footer",
+            "items": {
+              "type": "object",
+              "required": true,
+              "properties": {
+                "_fontSize": {
+                  "type": "number",
+                  "required": true,
+                  "default": "10",
+                  "title": "Font size",
+                  "inputType": "Number",
+                  "validators": ["required", "number"],
+                  "help": ""
+                },
+                "_fontColour": {
+                  "type": "string",
+                  "required": true,
+                  "default": "center",
+                  "title": "Font HEX colour",
+                  "validators": ["required"],
+                  "inputType": "ColourPicker",
+                  "help": "",
+                  "translatable": false
+                },
+                "_image": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Footer Image",
+                  "inputType": "Asset:image",
+                  "validators": [],
+                  "help": "",
+                  "translatable": false
+                },
+                "_imageStyling": {
+                  "type": "array",
+                  "required": true,
+                  "title": "PDF header image styling",
+                  "items": {
+                    "type": "object",
+                    "required": true,
+                    "properties": {
+                      "_width": {
+                        "type": "number",
+                        "required": true,
+                        "default": "100",
+                        "title": "Image Width (in % of page width)",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_height": {
+                        "type": "number",
+                        "required": true,
+                        "default": "5",
+                        "title": "Image Height (in % of page height)",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_left": {
+                        "type": "number",
+                        "required": true,
+                        "default": "0",
+                        "title": "Image position from left (% of page width)",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": ""
+                      },
+                      "_bottom": {
+                        "type": "number",
+                        "required": true,
+                        "default": "5",
+                        "title": "Image position from bottom (% of page height) ",
+                        "inputType": "Number",
+                        "validators": ["required", "number"],
+                        "help": "This would be the same as the _height property if it is to sit on the bottom of the page."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "_items": {
+      "type": "array",
+      "required": false,
+      "title": "Textarea items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_classes": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Class",
+            "inputType": {
+              "type": "Select",
+              "options": [
+                "",
+                "full-width"
+              ]
+            },
+            "validators": ["required"],
+            "help": "",
+            "translatable": false
+          },
+          "title": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Textrea title",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "subtitle": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Textrea subtitle",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "question": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Textrea question",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_colour": {
+            "type": "string",
+            "required": false,
+            "default": "#FFF",
+            "title": "Textrea title/subtitle text colour",
+            "inputType": "ColourPicker",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          },
+          "_bgcolour": {
+            "type": "string",
+            "required": false,
+            "default": "#000",
+            "title": "Textrea question title/subtitle background colour",
+            "inputType": "ColourPicker",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          }
+        }
+      }
+    }
+  }
+}

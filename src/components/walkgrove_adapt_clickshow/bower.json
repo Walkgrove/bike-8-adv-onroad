@@ -1,0 +1,19 @@
+{
+    "name": "walkgrove_adapt_clickshow",
+    "authors": [
+      "Laura Hooper <laura.hooper@walkgrove.co.uk>"
+    ],
+    "description": "An interactive component. Item(s) on the left can be selected to show an item on the right. Items can be image assets or text.",
+    "main": "/js/walkgrove_adapt_clickshow.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "version": "2.0.0",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_clickshow",
+    "framework": ">=5.0",
+    "component": "clickshow",
+    "displayName": "Click Show",
+    "license": "",
+    "private": true
+  }

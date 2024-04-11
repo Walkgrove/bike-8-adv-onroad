@@ -1,0 +1,61 @@
+{{import_globals}}
+
+<div class="hotspotmenu__inner hotspothotspotmenu__inner">
+
+  <div class="hotspotmenu__logo"></div>
+
+  {{#any displayTitle subtitle body instruction}}
+  <div class="hotspotmenu__header hotspothotspotmenu__header">
+    <div class="hotspotmenu__header-inner hotspothotspotmenu__header-inner">
+
+      {{#if displayTitle}}
+      <div class="hotspotmenu__title hotspothotspotmenu__title">
+
+        {{#unless _disableAccessibleState}}
+        <div class="js-heading"></div>
+        {{/unless}}
+
+        <div class="hotspotmenu__title-inner hotspothotspotmenu__title-inner" >
+          {{{compile displayTitle}}}
+        </div>
+
+      </div>
+      {{/if}}
+
+      {{#if subtitle}}
+      <div class="hotspotmenu__subtitle hotspothotspotmenu__subtitle">
+        <div class="hotspotmenu__subtitle-inner hotspothotspotmenu__subtitle-inner" >
+          {{{compile subtitle}}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if body}}
+      <div class="hotspotmenu__body hotspothotspotmenu__body">
+        <div class="hotspotmenu__body-inner hotspothotspotmenu__body-inner">
+          {{{compile body}}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if instruction}}
+      <div class="hotspotmenu__instruction hotspothotspotmenu__instruction">
+        <div class="hotspotmenu__instruction-inner hotspothotspotmenu__instruction-inner">
+          {{{compile instruction}}}
+        </div>
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+  {{/any}}
+
+  <div class="hotspotmenu__item-container hotspothotspotmenu__item-container">
+
+    <div class="hotspotmenu__item-container-inner hotspothotspotmenu__item-container-inner js-children" role="list">
+      <img class="hotspotmenu_image hotspotmenu_image" aria-hidden="true" alt="" />
+      {{!-- Menu items render here --}}
+    </div>
+  </div>
+
+</div>

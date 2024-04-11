@@ -1,0 +1,30 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "graphicBuild",
+        "_classes": "",
+        "_layout": "left",
+        "title": "Graphic Build",
+        "displayTitle": "Graphic Build",
+        "body": "",
+        "instruction": "",
+        "mobileInstruction": "",
+        "content": "This is the content for the first image.",
+        "_graphic": {
+            "src": "https://via.placeholder.com/1280x750",
+            "alt": ""
+         },
+         "_items": [
+            {
+               "content": "Text which sits below the image (optional)",
+               "_graphic": {
+                  "src": "https://via.placeholder.com/1280x750",
+                  "alt": ""
+               }
+            }
+        ],
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }

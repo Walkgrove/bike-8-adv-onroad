@@ -1,0 +1,43 @@
+<div class="component__inner interactivevideo__inner">
+  {{> component this}} 
+
+  <div class="interactivevideo__main">
+
+     <div class="interactivevideo__content">
+        <h2 class="interactivevideo__content-title"></h2>
+        <div class="interactivevideo__content-body component__body"></div>
+        <div class="interactivevideo__content-instruction component__instruction"></div>
+     </div>
+
+    <div class="interactivevideo__stages">
+    <div class="interactivevideo__bg-image is-hidden" aria-hidden="true" tabindex="-1">
+      <img class="interactivevideo__bg-img" src="" alt="" aria-hidden="true" tabindex="-1"/>
+   </div>
+    {{#each _items}}
+        <div class="interactivevideo__widget"></div>
+    {{/each}}
+    </div> 
+    
+    <div class="interactivevideo__controls">
+      <button class="btn-icon interactivevideo__controls-btn js-prev-stage" aria-label="{{_globals._accessibility._ariaLabels.previous}}" tabindex="0">
+         <span class="icon "></span>
+      </button>
+
+      <div class="interactivevideo__progress-dots " aria-hidden="true" tabindex="-1">
+         {{#each _stages}}
+            <div class="interactivevideo__progress-dot" aria-hidden="true"></div>
+        {{/each}}
+      </div>
+
+      <button class="btn-icon interactivevideo__controls-btn js-next-stage" aria-label="{{_globals._accessibility._ariaLabels.next}}" tabindex="0">
+         <span class="icon "></span>
+      </button>
+
+      <button class="btn-icon interactivevideo__controls-btn js-click-reset" aria-label="{{_globals._accessibility._ariaLabels.reset}}" tabindex="0">
+         <span class="icon "></span>
+      </button>
+   </div>
+
+  </div>
+
+</div>

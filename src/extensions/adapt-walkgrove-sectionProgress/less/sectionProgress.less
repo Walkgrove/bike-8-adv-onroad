@@ -1,0 +1,46 @@
+.sectionprogress {
+
+  display: block;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  transform: translate(0, -50%);
+
+  width: auto;
+  height: auto;
+
+  padding: 0.5rem;
+
+  background-color: @sectionProgress-icon-background;
+  border-radius: 0 1rem 1rem 0;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    min-height: 10rem;
+
+  }
+
+
+  &__item-btn {
+    background: transparent;
+    margin-top: 0.35rem;
+  }
+
+
+  &__item-title {
+    display: none;
+  }
+
+}

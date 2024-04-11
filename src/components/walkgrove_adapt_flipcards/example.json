@@ -1,0 +1,75 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "flipcards",
+        "_classes": "",
+        "_layout": "full",
+        "title": "Flipcards",
+        "displayTitle": "Flipcards",
+        "body": "<p>An interactive component.</p><p>Cards which flip over when selected to reveal more content.</p>",
+        "instruction": "Select the <strong>cards</strong> to find out more.",
+        "_fullImage": true,
+        "_minHeight": 400,
+        "_maxHeight": 450,
+        "_columns": {
+            "_large": 3,
+            "_medium": 2,
+            "_small": 1
+         },
+         "_items": [
+            {
+               "_front": {
+                  "title": "title 1",
+                  "_titleVerticalAlign": "top",
+                  "alt": ""
+               },
+               "_reverse": {
+                  "title": "card title 1",
+                  "body": "<p>This is the content on the back of the first flipcard, which shows under the (optional) title.</p>"
+               }
+            },
+            {
+               "_front": {
+                  "title": "title 2",
+                  "_titleVerticalAlign": "center",
+                  "_graphic": "https://via.placeholder.com/375x400",
+                  "alt": ""
+               },
+               "_reverse": {
+                "body": "<p>This is the content on the back of the second flipcard, which has no title.</p><p>And this is a second paragraph.</p>",
+                "_bodyAlign": "top"
+               }
+            },
+            {
+               "_front": {
+                  "title": "title 3",
+                  "_titleVerticalAlign": "bottom",
+                  "alt": ""
+               },
+               "_reverse": {
+                "title": "card title 3",
+                "body": "<p>The third flipcard has a title and a graphic underneath this content, on the back.</p>",
+                  "_graphic": "https://via.placeholder.com/400x200",
+                  "alt": ""
+               }
+            }
+        ],
+        "_pageLevelProgress": {
+            "_isEnabled": true,
+            "_isCompletionIndicatorEnabled": false
+        }
+    }
+
+
+
+
+   //  optional 
+
+
+   "_styling": {
+      "_front-font-color": "#FFF",
+      "_front-background-color": "#000",
+      "_reverse-font-color": "#FFF",
+      "_reverse-background-color": "#000"
+   }

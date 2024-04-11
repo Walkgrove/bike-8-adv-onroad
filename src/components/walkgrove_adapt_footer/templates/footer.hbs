@@ -1,0 +1,38 @@
+{{import_globals}}
+
+<div class="component__inner footer__inner {{#if_eq _home true}}home{{/if_eq}} {{#if_eq _buttons true}}buttons{{else}}not-buttons{{/if_eq}}" style="background-color:{{_styling._background-color}}; color: {{_styling._link-color}};">
+  {{> component this}}
+
+    {{#each _links}}
+      {{#if_eq _name "previous"}}
+      <button onclick="window.location.href='{{_href}}';" class="btn footer__link footer__{{{_name}}}" aria-label="{{{title}}}" role="link" tabindex="0" style="color: {{@root/_styling._link-color}};">
+        {{#if_eq @root/_buttons true}}
+        <span class="icon icon-controls-left"></span>
+        {{else}}
+        <span class="footer__link-title">{{{title}}}</span>
+        {{/if_eq}}
+      </button>
+      {{/if_eq}}
+    {{/each}}
+
+
+    {{#if_eq _home true}}
+    <button class="btn footer__link footer__home js-click-home" aria-label="{{{@root/_globals._buttons.home}}}" role="link" tabindex="0" style="color: {{@root/_styling._link-color}};">
+      <span class="icon icon-home"></span>
+    </button>
+    {{/if_eq}}
+
+
+    {{#each _links}}
+      {{#if_eq _name "next"}}
+      <button onclick="window.location.href='{{_href}}';" class="btn footer__link footer__{{{_name}}}" aria-label="{{{title}}}" role="link" tabindex="0" style="color: {{@root/_styling._link-color}};">
+        {{#if_eq @root/_buttons true}}
+        <span class="icon icon-controls-right "></span>
+        {{else}}
+        <span class="footer__link-title">{{{title}}}</span>
+        {{/if_eq}}
+      </button>
+      {{/if_eq}}
+    {{/each}}
+
+</div>

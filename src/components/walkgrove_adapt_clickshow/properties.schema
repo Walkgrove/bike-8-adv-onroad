@@ -1,0 +1,348 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "List of selectable areas. Select each button to show more information.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_layoutType": {
+      "type": "string",
+      "required": true,
+      "default": "image-text",
+      "inputType": "Text",
+      "validators": ["required"],
+      "inputType": {
+        "type": "Select",
+        "options": [
+          "image-text",
+          "text-image",
+          "image",
+          "text"
+        ]
+      },
+      "title": "Item Layout",
+      "help": "This is the layout setting - using images or text",
+      "translatable": false
+    },
+    "_layoutPosition": {
+      "type": "string",
+      "required": true,
+      "default": "row",
+      "validators": ["required"],
+      "inputType": {
+        "type": "Select",
+        "options": [
+          "column",
+          "row"
+        ]
+      },
+      "title": "Item Layout Position",
+      "help": "This is the display layout position setting - column or row",
+      "translatable": false
+    },
+    "_hideRightContent": {
+      "type": "boolean",
+      "default": true,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "Hide the content on the right / underneath?",
+      "help": "If set to true, the element is only shown once selected, moving content down to accommodate it"
+    },
+    "_leftHeading": {
+      "type": "object",
+      "required": false,
+      "title": "Left Heading",
+      "properties": {
+        "title": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Title",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Is a heading required above the left selectable items?",
+          "translatable": true
+        },
+        "_font-color": {
+          "title": "Font colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": ""
+        },
+        "_background-color": {
+          "title": "Background colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": ""
+        },
+        "_graphic": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Graphic",
+          "inputType": "Asset:image",
+          "validators": [],
+          "help": ""
+        }
+      }
+    },
+    "_rightHeading": {
+      "type": "object",
+      "required": false,
+      "title": "Right Heading",
+      "properties": {
+        "title": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Title",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Is a heading required above the right selectable items?",
+          "translatable": true
+        },
+        "_font-color": {
+          "title": "Font colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": ""
+        },
+        "_background-color": {
+          "title": "Background colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": ""
+        },
+        "_graphic": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Graphic",
+          "inputType": "Asset:image",
+          "validators": [],
+          "help": ""
+        }
+      }
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "leftGraphic": {
+            "type": "string",
+            "required": false,
+            "default": "https://via.placeholder.com/250x150",
+            "title": "Left graphic",
+            "inputType": "Asset:image",
+            "validators": [],
+            "help": "Is a graphic required on the left?",
+            "translatable": false
+          },
+          "leftGraphicHover": {
+            "type": "string",
+            "required": false,
+            "default": "https://via.placeholder.com/250x150",
+            "title": "Left hover graphic",
+            "inputType": "Asset:image",
+            "validators": [],
+            "help": "Is a hover graphic required on the left?",
+            "translatable": false
+          },
+          "leftAlt": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Left Alt description",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The alternative text for this image",
+            "translatable": true
+          },
+          "leftText": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Left text",
+            "inputType": "TextArea",
+            "validators": [],
+            "help": "Is content required on the left?",
+            "translatable": true
+          },
+          "rightGraphic": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Right graphic",
+            "inputType": "Asset:image",
+            "validators": [],
+            "help": "Is a graphic required on the right?",
+            "translatable": false
+          },
+          "rightAlt": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Right Alt description",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The alternative text for this image",
+            "translatable": true
+          },
+           "rightText": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Right text",
+            "inputType": "TextArea",
+            "validators": [],
+            "help": "Is content required on the right?",
+            "translatable": true
+          }
+        }
+      }
+    },
+    "_styling": {
+      "type": "object",
+      "required": false,
+      "title": "Styling",
+      "properties": {
+        "_graphic": {
+          "type": "string",
+          "required": true,
+          "default": "cover",
+          "title": "Image size",
+          "help": "Should the image cover, or be contained, within the height of the content?",
+          "validators": ["required"],
+          "inputType": {
+            "type": "Select",
+            "options": [
+              "cover",
+              "contain"
+            ]
+          }
+        },
+        "_item-width": {
+          "title": "Item Width",
+          "type": "string",
+          "required": true,
+          "inputType": "Text",
+          "default": "100%",
+          "help": "The Width for the items if in column layout and wish to set a % width, so items wrap"
+        },
+        "_item-wrap": {
+          "title": "Item Wrap (column layout)",
+          "type": "string",
+          "required": true,
+          "validators": ["required"],
+          "inputType": {
+            "type": "Select",
+            "options": [
+              "nowrap",
+              "wrap"
+            ]
+          },
+          "default": "nowrap",
+          "help": "Should the items wrap under each other (wrap), or show on one line (nowrap)"
+        },
+        "_item-background-color": {
+          "title": "Item Background colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": "transparent",
+          "help": "Main item background colour (optional)"
+        },
+        "_left-width": {
+          "title": "Left Width",
+          "type": "string",
+          "required": true,
+          "inputType": "Text",
+          "default": "35%",
+          "help": "The Width for the left elements"
+        },
+        "_left-font-color": {
+          "title": "Left Font colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": "transparent",
+          "help": "Left item font colour."
+        },
+        "_left-background-color": {
+          "title": "Left Background colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": "transparent",
+          "help": "Left item background colour"
+        },
+        "_left-padding": {
+          "type": "string",
+          "required": true,
+          "default": "0rem",
+          "inputType": "Text",
+          "title": "Spacing around the text",
+          "help": "Spacing around the left-hand text i.e. in rem"
+        },
+        "_right-font-color": {
+          "title": "Right Font colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": "#FFFFFF",
+          "help": "Right item font colour"
+        },
+        "_right-background-color": {
+          "title": "Right Background colour",
+          "type": "string",
+          "required": false,
+          "inputType": "ColourPicker",
+          "default": "#000000",
+          "help": "Right item background colour"
+        },
+        "_right-padding": {
+          "type": "string",
+          "required": true,
+          "default": "1rem",
+          "inputType": "Text",
+          "title": "Spacing around the right-hand text",
+          "help": "Spacing around the text i.e. in rem"
+        }
+      }
+    }
+  }
+}

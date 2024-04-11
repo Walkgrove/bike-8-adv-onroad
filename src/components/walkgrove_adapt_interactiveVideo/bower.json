@@ -1,0 +1,19 @@
+{
+    "name": "walkgrove_adapt_interactiveVideo",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/walkgrove/walkgrove_adapt_interactiveVideo.git"
+    },
+    "framework": ">=5",
+    "version": "2.0.0",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_interactiveVideo.git",
+    "component": "interactiveVideo",
+    "displayName": "Interactive Video",
+    "description": "",
+    "main": "/js/walkgrove_adapt_interactiveVideo.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPL-3.0"
+}

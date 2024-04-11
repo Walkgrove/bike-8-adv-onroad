@@ -1,0 +1,44 @@
+<div class="component__inner challenge__inner">
+  {{> component this}} 
+
+  <div class="challenge__button button is-visible">
+    <button class="btn-text challenge__start-btn js-challenge-start-click" aria-label="{{{buttonText}}}">
+      {{{buttonText}}}
+    </button>
+  </div>
+
+  <div class="challenge__main" {{#if _backgroundImage}}style="background-image: url({{_backgroundImage}}); background-size: cover; background-position: top right;"{{/if}}>
+    {{!-- style="background-image: url({{_backgroundImage}}); background-size: cover; background-position: top right;" --}}
+
+    <div class="challenge__items" >
+      {{#each _items}}
+        <div class="challenge__item challenge__item-{{../_id}}" >
+          <div class="challenge__item-buttons">
+            <div class="js-challenge-first-click" data-qnum="{{@index}}" >{{../choice1}}</div>
+            <div class="js-challenge-second-click" data-qnum="{{@index}}" >{{../choice2}}</div>
+            {{#if ../choice3}}<div class="js-challenge-third-click" data-qnum="{{@index}}" >{{../choice3}}</div>{{/if}}
+          </div>
+          <div class="challenge__item-content" style="background-color: {{_colour}}; color: {{_colourText}};">{{content}}</div>
+          <div class="challenge__item-feedback" data-fback-index="{{@index}}" >{{feedback}}</div>
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="challenge__feedbacks" >
+      {{#each _feedbacks}}
+        <div class="challenge__feedback">
+          <div>{{{content}}}</div>
+          {{!-- <img class="{{_imageClass}}" src="{{_image}}" {{#if alt}}aria-label="{{alt}}"{{else}}alt=""{{/if}} /> --}}
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="challenge__button-restart button">
+      <button class="btn-text challenge__restart-btn js-challenge-restart-click" aria-label="{{{@root/_globals._accessibility._ariaLabels.retry}}}">
+        {{{@root/_globals._accessibility._ariaLabels.retry}}}
+      </button>
+    </div>
+
+  </div>   
+
+</div>

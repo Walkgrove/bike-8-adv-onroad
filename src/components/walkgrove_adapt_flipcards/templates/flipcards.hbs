@@ -1,0 +1,25 @@
+<div class="component__inner flipcards__inner">
+  {{> component this}} 
+
+  <div class="flipcards__main">
+    {{#each _items}}
+    <div class="flipcards__widget large-{{../_columns._large}} medium-{{../_columns._medium}} small-{{../_columns._small}}" data-index="{{@index}}">
+      <button class="flipcards__card js-flip-item" role="button" tabindex="0" aria-label="{{_front.title}}. {{@root/_globals._accessibility._ariaLabels.showmore}}" style="color: {{@root/_styling._front-font-color}}; background-color: {{@root/_styling._front-background-color}}; ">
+        <img src="{{_front._graphic}}" class="flipcards__icon" style="opacity:0;" class="a11y-ignore" aria-hidden="true" alt=""   />
+        <div class="flipcards__card-front {{_front._titleVerticalAlign}}" style="color: {{@root/_styling._front-font-color}}; background-color: {{@root/_styling._front-background-color}}; ">
+          {{#if _front.title}}<div class="flipcards__title-front" role="heading" aria-level="3"  tabindex="0" >{{_front.title}}</div>{{/if}}
+          {{#if _front._graphic}}<img src="{{_front._graphic}}" class="flipcards__icon" {{#if _front._alt}}aria-label="{{_front._alt}}" tabindex="0"{{else}}class="a11y-ignore" aria-hidden="true" alt=""{{/if}} />{{/if}}
+        </div>
+        <div class="flipcards__card-back" style="color: {{@root/_styling._reverse-font-color}}; background-color: {{@root/_styling._reverse-background-color}};">
+          <div class="flipcards__card-container">
+          {{#if _reverse.title}}<div class="flipcards__title-back" role="heading" aria-level="3"  tabindex="0" >{{_reverse.title}}</div>{{/if}}
+          {{#if _reverse.body}}<div class="flipcards__content {{_reverse._bodyAlign}}" tabindex="0">{{{_reverse.body}}}</div>{{/if}}
+          {{#if _reverse._graphic}}<img src="{{_reverse._graphic}}" class="flipcards__image" {{#if _reverse._alt}}aria-label="{{_reverse._alt}}" tabindex="0"{{else}}class="a11y-ignore" aria-hidden="true" alt=""{{/if}}  />{{/if}}
+          </div>
+        </div>
+      </button>
+    </div>
+    {{/each}}
+  </div>
+
+</div>

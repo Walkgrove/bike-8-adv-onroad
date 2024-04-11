@@ -1,0 +1,19 @@
+{
+    "name": "walkgrove_adapt_flipcards",
+    "authors": [
+      "Laura Hooper <laura.hooper@walkgrove.co.uk>"
+    ],
+    "description": "An interactive component. Cards which flip over when selected to reveal more content.",
+    "main": "/js/walkgrove_adapt_flipcards.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "version": "2.0.0",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_flipcards",
+    "framework": ">=5.0",
+    "component": "flipcards",
+    "displayName": "Flipcards",
+    "license": "",
+    "private": true
+  }

@@ -1,0 +1,112 @@
+{
+    "_id": "c-05",
+    "_parentId": "b-05",
+    "_type": "component",
+    "_component": "clickshow",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Click Show",
+    "displayTitle": "Click Show",
+    "body": "<p>An interactive component. </p><p>Item(s) on the left can be selected to show an item on the right. Items can be image assets or text. </p><p>The layout position can be set to 'row' items stacked on top of each other (select left to show right) or 'column' items show in a row (select top to show bottom).",
+    "instruction": "<p>Select the images to find out more.</p>",
+	"_layoutPosition": "column",
+    "_layoutType": "image-text",
+    "_hideRightContent": true,
+    "_items": [
+        {
+            "leftGraphic": "https://via.placeholder.com/250x150",
+            "leftGraphicHover": "https://via.placeholder.com/250x150/000/fff",
+            "leftAlt": "Alt text for the left side image",
+            "rightText": "<p>Text content to show.</p>"
+         },
+         {
+            "leftGraphic": "https://via.placeholder.com/250x150",
+            "leftGraphicHover": "https://via.placeholder.com/250x150/000/fff",
+            "leftAlt": "Alt text for the left side image",
+            "rightText": "<p>Text content to show.</p>"
+         }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}
+
+    //  alternative 1
+
+    "_layoutType": "text-image",
+    "_items": [
+        {
+            "leftText": "Heading",
+            "rightGraphic": "https://via.placeholder.com/250x150",
+            "rightAlt": "Alt text for the right side image"
+        },
+        {
+            "leftText": "Heading",
+            "rightGraphic": "https://via.placeholder.com/250x150",
+            "rightAlt": "Alt text for the right side image"
+        }
+    ],
+
+    //  alternative 2
+
+    "_layoutType": "image",
+    "_items": [
+        {
+            "leftGraphic": "https://via.placeholder.com/250x150",
+            "leftGraphicHover": "https://via.placeholder.com/250x150",
+            "leftAlt": "Alt text for the left side image",
+            "rightGraphic": "https://via.placeholder.com/250x150",
+            "rightAlt": "Alt text for the right side image"
+        },
+        {
+            "leftGraphic": "https://via.placeholder.com/250x150",
+            "leftGraphicHover": "https://via.placeholder.com/250x150",
+            "leftAlt": "Alt text for the left side image",
+            "rightGraphic": "https://via.placeholder.com/250x150",
+            "rightAlt": "Alt text for the right side image"
+        }
+    ],
+
+
+    //  alternative 1
+
+    "_layoutType": "text",
+    "_items": [
+        {
+            "leftText": "Heading",
+            "rightText": "<p>Text content to show.</p>"
+        },
+        {
+            "leftText": "Heading",
+            "rightText": "<p>Text content to show.</p>"
+        }
+    ],
+
+
+   //  optional 
+
+   "_leftHeading": {
+        "title": "",
+        "_font-color": "",
+        "_background-color": "",
+        "_graphic": ""
+    },
+    "_rightHeading": {
+        "title": "",
+        "_font-color": "",
+        "_background-color": "",
+        "_graphic": ""
+    },
+    "_styling": {
+        "_graphic": "cover",
+        "_item-width": "100%",
+        "_item-wrap": "nowrap",
+        "_item-background-color": "#c2c2c2",
+        "_left-width": "35%",
+        "_left-font-color": "transparent",
+        "_left-background-color": "transparent",
+        "_left-padding": "0rem",
+        "_right-font-color": "#FFF",
+        "_right-background-color": "#000",
+        "_right-padding": "1rem"
+    }

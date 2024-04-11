@@ -1,0 +1,120 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "Page footer with naviagtional links.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_styling": {
+      "type": "object",
+      "required": false,
+      "title": "Styling",
+      "properties": {
+        "_background-color": {
+          "title": "Background colour",
+          "type": "string",
+          "required": true,
+          "inputType": "ColourPicker",
+          "default": "#000",
+          "help": ""
+        },
+        "_link-color": {
+          "title": "Link colour",
+          "type": "string",
+          "required": true,
+          "inputType": "ColourPicker",
+          "default": "#FFF",
+          "help": ""
+        }
+      }
+    },
+    "_buttons": {
+      "type": "boolean",
+      "default": false,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "Show the next, (home) and previous links as buttons only",
+      "help": ""
+    },
+    "_home": {
+      "type": "boolean",
+      "default": true,
+      "isSetting": true,
+      "inputType": "Checkbox",
+      "validators": [],
+      "title": "Show the Home button",
+      "help": "An optional setting to show or hide the home button in the middle of the footer bar."
+    },
+    "_links": {
+      "type": "array",
+      "required": true,
+      "title": "Footer links",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_name": {
+            "type": "string",
+            "required": true,
+            "inputType": {
+            "type": "Select",
+              "options": [
+                "",
+                "next",
+                "previous"
+              ]
+            },
+            "default": "",
+            "title": "Link direction"
+          },
+          "_href": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Link URL (page ID)",
+            "inputType": "Text",
+            "validators": [],
+            "help": "Enter the ID of the page here.",
+            "translatable": false
+          },
+          "title": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Link display title",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          }
+        } 
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "_id": "c-66",
+    "_parentId": "b-66",
+    "_type": "component",
+    "_component": "timeline",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Timeline",
+    "displayTitle": "Timeline",
+    "body": "<p>An information component. </p><p>XXX</p>",
+    "instruction": "",
+    "buttonMore": "Read more",
+    "_styling": {
+        "_item-background-color": "#000",
+        "_item-color": "#FFF",
+        "_item-title-background-color": "#000",
+        "_item-title-color": "#FFF",
+        "_item-title-padding": "1",
+        "_picture-layout": "side",
+        "_picture-width": "25"
+    },
+    "_items": [
+        {
+            "title": "Item 1",
+            "body": "Content for this item ..."
+        },
+        {
+            "title": "Item 2",
+            "body": "This is where the content for the item goes giving the information required ...",
+            "_image": "https://via.placeholder.com/650x400",
+            "alt": ""
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true,
+        "_isCompletionIndicatorEnabled": false
+    }
+}

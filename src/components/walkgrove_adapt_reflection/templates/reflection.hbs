@@ -1,0 +1,55 @@
+<div class="component__inner reflection__inner">
+  {{> component this}} 
+
+  <div class="reflection__main">
+
+    <div class="reflection__main-items">
+      {{#each _items}}
+        <div class="reflection__widget {{_classes}}" style="width: {{../_styling._input-width}};">
+          <div class="reflection__item-titles">
+              {{#if title}}
+              <div class="reflection__item-title " style="background-color:{{_bgcolour}};color:{{_colour}};" >{{{title}}}</div>
+              {{/if}}
+              {{#if subtitle}}
+              <div class="reflection__item-subtitle" style="background-color:{{_bgcolour}};color:{{_colour}};" >{{{subtitle}}}</div>
+              {{/if}}
+          </div>
+          {{#if question}}
+          <div class="reflection__item-question" >{{{question}}}</div>
+          {{/if}}
+          <textarea class="reflection__item-textbox js-reflection-textbox" maxlength="255" rows="10" placeholder="{{{../placeholder}}}"  aria-label="input" value="" ></textarea>
+          <div class="reflection__character-count">255</div>
+        </div>
+      {{/each}}
+    </div>
+
+  <div style="clear: both;" />
+
+    <div class="reflection__buttons button is-visible">
+      <button class="reflection__btn button js-reflection-save-click" role="button" aria-label="{{{_buttons.save}}}">
+        {{{_buttons.save}}}
+      </button>
+      {{#if_eq _buttons._exportEnabled true}}
+      <button class="reflection__btn button secondary js-reflection-export-click" role="button" aria-label="{{{_buttons.export}}}">
+        {{{_buttons.export}}}
+      </button>
+      {{/if_eq}}
+    </div>
+
+    <div class="reflection__message" >
+      {{{_message.content}}}
+    </div>
+
+    {{!-- {{#if pdf}}
+    <div class="reflection__pdf">
+      <div class="reflection__pdf-image">
+        {{{image}}}
+      </div>
+      <div class="reflection__pdf-title">
+        {{{title}}}
+      </div>
+    </div>
+    {{/if}} --}}
+
+  </div>
+</div>

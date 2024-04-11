@@ -1,0 +1,17 @@
+{
+  "name": "adapt-walkgrove-hotspotMenu",
+  "version": "5.0.0",
+  "framework": ">=5",
+  "homepage": "https://github.com/adaptlearning/adapt-walkgrove-hotspotMenu",
+  "issues": "https://github.com/adaptlearning/adapt_framework/issues/new",
+  "menu": "hotspotMenu",
+  "displayName": "Hotspot Menu",
+  "description": "A new hotspot style menu",
+  "main": "js/adapt-walkgrove-hotspotMenu.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-menu"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_hotspotMenu"
+}

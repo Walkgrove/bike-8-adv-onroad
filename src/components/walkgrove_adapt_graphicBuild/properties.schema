@@ -1,0 +1,133 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "mobileInstruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text for the mobile version",
+      "translatable": true
+    },
+    "content": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the content for the first image",
+      "translatable": true
+    },
+    "_graphic": {
+      "type": "array",
+      "required": true,
+      "title": "First graphic",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "src": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Image",
+            "inputType": "Asset:image",
+            "validators": ["required"],
+            "help": "Image which will be rendered"
+          },
+          "alt": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Graphic alt description",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The alternative text for this image",
+            "translatable": true
+          }
+        }
+      }
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "content": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Step content",
+            "inputType": "Text",
+            "validators": [],
+            "help": "This is the content for the step",
+            "translatable": true
+          },
+          "_graphic": {
+            "type": "array",
+            "required": true,
+            "title": "Step graphic",
+            "items": {
+              "type": "object",
+              "required": true,
+              "properties": {
+                "src": {
+                  "type": "string",
+                  "required": true,
+                  "default": "",
+                  "title": "Image",
+                  "inputType": "Asset:image",
+                  "validators": ["required"],
+                  "help": "Image which will be rendered"
+                },
+                "alt": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Graphic alt description",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "The alternative text for this image",
+                  "translatable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

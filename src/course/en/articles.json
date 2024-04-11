@@ -1,0 +1,141 @@
+[
+   {
+      "_id": "a-01_00",
+      "_parentId": "co-01_00",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_00",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_01",
+      "_parentId": "co-01_01",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_01",
+      "displayTitle": "Introduction",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_02",
+      "_parentId": "co-01_02",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_02",
+      "displayTitle": "Delivery guidance and the National Standard",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_03",
+      "_parentId": "co-01_03",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_03",
+      "displayTitle": "Assessing rider readiness",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_04",
+      "_parentId": "co-01_04",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_04",
+      "displayTitle": "Strategies for delivery",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_05",
+      "_parentId": "co-01_05",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_05",
+      "displayTitle": "Planning and stepping up ",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_06",
+      "_parentId": "co-01_06",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_06",
+      "displayTitle": "Advanced on-road training activities",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_06_1",
+      "_parentId": "co-01_06_1",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_06_1",
+      "displayTitle": "Using traffic lights and passing queuing traffic",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_06_2",
+      "_parentId": "co-01_06_2",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_06_2",
+      "displayTitle": "Multi-lane roads and roundabouts",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_06_3",
+      "_parentId": "co-01_06_3",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_06_3",
+      "displayTitle": "Using cycling infrastructure",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_06_4",
+      "_parentId": "co-01_06_4",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_06_4",
+      "displayTitle": "Being aware of driver blind spots and sharing bus lanes",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_06_5",
+      "_parentId": "co-01_06_5",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_06_5",
+      "displayTitle": "Riding on roads with a speed limit above 30mph",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_07",
+      "_parentId": "co-01_07",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_07",
+      "displayTitle": "Risk benefit assessment (RBA)",
+      "body": "",
+      "instruction": ""
+   },
+   {
+      "_id": "a-01_08",
+      "_parentId": "co-01_08",
+      "_type": "article",
+      "_classes": "",
+      "title": "a-01_08",
+      "displayTitle": "Review and next steps",
+      "body": "",
+      "instruction": ""
+   }
+]

@@ -1,0 +1,31 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "footer",
+        "_classes": "",
+        "_layout": "full",
+        "_styling": {
+            "_background-color": "#000",
+            "_link-color": "#FFF"
+        },
+        "_buttons": true,
+        "_home": true,
+        "_links": [
+            {
+                "_name": "previous",
+                "_href": "#/id/co-05",
+                "title": "Previous section"
+            },
+            {
+                "_name": "next",
+                "_href": "#/id/co-15",
+                "title": "Next section"
+            }
+        ],
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }
+
+    

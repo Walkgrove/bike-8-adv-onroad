@@ -1,0 +1,202 @@
+{
+  "_frameworkVersion": "2022_11",
+  "_courseVersion": "0_1",
+  "_id": "course",
+  "_type": "course",
+  "_dev": true,
+  "_isLXP": true,
+  "_classes": "",
+  "_htmlClasses": "",
+  "title": "Advanced on-road cycle training",
+  "displayTitle": "Advanced on-road cycle training",
+  "body": "Welcome to this training module, which will support you to teach riders how to cycle in more complex environments.",
+  "instruction": "Please select a topic to begin.",
+  "_buttons": {
+    "_submit": {
+      "buttonText": "Check answer",
+      "ariaLabel": "check answer"
+    },
+    "_tryagain": {
+      "buttonText": "Try again",
+      "ariaLabel": "try again"
+    },
+    "_reset": {
+      "buttonText": "Reset",
+      "ariaLabel": "reset"
+    },
+    "_showCorrectAnswer": {
+      "buttonText": "Correct answer",
+      "ariaLabel": "Show correct answer"
+    },
+    "_hideCorrectAnswer": {
+      "buttonText": "My answer",
+      "ariaLabel": "Show my answer"
+    },
+    "_showFeedback": {
+      "buttonText": "Show feedback",
+      "ariaLabel": "Show feedback"
+    },
+    "remainingAttemptsText": "attempts remaining",
+    "remainingAttemptText": "final attempt",
+    "disabledAriaLabel": "This button is disabled at the moment"
+  },
+  "_globals": {
+    "_learnerInfo": {
+      "id": "student.name@example.org",
+      "name": "Name, Student",
+      "firstname": "Student",
+      "lastname": "Name"
+    },
+    "durationLabel": "Duration:",
+    "_accessibility": {
+      "skipNavigationText": "Skip navigation",
+      "_ariaLabels": {
+        "answeredIncorrectly": "You answered incorrectly",
+        "answeredCorrectly": "You answered correctly",
+        "selectedAnswer": "selected",
+        "unselectedAnswer": "not selected",
+        "skipNavigation": "Skip Navigation",
+        "previous": "Back",
+        "sound": "Toggle sound",
+        "playPause": "Toggle playing sound",
+        "navigationDrawer": "Open course resources.",
+        "close": "Close",
+        "closeDrawer": "Close drawer",
+        "closeResources": "Close resources",
+        "drawer": "Top of side drawer",
+        "closePopup": "Close popup",
+        "next": "Next",
+        "done": "Done",
+        "reset": "Reset",
+        "retry": "Retry",
+        "complete": "Current status: Completed. ",
+        "incomplete": "Current status: Incomplete. ",
+        "incorrect": "Incorrect",
+        "correct": "Correct",
+        "locked": "Locked",
+        "visited": "Visited",
+        "splash": "Select anywhere to begin.",
+        "view": "View topic",
+        "continue": "Continue",
+        "menu": "module menu",
+        "rewind": "Rewind",
+        "showmore": "Select to show more.",
+        "help": "Help",
+        "resources": "Resources",
+        "home": "Home"
+      }
+    }
+  },
+  "_trickle": {
+    "_isEnabled": false
+  },
+  "_languagePicker": {
+    "navigationBarLabel": "Select course language"
+  },
+  "_latestTrackingId": 118,
+  "_start": {
+    "_isEnabled": true,
+    "_startIds": {
+      "_id": "co-01_00",
+      "_skipIfComplete": true,
+      "_className": ""
+    },
+    "_id": "co-01_00",
+    "_force": true
+  },
+  "_pageLevelProgress": {
+    "_isEnabled": true,
+    "_showPageCompletion": false,
+    "_isCompletionIndicatorEnabled": false,
+    "_isShownInNavigationBar": true
+  },
+  "_sectionProgress": {
+    "_isEnabled": false
+  },
+  "_hotspotMenu": {
+    "_backgroundImage": {
+      "_large": "course/en/images/menu/00_00_020_bg_dtop.png",
+      "_medium": "course/en/images/menu/00_00_01_bg_tab.png",
+      "_small": "course/en/images/menu/00_00_01_bg_mob.png"
+    },
+    "_backgroundStyles": {
+      "_backgroundSize": "100% 100%",
+      "_backgroundRepeat": "no-repeat",
+      "_backgroundPosition": "center top"
+    }
+  },
+  "_resources": {
+    "_isEnabled": true,
+    "title": "Resources",
+    "description": "View resources for this course by clicking here.",
+    "_filterButtons": {
+      "all": "All",
+      "document": "Document",
+      "media": "Media",
+      "link": "Link"
+    },
+    "_filterAria": {
+      "allAria": "View all resources",
+      "documentAria": "View document resources",
+      "mediaAria": "View media resources",
+      "linkAria": "View resource links"
+    },
+    "_resourcesItems": [
+      {
+        "_type": "link",
+        "title": "Cycle training delivery guidance (Cycle Training Delivery Guide, Ride Guide, Cycle Activity Templates)",
+        "_link": "https://www.bikeability.org.uk/for-instructors/delivery-guides/"
+      },
+      {
+        "_type": "link",
+        "title": "The Highway Code",
+        "_link": "https://www.gov.uk/guidance/the-highway-code/rules-for-cyclists-59-to-82"
+      },
+      {
+        "_type": "link",
+        "title": "National Standard for Cycle Training",
+        "_link": "https://www.gov.uk/government/publications/national-standard-for-cycle-training"
+      },
+      {
+        "_type": "link",
+        "title": "Risk management guidance",
+        "_link": "https://www.bikeability.org.uk/for-instructors/risk-benefit-assessment/"
+      }
+    ]
+  },
+  "_glossary": {
+    "_isEnabled": false,
+    "_drawerOrder": 1,
+    "title": "Glossary",
+    "description": "Select here to view the glossary for this course",
+    "clearSearch": "Clear search",
+    "searchItemsAlert": "{{filteredItems.length}} found",
+    "searchPlaceholder": "Search",
+    "searchWithInDescriptionLabel": "Search within Description",
+    "itemNotFoundMessage": "No results found",
+    "_isIndexEnabled": false,
+    "_isGroupHeadersEnabled": false,
+    "_isSearchEnabled": false,
+    "_glossaryItems": [
+      {
+        "term": "Walkgrove",
+        "description": "Walkgrove is an award-winning bespoke e-learning solutions company, offering content development, LMS and off-the-shelf courses since 1994."
+      }
+    ]
+  },
+  "_assessment": {
+    "_isPercentageBased": true,
+    "_scoreToPass": 75
+  },
+  "_bookmarking": {
+    "_isEnabled": true,
+    "_level": "component",
+    "title": "Resume?",
+    "body": "Would you like to resume the course from the location you were at last time?",
+    "_buttons": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "_lockType": "sequential"
+}

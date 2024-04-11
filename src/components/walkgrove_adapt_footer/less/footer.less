@@ -1,0 +1,153 @@
+.footer {
+  
+  position: relative;
+  // bottom: 0;
+  left:0;
+  width: 100%;
+
+  &__inner {
+    
+    width: 100%;
+    height:auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.not-buttons {
+
+      &.no-next {
+        justify-content: flex-start;
+      }
+      &.no-prev {
+        justify-content: flex-end;
+      }
+
+      // padding: 1.25rem 2rem;
+
+      .footer__previous {
+        left: 0;
+        .footer__link-title {
+          text-align: left; 
+          left: 5%;
+          position: relative;
+        }
+    
+        &:before { 
+          content: "\e960"; 
+          left: 0;
+        } 
+      }
+    
+      .footer__next {
+        right: 0;
+        .footer__link-title {
+          text-align: right;
+          left: 5%;
+          position: relative;
+        }
+    
+        &:after { 
+          content: "\e961"; 
+          right: 0;
+        }
+      }
+  
+      .footer__link {
+        width: 50%;
+        color: @white;
+        text-decoration: none!important;
+        font-weight: @font-weight-bold;
+
+        &:after, &:before {
+          font-family: "vanilla"; 
+          padding: 0 1rem; 
+          position: absolute;
+          top: 50%;
+          transform: translate(0%,-50%);
+        }
+      }
+    
+      .footer__link-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 90%;
+        display: block;
+
+        @media (max-width: @device-width-small) {
+          display: none;
+        }
+      }
+  
+      &.home {
+        .footer__link {
+          max-width: 33.3%;
+        }
+      }
+
+      .btn {
+        background-color: transparent;
+      }
+
+    }
+
+  
+    &.buttons {
+      padding: 0.5rem;
+
+      .btn {
+        font-family: "vanilla";
+        font-weight: 600;
+        margin: 0 0.5rem;
+        border-radius: 100%;
+        padding: 0.5rem;
+        min-width: 0;
+
+        .no-touch &:hover {
+          background-color: @btn-color-hover;
+          color: @btn-color-inverted-hover;
+          .transition(background-color @duration ease-in, color @duration ease-in;);
+      }
+      }
+  
+    }
+
+  }
+}
+
+
+.dir-rtl {
+  .footer {
+
+    button {
+      direction: rtl;
+    }
+
+    .footer__link-title {
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: unset;
+      // direction: rtl;
+    }
+
+    .footer__previous {
+      .footer__link-title {
+        text-align: right;
+        left: auto;
+        right: 5%;
+      }
+    }
+  
+    .footer__next {
+      right: 0;
+      .footer__link-title {
+        text-align: right;
+        left: auto;
+        right: 5%;
+      }
+    }
+
+  }
+}
+

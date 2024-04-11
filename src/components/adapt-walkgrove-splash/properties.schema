@@ -1,0 +1,126 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "Splash screen. A visual start to the course.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "splashTitle": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "title": "Button title",
+      "inputType": "Text",
+      "validators": [],
+      "help": "",
+      "translatable": true
+    },
+    "buttonText": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "title": "Button title",
+      "inputType": "Text",
+      "validators": [],
+      "help": "",
+      "translatable": true
+    },
+    "_graphic": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "large": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Splash LARGE image",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": false
+        },
+        "small": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Splash SMALL image",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": false
+        },
+        "portrait": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Splash PORTRAIT image",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": false
+        },
+        "alt": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Splash image ALT",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": true
+        }
+      }
+    },
+    "_logo": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "src": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Splash logo image",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": false
+        },
+        "alt": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Splash logo ALT",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": true
+        }
+      }
+    }
+  }
+}

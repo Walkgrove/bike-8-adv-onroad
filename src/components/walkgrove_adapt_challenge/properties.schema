@@ -1,0 +1,254 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "A timed series of questions. Select start to begin.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_simple": {
+      "type": "boolean",
+      "required": true,
+      "default": true,
+      "title": "Simple version with no timing",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "Decides if the options are timed or not."
+    },
+    "_random": {
+      "type": "boolean",
+      "required": true,
+      "default": true,
+      "title": "Randomise options",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "Controls whether the options are randomised."
+    },
+    "_backgroundImage": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "An image for the main challenge items",
+      "translatable": false
+    },
+    "buttonText": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "The start button label",
+      "translatable": true
+    },
+    "_timer": {
+      "type": "string",
+      "required": false,
+      "default": 0,
+      "inputType": "Number",
+      "validators": ["required", "number"],
+      "help": "Time in seconds until the next question appears",
+      "translatable": false
+    },
+    "_timeout": {
+      "type": "string",
+      "required": false,
+      "default": 0,
+      "inputType": "Number",
+      "validators": ["required", "number"],
+      "help": "Time in seconds until the question fades out",
+      "translatable": false
+    },
+    "_pass": {
+      "type": "string",
+      "required": false,
+      "default": 0,
+      "inputType": "Number",
+      "validators": ["required", "number"],
+      "help": "Number correct to pass/complete the challenge",
+      "translatable": false
+    },
+    "choice1": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Option 1 label",
+      "translatable": true
+    },
+    "choice2": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Option 2 label",
+      "translatable": true
+    },
+    "choice3": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Option 3 label",
+      "translatable": true
+    },
+    "ins2": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "The second instruction - shown after selecting the begin button",
+      "translatable": true
+    },
+    "ins3": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "The third instruction - shown after completing the challenge",
+      "translatable": true
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Question items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "content": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "The main question content",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_colour": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "The background colour of the question",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          },
+          "_colourText": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "The colour of the question text",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          },
+          "_answer": {
+            "type": "number",
+            "required": true,
+            "default": 0,
+            "title": "Which choice number is correct i.e. 1 or 2",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "",
+            "translatable": false
+          },
+          "feedback": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "The feedback shown once an choice has been made, or the question has timed out",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          }
+        }
+      }
+    },
+    "_feedbacks": {
+      "type": "array",
+      "required": true,
+      "title": "Feedbacks",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_score": {
+            "type": "number",
+            "required": true,
+            "default": 0,
+            "title": "The score required to show this feedback",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "",
+            "translatable": false
+          },
+          "content": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "The feedback content for this score",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_image": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "The image URL to show under the feedback text",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          },
+          "_imageClass": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "CSS classes to add to the feedback image",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          }
+        }
+      }
+    }
+  }
+}

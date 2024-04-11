@@ -1,0 +1,41 @@
+{{! make the _globals object in course.json available to this template}}
+{{import_globals}}
+
+{{! All links in the nav bar should have an attribute of data-event, navigationView uses this to fire a global event}}
+<div class="nav__inner u-clearfix">
+
+  {{#if _dev}}<div class="nav__version" aria-hidden="true" aria-label="" alt="" tabindex="-1">framework v{{_frameworkVersion}} - course v{{_courseVersion}}</div>{{/if}}
+
+  {{#if _accessibility._isSkipNavigationEnabled}}
+  <button class="nav__btn nav__skip-btn aria-label a11y-ignore-focus" data-event="skipNavigation" aria-label="{{_globals._accessibility._ariaLabels.skipNavigation}}">
+      {{{_globals._accessibility.skipNavigationText}}}
+  </button>
+  {{/if}}
+
+  <button class="btn-icon nav__btn nav__back-btn js-nav-back-btn u-display-none" data-event="homeButton" aria-label="{{_globals._accessibility._ariaLabels.home}}" role="link">
+    <div class="icon"></div><span>{{_globals._accessibility._ariaLabels.home}}</span>
+  </button>
+
+  <!-- <img src="course/en/images/logo.png" class="nav__logo" aria-label="logo" /> //-->
+  
+  {{!-- <button class="btn-icon nav__btn nav__help-btn js-nav-help-btn" data-event="showHelp" aria-label="{{_globals._accessibility._ariaLabels.help}}">
+    {{_globals._accessibility._ariaLabels.help}}
+  </button> --}}
+  
+  <button class="btn-icon nav__btn nav__drawer-btn js-nav-drawer-btn" data-event="toggleDrawer" aria-label="{{_globals._accessibility._ariaLabels.navigationDrawer}}">
+    {{_globals._accessibility._ariaLabels.resources}}
+  </button>
+
+  <button class="btn-icon nav__btn nav__audio-transcript-btn js-nav-audio-transcript-btn" data-event="toggleTranscriptAudio" aria-label="{{_globals._accessibility._ariaLabels.transcript}}">
+    <div class="icon"></div>
+  </button>
+  
+  <button class="btn-icon nav__btn nav__audio-playpause-btn js-nav-audio-playpause-btn" data-event="togglePlayAudio" aria-label="{{_globals._accessibility._ariaLabels.playPause}}">
+    <div class="icon"></div>
+  </button>
+
+  <button class="btn-icon nav__btn nav__audio-btn js-nav-audio-btn" data-event="toggleAudio" aria-label="{{_globals._accessibility._ariaLabels.sound}}">
+    <div class="icon"></div>
+  </button>
+
+</div>

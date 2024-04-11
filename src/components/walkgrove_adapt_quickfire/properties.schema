@@ -1,0 +1,165 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "A series of questions. Select an option to progress to the next question.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_passPercent": {
+      "type": "number",
+      "required": true,
+      "default": 1,
+      "title": "Pass percentage required",
+      "validators": ["required", "number"]
+    },
+    "_attempts": {
+      "type": "number",
+      "required": true,
+      "default": 1,
+      "title": "Attempts",
+      "inputType": "Number",
+      "validators": ["required", "number"],
+      "help": "How many attempts the learner is allowed"
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Questions",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "stem": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Question stem",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_options": {
+            "type": "object",
+            "required": true,
+            "title": "Options",
+            "properties": {
+              "option1": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Option 1 title",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": true
+              },
+              "option2": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "title": "Option 2 title",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": true
+              }
+            }
+          },
+          "_correct": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Correct option number",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          }
+        }
+      }
+    },
+    "_feedback": {
+      "type": "object",
+      "required": true,
+      "title": "Feedbacks",
+      "properties": {
+        "pass": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Pass feeback",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": true
+        },
+        "partialFail": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Partial Fail feedback",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": true
+        },
+        "fail": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Fail feedback",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": true
+        },
+        "retryText": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Retry button title",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": true
+        },
+        "correctText": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "title": "Show correct answers button title",
+          "inputType": "Text",
+          "validators": [],
+          "help": "",
+          "translatable": true
+        }
+      }
+    }
+  }
+}

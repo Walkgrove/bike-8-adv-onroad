@@ -1,0 +1,19 @@
+{
+    "name": "walkgrove_adapt_graphicBuild",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/walkgrove/walkgrove_adapt_graphicBuild.git"
+    },
+    "framework": "5",
+    "version": "1.0.0",
+    "homepage": "https://github.com/walkgrove/walkgrove_adapt_graphicBuild.git",
+    "component": "graphicBuild",
+    "displayName": "Graphic Build",
+    "description": "",
+    "main": "/js/walkgrove_adapt_graphicBuild.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPL-3.0"
+}
