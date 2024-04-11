@@ -110,7 +110,7 @@
                 "title": "Select Graphic",
                 "inputType": "Asset:image",
                 "validators": ["required"],
-                "help": "Image which will be rendered"
+                "help": ""
               },
               "alt": {
                 "type": "string",
@@ -140,7 +140,7 @@
             "title": "Narrative strapline",
             "inputType": "Text",
             "validators": ["required"],
-            "help": "Strapline - displayed on mobile version only",
+            "help": "",
             "translatable": true
           }
         }

@@ -7,7 +7,8 @@ define([
   var FooterView = ComponentView.extend({
 
     events: {
-      'click .js-click-home': 'goHome'
+      'click .js-click-home': 'goHome',
+      'click .js-return': 'goReturn'
     },
     
     preRender: function() {
@@ -47,6 +48,11 @@ define([
 
     goHome: function() {
       Adapt.router.navigateToHomeRoute();
+    },
+
+    goReturn: function(event) {
+      var id = $(event.currentTarget).data('href');
+      Adapt.navigateToElement('.' + id, { replace: true });
     },
 
     checkIfResetOnRevisit: function() {

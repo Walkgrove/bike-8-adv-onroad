@@ -1,0 +1,23 @@
+<div class="component__inner flipcards__inner">
+  {{> component this}} 
+
+  <div class="flipcards__main">
+    {{#each _items}}
+    <div class="flipcards__widget {{_classes}} large-{{../_columns._large}} medium-{{../_columns._medium}} small-{{../_columns._small}}" data-index="{{@index}}">
+      <button class=" flipcards__card js-flip-item" aria-label="{{_front.title}}. {{@root/_globals._accessibility._ariaLabels.showmore}}">
+        <img src="{{_front._icon}}" class="flipcards__icon" style="opacity:0;" class="a11y-ignore" aria-hidden="true" alt=""   />
+        <div class="flipcards__card-front">
+          {{#if _front.title}}<button class="flipcards__title-front" role="button" aria-hidden="true" alt="">{{{_front.title}}}</button>{{/if}}
+          {{#if _front._icon}}<img src="{{_front._icon}}" class="flipcards__icon" class="a11y-ignore" aria-hidden="true" alt="" />{{/if}}
+        </div>
+        <div class="flipcards__card-back">
+          {{#if _back.title}}<div class="flipcards__title-back" role="heading" aria-level="3"  tabindex="0" >{{{_back.title}}}</div>{{/if}}
+          {{#if _back.content}}<div class="flipcards__content" tabindex="0">{{{_back.content}}}</div>{{/if}}
+          {{#if _back._image}}<img src="{{_back._image}}" class="flipcards__image" class="a11y-ignore" aria-hidden="true" alt=""  />{{/if}}
+        </div>
+      </button>
+    </div>
+    {{/each}}
+  </div>
+
+</div>

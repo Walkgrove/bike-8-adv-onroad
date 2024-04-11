@@ -15,6 +15,15 @@ define([
 
     _data: '',
     _fontfamily: 'default',
+
+    _xapi: null,
+    _actorDetails: null,
+
+    _courseid: "bike-7-m3",
+    _activityId: "https://cloud.scorm.com/",
+
+    _reflectdata: null,
+    _state: false,
     
     preRender: function() {
       this.checkIfResetOnRevisit();
@@ -26,6 +35,32 @@ define([
             return opts.inverse(this);
         }
       });
+      this.listenTo(Adapt, {
+        'reflect:data': this.onGetXAPIState
+      });
+
+      this._activityId += "" + this._courseid + "",
+      this._stateId = this._activityId + this._activityId + "",
+
+      require(['https://unpkg.com/@xapi/xapi'], (XAPI) => {
+        const learnerdata = Adapt.offlineStorage.get("learnerinfo");
+
+        const _endpoint = "https://cloud.scorm.com/lrs/DQKRU0EHDD/";
+        const _auth = `Basic ${btoa('tbBmy5FNh0-AOScGIdE:CeJeS3Q7pWIKBFlND-M')}`; // `Basic ${btoa('accounts@walkgrove.co.uk:Trap3z1um$22')}`;
+
+        this._xapi = new XAPI({
+          endpoint: _endpoint,
+          auth: _auth
+        });
+
+        this._actorDetails = {
+          objectType: "Agent",
+          name: learnerdata.name,
+          mbox: "mailto:" + learnerdata.id
+        };
+
+        this.onGetXAPIState();
+      })
     },
 
     postRender: function() {
@@ -35,13 +70,64 @@ define([
 
       this.$('.js-reflection-save-click').prop('disabled', true);
 
-      if(this.model.get('_buttons').save === "") {
+      // console.log(this.model, this.model.get('_buttons'), this.model.get('_buttons').save);
+
+      this.model.set('_isComplete', false);
+
+      if(this.model.get('_buttons') && this.model.get('_buttons').save === "") {
         this.$('.js-reflection-export-click').addClass('is-visible');
-        this.$('.js-reflection-export-click').addClass('float-left');
         this.$('.js-reflection-save-click').addClass('is-hidden');
       }
 
+      
     },
+
+    onGetXAPIState: function() {
+      this.$('.reflection__loader').removeClass('is-hidden');
+      // console.log('>>>>> get state', this.model.get('_id'));
+      // GET the xAPI state ...
+      this._xapi.getState({
+        agent: this._actorDetails,
+        activityId: this._activityId,
+        stateId: this._stateId
+      }).then((result) => {
+        // console.log('>>>> getState', result.data);
+        this._reflectdata = result.data;
+        this._state = true;
+        this.$('.reflection__loader').addClass('is-hidden');
+        this.checkIfResetOnRevisit();
+      }).catch((error) => {
+        // console.log("no coursestate");
+        this._state = false;
+        this.$('.reflection__loader').addClass('is-hidden');
+        this.onCreateXAPIState();
+      });
+    },
+
+    onCreateXAPIState: function() {
+      // if not one, then CREATE one!
+      this._xapi.createState({
+        agent: this._actorDetails,
+        activityId: this._activityId,
+        stateId: this._stateId,
+        state: this._reflectdata
+      });
+      this._state = true;
+
+      this.onSaveXAPIState();
+    },
+
+    onSaveXAPIState: function() {
+      // SET
+      this._xapi.setState({
+        agent: this._actorDetails, 
+        activityId: this._activityId, 
+        stateId: this._stateId, 
+        state: this._reflectdata
+      });
+
+      // console.log('>>>> onSaveXAPIState', this._reflectdata);
+    },        
 
     onSaveActive: function() {
 
@@ -52,7 +138,7 @@ define([
         if(this.$('.reflection__item-textbox').eq(index).val() === '') {
           allowSave = false;
         }
-        const charCountLeft = 255 - this.$('.reflection__item-textbox').eq(index).val().length;
+        const charCountLeft = 500 - this.$('.reflection__item-textbox').eq(index).val().length;
         this.$('.reflection__character-count').eq(index).html('' + charCountLeft + '');
       });
 
@@ -62,12 +148,6 @@ define([
       } else {
         this.$('.js-reflection-save-click').prop('disabled', true);
       }
-
-
-
-    
-
-
     },
 
     setupInview: function() {
@@ -82,9 +162,12 @@ define([
 
     onSaveData: function() {
 
+      this.model.set('_isComplete', true);
+
       // save to scorm data
       //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
-      let reflectionData = Adapt.offlineStorage.get('reflection_data');
+      // this.onGetXAPIState();
+      let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
 
       let dataFound = true;
       if (reflectionData === 'undefined' || reflectionData === null || reflectionData === "") {
@@ -92,50 +175,62 @@ define([
       }
 
       let activityFound = false;
-      let activityID = "";
-      const reflectActivities = reflectionData.split("$$");
-      for(let a=0; a<reflectActivities.length; a++) {
-        const reflects = reflectActivities[a].split("$");
-        for(let r=0; r<reflects.length-1; r++){
-          let reflect = reflects[r].split("^");
-          if(r === 0 ) {
-            if (reflect[0] === this.model.get('_id')) {
-              activityFound = true;
-              activityID = this.model.get('_id');
-            }
-          }
-        }
-      }
+      let activityID = this.model.get('_id');
 
       const activityTitle = this.model.get('_activity').title ? this.model.get('_activity').title : ' ';
       const activityBody = this.model.get('_activity').body ? this.model.get('_activity').body : ' ';
 
       // add initial activity info ...
       const reflectionActivityData = this.model.get('_id') + '^' + activityTitle + '^' + activityBody + '$';
-
+      
       let reflectionDataNew = '';
+      let newData = '';
+
+      let activityToChange = false;
 
       if(dataFound === true) {
-        let newRData = '';
-        // loop through existing and add it to the new str - if not current activity
-        for(let a=0; a<reflectActivities.length; a++) {
-          let activityToChange = false;
+        let reflectActivities = reflectionData.split("$$");  
+        activityFound = false;
+        for(let a=0; a<reflectActivities.length-1; a++) {
+          
           const reflects = reflectActivities[a].split("$");
-          for(let r=0; r<reflects.length-1; r++){
+          activityToChange = false;
+          for(let r=0; r<reflects.length; r++){
             let reflect = reflects[r].split("^");
+
             if(r === 0) {
+  
               if(reflect[0] === activityID) {
+                activityFound = true;
                 activityToChange = true;
               }
+              newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2];
+            } else {
+              if(reflects.length-1 === 1) {
+                if(activityToChange === true) {
+                  reflect[4] = this.$('.js-reflection-textbox').eq(0).val();
+                }
+                newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '';
+              } else {
+                for(let i=0; i<reflects.length-1; i++){
+                  if(i === Number(reflect[0])) {
+                    if(activityToChange === true) {
+                      reflect[4] = this.$('.js-reflection-textbox').eq(i).val();
+                    }
+                    newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '';
+                  }
+                }
+              }
             }
+            
+            newData += '$';
+  
           }
-          if(activityToChange === false) {
-            newRData += reflectActivities[a];
-          }
-        }
-        reflectionDataNew += newRData + '$$';
-      }
+          newData += '$';
 
+        }
+      }
+      
       // add any new activity data
       if(dataFound === false || activityFound === false) {
 
@@ -145,88 +240,34 @@ define([
           const subTitleText = this.model.get('_items')[0].subtitle ? this.model.get('_items')[0].subtitle : ' ';
           const questionText = this.model.get('_items')[0].question ? this.model.get('_items')[0].question : ' ';
 
-          reflectionDataNew += reflectionActivityData + '0^' + titleText + '^' + subTitleText + '^' + questionText + '^' + $('.' + this.model.get('_id') + '').find('.js-reflection-textbox').eq(0).val()+ '$$';
+          newData += reflectionActivityData + '0^' + titleText + '^' + subTitleText + '^' + questionText + '^' + this.$('.js-reflection-textbox').eq(0).val() + '$$';
 
         } else {
 
-          reflectionDataNew += '' + reflectionActivityData;
+          newData += '' + reflectionActivityData;
           this.model.get('_items').forEach((item, i) => {
             const titleText = item.title ? item.title : ' ';
             const subTitleText = item.subtitle ? item.subtitle : ' ';
             const questionText = item.question ? item.question : ' ';
-            reflectionDataNew += '' + i + '^' + titleText + '^' + subTitleText + '^' + questionText + '^' + $('.' + this.model.get('_id') + '').find('.js-reflection-textbox').eq(i).val() + '$';
+            newData += '' + i + '^' + titleText + '^' + subTitleText + '^' + questionText + '^' + this.$('.js-reflection-textbox').eq(i).val() + '$';
           });
-          reflectionDataNew += '$';
+          newData += '$';
 
         }
-
-      }
-
-      // if activity already exists, update the relevant 
-      if(activityFound === true) {
         
-        let newData = "";
-
-        if(this.model.get('_items').length === 1) {
-
-          const reflectActivities = reflectionData.split("$$");
-          for(let a=0; a<reflectActivities.length; a++) {
-            let activityToChange = false;
-            const reflects = reflectActivities[a].split("$");
-            for(let r=0; r<reflects.length; r++){
-              let reflect = reflects[r].split("^");
-              if(r === 0) {
-                if(reflect[0] === activityID) {
-                  activityToChange = true;
-                  newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '$';
-                }
-              } else {
-                if(activityToChange === true) {
-                  reflect[4] = $('.' + activityID + '').find('.js-reflection-textbox').eq(0).val();
-                  newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '$';
-                } 
-              }
-            }
-          }
-          reflectionDataNew += newData + '$';
-
-        } else {
-
-          const reflectActivities = reflectionData.split("$$");
-          for(let a=0; a<reflectActivities.length; a++) {
-            let activityToChange = false;
-            const reflects = reflectActivities[a].split("$");
-            for(let r=0; r<reflects.length; r++){
-              let reflect = reflects[r].split("^");
-              if(reflect.length > 1) {
-                if(r === 0) {
-                  if(reflect[0] === activityID) {
-                    activityToChange = true;
-                    newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '$';
-                  }
-                } else {
-                  if(activityToChange === true) {
-                    this.model.get('_items').forEach((item, i) => {
-                      if(i === Number(reflect[0])) {
-                        reflect[4] = $('.' + activityID + '').find('.js-reflection-textbox').eq(i).val();
-                        newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '$';
-                      }
-                    });
-                  } 
-                }
-              }
-            }
-          }
-          reflectionDataNew += newData + '$';
-
-        }
-
       }
 
+      
+      reflectionDataNew += newData;
 
       this._data = reflectionDataNew;
       // save to SCORM
-      Adapt.offlineStorage.set('r', this._data);
+      this._reflectdata = this._data; //Adapt.offlineStorage.set('r', this._data);
+      // if(this._state === false) {
+      //   this.onCreateXAPIState();
+      // } else {
+        this.onSaveXAPIState();
+      // }
 
       // show as saved ...
       if(this.model.get('_message')._inline === true) {
@@ -269,7 +310,7 @@ define([
       //set the up-to-date content/data to use in the creation of the PDF
       // if (this._data === '') {
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
-        let reflectionData = Adapt.offlineStorage.get('reflection_data');
+        let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
         this._data = reflectionData;
       // }
 
@@ -296,6 +337,7 @@ define([
         //doc.setFontType("bold");
 
         const PDFHeaderTitle = this.model.get('pdf')._header.title ? this.model.get('pdf')._header.title : ' ';
+        const PDFHeaderSubitle = this.model.get('pdf')._header.subtitle ? this.model.get('pdf')._header.subtitle : ' ';
 
         // HEADER
         // -- image
@@ -318,16 +360,15 @@ define([
         // --- PDFHeaderTitle -- title box
         doc.setDrawColor(0);
         this.setFillColorHexToRgb(doc, this.model.get('pdf')._header._titleStyling._backgroundColour);
-        const boxH = this.model.get('pdf')._header._titleStyling._fontSize + vPadding/2;
-        const boxY = yPos-(vPadding/2)-(this.model.get('pdf')._header._titleStyling._fontSize/2)+5;
-        doc.rect(0, boxY, maxWidth, boxH, "F");
+        // const boxH = this.model.get('pdf')._header._titleStyling._fontSize + vPadding/2;
+        // doc.rect(0, this.model.get('pdf')._header._titleStyling._top, this.model.get('pdf')._header._titleStyling._width, this.model.get('pdf')._header._titleStyling._height, "F");
         // -- title
         doc.setFontSize(this.model.get('pdf')._header._titleStyling._fontSize);
         this.setTextColorHexToRgb(doc, this.model.get('pdf')._header._titleStyling._fontColour);
         if(this._fontfamily !== "default") {
           doc.setFont(this._fontfamily, "bold");
         }
-        let leftP = leftPos;
+        let leftP = this.model.get('pdf')._header._titleStyling._left + leftPos;
         switch(this.model.get('pdf')._header._titleStyling._fontAlign){
           case "center":
             leftP = maxWidth/2;
@@ -336,9 +377,15 @@ define([
             leftP = maxWidth - leftPos;
             break;
         }
-        doc.text(PDFHeaderTitle, leftP, yPos+5, { align: this.model.get('pdf')._header._titleStyling._fontAlign, maxWidth: maxWidth });
+        doc.text(PDFHeaderTitle, leftP, this.model.get('pdf')._header._titleStyling._top, { align: this.model.get('pdf')._header._titleStyling._fontAlign, maxWidth: maxWidth - 20 });
         
-        yPos += (boxH + vPadding/2)+5;
+        yPos += (this.model.get('pdf')._header._titleStyling._height + (vPadding*2));
+
+        this.setTextColorHexToRgb(doc, this.model.get('pdf')._header._subtitleStyling._fontColour);
+        doc.text(PDFHeaderSubitle, leftP, yPos, { align: this.model.get('pdf')._header._subtitleStyling._fontAlign, maxWidth: maxWidth - 20 });
+        
+        yPos += vPadding*2;
+
 
         if(this._fontfamily !== "default") {
           doc.setFont(this._fontfamily, "normal");
@@ -346,14 +393,13 @@ define([
 
         // INPUT CONTENT
 
-        let tempID = '';
         //split into each activity
         const reflectActivities = this._data.split("$$");
 
         for(let a=0; a<reflectActivities.length-1; a++) {
 
           if(a !== 0 ) {
-            yPos = this.checkNewPagePDF(doc, yPos);
+            // yPos = this.newPagePDF(doc, yPos);
           }
 
           const reflects = reflectActivities[a].split("$");
@@ -363,105 +409,118 @@ define([
             const reflect = reflects[r].split("^");
 
             if(reflect.length > 1 ) {
-              if(r === 0) {
-                const _id = reflect[0];
+              
+              var str1 = reflect[1];
+              var str2 = "slider";
+              let sliderData = false;
+              if(str1.indexOf(str2) !== -1){
+                sliderData = true;
+              }
+              if(sliderData === false) {
 
-                // set activity id
-                if (_id !== tempID) {
-                  tempID = _id;
-                }
+                if(r === 0) {
+                  // console.log(reflect);
+                  this.setTextColorHexToRgb(doc, this.model.get('pdf')._activityStyling._fontColour);
 
-                this.setTextColorHexToRgb(doc, this.model.get('pdf')._fontColour);
+                  //activityTitle
+                  const activityTitle = reflect[1];
+                  const actTitleSize = this.model.get('pdf')._activityStyling._fontTitleSize;
+                  if(activityTitle !== ' ') {
+                    doc.setFontSize(actTitleSize);
+                    doc.text(activityTitle, leftP, yPos, { align: this.model.get('pdf')._header._titleStyling._fontAlign, maxWidth: maxWidth - 20 });
+                    yPos += vPadding*2; //(actTitleSize/2 + vPadding);
+                    yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
+                  }
 
-                //activityTitle
-                const activityTitle = reflect[1];
-                const actTitleSize = this.model.get('pdf')._header._titleStyling._fontSize - 2;
-                if(activityTitle !== ' ') {
-                  this.setTextColorHexToRgb(doc, this.model.get('pdf')._items._activityStyling._fontColour);
-                  doc.setFontSize(actTitleSize);
-                  doc.text(activityTitle, leftP, yPos, { align: this.model.get('pdf')._header._titleStyling._fontAlign, maxWidth: maxWidth - 20 });
-                  yPos += vPadding*1.5; //(actTitleSize/2 + vPadding);
-                  yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
-                }
-
-                //activityBody
-                const activityBody = reflect[2];
-                const actBodySize = this.model.get('pdf')._items._activityStyling._fontSize;
-                if(activityBody !== ' ') {
                   this.setTextColorHexToRgb(doc, this.model.get('pdf')._fontColour);
-                  doc.setFontSize(actBodySize);
-                  doc.text(activityBody, leftP, yPos, { align: this.model.get('pdf')._header._titleStyling._fontAlign, maxWidth: maxWidth - 20 });
-                  yPos += vPadding*2; //(actBodySize/2 + vPadding);
-                  yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
-                }
 
-              } else {
+                  //activityBody
+                  const activityBody = reflect[2];
+                  const actBodySize = this.model.get('pdf')._fontSize;
+                  if(activityBody !== ' ') {
+                    doc.setFontSize(actBodySize);
+                    doc.text(activityBody, leftP, yPos, { align: this.model.get('pdf')._header._titleStyling._fontAlign, maxWidth: maxWidth - 20 });
+                    yPos += vPadding*2; //(actBodySize/2 + vPadding);
+                    yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
+                  }
 
-                // item title
-                let itemTitle = reflect[1];
-                if(itemTitle !== ' ') {
-                  this.setTextColorHexToRgb(doc, this.model.get('pdf')._items._titleStyling._fontColour);
-                  doc.setFontSize(this.model.get('pdf')._items._titleStyling._fontSize);
-              
-                  itemTitle = itemTitle.replace(/(<([^>]+)>)/ig," ");
-                  doc.text(itemTitle, leftPos, yPos, { align: 'left', maxWidth: maxWidth - 20 });
-                  yPos += vPadding*1.5;
-                  yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
-                }
+                } else {
+
+                  // item title
+                  let itemTitle = reflect[1];
+                  if(itemTitle !== ' ') {
+                    this.setTextColorHexToRgb(doc, this.model.get('pdf')._items._titleStyling._fontColour);
+                    doc.setFontSize(this.model.get('pdf')._items._titleStyling._fontSize);
                 
-                // item subtitle
-                let itemSubtitle = reflect[2];
-                if(itemSubtitle !== ' ') {
-                  this.setTextColorHexToRgb(doc, this.model.get('pdf')._items._subtitleStyling._fontColour);
-                  doc.setFontSize(this.model.get('pdf')._items._subtitleStyling._fontSize);
-              
-                  itemSubtitle = itemSubtitle.replace(/(<([^>]+)>)/ig," ");
-                  doc.text(itemSubtitle, leftPos, yPos, { align: 'left', maxWidth: maxWidth - 20 });
-                  yPos += vPadding*1.5;
-                  yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
-                }
-
-                // item question
-                let itemQuestion = reflect[3];
-                if(itemQuestion !== ' ') {
-                  this.setTextColorHexToRgb(doc, this.model.get('pdf')._items._questionStyling._fontColour);
-                  doc.setFontSize(this.model.get('pdf')._items._questionStyling._fontSize);
+                    itemTitle = itemTitle.replace(/(<([^>]+)>)/ig,"");
+                    doc.text(itemTitle, leftPos, yPos, { align: 'left', maxWidth: maxWidth - 20 });
+                    yPos += vPadding*1.5;
+                    yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
+                  }
+                  
+                  // item subtitle
+                  let itemSubtitle = reflect[2];
+                  if(itemSubtitle !== ' ') {
+                    this.setTextColorHexToRgb(doc, this.model.get('pdf')._items._subtitleStyling._fontColour);
+                    doc.setFontSize(this.model.get('pdf')._items._subtitleStyling._fontSize);
                 
-                  itemQuestion = itemQuestion.replace(/(<([^>]+)>)/ig," ");
-                  doc.text(itemQuestion, leftPos, yPos, { align: 'left', maxWidth: maxWidth - 20 });
-                  const rows = Math.round(itemQuestion.length/75)+1;
-                  yPos += ((rows * 5) + vPadding + 5);
-                  yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
+                    itemSubtitle = itemSubtitle.replace(/(<([^>]+)>)/ig,"");
+                    doc.text(itemSubtitle, leftPos, yPos, { align: 'left', maxWidth: maxWidth - 20 });
+                    yPos += vPadding*1.5;
+                    yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
+                  }
+
+                  // item question
+                  let itemQuestion = reflect[3];
+                  // console.log('|' + itemQuestion + '|', reflect[4]);
+                  if(itemQuestion !== ' ') {//} && itemQuestion !== undefined && itemQuestion !== 'undefined') {
+                    this.setTextColorHexToRgb(doc, this.model.get('pdf')._items._questionStyling._fontColour);
+                    doc.setFontSize(this.model.get('pdf')._items._questionStyling._fontSize);
+                  
+                    itemQuestion = itemQuestion.replace(/(<([^>]+)>)/ig,"");
+                    doc.text(itemQuestion, leftPos, yPos, { align: 'left', maxWidth: maxWidth - 20 });
+                    yPos += vPadding*2;
+                    yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
+                  }
+
+                  const boxY = Number(yPos) - Number(vPadding);
+
+                  // input content
+                  this.setTextColorHexToRgb(doc, this.model.get('pdf')._fontColour);
+                  const contentTextSize = this.model.get('pdf')._fontSize;
+                  doc.setFontSize(contentTextSize);
+
+                  const inputContent = reflect[4];
+                  // if(inputContent !== '' && inputContent !== undefined && inputContent !== 'undefined') {
+                    doc.text(inputContent, leftPos + 10, yPos, { align: 'left', maxWidth: maxWidth - 40 }); ///to fit inside box
+                    const rows = Math.round(inputContent.length/75)+1;
+                    yPos += ((rows * 6) + vPadding + 10);
+
+                    this.setFillColorHexToRgb(doc, '#f2f2f2');
+                    doc.setLineWidth(0.1);
+                    doc.roundedRect(leftPos, boxY, maxWidth-20, (rows*6)+10, 3, 3);
+
+                    yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
+                  // }
+
                 }
-
-                const boxY = Number(yPos) - Number(vPadding);
-
-                // input content
-                this.setTextColorHexToRgb(doc, this.model.get('pdf')._fontColour);
-                const contentTextSize = this.model.get('pdf')._fontSize;
-                doc.setFontSize(contentTextSize);
-
-                const inputContent = reflect[4];
-                doc.text(inputContent, leftPos + 10, yPos, { align: 'left', maxWidth: maxWidth - 40 }); ///to fit inside box
-                const rows = Math.round(inputContent.length/75)+1;
-                yPos += ((rows * 5) + vPadding + 5);
-
-                this.setFillColorHexToRgb(doc, '#f2f2f2');
-                doc.setLineWidth(0.1);
-                doc.roundedRect(leftPos, boxY, maxWidth-20, (rows*5)+10, 3, 3);
-
-                // yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
 
               }
+
+
             }
           }
         }
+
+        // yPos = this.newPagePDF(doc, yPos);
 
         this.addFooter(doc);
 
         let filename = this.model.get('pdf').filename;
         filename.replace(" ", "-");
-        doc.save("" + filename + "-" + dateToday + ".pdf");
+        // doc.save("" + filename + "-" + dateToday + ".pdf");
+        var blob = doc.output("blob");
+        window.open(URL.createObjectURL(blob));
 
       });
 
@@ -473,7 +532,6 @@ define([
       if (yPos >= pageHeight) {
           this.addFooter(doc);
           doc.addPage();
-          doc.setFont(this._fontfamily, "normal");
           yPos = 20; // Restart height position
       }
       return yPos;
@@ -482,7 +540,6 @@ define([
     newPagePDF: function(doc, yPos) {
       this.addFooter(doc);
       doc.addPage();
-      doc.setFont(this._fontfamily, "normal");
       yPos = 20; // Restart height position
       return yPos;
     },
@@ -493,7 +550,7 @@ define([
         
       const centerPos = 100;
       const maxWidth = 190;
-      const bottomPos = 292;
+      const bottomPos = 290;
 
       if(this.model.get('pdf')._footer && this.model.get('pdf')._footer.image !== null) {
         const pdfImageFooter = this.model.get('pdf')._footer.image;
@@ -502,11 +559,10 @@ define([
 
         const wPercVar = doc.internal.pageSize.width/100;
         const hPercVar = doc.internal.pageSize.height/100;
-        let widthVar = Math.round(this.model.get('pdf')._footer._imageStyling._width * wPercVar)+1;
+        let widthVar = Math.round(this.model.get('pdf')._footer._imageStyling._width * wPercVar);
         let heightVar = Math.round(this.model.get('pdf')._footer._imageStyling._height * hPercVar);
-        let leftVar = Math.round(this.model.get('pdf')._footer._imageStyling._left * wPercVar)-1;
+        let leftVar = Math.round(this.model.get('pdf')._footer._imageStyling._left * wPercVar);
         let topVar = Math.round((100-this.model.get('pdf')._footer._imageStyling._bottom) * hPercVar);
-        console.log(leftVar, topVar, widthVar, heightVar);
 
         doc.addImage(pdfImageFooter, imgType, leftVar, topVar, widthVar, heightVar, '', 'none', 0);
       }
@@ -519,13 +575,14 @@ define([
         doc.setFont(this._fontfamily, "italic");
       }
       doc.text(dateToShow, centerPos, bottomPos, { align: 'center', maxWidth: maxWidth });
+      doc.setFont(this._fontfamily, "normal");
     },
 
     /**
      * determines which element should be used for inview logic - body, instruction or title - and returns the selector for that element
      */
     getInviewElementSelector: function() {
-     return 'reflection__message';
+     return 'reflection__main';
     },
 
     checkIfResetOnRevisit: function() {
@@ -533,39 +590,49 @@ define([
 
       _.delay(() => {
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
-        let reflectionData = Adapt.offlineStorage.get('reflection_data');
+        let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
 
         if (reflectionData !== 'undefined' && reflectionData !== null && reflectionData !== "") {
+
+          // console.log(reflectionData);
 
           const reflectActivities = reflectionData.split("$$");
           for(let a=0; a<reflectActivities.length; a++) {
             const reflects = reflectActivities[a].split("$");
 
+            let _reflectId = this.model.get('_id');
             let _id = "";
             let countVar = reflects.length;
-            if(this.model.get('_items').length === 1) {
-              countVar = reflects.length-1;
-            }
+            // if(this.model.get('_items').length === 1) {
+            //   countVar = reflects.length-1;
+            // }
             for(let r=0; r<countVar; r++){
               let reflect = reflects[r].split("^");
               if(r === 0 ) {
                 _id = reflect[0];
               } else {
-                // one input ...?
-                if(countVar === 1) {
-                  $('.'+ _id + '').find('.js-reflection-textbox').eq(0).val(reflect[4]);
-                } else {
-                  this.model.get('_items').forEach((item, i) => {
-                    if(i === Number(reflect[0])) {
-                      $('.' + _id + '').find('.js-reflection-textbox').eq(i).val(reflect[4]);
-                      const charCountLeft = 255 - this.$('.reflection__item-textbox').eq(i).val().length;
-                      this.$('.reflection__character-count').eq(i).html('' + charCountLeft + '');
-                    }
-                  });
-                }
-                
-                if(this.model.get('exportText') != "") {
-                  this.$('.js-reflection-export-click').addClass('is-visible');
+                if(_id === _reflectId) {
+                  // one input ...?
+                  if(countVar === 1) {
+                    this.$('.js-reflection-textbox').eq(0).val(reflect[4]);
+                    // console.log('>>>>>>>>>>>>>>', _id, _reflectId, reflect[4]);
+                  } else {
+                    this.model.get('_items').forEach((item, i) => {
+                      if(i === Number(reflect[0])) {
+                        this.$('.js-reflection-textbox').eq(i).val(reflect[4]);
+                        const charCountLeft = 500 - this.$('.reflection__item-textbox').eq(i).val().length;
+                        this.$('.reflection__character-count').eq(i).html('' + charCountLeft + '');
+                      }
+                    });
+                  }
+                  // if(this.model.get('exportText') != "") {
+                  //   this.$('.js-reflection-export-click').addClass('is-visible');
+                  // }
+                  // this.model.set('_isComplete', true);
+                  if(this.model.get('_message')._inline === true) {
+                    // ... inline
+                    this.$('.reflection__message').addClass('is-visible');
+                  }
                 }
 
               }

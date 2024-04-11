@@ -1,23 +1,13 @@
 .narrative {
-
-  &__content-inner {
-      display: flex;
-      align-self: flex-start;
-  }
-
-  &__content-item{
-      width: 100%;
-  }
-
   &__content {
     // display: none;
 
   //  @media (min-width: @device-width-medium) {
       display: block;
       .u-float-right;
-      margin-left: 2%;
-      margin-bottom: 1rem;
-      width: 53%;
+      //margin-left: 2%;
+      width: 65%;
+      padding: 4rem;
 
       .dir-rtl & {
         margin-left: inherit;
@@ -26,7 +16,7 @@
     // }
 
     
-    @media (max-width: 700px) {
+    @media (max-width: @device-width-medium) {
       width: 100%;
       // margin-bottom: 1rem;
     }
@@ -111,17 +101,17 @@
     width: 100%;
     overflow-x: hidden;
 
-    @media (min-width: 700px) {
-      width: 43%;
+    @media (min-width: @device-width-medium) {
+      width: 33%;
+      margin: 0 auto;
     }
-  }
-
-  &__slider {
-    height: 100%;
   }
 
   &__slider-image-container {
     .u-float-left;
+
+    border-radius: 1rem;
+    overflow: hidden;
   }
 
   // --------------------------------------------------
@@ -136,10 +126,6 @@
     top: 50%;
     z-index: 10;
     .transform(translateY(-50%));
-
-    // @media (min-width: @device-width-small) and (max-width: @device-width-medium) {
-    //   display: none;
-    // }
   }
 
   &__controls-left {
@@ -177,9 +163,10 @@
     justify-content: center;
     width: 100%;
 
-    // @media (min-width: @device-width-small) and (max-width: @device-width-medium) {
-    //   display: none;
-    // }
+    @media (min-width: @device-width-medium) {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 
   &__progress {
@@ -222,7 +209,6 @@
     .narrative__content {
       position: relative;
       padding-top: @icon-size + (@icon-padding * 2);
-      width: 100%;
 
       .narrative__indicators {
         display: flex;
@@ -230,17 +216,12 @@
 
       .narrative__controls-container {
         position: absolute;
-        // bottom: 0;
         top: 0;
         left: 0;
         right: 0;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
-        // @media (max-width: @device-width-small) {
-        //   display: none;
-        // }
       }
 
       .narrative__controls {
@@ -249,15 +230,6 @@
         display: block;
         transform: none;
       }
-
-      // .narrative__content-item {
-      //   @media (max-width: @device-width-medium) {
-      //     padding-bottom: 4rem;
-      //   }
-      //   @media (max-width: @device-width-small) {
-      //     padding-bottom: 0rem;
-      //   }
-      // }
 
     }
 

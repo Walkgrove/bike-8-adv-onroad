@@ -1,0 +1,28 @@
+{
+  "name": "adapt-walkgrove-timeline",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/walkgrovedev/adapt-walkgrove-timeline.git"
+  },
+  "framework": "5",
+  "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-timeline.git",
+  "component": "timeline",
+  "displayName": "Timeline",
+  "description": "A component ...",
+  "main": "/js/adapt-walkgrove-timeline.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0",
+  "_release": "f87fb6dcd9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f87fb6dcd9576bc7b45806ae1e5232f82bcac591"
+  },
+  "_source": "git://github.com/walkgrovedev/adapt-walkgrove-timeline.git",
+  "_target": "*",
+  "_originalSource": "adapt-walkgrove-timeline",
+  "_direct": true
+}

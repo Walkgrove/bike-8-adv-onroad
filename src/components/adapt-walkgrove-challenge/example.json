@@ -1,0 +1,67 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "challenge",
+        "_classes": "",
+        "_layout": "left",
+        "title": "Our first look at a component",
+        "displayTitle": "Our first look at a component",
+        "body": "This component you're reading is a text component. All components take this form of a title and body - except a blank component. However it's important to realise that title and body attributes are not needed. <br><br>Take for instance the media component opposite or below on a smaller device - has no body attribute. Instead of the HTML being rendered Adapt simply doesn't render it. The title attribute is simply a break tag to push the media component level with the opposite component.",
+        "instruction": "",
+        "_backgroundImage": "course/en/images/01_03_020_back.jpg",
+        "buttonText": "Start",
+        "_timer": 3,
+        "_timeout": 8,
+        "choice1": true,
+        "choice2": false,
+        "ins2": "<p>Select <strong>true</strong> or <strong>false</strong> for each statement.</p>",
+        "ins3": "<p>Scroll down to continue.</p>",
+        "_items": [
+            {
+                "content": "The Our Functions module will focus on your role and the function you work in",
+                "_colour": "#983dbb",
+                "_colourText": "#ffffff",
+                "_answer": 2,
+                "feedback": "The Our Functions module will focus on all of the functions within Unilever and how they work together to create a better business \u2013 there is a module specifically for your function, but that is separate!"
+            },
+            {
+                "content": "The Business Ambitions module is about Unilever\u2019s goals and objectives, as well as expectations for Unilever employees",
+                "_colour": "#0070ce",
+                "_colourText": "#ffffff",
+                "_answer": 1,
+                "feedback": "This statement is true! The Business Ambitions module will outline our expectations, objectives and goals."
+            },
+            {
+                "content": "The Helpful Tools module is about self-serving HR and IT resources which will help you in your role",
+                "_colour": "#ff595a",
+                "_colourText": "#ffffff",
+                "_answer": 1,
+                "feedback": "This statement is true! The Helpful Tools module will show you various HR and IT tools to help you control your path."
+            },
+            {
+                "content": "Key HR Processes will cover administrative information but won\u2019t go into detail about rewards and pensions",
+                "_colour": "#f97eb5",
+                "_colourText": "#0047ba",
+                "_answer": 2,
+                "feedback": "The Key HR Processes module will cover a wide range of information, including rewards and pensions."
+            }
+        ],
+        "_feedbacks": [
+            {
+                "_score": 0,
+                "content": "Could do better \u2013 as you didn\u2019t answer the majority of the questions correctly you haven\u2019t earned a reward this time.",
+                "_image": "course/en/images/silver_badge_large.png",
+                "_imageClass": "badge fade"
+            },
+            {
+                "_score": 2,
+                "content": "Not bad! You answered most of the questions in the challenge correctly so you have earned a silver badge!",
+                "_image": "course/en/images/silver_badge_large.png",
+                "_imageClass": "badge"
+            }
+        ],
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }

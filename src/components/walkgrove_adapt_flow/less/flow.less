@@ -44,17 +44,23 @@
         }
 
         .flow__item-content {
+            background-color: @bike-blue-light;
+            text-align: left;
+
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+
             width: 50%;
             @media (max-width: @device-width-small) { 
                 width: 100%;
             }
 
-            padding: 1rem;
+            padding: 1rem 2rem;
 
             .flow__item-title {
-                .item-title;
-                //font-size: 1.3rem;
-                //font-weight: 700;
+                font-size: 1.3rem;
+                font-weight: 700;
             }
 
             .flow__item-body {

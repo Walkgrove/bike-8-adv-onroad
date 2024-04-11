@@ -80,13 +80,14 @@ define([
 
       this.setQuestionAsSubmitted();
       this.markQuestion();
-      this.setScore();
       this.setupFeedback();
     },
 
     //This preserves the state of the users answers for returning or showing the users answer
     storeUserAnswer: function() {
       this.set('_userAnswer', this.get('_selectedItem').value);
+      this.setScore();
+      //console.log('>>>>>>>>>>>>>>>>>>>', 'storeUserAnswer');
     },
 
     resetUserAnswer: function() {
@@ -128,6 +129,107 @@ define([
       var questionWeight = this.get('_questionWeight');
       var score = questionWeight * numberOfCorrectAnswers;
       this.set('_score', score);
+
+      // CHECK IF ON LXP
+      if(Adapt.course.get('_isLXP') === true) {
+
+        // IF SO, save to reflection data
+        let reflectionData = Adapt.offlineStorage.get('reflection_data');
+        let dataFound = true;
+        let activityFound = false;
+        const activityID = this.get('_id');
+        if (reflectionData === 'undefined' || reflectionData === null || reflectionData === "") {
+          dataFound = false;
+          reflectionData = "";
+        }
+        if(dataFound === true) {
+          const reflectActivities = reflectionData.split("$$");  
+          for(let a=0; a<reflectActivities.length-1; a++) {
+            const reflects = reflectActivities[a].split("$");
+            for(let r=0; r<reflects.length; r++){
+              let reflect = reflects[r].split("^");
+              if(r === 0) {
+                if(reflect[0] === activityID) {
+                  activityFound = true;
+                }
+              }
+            }
+          }
+        }
+        if(!activityFound) {
+          reflectionData += "" + activityID + "^ ^ $0^slider^" + this.get('number') + "^" + this.get('value') + "^" + this.get('_userAnswer') + "$$"; 
+          Adapt.offlineStorage.set('r', reflectionData);
+        }
+
+        //is it a compare slider?
+        let sliderNum = this.get('number') - 1;
+        let sliderVal;
+        if(this.get('compare')) {
+          //GET 'compare' from reflection data ...
+          if(dataFound === true) {
+            const reflectActivities = reflectionData.split("$$");  
+            for(let a=0; a<reflectActivities.length-1; a++) {
+              const reflects = reflectActivities[a].split("$");
+              for(let r=0; r<reflects.length; r++){
+                let reflect = reflects[r].split("^");
+                if(Number(reflect[2]) === this.get('number') && reflect[3] === this.get('compare')) {
+                  sliderVal = Number(reflect[4]);
+                }
+              }
+            }
+          }
+
+          document.querySelectorAll(".slider").forEach((c, i) => {
+            if(i === sliderNum) {
+              c.querySelectorAll(".slider__number").forEach((n, nIndex) => {
+                if(nIndex === sliderVal-1) {
+                  n.classList.add('previous');
+                }
+              });
+            }
+          });
+
+        }
+
+      } else {
+
+        // IF NOT, save to LMS - set/compare slider values
+        const sliderNum = this.get('number')-1;
+        if(this.get('value')) {
+          //GET the 'value' array values from SCORM
+          let arrayValues = Adapt.offlineStorage.get('' + this.get('value') + '').split(",").map(Number);
+          if(arrayValues === null || arrayValues === 'undefined' || arrayValues === undefined){
+            arrayValues = [0,0,0];
+          } 
+
+          //SET the array posiiton with user selection 
+          arrayValues[sliderNum] = Number(this.get('_userAnswer'));
+          //SET the SCORM value with updated var
+          const newArray = Adapt.offlineStorage.set('' + this.get('value') + '', arrayValues);
+        }
+        
+        //is it a compare slider?
+        if(this.get('compare')) {
+          //GET 'compare' array values from SCORM
+          const arrayCompare = Adapt.offlineStorage.get('' + this.get('compare') + '').split(",").map(Number);
+          //FIND the relevant slider data
+          let sliderVal = Number(arrayCompare[sliderNum]);
+
+          document.querySelectorAll(".slider").forEach((c, i) => {
+            if(i === sliderNum) {
+              c.querySelectorAll(".slider__number").forEach((n, nIndex) => {
+                if(nIndex === sliderVal-1) {
+                  n.classList.add('previous');
+                }
+              });
+            }
+          });
+          
+          //console.log(sliderVal);
+          
+        }
+
+      }
     },
 
     /**

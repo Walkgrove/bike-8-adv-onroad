@@ -20,7 +20,12 @@ define([
 
     // Used by question to setup itself just before rendering
     setupQuestion: function() {
-      if (this.model.get('_isSubmitted')) return;
+      if (this.model.get('_isSubmitted')) {
+        _.delay(() => {
+          this.model.setScore();
+        }, 1000);
+        return;
+      }
 
       this.selectItem(this.getIndexFromValue(this.model.get('_selectedItem').value), true);
     },

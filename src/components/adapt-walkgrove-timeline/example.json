@@ -1,0 +1,28 @@
+{
+    "_id": "c-66",
+    "_parentId": "b-66",
+    "_type": "component",
+    "_component": "timeline",
+    "_classes": "",
+    "_layout": "full",
+    "title": "Timeline",
+    "displayTitle": "Timeline component",
+    "body": "Introduction for the timeline ...",
+    "instruction": "",
+    "buttonMore": "Read more",
+    "_items": [
+        {
+            "title": "Item 1",
+            "body": "Content for this item ..."
+        },
+        {
+            "title": "Item 2",
+            "body": "This is where the content for the item goes giving the information required ...",
+            "_image": "https://via.placeholder.com/650x400"
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true,
+        "_isCompletionIndicatorEnabled": false
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "adapt-walkgrove-flipcards",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/walkgrovedev/adapt-walkgrove-flipcards.git"
+    },
+    "framework": "5",
+    "version": "1.0.0",
+    "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-flipcards.git",
+    "component": "flipcards",
+    "displayName": "Flip cards",
+    "description": "A component with cards that flip when selecetd to show more content",
+    "main": "/js/adapt-walkgrove-flipcards.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPL-3.0"
+}

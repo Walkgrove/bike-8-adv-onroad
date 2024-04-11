@@ -1,0 +1,222 @@
+.timeline {
+    &__main, &__items {
+        height: auto;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    &__items {
+        width: 100%;
+        position: relative;
+
+        display:flex;
+        flex-direction: column;
+
+        &:after {
+            content: "";
+            height: 100%;
+            background-color: @black;
+            width: 3px;
+            position: absolute;
+            top: 0;
+            left: 0%;
+
+            @media (max-width: @device-width-small) {
+                display: none;
+            }
+        }
+
+        &.is-hidden {
+            &:after {
+                display: none;
+            }
+        }
+
+        &.is-more {
+            &:after {
+                height: 90%;
+            }
+        }
+    }
+
+    &__widget {
+        margin: 1rem 0;
+        width: 95%;
+        max-width: 95%;
+
+        &.is-hidden {
+            display: none;
+        }
+
+        @media (max-width: @device-width-small) {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        border: 1px solid @item-color;
+        background-color: @bike-blue-light;
+
+        position: relative;
+        
+        display:flex;
+        flex-direction: column;
+        align-self: flex-end;
+
+        &:after {
+            content: "";
+            height: 100%;
+            background-color: @item-color;
+            border: 1px solid @black;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            position: absolute;
+            left: -5%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index:2;
+
+            @media (max-width: @device-width-small) {
+                display: none;
+            }
+        }
+    }
+
+    // &__widget:nth-child(even) {
+    //     align-self: flex-end;
+
+    //     border: 1px solid @primary-colour;
+
+    //     &:after {
+    //         content: "";
+    //         background-color: @primary-colour;
+    //         left: -11%;
+    //     }
+
+    //     .timeline__item-title {
+    //         background-color: @primary-colour;
+    //         color: @item-color-inverted;
+    //     }
+    // }
+
+    
+    &__item-title {
+        font-size: 1.2em;
+        padding: 1rem;
+
+        background-color: @item-color;
+        color: @item-color-inverted;
+    }
+
+    &__item-body-container {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: stretch;
+
+        .timeline__item-body {
+            max-width: 70%;
+            width: 70%;
+            @media (max-width: @device-width-small) {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        img {
+            background-color: @white;
+            max-width: 30%;
+            width: 30%;
+            min-width: 30%;
+            @media (max-width: @device-width-small) {
+                max-width: 100%;
+                width: 100%;
+                min-width: 100%;
+            }
+            
+            object-fit: contain;
+        }
+
+        @media (max-width: @device-width-small) {
+            flex-direction: column;
+        }
+    }
+
+    &__item-body {
+        padding: 1rem;
+
+    }
+
+    &__item-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__button-more {
+        display: none;
+        height: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0rem;
+
+        &.is-visible {
+            display: flex;
+        }
+
+        &:before {
+            content: " ";
+            top:50%;
+            left: 0%;
+            transform: translate(0%, -50%);
+            width: 30%;
+            height: 2px;
+            background-color: @white;
+            margin: 0 2rem;
+        }
+
+        &:after {
+            content: " ";
+            top:50%;
+            right: 0%;
+            transform: translate(0%, -50%);
+            width: 30%;
+            height: 2px;
+            background-color: @white;
+            margin: 0 2rem;
+        }
+    }
+
+    .js-timeline-more-click {
+        display: flex;
+    }
+
+    .timeline__btn-more {
+        .icon-plus;
+        // margin: 0.5rem;
+    }
+    
+}
+
+
+.dir-rtl {
+    .timeline {
+        &__widget {
+            
+            &:after {
+                left: -11.5%;
+            }
+        }
+    
+        &__widget:nth-child(even) {
+
+            &:after {
+                left: 111.5%;
+            }
+        }
+    }
+}

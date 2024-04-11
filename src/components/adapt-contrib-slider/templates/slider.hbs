@@ -2,7 +2,28 @@
 
   {{> component this}}
 
+  <img class="slider__image" src="{{_background}}"></img>
+
   <div class="component__widget slider__widget{{#unless _isEnabled}} is-disabled{{#if _isInteractionComplete}} is-complete is-submitted show-user-answer{{#if _canShowMarking}}{{#if _isCorrect}} is-correct{{else}} is-incorrect{{/if}}{{/if}}{{/if}}{{/unless}}">
+
+    <div class="slider__number-container">
+      {{#each _items}}
+      <div class="slider__number js-slider-number js-slider-number-click" data-id="{{value}}" aria-hidden="true">{{value}}</div>
+      {{/each}}
+      <div class="slider__number-model-range js-slider-model-range"></div>
+      <div class="slider__number-answer"></div>
+      <div class="slider__number-selection js-slider-number-selection a11y-ignore" aria-hidden="true" tabindex="-1"></div>
+    </div>
+
+    <div class="slider__scale-container js-slider-scale">
+      <div class="slider__scale-notch slider__scale-notch-start"></div>
+      <div class="slider__scale-notch-container js-slider-scale-notch-container"></div>
+      <div class="slider__scale-notch slider__scale-notch-end"></div>
+    </div>
+
+    <div class="slider__item{{#unless _isEnabled}}{{#if _isCorrect}} is-correct{{else}} is-incorrect{{/if}}{{/unless}}">
+      <input class="slider__item-input js-slider-item-input" type="range" aria-label="slider" value="{{#if _userAnswer}}{{_userAnswer}}{{else}}{{_scaleStart}}{{/if}}" min="{{_scaleStart}}" max="{{_scaleEnd}}" aria-valuenow="{{#if _userAnswer}}{{_userAnswer}}{{else}}{{_scaleStart}}{{/if}}" aria-valuemin="{{_scaleStart}}" aria-valuemax="{{_scaleEnd}}" data-direction="{{#equals _marginDir "right"}}rtl{{/equals}}" {{#unless _isEnabled}} disabled {{/unless}}>
+    </div>
 
     {{#any labelStart labelEnd}}
     <div class="slider__label-container js-slider-label-container">
@@ -25,25 +46,6 @@
 
     </div>
     {{/any}}
-
-    <div class="slider__number-container">
-      {{#each _items}}
-      <div class="slider__number js-slider-number js-slider-number-click" data-id="{{value}}" aria-hidden="true">{{value}}</div>
-      {{/each}}
-      <div class="slider__number-model-range js-slider-model-range"></div>
-      <div class="slider__number-answer"></div>
-      <div class="slider__number-selection js-slider-number-selection a11y-ignore" aria-hidden="true" tabindex="-1"></div>
-    </div>
-
-    <div class="slider__scale-container js-slider-scale">
-      <div class="slider__scale-notch slider__scale-notch-start"></div>
-      <div class="slider__scale-notch-container js-slider-scale-notch-container"></div>
-      <div class="slider__scale-notch slider__scale-notch-end"></div>
-    </div>
-
-    <div class="slider__item{{#unless _isEnabled}}{{#if _isCorrect}} is-correct{{else}} is-incorrect{{/if}}{{/unless}}">
-      <input class="slider__item-input js-slider-item-input" type="range" aria-label="slider" value="{{#if _userAnswer}}{{_userAnswer}}{{else}}{{_scaleStart}}{{/if}}" min="{{_scaleStart}}" max="{{_scaleEnd}}" aria-valuenow="{{#if _userAnswer}}{{_userAnswer}}{{else}}{{_scaleStart}}{{/if}}" aria-valuemin="{{_scaleStart}}" aria-valuemax="{{_scaleEnd}}" data-direction="{{#equals _marginDir "right"}}rtl{{/equals}}" {{#unless _isEnabled}} disabled {{/unless}}>
-    </div>
 
   </div>
 

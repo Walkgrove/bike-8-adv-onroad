@@ -1,0 +1,46 @@
+<div class="component__inner challenge__inner">
+  {{> component this}} 
+
+  <div class="challenge__button button is-visible">
+    <button class="challenge__start-btn btn js-challenge-start-click" aria-label="{{{buttonText}}}">
+      {{{buttonText}}}
+    </button>
+  </div>
+
+  <div class="challenge__main" >
+    {{!-- style="background-image: url({{_backgroundImage}}); background-size: cover; background-position: top right;" --}}
+
+    <div class="challenge__items" >
+      {{#each _items}}
+        <div class="challenge__item" >
+          <div class="challenge__item-buttons">
+            {{{a11y_aria_label content}}}
+            <button class="js-challenge-first-click" data-qnum="{{@index}}" tabindex="0">{{../choice1}}</button>
+            {{!-- style="background-color: {{_colour}}; color: {{_colourText}};" --}}
+            <button class="js-challenge-second-click" data-qnum="{{@index}}" tabindex="0">{{../choice2}}</button>
+            {{!-- <button class="js-challenge-third-click" data-qnum="{{@index}}"  tabindex="0">{{../choice3}}</button> --}}
+          </div>
+          <div class="challenge__item-content" style="background-color: {{_colour}}; color: {{_colourText}};" aria-hidden="true">{{content}}</div>
+          <div class="challenge__item-feedback" data-fback-index="{{@index}}" tabindex="0" >{{feedback}}</div>
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="challenge__feedbacks" >
+      {{#each _feedbacks}}
+        <div class="challenge__feedback">
+          <div>{{{content}}}</div>
+          {{!-- <img class="{{_imageClass}}" src="{{_image}}" {{#if alt}}aria-label="{{alt}}"{{else}}alt=""{{/if}} /> --}}
+        </div>
+      {{/each}}
+    </div>
+
+    {{!-- <div class="challenge__button-restart button">
+      <button class="challenge__restart-btn btn js-challenge-restart-click" aria-label="{{{@root/_globals._accessibility._ariaLabels.retry}}}">
+        {{{@root/_globals._accessibility._ariaLabels.retry}}}
+      </button>
+    </div> --}}
+
+  </div>   
+
+</div>

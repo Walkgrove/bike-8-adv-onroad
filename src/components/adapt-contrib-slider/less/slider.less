@@ -15,7 +15,7 @@
   &__number-container {
     position: relative;
     min-height: 1rem;
-    margin: 0 1rem;
+    margin: 0 1rem 1rem 1rem;
     // Indent half the width of the range slider handle either side
 
     .dir-rtl & {
@@ -33,13 +33,26 @@
     .dir-rtl & {
       .transform(translateX(-50%) rotateY(180deg));
     }
+
+    &.previous {
+      border: 2px solid @bike-orange;
+      z-index: 6;
+      background: @bike-blue;
+      //color: transparent;
+    }
   }
+
+  &__image {
+
+  }
+
   // --------------------------------------------------
 
   // --------------------------------------------------
   // Scale
   // --------------------------------------------------
   &__scale-container {
+    //display: none;
     position: relative;
     height: 1px;
     width: calc(~'100% - 2rem');
@@ -130,12 +143,16 @@
   }
 
   &--horizontal .rangeslider__handle {
-    top: -0.875rem;
+    top: 0; //-0.875rem;
   }
 
   &__handle {
-    height: 2rem;
-    width: 2rem;
+    height: 5rem;
+    width: 5rem;
+    @media (max-width: @device-width-small) {
+      height: 3rem;
+      width: 3rem;
+    }
 
     &:after {
       height: 1rem;
@@ -146,5 +163,11 @@
       cursor: default;
     }
   }
+
+
+
+
+  
+
 }
 // --------------------------------------------------

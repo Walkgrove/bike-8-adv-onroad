@@ -1,0 +1,32 @@
+<div class="component__inner timeline__inner" role="region">
+  {{> component this}} 
+
+ <div class="timeline__main">
+
+   <div class="timeline__items" role="list">
+     
+    {{#each _items}}
+      <div class="timeline__widget" id="timeline__widget-{{@index}}" >
+        <div class="timeline__item-title" role="heading" aria-level="3" >{{title}}</div>
+        <div class="timeline__item-body-container">
+          <div class="timeline__item-body" >{{{body}}}</div>
+          {{#if _image}} <img class="timeline__item-image" src={{{_image}}} {{#if alt}}aria-label="{{alt}}" {{else}}aria-hidden="true" alt=""{{/if}} />{{/if}}
+        </div>
+      </div>
+    {{/each}}
+
+    {{#if buttonMore}}
+    <div class="timeline__button-more button">
+      <button class="timeline__more-btn btn js-timeline-more-click" role="button" aria-label="{{{buttonMore}}}">
+        {{{buttonMore}}} <div class="timeline__btn-more icon" />
+      </button>
+    </div>
+    {{/if}}
+
+  </div>
+
+  
+
+  </div> 
+
+</div>

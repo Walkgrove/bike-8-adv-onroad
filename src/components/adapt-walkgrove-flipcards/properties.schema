@@ -1,0 +1,153 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "Cards. Select each card to flip it and show the content.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_columns": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "_large": {
+          "type": "number",
+          "required": true,
+          "default": "",
+          "title": "Large layout columns",
+          "inputType": "Number",
+          "validators": ["required", "number"],
+          "help": "",
+          "translatable": false
+        },
+        "_medium": {
+          "type": "number",
+          "required": true,
+          "default": "",
+          "title": "Medium layout columns",
+          "inputType": "Number",
+          "validators": ["required", "number"],
+          "help": "",
+          "translatable": false
+        },
+        "_small": {
+          "type": "number",
+          "required": true,
+          "default": "",
+          "title": "Small layout columns",
+          "inputType": "Number",
+          "validators": ["required", "number"],
+          "help": "",
+          "translatable": false
+        }
+      }
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Flipcards",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_classes": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Flipcard classes",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": false
+          },
+          "_front": {
+            "type": "object",
+            "required": true,
+            "properties": {
+              "title": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "title": "Front display title",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": true
+              },
+              "_icon": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "title": "Front icon/image",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": false
+              }
+            }
+          },
+          "_back": {
+            "type": "object",
+            "required": true,
+            "properties": {
+              "title": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "title": "Back display title",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": true
+              },
+              "content": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "title": "Back content",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": true
+              },
+              "_image": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "title": "Back image",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": false
+              }
+            }
+          }
+        }	
+      }
+    }
+  }
+}

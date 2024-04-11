@@ -72,87 +72,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "Hide the content on the right / underneath?",
-      "help": "If set to true, the element is only shown once selected, moving content down to accommodate it"
-    },
-    "_leftHeading": {
-      "type": "object",
-      "required": false,
-      "title": "Left Heading",
-      "properties": {
-        "title": {
-          "type": "string",
-          "required": false,
-          "default": "",
-          "title": "Title",
-          "inputType": "Text",
-          "validators": [],
-          "help": "Is a heading required above the left selectable items?",
-          "translatable": true
-        },
-        "_font-color": {
-          "title": "Font colour",
-          "type": "string",
-          "required": false,
-          "inputType": "ColourPicker",
-          "default": ""
-        },
-        "_background-color": {
-          "title": "Background colour",
-          "type": "string",
-          "required": false,
-          "inputType": "ColourPicker",
-          "default": ""
-        },
-        "_graphic": {
-          "type": "string",
-          "required": false,
-          "default": "",
-          "title": "Graphic",
-          "inputType": "Asset:image",
-          "validators": [],
-          "help": ""
-        }
-      }
-    },
-    "_rightHeading": {
-      "type": "object",
-      "required": false,
-      "title": "Right Heading",
-      "properties": {
-        "title": {
-          "type": "string",
-          "required": false,
-          "default": "",
-          "title": "Title",
-          "inputType": "Text",
-          "validators": [],
-          "help": "Is a heading required above the right selectable items?",
-          "translatable": true
-        },
-        "_font-color": {
-          "title": "Font colour",
-          "type": "string",
-          "required": false,
-          "inputType": "ColourPicker",
-          "default": ""
-        },
-        "_background-color": {
-          "title": "Background colour",
-          "type": "string",
-          "required": false,
-          "inputType": "ColourPicker",
-          "default": ""
-        },
-        "_graphic": {
-          "type": "string",
-          "required": false,
-          "default": "",
-          "title": "Graphic",
-          "inputType": "Asset:image",
-          "validators": [],
-          "help": ""
-        }
-      }
+      "help": "If set to true, the element is only shown once selected, moving content down to accomodate it."
     },
     "_items": {
       "type": "array",
@@ -169,7 +89,7 @@
             "title": "Left graphic",
             "inputType": "Asset:image",
             "validators": [],
-            "help": "Is a graphic required on the left?",
+            "help": "",
             "translatable": false
           },
           "leftGraphicHover": {
@@ -179,7 +99,7 @@
             "title": "Left hover graphic",
             "inputType": "Asset:image",
             "validators": [],
-            "help": "Is a hover graphic required on the left?",
+            "help": "",
             "translatable": false
           },
           "leftAlt": {
@@ -189,7 +109,7 @@
             "title": "Left Alt description",
             "inputType": "Text",
             "validators": [],
-            "help": "The alternative text for this image",
+            "help": "",
             "translatable": true
           },
           "leftText": {
@@ -199,7 +119,7 @@
             "title": "Left text",
             "inputType": "TextArea",
             "validators": [],
-            "help": "Is content required on the left?",
+            "help": "",
             "translatable": true
           },
           "rightGraphic": {
@@ -209,7 +129,7 @@
             "title": "Right graphic",
             "inputType": "Asset:image",
             "validators": [],
-            "help": "Is a graphic required on the right?",
+            "help": "",
             "translatable": false
           },
           "rightAlt": {
@@ -219,7 +139,7 @@
             "title": "Right Alt description",
             "inputType": "Text",
             "validators": [],
-            "help": "The alternative text for this image",
+            "help": "",
             "translatable": true
           },
            "rightText": {
@@ -229,7 +149,7 @@
             "title": "Right text",
             "inputType": "TextArea",
             "validators": [],
-            "help": "Is content required on the right?",
+            "help": "",
             "translatable": true
           }
         }
@@ -276,7 +196,7 @@
             ]
           },
           "default": "nowrap",
-          "help": "Should the items wrap under each other (wrap), or show on one line (nowrap)"
+          "help": "Should the items wrap under each other (wrap), or show on one line (nowrap)."
         },
         "_item-background-color": {
           "title": "Item Background colour",
@@ -284,7 +204,7 @@
           "required": false,
           "inputType": "ColourPicker",
           "default": "transparent",
-          "help": "Main item background colour (optional)"
+          "help": "Main item background colour (optional)."
         },
         "_left-width": {
           "title": "Left Width",
@@ -308,7 +228,7 @@
           "required": false,
           "inputType": "ColourPicker",
           "default": "transparent",
-          "help": "Left item background colour"
+          "help": "Left item background colour."
         },
         "_left-padding": {
           "type": "string",
@@ -324,7 +244,7 @@
           "required": false,
           "inputType": "ColourPicker",
           "default": "#FFFFFF",
-          "help": "Right item font colour"
+          "help": "Right item font colour."
         },
         "_right-background-color": {
           "title": "Right Background colour",
@@ -332,7 +252,7 @@
           "required": false,
           "inputType": "ColourPicker",
           "default": "#000000",
-          "help": "Right item background colour"
+          "help": "Right item background colour."
         },
         "_right-padding": {
           "type": "string",

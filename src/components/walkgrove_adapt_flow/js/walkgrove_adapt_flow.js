@@ -19,7 +19,11 @@ define([
     postRender: function() {
       this.setReadyStatus();
 
-      this.$('.flow__widget').eq(0).addClass('is-visible');
+      if(this.model.get('_hideInitial') && this.model.get('_hideInitial') === true) {
+        this.flowIndex = -1;
+      } else {
+        this.$('.flow__widget').eq(0).addClass('is-visible');
+      }
     },
 
     checkIfResetOnRevisit: function() {

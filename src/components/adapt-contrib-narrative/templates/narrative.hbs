@@ -33,7 +33,7 @@
 
         <div class="narrative__controls-container u-clearfix">
 
-          <button class="btn-icon narrative__controls narrative__controls-left js-narrative-controls-click" aria-label="{{_globals._accessibility._ariaLabels.previous}}" role="button" tabindex="2">
+          <button class="btn-icon narrative__controls narrative__controls-left js-narrative-controls-click" aria-label="{{_globals._accessibility._ariaLabels.previous}}" role="button" aria-pressed="false" tabindex="2">
             <div class="icon"></div>
           </button>
 
@@ -43,7 +43,7 @@
             {{/each}}
           </div>
 
-          <button class="btn-icon narrative__controls narrative__controls-right js-narrative-controls-click" aria-label="{{_globals._accessibility._ariaLabels.next}}" role="button" tabindex="1">
+          <button class="btn-icon narrative__controls narrative__controls-right js-narrative-controls-click" aria-label="{{_globals._accessibility._ariaLabels.next}}" role="button" aria-pressed="false" tabindex="1">
             <div class="icon"></div>
           </button>
         </div>
@@ -95,7 +95,7 @@
         <div class="narrative__slider-image-container{{#if _isVisited}} is-visited{{/if}}{{#if _graphic.attribution}} has-attribution{{/if}}" style="width: {{../_itemWidth}}%" data-index="{{@index}}">
 
           {{#if _graphic}}
-          <img class="narrative__slider-image" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-labal="{{_graphic.alt}}"{{/if}} />
+            <img class="narrative__slider-image" src="{{_graphic.src}}" alt="{{_graphic.alt}}" />
 
             {{#if _graphic.attribution}}
             <div class="component__attribution narrative__attribution">

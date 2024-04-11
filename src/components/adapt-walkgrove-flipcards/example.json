@@ -1,0 +1,56 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "flipcards",
+        "_classes": "",
+        "_layout": "full",
+        "_comment": "setCompletionOn = inview | allItems",
+        "_setCompletionOn": "allItems",
+        "_hasNavigationInTextArea": false,
+        "title": "Flipcards component",
+        "displayTitle": "Flipcards component",
+        "body": "Content before the flip cards...",
+        "instruction": "Select the <strong>cards</strong> to find out more.",
+        "_columns": {
+            "_large": 3,
+            "_medium": 2,
+            "_small": 1
+        },
+        "_items": [
+            {
+                "_front": {
+                    "title": "Card 1 title",
+                    "_icon": "https://via.placeholder.com/100x100"
+                },
+                "_back": {
+                    "title": "Card 1 title",
+                    "content": "Card 1 content here ..."
+                }
+            },
+            {
+                "_classes": "full-image",
+                "_front": {
+                    "_icon": "https://via.placeholder.com/375x472"
+                },
+                "_back": {
+                    "title": "Card 2 title",
+                    "content": "Card 2 content here ..."
+                }
+            },
+            {
+                "_front": {
+                    "title": "Card 3 title"
+                },
+                "_back": {
+                    "title": "Card 3 title",
+                    "content": "Card 3 content here ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus nunc convallis volutpat scelerisque. ",
+                    "_image": "https://via.placeholder.com/400x200"
+                }
+            }
+        ],
+        "_pageLevelProgress": {
+            "_isEnabled": true,
+            "_isCompletionIndicatorEnabled": false
+        }
+    }

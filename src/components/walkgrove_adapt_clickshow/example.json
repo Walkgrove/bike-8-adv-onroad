@@ -85,19 +85,8 @@
 
    //  optional 
 
-   "_leftHeading": {
-        "title": "",
-        "_font-color": "",
-        "_background-color": "",
-        "_graphic": ""
-    },
-    "_rightHeading": {
-        "title": "",
-        "_font-color": "",
-        "_background-color": "",
-        "_graphic": ""
-    },
-    "_styling": {
+
+   "_styling": {
         "_graphic": "cover",
         "_item-width": "100%",
         "_item-wrap": "nowrap",

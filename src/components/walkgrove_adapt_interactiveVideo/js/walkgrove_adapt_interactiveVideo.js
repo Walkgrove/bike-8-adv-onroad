@@ -12,6 +12,14 @@ define([
       'click .js-prev-stage': 'showPrevStep',
       'click .js-click-reset': 'resetInteraction',
     },
+
+    _stageIndex: 1,
+    _stepIndex: -1,
+    _stageViewedIndex: 1,
+    _stepViewedIndex: -1,
+    _moveOnAuto: false,
+    _stepCompletedIndex: -1,
+    _models: [],
     
     preRender: function() {
 
@@ -43,6 +51,9 @@ define([
       this.setReadyStatus();
 
       this.setUpSteps();
+
+      this._moveOnAuto = this.model.get('_moveOnAuto') ? this.model.get('_moveOnAuto') : false;
+
     },
 
     resetInteraction: function() {
@@ -64,13 +75,6 @@ define([
       this.$('.js-click-reset').removeClass('is-visible');
     },
 
-    _stageIndex: 1,
-    _stepIndex: -1,
-    _stageViewedIndex: 1,
-    _stepViewedIndex: -1,
-    _moveOnAuto: false,
-    _stepCompletedIndex: -1,
-    
     checkIfResetOnRevisit: function() {
       var isResetOnRevisit = this.model.get('_isResetOnRevisit');
 
@@ -85,10 +89,12 @@ define([
       var DragdropView = Adapt.getViewClass('dragdrop');
       var MCQView = Adapt.getViewClass('basicQuestion');
       var ReflectionView = Adapt.getViewClass('reflection');
+      var TextView = Adapt.getViewClass('text');
 
       this.model.get('_items').forEach((item, index) => {
 
        var model = new Backbone.Model(item);
+       this._models.push(model);
        var newComponent;
 
         switch(item._component) {
@@ -113,37 +119,6 @@ define([
             this.addStepModel(index, newComponent.$el);
             break;
 
-          case "basicQuestion":
-
-            newComponent = new MCQView({ model: model });
-          
-            this.model.listenTo(model,  'change', ()=> {
-              if(model.get('_isComplete') === true) {
-                console.log("basicQuestion completed");
-                var ins = model.get('instructionAfter');
-                if(ins){
-                  $('.interactivevideo__content-instruction').html(ins);
-                }
-                this.allowNextStep();
-              }
-            });
-
-            this.addStepModel(index, newComponent.$el);
-            break;
-
-          case "dragdrop":
-            newComponent = new DragdropView({ model: model });
-
-            this.model.listenTo(model,  'change', ()=> {
-              if(model.get('_isComplete') === true) {
-                console.log("dragdrop completed");
-                this.allowNextStep();
-              }
-            });
-
-            this.addStepModel(index, newComponent.$el);
-            break;
-
           case "reflection":
 
             newComponent = new ReflectionView({ model: model });
@@ -151,6 +126,25 @@ define([
             this.model.listenTo(model,  'change', ()=> {
               if(model.get('_isComplete') === true) {
                 console.log("reflection completed");
+                var ins = model.get('instructionAfter');
+                if(ins){
+                  $('.interactivevideo__content-instruction').html(ins);
+                }
+                this.allowNextStep();
+                this._models[index] = model;
+              }
+            });
+
+            this.addStepModel(index, newComponent.$el);
+            break;
+          
+          case "text":
+
+            newComponent = new TextView({ model: model });
+          
+            this.model.listenTo(model,  'change', ()=> {
+              if(model.get('_isComplete') === true) {
+                console.log("text completed");
                 var ins = model.get('instructionAfter');
                 if(ins){
                   $('.interactivevideo__content-instruction').html(ins);
@@ -333,7 +327,7 @@ define([
           this.$('.interactivevideo__progress-dot').eq(stageI).removeClass('is-complete');
           this.$('.interactivevideo__progress-dot').eq(stageI).removeClass('is-active');
         }
-    
+
       });
 
       //buttons
@@ -354,6 +348,12 @@ define([
       if(this._stepIndex <= this._stepCompletedIndex) {
         this.$('.js-next-stage').a11y_cntrl_enabled(true);
       }
+
+      // console.log(this._stepIndex, this._models[this._stepIndex], this._models[this._stepIndex].get('_isComplete'));
+      if(this._models[this._stepIndex].get('_isComplete') === true) {
+        this.enableNext();
+      }
+
 
     },
 

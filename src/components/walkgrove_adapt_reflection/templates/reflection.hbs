@@ -17,8 +17,12 @@
           {{#if question}}
           <div class="reflection__item-question" >{{{question}}}</div>
           {{/if}}
-          <textarea class="reflection__item-textbox js-reflection-textbox" maxlength="255" rows="10" placeholder="{{{../placeholder}}}"  aria-label="input" value="" ></textarea>
-          <div class="reflection__character-count">255</div>
+          <textarea class="reflection__item-textbox js-reflection-textbox" maxlength="500" rows="8" placeholder="{{{../placeholder}}}"  aria-label="input" value="" ></textarea>
+          <div class="reflection__character-count">500</div>
+
+          <div class="reflection__loader">
+            <div class="dot-flashing" aria-hidden="true" ></div>
+          </div>
         </div>
       {{/each}}
     </div>

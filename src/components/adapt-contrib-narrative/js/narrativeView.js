@@ -17,11 +17,9 @@ define([
 
     preRender: function() {
       this.listenTo(Adapt, {
-        "device:changed": this.reRender,
-        "device:resize": this.reRender,
+        'device:changed device:resize': this.reRender,
         'notify:closed': this.closeNotify
       });
-      Adapt.on('resize ', this.checkNarrativeHeight);
       this.renderMode();
 
       this.listenTo(this.model.get('_children'), {
@@ -74,8 +72,6 @@ define([
       if (Adapt.config.get('_disableAnimation')) {
         this.$el.addClass('disable-animation');
       }
-
-      this.checkNarrativeHeight();
     },
 
     checkIfResetOnRevisit: function() {
@@ -133,62 +129,12 @@ define([
       //   this.resizeControl();
       //   console.log("resizeControl");
       // }
-
-      console.log("orientation");
-
-      this.checkNarrativeHeight();
-
       this.replaceTitle();
     },
 
     closeNotify: function() {
       this.evaluateCompletion();
     },
-
-
-    checkNarrativeHeight: function() {
-      if (this.isLargeMode()) {
-        let highest = 0;
-        this.$(".narrative__content-item").height('auto');
-        var activeItem = this.model.getActiveItem();
-        this.model.get('_items').forEach((item, index) => {
-          if(!this.$(".narrative__content-item").eq(index).hasClass('u-display-none')) {
-            this.$(".narrative__content-item").eq(index).addClass('u-display-none');
-          }
-        });
-        this.model.get('_items').forEach((item, index) => {
-          _.delay(() => { 
-            const $elSlide = this.$(".narrative__content-item").eq(index);
-            $elSlide.removeClass('u-display-none');
-            // console.log(index, $elSlide.height());
-            const heightVar = $elSlide.height();
-            // console.log(index, heightVar, highest);
-            if(heightVar > highest) {
-              highest = heightVar;
-            }
-            const highestVar = Number(highest)+Number(56);
-            // console.log(highest, highestVar);
-            $elSlide.addClass('u-display-none');
-            
-          }, 10*index);
-        });   
-
-
-        _.delay(() => { 
-          if(!this.model.get("_hasNavigationInTextArea")) {
-            this.$(".narrative__content-item").css({minHeight: highest});//height(highest);
-            this.$(".narrative__slider").css({minHeight: highest});//height(highest);
-            this.$(".narrative__slider-image-container").css({minHeight: highest});//height(highest);
-            this.$(".narrative__slider-image").css({minHeight: highest});//height(highest);
-            const activeIndex = activeItem.get('_index');
-            this.$(".narrative__content-item").eq(activeIndex).removeClass('u-display-none');
-          }
-        }, 10*this.model.get('_items').length);
-      } 
-      
-    },
-
-
 
     replaceInstructions: function() {
       if (this.isLargeMode()) {

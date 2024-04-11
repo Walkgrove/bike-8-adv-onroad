@@ -1,0 +1,19 @@
+{
+    "name": "adapt-walkgrove-challenge",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/walkgrovedev/adapt-walkgrove-challenge.git"
+    },
+    "framework": "5",
+    "version": "1.0.0",
+    "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-challenge.git",
+    "component": "challenge",
+    "displayName": "Challenge",
+    "description": "A component ...",
+    "main": "/js/adapt-walkgrove-challenge.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPL-3.0"
+}

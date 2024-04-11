@@ -35,8 +35,8 @@
 
             &:hover {
                 .submenu__item-title {
-                    background-color: @grey;
-                    color: @black;
+                    background-color: @btn-color-hover;
+                    color: @btn-color-inverted-hover;
                 }
             }
 
@@ -67,7 +67,8 @@
             position: relative;
             
             top: 95%;
-            left: 21%;
+            left: 50%;
+            transform: translate(-75%, 0%);
 
             width: 185px;
 
@@ -75,6 +76,7 @@
             border-radius: 1rem;
             
             padding: 0.5rem;
+            line-height: 1.5;
             
             background-color: @btn-color;
             color: @btn-color-inverted;
