@@ -333,7 +333,7 @@
       "body": "",
       "instruction": "<p>Select the home button to return to the module contents screen or the forward arrow to move straight to the next topic.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -497,7 +497,7 @@
          },
          {
             "title": "Cooperate with and respect other road users",
-            "body": "<p>Element 4.1.2 covers the ability to interact with other road users in a variety of different settings and scenarios.</p><p class='narrative-quote'>\u201CYou cycle with a positive and collaborative approach to sharing the road. Through actively and positively interacting with other road users, you help to contribute to a co-operative culture.\u201D (Cycle Training Delivery Guide, p. 15) </p>",
+            "body": "<p>Element 4.1.2 covers the ability to interact with other road users in a variety of different settings and scenarios.</p><p class='narrative-quote'>\u201CYou cycle with a positive and collaborative approach to sharing the road. Through actively and positively interacting with other road users, you help to contribute to a co-operative culture.\u201D</p><p class='quote-ann'>(Cycle Training Delivery Guide, p. 15) </p>",
             "strapline": "Cooperate with and respect other road users",
             "_graphic": {
                "src": "course/en/images/02_01_030/02_01_030_03.png",
@@ -506,7 +506,7 @@
          },
          {
             "title": "Identify and respond to hazards",
-            "body": "<p>The ability to deal with hazards is covered in Element 4.2.1, including being able to continually scan the cycling environment and anticipate, evaluate and appropriately respond to possible hazards.</p><p class='narrative-quote'>\u201CWhether you\u2019re riding in the park, on a segregated cycle lane or on the road, you are sharing space with others. This means being aware of your surroundings and co-operating with those around you. Staying aware and alert enables you to identify and respond to hazards and the actions of others. It lets you anticipate potential problems before they even take place.\u201D (Ride Guide, p. 23)</p>",
+            "body": "<p>The ability to deal with hazards is covered in Element 4.2.1, including being able to continually scan the cycling environment and anticipate, evaluate and appropriately respond to possible hazards.</p><p class='narrative-quote'>\u201CWhether you\u2019re riding in the park, on a segregated cycle lane or on the road, you are sharing space with others. This means being aware of your surroundings and co-operating with those around you. Staying aware and alert enables you to identify and respond to hazards and the actions of others. It lets you anticipate potential problems before they even take place.\u201D</p><p class='quote-ann'>(Ride Guide, p. 23)</p>",
             "strapline": "Identify and respond to hazards",
             "_graphic": {
                "src": "course/en/images/02_01_030/02_01_030_04.png",
@@ -579,7 +579,7 @@
       "body": "",
       "instruction": "<p>Select the home button to return to the module contents screen or the forward arrow to move straight to the next topic.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -749,7 +749,7 @@
       "_component": "hotgraphic",
       "_classes": "",
       "_layout": "full",
-      "title": "Off-road assessment (Continued)",
+      "title": "• cont.",
       "displayTitle": "",
       "body": "<p>You can take a few minutes in an off-road (traffic-free) environment to deliver a short activity where you check the core competencies. You could use a simple circuit and ask riders to ride around it, taking turns as the leader and regularly changing direction as you call out things for them to do.</p>",
       "instruction": "<p>Select each icon for examples of what you could ask riders to do.</p>",
@@ -903,7 +903,7 @@
       "_component": "clickshow",
       "_classes": "",
       "_layout": "full",
-      "title": "On-road assessment (Continued)",
+      "title": "• cont.",
       "displayTitle": "",
       "body": "",
       "instruction": "<p>Select each image for suggestions of on-road reassessment activities.</p>",
@@ -1074,7 +1074,7 @@
       "_component": "timeline",
       "_classes": "",
       "_layout": "full",
-      "title": "How could you support this rider to build their confidence? (Continued)",
+      "title": "Different ways to enhance a rider\u2019s confidence",
       "displayTitle": "",
       "body": "<p>There are different ways to enhance a rider\u2019s confidence.</p>",
       "instruction": "<p>Scroll down to find out more.</p>",
@@ -1114,7 +1114,7 @@
          },
          {
             "title": "Adjust your approach",
-            "body": "<p>When necessary, explore options such as dismounting and walking certain sections of a route, or planning a quieter route.</p><p class='timeline-quote'>\u201CIt is normal to feel nervous sometimes when cycling. It is perfectly fine to pull over and pause a journey so you can regain your composure. When planning your journey, you should choose a route that reflects your cycling ability and confidence.\u201D (Cycle Training Delivery Guide, page 14.)</p>",
+            "body": "<p>When necessary, explore options such as dismounting and walking certain sections of a route, or planning a quieter route.</p><p class='timeline-quote'>\u201CIt is normal to feel nervous sometimes when cycling. It is perfectly fine to pull over and pause a journey so you can regain your composure. When planning your journey, you should choose a route that reflects your cycling ability and confidence.\u201D</p><p class='quote-ann'>(Cycle Training Delivery Guide, page 14.)</p>",
             "_image": "course/en/images/03_01_100/03_01_100_item05.png",
             "alt": ""
          }
@@ -1254,7 +1254,7 @@
       "body": "",
       "instruction": "<p>Select the home button to return to the module contents screen or the forward arrow to move straight to the next topic.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -1422,7 +1422,7 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "Buddy riding (Continued)",
+      "title": "• Instructor and two riders using buddy riding as a strategy",
       "displayTitle": "",
       "body": "<p>This video shows an instructor and two riders using buddy riding as a strategy. Take note of how the instructor approaches it each time.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
@@ -1462,7 +1462,7 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "Buddy riding (Continued)",
+      "title": "• Instructor with a single rider using a different approach",
       "displayTitle": "",
       "body": "<p>This example shows the same instructor with a single rider using a different approach.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
@@ -1578,7 +1578,7 @@
       "_component": "clickshow",
       "_classes": "",
       "_layout": "full",
-      "title": "How could you support these riders? (Continued)",
+      "title": "• Here are some ideas ...",
       "displayTitle": "",
       "body": "<p>Here are some ideas on how you could use the buddy-riding strategy in this situation.</p>",
       "instruction": "<p>Select each image for examples of different options.</p>",
@@ -1703,7 +1703,7 @@
       "_component": "accordion",
       "_classes": "",
       "_layout": "full",
-      "title": "How could you enhance the learning experience for these riders? (Continued)",
+      "title": "• Here are some ideas ...",
       "displayTitle": "",
       "body": "<p>Here are some ideas of how to progress the buddy-riding approach in this situation.</p>",
       "instruction": "<p>Select each heading to learn more.</p>",
@@ -1960,7 +1960,7 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "Point-to-point independent riding activities (Continued)",
+      "title": "• An example ...",
       "displayTitle": "",
       "body": "<p>This video shows an example of a point-to-point independent riding activity.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
@@ -2109,7 +2109,7 @@
       "body": "",
       "instruction": "<p>Select the home button to return to the module contents screen or the forward arrow to move straight to the next topic.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -2191,7 +2191,7 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "The pre-ride discussion (Continued)",
+      "title": "• An example ...",
       "displayTitle": "",
       "body": "<p>Watch this video for an example of an instructor having a pre-ride discussion with riders. </p>",
       "instruction": "<p>Select Play to watch the video.</p>",
@@ -2270,7 +2270,7 @@
       "_component": "clickshow",
       "_classes": "",
       "_layout": "full",
-      "title": "How can you help your riders plan? (Continued)",
+      "title": "• Some points you could discuss ...",
       "displayTitle": "",
       "body": "<p>Here are some points you could discuss when planning the cycle training session with riders.</p>",
       "instruction": "<p>Select each image to find out more.</p>",
@@ -2373,7 +2373,7 @@
       "_component": "accordion",
       "_classes": "",
       "_layout": "full",
-      "title": "Ensuring inclusivity (Continued)",
+      "title": "• Some potential accessibility considerations ...",
       "displayTitle": "",
       "body": "<p>Here are some potential accessibility considerations to think about.</p><p>\nYou can further enhance your knowledge of how to deliver inclusive training by attending <strong>The Bikeability Trust\u2019s SEND online training module</strong>.</p>",
       "instruction": "<p>Select each heading to learn more.</p>",
@@ -2474,9 +2474,9 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "Transitioning to more complex activities (Continued)",
+      "title": "• cont.",
       "displayTitle": "",
-      "body": "<div class='guide=excerpt'>From the REPPROC Principles (Cycle Training Delivery Guide)<ul><li>riders experience more challenging cycling environments as their skills and confidence grow. Training is delivered in a logical way with activities and manoeuvres becoming more complex</li><li>once riders feel comfortable with a set of skills, they can be challenged further during the next round of activities</li><li>each rider can progress at their own pace and according to their learning needs</li></ul></div><p>In this video, the instructor watches and encourages riders through a transitional activity where riders negotiate a road narrowing. This is a good example of previously learnt skills being practised in a more complex environment.</p>",
+      "body": "<h3>From the REPPROC Principles (Cycle Training Delivery Guide)</h3><div class='guide-excerpt'><ul><li>riders experience more challenging cycling environments as their skills and confidence grow. Training is delivered in a logical way with activities and manoeuvres becoming more complex</li><li>once riders feel comfortable with a set of skills, they can be challenged further during the next round of activities</li><li>each rider can progress at their own pace and according to their learning needs</li></ul></div><p>In this video, the instructor watches and encourages riders through a transitional activity where riders negotiate a road narrowing. This is a good example of previously learnt skills being practised in a more complex environment.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
       "_useClosedCaptions": false,
@@ -2557,7 +2557,7 @@
       "body": "",
       "instruction": "<p>Select the home button to return to the module contents screen or the forward arrow to move straight to the next topic.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -2815,7 +2815,7 @@
       "body": "",
       "instruction": "<p>Select the home button to return to the module contents screen or the forward arrow to move straight to the next topic.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -2897,7 +2897,7 @@
       "_component": "reflection",
       "_classes": "",
       "_layout": "right",
-      "title": "Think about how they approach the junction, what they do at the traffic lights and how they pass through the junction.",
+      "title": "• cont.",
       "displayTitle": "",
       "body": "",
       "instruction": "<p>Enter your notes in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
@@ -2936,8 +2936,8 @@
       "_component": "timeline",
       "_classes": "",
       "_layout": "full",
-      "title": "Using traffic lights",
-      "displayTitle": "Using traffic lights",
+      "title": "• cont.",
+      "displayTitle": "",
       "body": "<p>Take a look at some coaching points you could use.\n</p>",
       "instruction": "<p>Scroll down to find out more.</p>",
       "_styling": {
@@ -2997,7 +2997,7 @@
       "_component": "interactiveVideo",
       "_classes": "",
       "_layout": "full",
-      "title": "Passing queuing traffic",
+      "title": "• cont.",
       "displayTitle": "",
       "body": "",
       "instruction": "",
@@ -3327,7 +3327,7 @@
       "body": "",
       "instruction": "<p>Select the forward arrow to return.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -3410,7 +3410,7 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "Multi-lane roads and roundabouts (Continued)",
+      "title": "• Instructor coaching riders ...",
       "displayTitle": "",
       "body": "<p>This video shows an instructor coaching riders at a multi-lane roundabout. Take note of some of the questions they ask to encourage active learning.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
@@ -3450,7 +3450,7 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "Multi-lane roads and roundabouts (Continued)",
+      "title": "• Some important points ...",
       "displayTitle": "",
       "body": "<p>In this video, some important coaching points are highlighted while the rider is on the road. </p><p>You can also find more coaching points detailed in the <strong>Cycle Activity Templates: Using multi-lane roads and Using multi-lane roundabouts</strong>.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
@@ -3528,10 +3528,10 @@
       "_component": "reflection",
       "_classes": "",
       "_layout": "full",
-      "title": "How could you support your riders in this scenario? (Continued)",
+      "title": "• cont.",
       "displayTitle": "",
       "body": "",
-      "instruction": "Enter your thoughts and select save.",
+      "instruction": "",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -3541,7 +3541,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved! </p>Here are some suggestions to compare your ideas with:<ul><li>First, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this <strong>differentiated</strong> and inclusive approach helps all the riders develop their cycling</li></ul><div class='speechmarks'>Three possible questions to ask your riders:<p>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</p></div><p> Scroll down to continue.</p>",
+         "content": "<p>Your notes have been saved! </p>Here are some suggestions to compare your ideas with:<ul><li>First, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this <strong>differentiated</strong> and inclusive approach helps all the riders develop their cycling</li></ul><p>Three possible questions to ask your riders:<div class='speechmarks more-padding'>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</div></p><p> Scroll down to continue.</p>",
          "_inline": true
       },
       "_activity": {
@@ -3577,7 +3577,7 @@
       "body": "",
       "instruction": "<p>Select the forward arrow to return.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -3654,7 +3654,7 @@
       "_component": "flow",
       "_classes": "",
       "_layout": "full",
-      "title": "Using cycling infrastructure (Continued)",
+      "title": "• Some examples ...",
       "displayTitle": "",
       "body": "<p>There are many scenarios where you can cover this activity.</p>",
       "instruction": "<p>Select the \u2018+\u2019 button for some examples. </p>",
@@ -3798,7 +3798,7 @@
       "_component": "hotgraphic",
       "_classes": "",
       "_layout": "full",
-      "title": "Other infrastructure examples (Continued)",
+      "title": "• What could you point out to riders about this infrastructure?",
       "displayTitle": "",
       "body": "<p>What could you point out to riders about this infrastructure? </p>",
       "instruction": "<p>Select each icon to find out more.</p>",
@@ -3854,7 +3854,7 @@
       "_component": "hotgraphic",
       "_classes": "",
       "_layout": "full",
-      "title": "Other infrastructure examples (Continued)",
+      "title": "• What do you see at this site?",
       "displayTitle": "",
       "body": "<p>What do you see at this site? </p>",
       "instruction": "<p>Select each icon to find out more.</p>",
@@ -3910,7 +3910,7 @@
       "_component": "hotgraphic",
       "_classes": "",
       "_layout": "full",
-      "title": "Other infrastructure examples (Continued)",
+      "title": "• What do you see in this image?",
       "displayTitle": "",
       "body": "<p>What do you see in this image? </p>",
       "instruction": "<p>Select each icon to find out more.</p>",
@@ -4062,7 +4062,7 @@
       "body": "",
       "instruction": "<p>Select the forward arrow to return.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -4291,7 +4291,7 @@
       "_component": "reflection",
       "_classes": "",
       "_layout": "full",
-      "title": "Bus lanes (Continued)",
+      "title": "• Questions ...",
       "displayTitle": "",
       "body": "<p>Write down your answers to the questions below.</p>",
       "instruction": "<p>Enter your notes in the boxes below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
@@ -4411,7 +4411,7 @@
       "body": "",
       "instruction": "<p>Select the forward arrow to return.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -4488,7 +4488,7 @@
       "_component": "media",
       "_classes": "",
       "_layout": "full",
-      "title": "Riding on roads with a speed limit above 30mph (Continued)",
+      "title": "• Short film ...",
       "displayTitle": "",
       "body": "<p>Watch this short film of a rider cycling on some faster and rural roads and then write down below some important things to discuss with your riders on how they should cycle in these environments. </p>",
       "instruction": "<p>Select Play to watch the video.</p>",
@@ -4566,7 +4566,7 @@
       "_component": "flow",
       "_classes": "",
       "_layout": "full",
-      "title": "What will you discuss with your riders? (Continued)",
+      "title": "• Discussion points ...",
       "displayTitle": "",
       "body": "",
       "instruction": "<p>Select the \u2018+\u2019 button to find out what these are.</p>",
@@ -4589,7 +4589,7 @@
             "_layout": "no-image-full"
          },
          {
-            "content": "<p class='flow-quote'>\u201CWhen cycling on the road, your riding position is a dynamic choice. This means that you change it according to the circumstances. Your riding position should be flexible and based on a range of factors. These include the space available and the physical nature of the on-road environment, the width of the lane and the width of your cycle. They also include the speed that you are cycling and the size and speed of other road users around you.\u201D (Ride Guide, page 24) </div>",
+            "content": "<p class='flow-quote'>\u201CWhen cycling on the road, your riding position is a dynamic choice. This means that you change it according to the circumstances. Your riding position should be flexible and based on a range of factors. These include the space available and the physical nature of the on-road environment, the width of the lane and the width of your cycle. They also include the speed that you are cycling and the size and speed of other road users around you.\u201D</p><p class='quote-ann'>(Ride Guide, page 24)</div>",
             "_layout": "no-image-full"
          }
       ],
@@ -4610,7 +4610,7 @@
       "body": "",
       "instruction": "<p>Select the forward arrow to return.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -4728,7 +4728,7 @@
       "title": "How would you manage this situation?",
       "displayTitle": "",
       "body": "",
-      "instruction": "Enter your thoughts and select save.",
+      "instruction": "",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -4979,7 +4979,7 @@
       "body": "",
       "instruction": "<p>Select the home button to return to the module contents screen or the forward arrow to move straight to the next topic.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },
@@ -5236,7 +5236,7 @@
       "body": "",
       "instruction": "<p>Exit the module by selecting the window/tab close button, or select the home button to return to the module contents screen.</p>",
       "_pageLevelProgress": {
-         "_isEnabled": true,
+         "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
       }
    },

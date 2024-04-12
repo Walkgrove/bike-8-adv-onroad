@@ -110,6 +110,12 @@ html, body {
 }
 
 
+
+
+// -----------------------------------
+// COMPONENTS
+// -----------------------------------
+
 .component__container {
     @media (max-width: @device-width-medium) {
         flex-direction: row!important;
@@ -118,10 +124,6 @@ html, body {
         flex-direction: column!important;
     }
 }
-
-// -----------------------------------
-// COMPONENTS
-// -----------------------------------
 
 .hidden {
     display: none;
@@ -316,6 +318,10 @@ a {
     color: @btn-color;
 }
 
+.pagelevelprogress__item-btn {
+    border-radius: 0;
+}
+
 .btn-sound, button {
     padding: 0rem 1rem;
 }
@@ -385,6 +391,53 @@ a {
     }
 }
 
+/// CUSOMT STYLES
+
+.narrative-quote, .timeline-quote, .flow-quote {
+    .quote;
+}
+.narrative-quote {
+    font-size: 110%;
+}
+.timeline-quote, .flow-quote {
+    font-size: 120%;
+    color: @black;
+}
+
+.speechmarks {
+    position: relative;
+    padding: 0 2rem;
+    &.more-padding {
+        padding: 0 0 0 0 4rem;
+    }
+
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        transform: translate(-25%,0%);
+        width: @icon-size*2;
+        height: @icon-size*3;
+    }
+    &:before {
+        left: 0;
+        background-image: url('course/en/images/05_01_040/05_01_040_speech01.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    // &:after {
+    //     right: 0;
+    //     background-image: url('course/en/images/05_01_040/05_01_040_speech02.png');
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    // }
+}
+
+.guide-excerpt {
+    font-family: "Times New Roman", sans serif;
+    font-size: 130%;
+    font-style: italic;
+}
 
 .exclamation {
     display: inline-block;
