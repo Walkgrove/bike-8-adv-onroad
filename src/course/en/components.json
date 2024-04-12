@@ -1505,7 +1505,7 @@
       "title": "How could you support these riders?",
       "displayTitle": "How could you support these riders?",
       "body": "<p>You are working alone with three riders who are carrying out advanced on-road training. </p>",
-      "instruction": "<p>Enter your thoughts in the boxes below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false
@@ -1630,7 +1630,7 @@
       "title": "How could you enhance the learning experience for these riders? (Continued)",
       "displayTitle": "How could you enhance the learning experience for these riders?",
       "body": "<p>You are delivering advanced on-road training to five riders with a co-instructor using a buddy-riding approach. Here is a picture showing you both moving the group in a more passive fashion. </p>",
-      "instruction": "",
+      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false
@@ -2234,7 +2234,7 @@
       "title": "How can you help your riders plan?",
       "displayTitle": "How can you help your riders plan?",
       "body": "<p>Using your observations from the video and ideas of your own, make a note of ...</p>",
-      "instruction": "<p>Enter your thoughts in the boxes below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -2337,7 +2337,7 @@
       "title": "Ensuring inclusivity",
       "displayTitle": "Ensuring inclusivity",
       "body": "<p>Advanced on-road training must be delivered in a rider-centred and inclusive fashion that embraces, as far as possible, riders of all abilities. </p><p>Think about this scenario and answer the question that follows.</p><p><strong>You are planning a session for two riders who have additional needs. One of the riders has cerebral palsy and will be using a hand-powered adapted cycle that is wider than most cycles, and the other rider will be using a recumbent, which is low to the ground. They are both experienced in using these adapted cycles. Both riders have restricted mobility that affects their ability to look behind when cycling.</strong></p>",
-      "instruction": "<p>Enter your thoughts in the boxes below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -4690,7 +4690,7 @@
       "title": "Planning a longer distance ",
       "displayTitle": "Planning a longer distance ",
       "body": "<p>You are supporting a rider to plan a journey that will integrate part of their future commute to and from work. During the planning exercise, you discover that the journey is longer than was expected, and you are concerned that the rider may struggle with the distance.  The rider is unable to attend another session after this one.</p>",
-      "instruction": "<p>Enter your notes in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Enter your points in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false
@@ -4816,7 +4816,7 @@
       "title": "Promoting rider independence while managing risk ",
       "displayTitle": "Promoting rider independence while managing risk ",
       "body": "<p>You are working with one rider who is attempting an exercise where they ride straight ahead through a junction controlled by traffic lights. The rider wants to attempt the activity alone as the junction will be part of their future commute to work. </p>",
-      "instruction": "<p>Enter your notes in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Enter your ideas in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
