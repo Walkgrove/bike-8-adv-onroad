@@ -86,7 +86,7 @@ html, body {
 // small side graphics!
 .c-01_01_060, .c-02_01_040, .c-03_01_020, .c-03_01_080, .c-03_01_130, 
 .c-04_01_030, .c-04_01_100, .c-04_01_140, .c-04_01_170, .c-05_01_070, .c-05_01_090,
-.c-06_00_030, .c-06_03_010  {  //, .c-06_01_010-t
+.c-06_00_030, .c-06_03_010, .c-07_01_060 {  //, .c-06_01_010-t
     width: 70%!important;
     @media (max-width: @device-width-medium) {
         width: 60%!important;
@@ -99,7 +99,7 @@ html, body {
 
 .c-01_01_060-g, .c-02_01_040-g, .c-03_01_020-g, .c-03_01_080-g, .c-03_01_130-g, 
 .c-04_01_030-g, .c-04_01_100-g, .c-04_01_140-g, .c-04_01_170-g, .c-05_01_070-g, .c-05_01_090-g,
-.c-06_00_030-g, .c-06_03_010-g { //, .c-06_01_010-g
+.c-06_00_030-g, .c-06_03_010-g, .c-07_01_060-g { //, .c-06_01_010-g
     width: 30%!important;
     @media (max-width: @device-width-medium) {
         width: 40%!important;
@@ -702,8 +702,13 @@ a {
 //------------------------------------
 
 .quickfire__question-container, .quickfire__feedback-container {
-    background-color: @white;
+    background-color: @bike-blue-light;
 }
+.quickfire__feedback-container-corrects {
+    background-color: @white;
+    height: 100%;
+}
+
 
 
 //------------------------------------
@@ -987,6 +992,24 @@ a {
         }
     }
 // }
+
+.c-06_04_030 {
+    .clickshow__widget:nth-of-type(1), .clickshow__widget:nth-of-type(5), .clickshow__widget:nth-of-type(9) {
+        .clickshow__item.right {
+            background-color: @bike-orange-light;
+        }
+    }
+    .clickshow__widget:nth-of-type(2), .clickshow__widget:nth-of-type(6) {
+        .clickshow__item.right {
+            background-color: @bike-red-light;
+        }
+    }
+    .clickshow__widget:nth-of-type(3), .clickshow__widget:nth-of-type(7) {
+        .clickshow__item.right {
+            background-color: @bike-blue-light;
+        }
+    }
+}
 
 
 

@@ -2743,7 +2743,7 @@
          },
          {
             "title": "Riding on roads with a speed limit above 30mph",
-            "_href": "co-01_06_4",
+            "_href": "co-01_06_5",
             "_unlockBy": "co-01_00",
             "_appearance": {
                "_width": "20%",
@@ -3028,13 +3028,13 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2-Passing_Queuing_Traffic.png",
+            "_background": "course/en/video/C2_Q1CP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2-Passing_Queuing_Traffic.mp4",
-               "poster": "course/en/video/C2-Passing_Queuing_Traffic.png"
+               "mp4": "course/en/video/C2_Q1CP.mp4",
+               "poster": "course/en/video/C2_Q1CP.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3081,13 +3081,13 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2-Passing_Queuing_Traffic.png",
+            "_background": "course/en/video/C2_Q2_3CP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2-Passing_Queuing_Traffic.mp4",
-               "poster": "course/en/video/C2-Passing_Queuing_Traffic.png"
+               "mp4": "course/en/video/C2_Q2_3CP.mp4",
+               "poster": "course/en/video/C2_Q2_3CP.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3109,7 +3109,7 @@
                "_exportEnabled": false
             },
             "_styling": {
-               "_input-width": "100%"
+               "_input-width": "50%"
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
@@ -3122,7 +3122,12 @@
             },
             "_items": [
                {
-                  "question": "If riding to the front, which side would be best to filter on and why? If there is space at the front, what position should riders use?",
+                  "question": "If riding to the front, which side would be best to filter on and why?",
+                  "_colour": "#fff",
+                  "_bgcolour": "#000"
+               },
+               {
+                  "question": "If there is space at the front, what position should riders use?",
                   "_colour": "#fff",
                   "_bgcolour": "#000"
                }
@@ -3134,13 +3139,13 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2-Passing_Queuing_Traffic.png",
+            "_background": "course/en/video/C2_Q4CP..png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2-Passing_Queuing_Traffic.mp4",
-               "poster": "course/en/video/C2-Passing_Queuing_Traffic.png"
+               "mp4": "course/en/video/C2_Q4CP..mp4",
+               "poster": "course/en/video/C2_Q4CP..png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3187,13 +3192,13 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2-Passing_Queuing_Traffic.png",
+            "_background": "course/en/video/C2_Q5CP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2-Passing_Queuing_Traffic.mp4",
-               "poster": "course/en/video/C2-Passing_Queuing_Traffic.png"
+               "mp4": "course/en/video/C2_Q5CP.mp4",
+               "poster": "course/en/video/C2_Q5CP.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3341,7 +3346,7 @@
          "_link-color": "#FFF"
       },
       "_buttons": true,
-      "_home": true,
+      "_home": false,
       "_links": [
          {
             "_name": "return",
@@ -3591,7 +3596,7 @@
          "_link-color": "#FFF"
       },
       "_buttons": true,
-      "_home": true,
+      "_home": false,
       "_links": [
          {
             "_name": "return",
@@ -3751,14 +3756,14 @@
       },
       "_items": [
          {
-            "title": "This segregated cycle lane provides helpful separation from road users on the main road.",
-            "strapline": "This segregated cycle lane provides helpful separation from road users on the main road.",
+            "title": "This small driveway to the hotel on the left may cause others to enter the cycle lane, posing a potential hazard.",
+            "strapline": "This small driveway to the hotel on the left may cause others to enter the cycle lane, posing a potential hazard.",
             "_graphic": {
-               "src": "course/en/images/06_03_040/06_03_040_item01.png",
-               "alt": "utton located on the right-hand edge of the cycle lane"
+               "src": "course/en/images/06_03_040/06_03_040_item03.png",
+               "alt": "button on the left of the image at the driveway"
             },
-            "_top": 50,
-            "_left": 25
+            "_top": 49,
+            "_left": 26
          },
          {
             "title": "The cycle lane has good width, giving riders plenty of space to pass one another.",
@@ -3767,19 +3772,19 @@
                "src": "course/en/images/06_03_040/06_03_040_item02.png",
                "alt": "button in the middle of the cycle lane"
             },
-            "_top": 50,
-            "_left": 50
+            "_top": 52.5,
+            "_left": 42.5
          },
          {
-            "title": "This small driveway to the hotel on the left may cause others to enter the cycle lane, posing a potential hazard.",
-            "strapline": "This small driveway to the hotel on the left may cause others to enter the cycle lane, posing a potential hazard.",
+            "title": "This segregated cycle lane provides helpful separation from road users on the main road.",
+            "strapline": "This segregated cycle lane provides helpful separation from road users on the main road.",
             "_graphic": {
-               "src": "course/en/images/06_03_040/06_03_040_item03.png",
-               "alt": "button on the left of the image at the driveway"
+               "src": "course/en/images/06_03_040/06_03_040_item01.png",
+               "alt": "utton located on the right-hand edge of the cycle lane"
             },
-            "_top": 50,
-            "_left": 75
-         }
+            "_top": 57,
+            "_left": 62
+         }  
       ],
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -3813,8 +3818,8 @@
                "src": "course/en/images/06_03_050/06_03_050_item01.png",
                "alt": "button reveal on the cycle lane itself"
             },
-            "_top": 50,
-            "_left": 25
+            "_top": 70,
+            "_left": 30
          },
          {
             "title": "Riders need to slow down and give space for pedestrians using the bus stop who have priority when waiting to cross at the zebra crossing.",
@@ -3824,7 +3829,7 @@
                "alt": "button reveal at the bus stop"
             },
             "_top": 50,
-            "_left": 50
+            "_left": 53
          },
          {
             "title": "Riders should be alert to any road users turning into or out of the side road who may not always check for cyclists using the cycle lane.",
@@ -3833,8 +3838,8 @@
                "src": "course/en/images/06_03_050/06_03_050_item03.png",
                "alt": "button reveal on the Give Way lines"
             },
-            "_top": 50,
-            "_left": 75
+            "_top": 65,
+            "_left": 45
          }
       ],
       "_pageLevelProgress": {
@@ -3869,8 +3874,8 @@
                "src": "course/en/images/06_03_060/06_03_060_item01.png",
                "alt": "button reveal just below the left-pointing arrow in the cycle lane"
             },
-            "_top": 50,
-            "_left": 25
+            "_top": 72,
+            "_left": 48
          },
          {
             "title": "This traffic light allows riders to negotiate this junction at a different time to pedestrians and other road users.",
@@ -3879,8 +3884,8 @@
                "src": "course/en/images/06_03_060/06_03_060_item02.png",
                "alt": "button reveal on the traffic light for cyclists"
             },
-            "_top": 50,
-            "_left": 50
+            "_top": 60,
+            "_left": 57
          },
          {
             "title": "Riders should give time and space to pedestrians crossing the road, including those crossing when cyclists have a green light.",
@@ -3889,8 +3894,8 @@
                "src": "course/en/images/06_03_060/06_03_060_item03.png",
                "alt": "button reveal on the pedestrians crossing the road on the left"
             },
-            "_top": 50,
-            "_left": 75
+            "_top": 60,
+            "_left": 25
          }
       ],
       "_pageLevelProgress": {
@@ -3919,24 +3924,26 @@
       },
       "_items": [
          {
-            "title": "This cycle lane invites riders to use the secondary position, despite road users at the junction often turning left. The cycle lane is therefore best ignored when riders negotiate the junction. Riders could remain in the traffic flow or, in situations where riders wish to filter up to the ASL in front, they should carefully consider which side to pass queuing traffic on.",
-            "strapline": "This cycle lane invites riders to use the secondary position, despite road users at the junction often turning left. The cycle lane is therefore best ignored when riders negotiate the junction. Riders could remain in the traffic flow or, in situations where riders wish to filter up to the ASL in front, they should carefully consider which side to pass queuing traffic on.",
+            "title": "This cycle lane invites riders to use the secondary position, despite road users at the junction often turning left.",
+            "body": "The cycle lane is therefore best ignored when riders negotiate the junction. Riders could remain in the traffic flow or, in situations where riders wish to filter up to the ASL in front, they should carefully consider which side to pass queuing traffic on.",
+            "strapline": "This cycle lane invites riders to use the secondary position, despite road users at the junction often turning left.",
             "_graphic": {
                "src": "course/en/images/06_03_070/06_03_070_item01.png",
                "alt": "button on the cycle lane near to the junction"
             },
-            "_top": 50,
-            "_left": 25
+            "_top": 60,
+            "_left": 45
          },
          {
-            "title": "The ASL provides riders with space at the front and enables them to set off before other road users when the lights turn green. This can help riders to create and maintain a \u2018safe riding space\u2019 as they pass through the junction.",
-            "strapline": "The ASL provides riders with space at the front and enables them to set off before other road users when the lights turn green. This can help riders to create and maintain a \u2018safe riding space\u2019 as they pass through the junction.",
+            "title": "The ASL provides riders with space at the front and enables them to set off before other road users when the lights turn green.",
+            "body":"This can help riders to create and maintain a \u2018safe riding space\u2019 as they pass through the junction.",
+            "strapline": "The ASL provides riders with space at the front and enables them to set off before other road users when the lights turn green.",
             "_graphic": {
                "src": "course/en/images/06_03_070/06_03_070_item02.png",
                "alt": "button on the ASL"
             },
-            "_top": 50,
-            "_left": 75
+            "_top": 40,
+            "_left": 50
          }
       ],
       "_pageLevelProgress": {
@@ -4074,7 +4081,7 @@
          "_link-color": "#FFF"
       },
       "_buttons": true,
-      "_home": true,
+      "_home": false,
       "_links": [
          {
             "_name": "return",
@@ -4207,7 +4214,7 @@
          "_item-width": "100%",
          "_item-wrap": "nowrap",
          "_item-background-color": "transparent",
-         "_left-width": "50%",
+         "_left-width": "25%",
          "_left-font-color": "transparent",
          "_left-background-color": "transparent",
          "_left-padding": "0rem",
@@ -4423,7 +4430,7 @@
          "_link-color": "#FFF"
       },
       "_buttons": true,
-      "_home": true,
+      "_home": false,
       "_links": [
          {
             "_name": "return",
@@ -4679,7 +4686,7 @@
       "_type": "component",
       "_component": "text",
       "_classes": "",
-      "_layout": "full",
+      "_layout": "left",
       "title": "Planning a longer distance ",
       "displayTitle": "Planning a longer distance ",
       "body": "<p>You are supporting a rider to plan a journey that will integrate part of their future commute to and from work. During the planning exercise, you discover that the journey is longer than was expected, and you are concerned that the rider may struggle with the distance.  The rider is unable to attend another session after this one.</p>",
@@ -4695,15 +4702,15 @@
       "_type": "component",
       "_component": "graphic",
       "_classes": "",
-      "_layout": "full",
+      "_layout": "right",
       "title": "",
       "displayTitle": "",
       "body": "",
       "instruction": "",
       "_isOptional": true,
       "_graphic": {
-         "large": "course/en/images/07_01_020_image.png",
-         "small": "course/en/images/07_01_020_image.png",
+         "large": "course/en/images/07_01_020_image.jpg",
+         "small": "course/en/images/07_01_020_image.jpg",
          "alt": ""
       },
       "_pageLevelProgress": {
@@ -4928,7 +4935,7 @@
       "_type": "component",
       "_component": "text",
       "_classes": "",
-      "_layout": "full",
+      "_layout": "left",
       "title": "Up next",
       "displayTitle": "Up next",
       "body": "<p>Continue for a final recap and important next steps.</p>",
