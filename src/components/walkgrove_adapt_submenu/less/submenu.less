@@ -103,12 +103,18 @@
 
     .icon-tick {
         display: none;
-        width: @icon-size;
-        height: @icon-size;
-        min-width: @icon-size;
+        width: @icon-size*1.5;
+        height: @icon-size*1.5;
+        min-width: @icon-size*1.5;
         position: absolute;
-        right: 0.5rem;
-        top: 0.5rem;
+        right: 0rem;
+        top: 0rem;
+        transform: translate(50%, -50%);
+        background-color: @black;
+        color: @white;
+        border-radius: 100%;
+        font-size: 2rem;
+        padding: 0.25rem 0;
     }
     .is-complete {
         .icon-tick {

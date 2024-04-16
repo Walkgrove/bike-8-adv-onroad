@@ -2009,7 +2009,7 @@
       "buttonText": "Start",
       "_timer": 3,
       "_timeout": 10,
-      "_pass": 4,
+      "_pass": 0,
       "choice1": "True",
       "choice2": "False",
       "ins2": "<p>Select <strong>true</strong> or <strong>false</strong> for each statement.</p>",

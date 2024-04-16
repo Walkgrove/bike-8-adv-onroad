@@ -637,6 +637,7 @@ define([
                   //   this.$('.js-reflection-export-click').addClass('is-visible');
                   // }
                   this.model.set('_isAnswered', true);
+                  this.setCompletionStatus();
                   if(this.model.get('_message')._inline === true) {
                     // ... inline
                     this.$('.reflection__message').addClass('is-visible');
