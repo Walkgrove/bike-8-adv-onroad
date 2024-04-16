@@ -19,7 +19,7 @@ define([
     _xapi: null,
     _actorDetails: null,
 
-    _courseid: "bike-7-m3",
+    _courseid: "bike8",
     _activityId: "https://cloud.scorm.com/",
 
     _reflectdata: null,
@@ -72,7 +72,7 @@ define([
 
       // console.log(this.model, this.model.get('_buttons'), this.model.get('_buttons').save);
 
-      this.model.set('_isComplete', false);
+      this.model.set('_isAnswered', false);
 
       if(this.model.get('_buttons') && this.model.get('_buttons').save === "") {
         this.$('.js-reflection-export-click').addClass('is-visible');
@@ -162,6 +162,7 @@ define([
 
     onSaveData: function() {
 
+      this.model.set('_isAnswered', true);
       this.model.set('_isComplete', true);
 
       // save to scorm data
@@ -339,6 +340,8 @@ define([
         const PDFHeaderTitle = this.model.get('pdf')._header.title ? this.model.get('pdf')._header.title : ' ';
         const PDFHeaderSubitle = this.model.get('pdf')._header.subtitle ? this.model.get('pdf')._header.subtitle : ' ';
 
+        // console.log(PDFHeaderTitle, PDFHeaderSubitle);
+
         // HEADER
         // -- image
         if(this.model.get('pdf')._header && this.model.get('pdf')._header.image !== null) {
@@ -381,10 +384,12 @@ define([
         
         yPos += (this.model.get('pdf')._header._titleStyling._height + (vPadding*2));
 
-        this.setTextColorHexToRgb(doc, this.model.get('pdf')._header._subtitleStyling._fontColour);
-        doc.text(PDFHeaderSubitle, leftP, yPos, { align: this.model.get('pdf')._header._subtitleStyling._fontAlign, maxWidth: maxWidth - 20 });
-        
-        yPos += vPadding*2;
+        if(PDFHeaderSubitle !== " ") {
+          this.setTextColorHexToRgb(doc, this.model.get('pdf')._header._subtitleStyling._fontColour);
+          doc.text(PDFHeaderSubitle, leftP, yPos, { align: this.model.get('pdf')._header._subtitleStyling._fontAlign, maxWidth: maxWidth - 20 });
+          
+          yPos += vPadding*2;
+        }
 
 
         if(this._fontfamily !== "default") {
@@ -399,7 +404,7 @@ define([
         for(let a=0; a<reflectActivities.length-1; a++) {
 
           if(a !== 0 ) {
-            // yPos = this.newPagePDF(doc, yPos);
+            yPos = this.newPagePDF(doc, yPos);
           }
 
           const reflects = reflectActivities[a].split("$");
@@ -440,7 +445,8 @@ define([
                   if(activityBody !== ' ') {
                     doc.setFontSize(actBodySize);
                     doc.text(activityBody, leftP, yPos, { align: this.model.get('pdf')._header._titleStyling._fontAlign, maxWidth: maxWidth - 20 });
-                    yPos += vPadding*2; //(actBodySize/2 + vPadding);
+                    const rows = Math.round(activityBody.length/75)+1;
+                    yPos += ((rows * 5) + 10);
                     yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
                   }
 
@@ -479,7 +485,8 @@ define([
                   
                     itemQuestion = itemQuestion.replace(/(<([^>]+)>)/ig,"");
                     doc.text(itemQuestion, leftPos, yPos, { align: 'left', maxWidth: maxWidth - 20 });
-                    yPos += vPadding*2;
+                    const rows = Math.round(itemQuestion.length/75)+1;
+                    yPos += ((rows * 6) + 12);
                     yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
                   }
 
@@ -494,11 +501,11 @@ define([
                   // if(inputContent !== '' && inputContent !== undefined && inputContent !== 'undefined') {
                     doc.text(inputContent, leftPos + 10, yPos, { align: 'left', maxWidth: maxWidth - 40 }); ///to fit inside box
                     const rows = Math.round(inputContent.length/75)+1;
-                    yPos += ((rows * 6) + vPadding + 10);
+                    yPos += ((rows * 5) + vPadding + 10);
 
                     this.setFillColorHexToRgb(doc, '#f2f2f2');
                     doc.setLineWidth(0.1);
-                    doc.roundedRect(leftPos, boxY, maxWidth-20, (rows*6)+10, 3, 3);
+                    doc.roundedRect(leftPos, boxY, maxWidth-20, (rows*5)+10, 3, 3);
 
                     yPos = this.checkNewPagePDF(doc, yPos, pageHeight);
                   // }
@@ -613,6 +620,7 @@ define([
               } else {
                 if(_id === _reflectId) {
                   // one input ...?
+                  console.log(countVar);
                   if(countVar === 1) {
                     this.$('.js-reflection-textbox').eq(0).val(reflect[4]);
                     // console.log('>>>>>>>>>>>>>>', _id, _reflectId, reflect[4]);
@@ -628,7 +636,7 @@ define([
                   // if(this.model.get('exportText') != "") {
                   //   this.$('.js-reflection-export-click').addClass('is-visible');
                   // }
-                  // this.model.set('_isComplete', true);
+                  this.model.set('_isAnswered', true);
                   if(this.model.get('_message')._inline === true) {
                     // ... inline
                     this.$('.reflection__message').addClass('is-visible');

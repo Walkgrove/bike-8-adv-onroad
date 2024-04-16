@@ -179,10 +179,10 @@ define([
         }
         this.enableNext();
       }
-      if(this._stepIndex === this.model.get('_items').length-1) {
+      if(this._stepIndex === this.model.get('_items').length-3) {
         //this._stageViewedIndex++;
         this.setCompletionStatus();
-        this.$('.js-click-reset').addClass('is-visible');
+        // this.$('.js-click-reset').addClass('is-visible');
         this._stepViewedIndex++;
       }
     },
@@ -205,7 +205,16 @@ define([
             $("." + item._id).addClass('hide');
           }
         });
+        
         this.updateProgress();
+
+        _.delay(() => {
+          console.log(this._models[this._stepIndex].get('_isAnswered'));
+          if(this._models[this._stepIndex].get('_isAnswered') === true) {
+            this.allowNextStep();
+            this.enableNext();
+          }
+        }, 1500);
       }
     },
 
@@ -315,7 +324,7 @@ define([
        var activeIndex = (this._stageIndex*2) - 2;
        var completeIndex = (this._stageIndex*2) - 1;
 
-       //console.log("this._stepIndex: " + this._stepIndex + " - activeIndex: " + activeIndex + " - completeIndex: " + completeIndex);
+      //  console.log("this._stepIndex: " + this._stepIndex + " - activeIndex: " + activeIndex + " - completeIndex: " + completeIndex);
 
         if(index === this._stepIndex && this._stepIndex === activeIndex) { 
           //console.log("active: " + index + " - " + stageI);
@@ -326,6 +335,11 @@ define([
         } else if(index > this._stepIndex) {
           this.$('.interactivevideo__progress-dot').eq(stageI).removeClass('is-complete');
           this.$('.interactivevideo__progress-dot').eq(stageI).removeClass('is-active');
+        }
+
+        if(index === this._stepIndex && activeIndex < completeIndex) { 
+          //console.log("active: " + index + " - " + stageI);
+          this.$('.interactivevideo__progress-dot').eq(stageI).addClass('is-complete');
         }
 
       });
@@ -348,12 +362,6 @@ define([
       if(this._stepIndex <= this._stepCompletedIndex) {
         this.$('.js-next-stage').a11y_cntrl_enabled(true);
       }
-
-      // console.log(this._stepIndex, this._models[this._stepIndex], this._models[this._stepIndex].get('_isComplete'));
-      if(this._models[this._stepIndex].get('_isComplete') === true) {
-        this.enableNext();
-      }
-
 
     },
 

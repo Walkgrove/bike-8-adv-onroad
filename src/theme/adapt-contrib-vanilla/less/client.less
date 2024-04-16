@@ -397,7 +397,10 @@ a {
     .quote;
 }
 .narrative-quote {
-    font-size: 110%;
+    font-size: 105%;
+    background-color: rgba(@white, @opacity-70);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 .timeline-quote, .flow-quote {
     font-size: 120%;
@@ -1046,6 +1049,30 @@ a {
     }
 // }
 
+.c-05_01_040 {
+    .clickshow__widget:nth-of-type(1), .clickshow__widget:nth-of-type(5), .clickshow__widget:nth-of-type(9) {
+        .clickshow__item.right {
+            background-color: @bike-green-light;
+        }
+    }
+    .clickshow__widget:nth-of-type(2), .clickshow__widget:nth-of-type(6) {
+        .clickshow__item.right {
+            background-color: @bike-orange-light;
+        }
+    }
+    .clickshow__widget:nth-of-type(3), .clickshow__widget:nth-of-type(7) {
+        .clickshow__item.right {
+            background-color: @bike-blue-light;
+        }
+    }
+    .clickshow__widget:nth-of-type(4), .clickshow__widget:nth-of-type(8) {
+        .clickshow__item.right {
+            background-color: @bike-red-light;
+        }
+    }
+}
+
+
 .c-06_04_030 {
     .clickshow__widget:nth-of-type(1), .clickshow__widget:nth-of-type(5), .clickshow__widget:nth-of-type(9) {
         .clickshow__item.right {
@@ -1127,12 +1154,38 @@ a {
 // TIMELINE
 //------------------------------------
 
-// .c-03_01_020 {
-//     .timeline__widget {
-//         border: none!important;
-//         margin: 0.5rem 0!important;
-//     }
-//     .timeline__item-title, .timeline__widget:after, .timeline__items.is-more:after {
-//         display: none;
-//     }
-// }
+.c-06_04_060 {
+    .timeline__item-body {
+        max-width: 50%;
+        width: 50%;
+    }
+    .timeline__item-body-container img {
+        max-width: 50%;
+        width: 50%;
+        min-width: 50%;
+    }
+
+    // @media (max-width: @device-width-medium) {
+    //     .timeline__item-body {
+    //         max-width: 50%;
+    //         width: 50%;
+    //     }
+    //     .timeline__item-body-container img {
+    //         max-width: 50%;
+    //         width: 50%;
+    //         min-width: 50%;
+    //     }
+    // }
+
+    @media (max-width: @device-width-small) {
+        .timeline__item-body {
+            max-width: 100%;
+            width: 100%;
+        }
+        .timeline__item-body-container img {
+            max-width: 100%;
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+}
