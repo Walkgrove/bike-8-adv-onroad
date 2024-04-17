@@ -109,6 +109,22 @@ html, body {
     }
 }
 
+//full width on smaller resolutions
+.c-01_01_020, .c-04_01_020, .c-05_01_010, 
+.c-06_04_010, .c-06_05_010, .c-07_01_010, 
+.c-08_01_010, .c-08_01_030{
+    @media (max-width: @device-width-phoneland) {
+        width: 100%!important;
+    }
+}
+.c-01_01_020-g, .c-04_01_020-g, .c-05_01_010-g, 
+.c-06_04_010-g, .c-06_05_010-g, .c-07_01_010-g,
+.c-08_01_010-g, .c-08_01_030-g {
+    @media (max-width: @device-width-phoneland) {
+        max-width: 50%!important;
+        margin: 0 auto;
+    }
+}
 
 
 
@@ -730,7 +746,7 @@ a {
     }
     @media (max-width: 900px) and (orientation: landscape) { 
         font-size: 0.7rem!important;
-        padding: 0 1rem!important;
+        // padding: 0 1rem!important;
     }
     @media (max-width: @device-width-medium) {
         font-size: 1em!important;
@@ -964,7 +980,11 @@ a {
         // color: @item-color-inverted;
         min-height: 6.5rem;
 
-        @media (max-width: @device-width-medium) {
+        @media (max-width: @device-width-tablet) {
+            min-height: 8rem;
+        }
+
+        @media (max-width: @device-width-small) {
             min-height: 0;
         }
     }
@@ -997,6 +1017,10 @@ a {
         align-items: center;
         justify-content: center;
         background-color: rgba(@white, @opacity-70);
+
+        @media (max-width: @device-width-small) {
+            padding: 1rem 0rem;
+        }
     }
 }
 
@@ -1137,6 +1161,13 @@ a {
 .c-06_02_010 {
     .graphicbuild__item-content, .graphicbuild__item-graphic, .graphicbuild__item-bg-graphic {
         width: 75%;
+        @media (max-width: @device-width-tablet) {
+            width: 100%;
+        }
+        @media (max-width: @device-width-small) {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
         // max-width: 100%;
         margin: 0 auto;
         position: relative;

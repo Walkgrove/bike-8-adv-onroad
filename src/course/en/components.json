@@ -2676,6 +2676,7 @@
       "body": "<p>The next section takes you on a journey carried out in an advanced on-road training session, integrating a range of activities.</p><p>Bear in mind that this journey is just one example. When you deliver advanced on-road training, you can combine any number of activities to do what is best for your riders. Some sites will provide opportunities for combining activities. For example, a multi-lane roundabout could involve passing queuing traffic and be controlled by traffic lights and even have some cycling infrastructure around it too. Use what you have and do not be afraid to link activities together.</p>",
       "instruction": "<p>Select each example to find out more.</p>",
       "_backgroundImage": "course/en/images/06_00_020/06_00_020_bg.png",
+      "_backgroundImageMobile": "course/en/images/06_00_020/06_00_020_bg_mob.jpg",
       "_items": [
          {
             "title": "1.Using traffic lights and passing queuing traffic",
@@ -2714,10 +2715,10 @@
             "_href": "co-01_06_3",
             "_unlockBy": "co-01_00",
             "_appearance": {
-               "_width": "20%",
+               "_width": "22%",
                "_height": "20%",
                "_top": "25%",
-               "_left": "30%"
+               "_left": "29%"
             },
             "_graphic": {
                "src": "course/en/images/06_00_020/06_00_020_item03.png",
@@ -3051,6 +3052,7 @@
             "_component": "reflection",
             "stepInstruction": "",
             "instruction": "<p>Enter your notes in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "_isNested": true,
             "_buttons": {
                "save": "Save",
                "_exportEnabled": false
@@ -3060,12 +3062,12 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!<p><p>Did you consider these suggestions?<ul><li>when will the traffic set off again? If everyone will move off again shortly, it’s probably best to wait in the traffic queue. The rider should only filter here if there is time to reach the front. It’s important to pass queuing traffic slowly. Is there a pedestrian countdown timer that shows when the lights will change?</li><li>is there is enough space to get to the front and on which side? The rider should not filter unless there is time and space to do so.</li><li>are there any additional hazards? Might drivers be about to turn or change lanes? Are they indicating, and if so, on which side? Might people cross the road? Could vehicle doors open?</li></ul></p><p class='ins'>Now close this window and select the down arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved!<p><p>Did you consider these suggestions?<ul><li>when will the traffic set off again? If everyone will move off again shortly, it’s probably best to wait in the traffic queue. The rider should only filter here if there is time to reach the front. It’s important to pass queuing traffic slowly. Is there a pedestrian countdown timer that shows when the lights will change?</li><li>is there is enough space to get to the front and on which side? The rider should not filter unless there is time and space to do so.</li><li>are there any additional hazards? Might drivers be about to turn or change lanes? Are they indicating, and if so, on which side? Might people cross the road? Could vehicle doors open?</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
                "title": "Passing queuing traffic",
-               "body": ""
+               "body": "Part 1"
             },
             "_items": [
                {
@@ -3104,6 +3106,7 @@
             "_component": "reflection",
             "stepInstruction": "",
             "instruction": "<p>Enter your notes in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "_isNested": true,
             "_buttons": {
                "save": "Save",
                "_exportEnabled": false
@@ -3113,12 +3116,12 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!</p><p>Compare your thoughts with these ideas:<ul><li>for single lanes of queuing traffic, it will normally be better to filter on the right-hand side of the queuing traffic, but not always</li><li>on multi-lane roads with queuing traffic, it can be best to filter in between the two lanes, but again, not always</li><li>as this clip will show, the road soon widens into two lanes and there is not enough space to reach the front in between the two lanes. As there is enough time and space on the left-hand side to filter to the front, the rider sensibly (in this case) decides to use that side. If there had been insufficient time to get to the front, the cycle lane would normally be best avoided due to the possibility of road users behind overtaking and turning left at the junction</li><li>riders should usually adopt the primary position when riding through junctions. This helps to create and maintain a ‘safe riding space’ –  in clear sight of others and preventing hazardous overtaking</li></ul></p><p class='ins'>Now close this window and select the down arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved!</p><p>Compare your thoughts with these ideas:<ul><li>for single lanes of queuing traffic, it will normally be better to filter on the right-hand side of the queuing traffic, but not always</li><li>on multi-lane roads with queuing traffic, it can be best to filter in between the two lanes, but again, not always</li><li>as this clip will show, the road soon widens into two lanes and there is not enough space to reach the front in between the two lanes. As there is enough time and space on the left-hand side to filter to the front, the rider sensibly (in this case) decides to use that side. If there had been insufficient time to get to the front, the cycle lane would normally be best avoided due to the possibility of road users behind overtaking and turning left at the junction</li><li>riders should usually adopt the primary position when riding through junctions. This helps to create and maintain a ‘safe riding space’ –  in clear sight of others and preventing hazardous overtaking</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
-               "title": "",
-               "body": ""
+               "title": "Passing queuing traffic",
+               "body": "Part 2"
             },
             "_items": [
                {
@@ -3162,6 +3165,7 @@
             "_component": "reflection",
             "stepInstruction": "",
             "instruction": "<p>Enter your notes in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "_isNested": true,
             "_buttons": {
                "save": "Save",
                "_exportEnabled": false
@@ -3171,12 +3175,12 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!</p><p>Here are some ideas to consider:<ul><li>in this example, it is unclear when the lights will change and, in any case, the rider is already quite close to the front </li><li>in addition, due to the size of the queuing vehicles and lack of available space, and clear signs that road users in front are about to turn right, the rider makes the sensible decision to not filter any further and to wait in the traffic queue</li></ul></p><p class='ins'>Now close this window and select the down arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved!</p><p>Here are some ideas to consider:<ul><li>in this example, it is unclear when the lights will change and, in any case, the rider is already quite close to the front </li><li>in addition, due to the size of the queuing vehicles and lack of available space, and clear signs that road users in front are about to turn right, the rider makes the sensible decision to not filter any further and to wait in the traffic queue</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
-               "title": "",
-               "body": ""
+               "title": "Passing queuing traffic",
+               "body": "Part 3"
             },
             "_items": [
                {
@@ -3215,6 +3219,7 @@
             "_component": "reflection",
             "stepInstruction": "",
             "instruction": "<p>Enter your notes in the box below and select \u2018Save\u2019. Your ideas will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "_isNested": true,
             "_buttons": {
                "save": "Save",
                "_exportEnabled": false
@@ -3224,16 +3229,16 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!</p><p>Consider this suggestion:<ul><li>if passing vehicles that start to move, the space between two queuing road users normally expands when the traffic moves off, creating a sort of ‘concertina’ effect. This is the rider’s opportunity to make eye contact with the road user behind and to drop back into the traffic flow</li></ul></p><p class='ins'>Now close this window and select the down arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved!</p><p>Consider this suggestion:<ul><li>if passing vehicles that start to move, the space between two queuing road users normally expands when the traffic moves off, creating a sort of ‘concertina’ effect. This is the rider’s opportunity to make eye contact with the road user behind and to drop back into the traffic flow</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
-               "title": "",
-               "body": ""
+               "title": "Passing queuing traffic",
+               "body": "Part 4"
             },
             "_items": [
                {
-                  "question": "If the traffic starts to move off, what should the rider’s strategy be?",
+                  "question": "If the traffic starts to move off, what should the rider's strategy be?",
                   "_colour": "#fff",
                   "_bgcolour": "#000"
                }

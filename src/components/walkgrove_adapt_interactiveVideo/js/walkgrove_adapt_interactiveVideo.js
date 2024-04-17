@@ -54,6 +54,19 @@ define([
 
       this._moveOnAuto = this.model.get('_moveOnAuto') ? this.model.get('_moveOnAuto') : false;
 
+      this.listenTo(Adapt, {
+        'intvid:unlock': this.unlockAfterReflection
+      });
+
+    },
+
+    unlockAfterReflection: function() {
+      // console.log("reflection completed");
+      this.allowNextStep();
+      var ins = this._models[this._stepIndex].get('instructionAfter');
+      if(ins){
+        $('.interactivevideo__content-instruction').html(ins);
+      }
     },
 
     resetInteraction: function() {
@@ -124,14 +137,8 @@ define([
             newComponent = new ReflectionView({ model: model });
           
             this.model.listenTo(model,  'change', ()=> {
-              if(model.get('_isComplete') === true) {
-                console.log("reflection completed");
-                var ins = model.get('instructionAfter');
-                if(ins){
-                  $('.interactivevideo__content-instruction').html(ins);
-                }
-                this.allowNextStep();
-                this._models[index] = model;
+              if(model.get('_isComplete') === true || model.get('_isAnswered') === true) {
+                // this.unlockAfterReflection();
               }
             });
 
@@ -169,7 +176,8 @@ define([
     },
 
     allowNextStep: function() {
-      if(this._stageIndex < this.model.get('_stages').length) {
+      // console.log("boo!", this._stageIndex, this.model.get('_stages').length);
+      if(this._stageIndex <= this.model.get('_stages').length) {
         this._stageIndex++;
         if(this._stageViewedIndex < this._stageIndex) {
           this._stageViewedIndex = this._stageIndex;
@@ -183,6 +191,8 @@ define([
         //this._stageViewedIndex++;
         this.setCompletionStatus();
         // this.$('.js-click-reset').addClass('is-visible');
+      }
+      if(this._stepIndex === this.model.get('_items').length-1) {
         this._stepViewedIndex++;
       }
     },
@@ -209,7 +219,7 @@ define([
         this.updateProgress();
 
         _.delay(() => {
-          console.log(this._models[this._stepIndex].get('_isAnswered'));
+          // console.log(this._models[this._stepIndex].get('_isAnswered'));
           if(this._models[this._stepIndex].get('_isAnswered') === true) {
             this.allowNextStep();
             this.enableNext();

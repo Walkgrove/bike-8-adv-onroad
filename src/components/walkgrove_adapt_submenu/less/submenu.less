@@ -6,9 +6,20 @@
         position: relative;
     }
 
-    &__background {
+    &__background, &__background-mobile {
         width: 100%;
         height: auto;
+        display: block;
+        @media (max-width: @device-width-small) {
+            display: none;
+        }
+    }
+
+    &__background-mobile {
+        display: none;
+        @media (max-width: @device-width-small) {
+            display: block;
+        }
     }
 
     &__items {
@@ -136,6 +147,9 @@
             margin: 0.5rem 0;
 
             text-align: center;
+            @media (max-width: @device-width-small) {
+                text-align: left;
+            }
             border-radius: 1rem;
             
             padding: 0.5rem;

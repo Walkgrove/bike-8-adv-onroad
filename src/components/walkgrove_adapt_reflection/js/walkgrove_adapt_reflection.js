@@ -19,7 +19,7 @@ define([
     _xapi: null,
     _actorDetails: null,
 
-    _courseid: "bike8",
+    _courseid: "bikeability-adv-on-road-cycle-training",
     _activityId: "https://cloud.scorm.com/",
 
     _reflectdata: null,
@@ -39,14 +39,68 @@ define([
         'reflect:data': this.onGetXAPIState
       });
 
+      let reflectionData = Adapt.offlineStorage.get('reflection_data');
+      let dataFound = true;
+      let activityFound = false;
+      let _xapiID;
+      const activityID = '_apiID';
+      if (reflectionData === 'undefined' || reflectionData === null || reflectionData === "") {
+        dataFound = false;
+        reflectionData = "";
+      }
+      if(dataFound === true) {
+        const reflectActivities = reflectionData.split("$$");  
+        for(let a=0; a<reflectActivities.length-1; a++) {
+          const reflects = reflectActivities[a].split("$");
+          for(let r=0; r<reflects.length; r++){
+            let reflect = reflects[r].split("^");
+            if(r === 0) {
+              if(reflect[0] === activityID) {
+                activityFound = true;
+                _xapiID = reflect[1];
+              }
+            }
+          }
+        }
+      }
+      if(!activityFound) {
+        _xapiID = new Date().valueOf();
+        reflectionData += "_apiID^" + _xapiID + ""  + "$$"; 
+        Adapt.offlineStorage.set('r', reflectionData);
+      }
+      
       this._activityId += "" + this._courseid + "",
-      this._stateId = this._activityId + this._activityId + "",
+      this._stateId = this._activityId + "/" + _xapiID,
+
+      // console.log(this._stateId);
 
       require(['https://unpkg.com/@xapi/xapi'], (XAPI) => {
         const learnerdata = Adapt.offlineStorage.get("learnerinfo");
 
-        const _endpoint = "https://cloud.scorm.com/lrs/DQKRU0EHDD/";
-        const _auth = `Basic ${btoa('tbBmy5FNh0-AOScGIdE:CeJeS3Q7pWIKBFlND-M')}`; // `Basic ${btoa('accounts@walkgrove.co.uk:Trap3z1um$22')}`;
+        let _endpoint = "https://cloud.scorm.com/lrs/DQKRU0EHDD/";
+        let _auth = `Basic ${btoa('tbBmy5FNh0-AOScGIdE:CeJeS3Q7pWIKBFlND-M')}`; // `Basic ${btoa('accounts@walkgrove.co.uk:Trap3z1um$22')}`;
+
+        let agentName = learnerdata.name;
+        let agentMbox = "mailto:" + learnerdata.id;
+
+        const queryParamsString = location.search;
+        const queryParamsObject = XAPI.getSearchQueryParamsAsObject(queryParamsString);
+        // if there is an activity id, i.e. on an LRS
+        if(queryParamsObject.activity_id) {
+
+          _endpoint = queryParamsObject.endpoint;
+          _auth = queryParamsObject.auth; 
+          // actorDetails = queryParamsObject.actor;
+          // registration = queryParamsObject.registration;
+
+          agentName = queryParamsObject.actor.name;
+          if(queryParamsObject.actor.mbox){
+            agentMbox = queryParamsObject.actor.mbox;
+          } else if(queryParamsObject.actor.account && queryParamsObject.actor.account.name) {
+            const res = queryParamsObject.actor.account.name.split("|");
+            agentMbox = "mailto:" + res[1];
+          }
+        } 
 
         this._xapi = new XAPI({
           endpoint: _endpoint,
@@ -55,8 +109,8 @@ define([
 
         this._actorDetails = {
           objectType: "Agent",
-          name: learnerdata.name,
-          mbox: "mailto:" + learnerdata.id
+          name: agentName,
+          mbox: agentMbox
         };
 
         this.onGetXAPIState();
@@ -84,14 +138,13 @@ define([
 
     onGetXAPIState: function() {
       this.$('.reflection__loader').removeClass('is-hidden');
-      // console.log('>>>>> get state', this.model.get('_id'));
       // GET the xAPI state ...
       this._xapi.getState({
         agent: this._actorDetails,
         activityId: this._activityId,
         stateId: this._stateId
       }).then((result) => {
-        // console.log('>>>> getState', result.data);
+        console.log('>>>> getState', result.data);
         this._reflectdata = result.data;
         this._state = true;
         this.$('.reflection__loader').addClass('is-hidden');
@@ -125,8 +178,6 @@ define([
         stateId: this._stateId, 
         state: this._reflectdata
       });
-
-      // console.log('>>>> onSaveXAPIState', this._reflectdata);
     },        
 
     onSaveActive: function() {
@@ -162,131 +213,140 @@ define([
 
     onSaveData: function() {
 
-      this.model.set('_isAnswered', true);
-      this.model.set('_isComplete', true);
-
-      // save to scorm data
-      //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
-      // this.onGetXAPIState();
-      let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
-
-      let dataFound = true;
-      if (reflectionData === 'undefined' || reflectionData === null || reflectionData === "") {
-        dataFound = false;
+      if(this.model.get('_isNested') === true) {
+        //GET
+        this.onGetXAPIState();
       }
 
-      let activityFound = false;
-      let activityID = this.model.get('_id');
+      _.delay(() => {
+        this.model.set('_isAnswered', true);
+        this.model.set('_isComplete', true);
+        Adapt.trigger('intvid:unlock');
 
-      const activityTitle = this.model.get('_activity').title ? this.model.get('_activity').title : ' ';
-      const activityBody = this.model.get('_activity').body ? this.model.get('_activity').body : ' ';
+        // save to scorm data
+        //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
+        // this.onGetXAPIState();
+        let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
 
-      // add initial activity info ...
-      const reflectionActivityData = this.model.get('_id') + '^' + activityTitle + '^' + activityBody + '$';
-      
-      let reflectionDataNew = '';
-      let newData = '';
+        let dataFound = true;
+        if (reflectionData === 'undefined' || reflectionData === null || reflectionData === "") {
+          dataFound = false;
+        }
 
-      let activityToChange = false;
+        let activityFound = false;
+        let activityID = this.model.get('_id');
 
-      if(dataFound === true) {
-        let reflectActivities = reflectionData.split("$$");  
-        activityFound = false;
-        for(let a=0; a<reflectActivities.length-1; a++) {
-          
-          const reflects = reflectActivities[a].split("$");
-          activityToChange = false;
-          for(let r=0; r<reflects.length; r++){
-            let reflect = reflects[r].split("^");
+        const activityTitle = this.model.get('_activity').title ? this.model.get('_activity').title : ' ';
+        const activityBody = this.model.get('_activity').body ? this.model.get('_activity').body : ' ';
 
-            if(r === 0) {
-  
-              if(reflect[0] === activityID) {
-                activityFound = true;
-                activityToChange = true;
-              }
-              newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2];
-            } else {
-              if(reflects.length-1 === 1) {
-                if(activityToChange === true) {
-                  reflect[4] = this.$('.js-reflection-textbox').eq(0).val();
+        // add initial activity info ...
+        const reflectionActivityData = this.model.get('_id') + '^' + activityTitle + '^' + activityBody + '$';
+        
+        let reflectionDataNew = '';
+        let newData = '';
+
+        let activityToChange = false;
+
+        if(dataFound === true) {
+          let reflectActivities = reflectionData.split("$$");  
+          activityFound = false;
+          for(let a=0; a<reflectActivities.length-1; a++) {
+            
+            const reflects = reflectActivities[a].split("$");
+            activityToChange = false;
+            for(let r=0; r<reflects.length; r++){
+              let reflect = reflects[r].split("^");
+
+              if(r === 0) {
+    
+                if(reflect[0] === activityID) {
+                  activityFound = true;
+                  activityToChange = true;
                 }
-                newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '';
+                newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2];
               } else {
-                for(let i=0; i<reflects.length-1; i++){
-                  if(i === Number(reflect[0])) {
-                    if(activityToChange === true) {
-                      reflect[4] = this.$('.js-reflection-textbox').eq(i).val();
+                if(reflects.length-1 === 1) {
+                  if(activityToChange === true) {
+                    reflect[4] = this.$('.js-reflection-textbox').eq(0).val();
+                  }
+                  newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '';
+                } else {
+                  for(let i=0; i<reflects.length-1; i++){
+                    if(i === Number(reflect[0])) {
+                      if(activityToChange === true) {
+                        reflect[4] = this.$('.js-reflection-textbox').eq(i).val();
+                      }
+                      newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '';
                     }
-                    newData += reflect[0] + '^' + reflect[1] + '^' + reflect[2] + '^' + reflect[3] + '^' + reflect[4] + '';
                   }
                 }
               }
+              
+              newData += '$';
+    
             }
-            
             newData += '$';
-  
+
           }
-          newData += '$';
-
-        }
-      }
-      
-      // add any new activity data
-      if(dataFound === false || activityFound === false) {
-
-        if(this.model.get('_items').length === 1) {
-
-          const titleText = this.model.get('_items')[0].title ? this.model.get('_items')[0].title : ' ';
-          const subTitleText = this.model.get('_items')[0].subtitle ? this.model.get('_items')[0].subtitle : ' ';
-          const questionText = this.model.get('_items')[0].question ? this.model.get('_items')[0].question : ' ';
-
-          newData += reflectionActivityData + '0^' + titleText + '^' + subTitleText + '^' + questionText + '^' + this.$('.js-reflection-textbox').eq(0).val() + '$$';
-
-        } else {
-
-          newData += '' + reflectionActivityData;
-          this.model.get('_items').forEach((item, i) => {
-            const titleText = item.title ? item.title : ' ';
-            const subTitleText = item.subtitle ? item.subtitle : ' ';
-            const questionText = item.question ? item.question : ' ';
-            newData += '' + i + '^' + titleText + '^' + subTitleText + '^' + questionText + '^' + this.$('.js-reflection-textbox').eq(i).val() + '$';
-          });
-          newData += '$';
-
         }
         
-      }
+        // add any new activity data
+        if(dataFound === false || activityFound === false) {
 
-      
-      reflectionDataNew += newData;
+          if(this.model.get('_items').length === 1) {
 
-      this._data = reflectionDataNew;
-      // save to SCORM
-      this._reflectdata = this._data; //Adapt.offlineStorage.set('r', this._data);
-      // if(this._state === false) {
-      //   this.onCreateXAPIState();
-      // } else {
-        this.onSaveXAPIState();
-      // }
+            const titleText = this.model.get('_items')[0].title ? this.model.get('_items')[0].title : ' ';
+            const subTitleText = this.model.get('_items')[0].subtitle ? this.model.get('_items')[0].subtitle : ' ';
+            const questionText = this.model.get('_items')[0].question ? this.model.get('_items')[0].question : ' ';
 
-      // show as saved ...
-      if(this.model.get('_message')._inline === true) {
-        // ... inline
-        this.$('.reflection__message').addClass('is-visible');
-      } else {
-        // ... or, as a notify popup
-        Adapt.trigger('notify:popup', {
-          body: this.model.get('_message').content  
-        });
-      }
+            newData += reflectionActivityData + '0^' + titleText + '^' + subTitleText + '^' + questionText + '^' + this.$('.js-reflection-textbox').eq(0).val() + '$$';
 
-      // show export button - if required
-      if(this.model.get('_buttons')._exportEnabled === true) {
-        this.$('.js-reflection-export-click').addClass('is-visible');
-      }
-      
-      this.setCompletionStatus();      
+          } else {
+
+            newData += '' + reflectionActivityData;
+            this.model.get('_items').forEach((item, i) => {
+              const titleText = item.title ? item.title : ' ';
+              const subTitleText = item.subtitle ? item.subtitle : ' ';
+              const questionText = item.question ? item.question : ' ';
+              newData += '' + i + '^' + titleText + '^' + subTitleText + '^' + questionText + '^' + this.$('.js-reflection-textbox').eq(i).val() + '$';
+            });
+            newData += '$';
+
+          }
+          
+        }
+
+        
+        reflectionDataNew += newData;
+
+        this._data = reflectionDataNew;
+        // save to SCORM
+        this._reflectdata = this._data; //Adapt.offlineStorage.set('r', this._data);
+        // if(this._state === false) {
+        //   this.onCreateXAPIState();
+        // } else {
+          this.onSaveXAPIState();
+        // }
+
+        // show as saved ...
+        if(this.model.get('_message')._inline === true) {
+          // ... inline
+          this.$('.reflection__message').addClass('is-visible');
+        } else {
+          // ... or, as a notify popup
+          Adapt.trigger('notify:popup', {
+            body: this.model.get('_message').content  
+          });
+        }
+
+        // show export button - if required
+        if(this.model.get('_buttons')._exportEnabled === true) {
+          this.$('.js-reflection-export-click').addClass('is-visible');
+        }
+        
+        this.setCompletionStatus();  
+        
+      }, 1000);    
 
     },
 
@@ -637,7 +697,7 @@ define([
                   //   this.$('.js-reflection-export-click').addClass('is-visible');
                   // }
                   this.model.set('_isAnswered', true);
-                  this.setCompletionStatus();
+                  this.model.set('_isComplete', true);
                   if(this.model.get('_message')._inline === true) {
                     // ... inline
                     this.$('.reflection__message').addClass('is-visible');
