@@ -8,7 +8,7 @@ define([
   var ReflectionView = ComponentView.extend({
 
     events: {
-      'click .js-reflection-save-click': 'onSaveData',
+      'click .js-reflection-save-click': 'onSaveSelected',
       'click .js-reflection-export-click': 'onExportPDF',
       'input .reflection__item-textbox': 'onSaveActive'
     },
@@ -157,6 +157,21 @@ define([
       });
     },
 
+    onGetSaveXAPIState: function() {
+      // GET the xAPI state ...
+      this._xapi.getState({
+        agent: this._actorDetails,
+        activityId: this._activityId,
+        stateId: this._stateId
+      }).then((result) => {
+        console.log('>>>> getState', result.data);
+        this._reflectdata = result.data;
+        this.onSaveData();
+      }).catch((error) => {
+        this.onSaveData();
+      });
+    },
+
     onCreateXAPIState: function() {
       // if not one, then CREATE one!
       this._xapi.createState({
@@ -211,14 +226,17 @@ define([
       this.setupInviewCompletion(selector);
     },
 
-    onSaveData: function() {
-
+    onSaveSelected: function() {
       if(this.model.get('_isNested') === true) {
         //GET
-        this.onGetXAPIState();
+        this.onGetSaveXAPIState();
+      } else {
+        this.onSaveData();
       }
+    },
 
-      _.delay(() => {
+    onSaveData: function() {
+
         this.model.set('_isAnswered', true);
         this.model.set('_isComplete', true);
         Adapt.trigger('intvid:unlock');
@@ -344,9 +362,7 @@ define([
           this.$('.js-reflection-export-click').addClass('is-visible');
         }
         
-        this.setCompletionStatus();  
-        
-      }, 1000);    
+        this.setCompletionStatus();     
 
     },
 

@@ -88,7 +88,7 @@
     }
   },
   "_trickle": {
-    "_isEnabled": true
+    "_isEnabled": false
   },
   "_languagePicker": {
     "navigationBarLabel": "Select course language"

@@ -3142,13 +3142,13 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2_Q4CP..png",
+            "_background": "course/en/video/C2_Q4CP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2_Q4CP..mp4",
-               "poster": "course/en/video/C2_Q4CP..png"
+               "mp4": "course/en/video/C2_Q4CP.mp4",
+               "poster": "course/en/video/C2_Q4CP.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
