@@ -79,6 +79,7 @@ html, body {
 .c-06_01_010-g {
     img {
         object-fit: cover;
+        overflow: hidden;
     }
 }
 
@@ -358,6 +359,16 @@ a {
 .block, .block__inner {
     height: auto;
 }
+
+// .custom-block-height {
+//     .block, .block__inner {
+//         height: auto;
+
+//         @media (min-height: 768px) {
+//         height: 85vh!important;
+//         }
+//     }
+// }
 
 .has-animation {
     overflow: visible!important;
@@ -856,6 +867,23 @@ a {
 
     .narrative__content-title {
         font-weight: @font-weight-bold!important;
+    }
+}
+
+.c-02_01_030 {
+    .narrative {
+        &__content {
+            width: 50%;
+            @media (max-width: @device-width-medium) {
+                width: 100%;
+            }    
+        }
+
+        &__slide-container {
+            @media (min-width: @device-width-medium) {
+            width: 50%;
+            }
+        }
     }
 }
 
