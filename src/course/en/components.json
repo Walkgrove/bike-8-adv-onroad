@@ -1348,7 +1348,7 @@
       "_layout": "left",
       "title": "Strategies for delivery",
       "displayTitle": "Strategies for delivery",
-      "body": "<p>Effective advanced on-road delivery will involve different coaching strategies that should be applied in a rider-centred way to achieve the best possible training outcomes. Training will normally involve a combination of:<ul><li>buddy riding where riders carry out longer journeys</li><li>point-to-point independent riding activities</li></ul>Both approaches \u2013 longer journey-based activities or shorter point-to-point independent riding activities \u2013 will often require discussions by the roadside (where necessary accompanied by an instructor demonstration) to ensure your riders understand the important coaching points. As always, when your riders are away from their cycles, you should aim for high levels of active learning, with your riders cycling as soon as possible, so they can learn through practice!</p><div class='box-green'>For more information on active learning, you can visit the relevant section in the Cycle Training Delivery Guide under the <strong>Resources</strong> tab.</div><p>Let\u2019s now look at these two main approaches for delivering advanced on-road training activities.</p>",
+      "body": "<p>Effective advanced on-road delivery will involve different coaching strategies that should be applied in a rider-centred way to achieve the best possible training outcomes. Training will normally involve a combination of:<ul><li>buddy riding where riders carry out longer journeys</li><li>point-to-point independent riding activities</li></ul>Both approaches \u2013 longer journey-based activities or shorter point-to-point independent riding activities \u2013 will often require discussions by the roadside (where necessary accompanied by an instructor demonstration) to ensure your riders understand the important coaching points. As always, when your riders are away from their cycles, you should aim for high levels of active learning, with your riders cycling as soon as possible, so they can learn through practice!</p><div class='box-green'>For more information on active learning, you can visit the relevant section in the <strong>Cycle Training Delivery</strong> Guide under the <strong>Resources</strong> tab.</div><p>Let\u2019s now look at these two main approaches for delivering advanced on-road training activities.</p>",
       "instruction": "<p>Scroll down to continue.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -1789,7 +1789,7 @@
       "title": "What are the advantages of buddy riding?",
       "displayTitle": "What are the advantages of buddy riding?",
       "body": "<p>Take a look at the following statements and decide which accurately describe the benefits of buddy riding.</p>",
-      "instruction": "<p>Select the correct options or options and then select Check answer.</p>",
+      "instruction": "<p>Select the correct option(s) and then select Check answer.</p>",
       "_questionWeight": 1,
       "_canShowModelAnswer": true,
       "_shouldDisplayAttempts": false,
@@ -3003,7 +3003,7 @@
       "body": "",
       "instruction": "",
       "_canReset": true,
-      "_isResetOnRevisit": true,
+      "_isResetOnRevisit": false,
       "_moveOnAuto": true,
       "_stages": [
          {
@@ -3457,7 +3457,7 @@
       "_layout": "full",
       "title": "• Some important points ...",
       "displayTitle": "",
-      "body": "<p>In this video, some important coaching points are highlighted while the rider is on the road.</p><p>You can also find more coaching points detailed in the <strong>Cycle Activity Templates: Using multi-lane roads and Using multi-lane roundabouts</strong>.</p>",
+      "body": "<p>In this video, some important coaching points are highlighted while the rider is on the road.</p><p>You can also find more coaching points detailed in the <strong>Cycle Activity Templates: Using multi-lane roads</strong> and <strong>Using multi-lane roundabouts</strong>.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
       "_useClosedCaptions": false,
@@ -3700,7 +3700,7 @@
       "_layout": "full",
       "title": "Evaluate this infrastructure",
       "displayTitle": "Evaluate this infrastructure",
-      "body": "<p>Take a look at these before and after images that show two examples of cycling infrastructure. Before moving to the second image at each site, spend a moment thinking about any potential issues with the infrastructure you see.</p>",
+      "body": "<p>Take a look at these <em>before and after</em> images that show two examples of cycling infrastructure. Before moving to the second image at each site, spend a moment thinking about any potential issues with the infrastructure you see.</p>",
       "instruction": "<p>Select the arrow to find out more.</p>",
       "_setCompletionOn": "allItems",
       "mobileInstruction": "<p>Select the arrow to find out more.</p>",
@@ -4862,7 +4862,7 @@
       "title": "Dealing with abusive road users",
       "displayTitle": "Dealing with abusive road users",
       "body": "<p>During a buddy-riding journey, your riders are verbally abused and beeped at by a driver who passes them very closely on a road that has a 40mph speed limit. The riders appear flustered. How would you deal with this situation?</p>",
-      "instruction": "<p>Selecteach card for ideas from instructors of possible ways to handle this scenario.</p>",
+      "instruction": "<p>Select each card for ideas from instructors of possible ways to handle this scenario.</p>",
       "_fullImage": true,
       "_columns": {
          "_large": 3,

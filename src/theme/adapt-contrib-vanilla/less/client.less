@@ -78,8 +78,8 @@ html, body {
 
 .c-06_01_010-g {
     img {
-        object-fit: cover;
-        overflow: hidden;
+        object-fit: contain;
+        object-position: top;
     }
 }
 
@@ -636,7 +636,7 @@ a {
     justify-content: flex-start;
 }
 .timer-icon {
-    background-image: url('course/en/images/timer_icon_--.png');
+    background-image: url('course/en/images/timer_icon_90.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 3.5rem;
@@ -652,6 +652,13 @@ a {
     display: inline-block;
     transform: translate(0%,0%);
     margin-right: 1rem;
+}
+
+.submenu__background {
+    @media (max-width: @device-width-medium) {
+        height: 65vh;
+        object-fit: contain;
+    }
 }
 
 
@@ -1245,6 +1252,30 @@ a {
             max-width: 100%;
             width: 100%;
             min-width: 100%;
+        }
+    }
+}
+
+//------------------------------------
+// ACCORDION
+//------------------------------------
+.c-05_01_060 {
+    
+    .accordion__item-body {
+        width: 80%!important;
+        display: flex;
+        align-self: center;
+
+        @media (max-width: @device-width-medium) {
+            width: 100%!important;
+        }
+    }
+
+    .accordion__item-image-container {
+        width: 20%!important;
+
+        @media (max-width: @device-width-medium) {
+            width: 100%!important;
         }
     }
 }
