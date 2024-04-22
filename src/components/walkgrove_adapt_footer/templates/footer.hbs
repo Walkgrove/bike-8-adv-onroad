@@ -39,12 +39,24 @@
     {{#if_eq _name "return"}}
       <button class="btn footer__link footer__{{{_name}}} js-return" data-href="{{_href}}" aria-label="{{{title}}}" role="link" tabindex="0" style="color: {{@root/_styling._link-color}};">
         {{#if_eq @root/_buttons true}}
-        <span class="icon icon-controls-right "></span>
+        <span class="icon icon-controls-left "></span>
         {{else}}
         <span class="footer__link-title">{{{title}}}</span>
         {{/if_eq}}
       </button>
       {{/if_eq}}
     {{/each}}
+
+    {{!-- {{#each _links}}
+    {{#if_eq _name "return-top"}}
+      <button class="btn footer__link footer__{{{_name}}} js-return-top" data-href="{{_href}}" aria-label="{{{title}}}" role="link" tabindex="0" style="color: {{@root/_styling._link-color}};">
+        {{#if_eq @root/_buttons true}}
+        <span class="icon icon-controls-left "></span>
+        {{else}}
+        <span class="footer__link-title">{{{title}}}</span>
+        {{/if_eq}}
+      </button>
+      {{/if_eq}}
+    {{/each}} --}}
 
 </div>

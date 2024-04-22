@@ -8,7 +8,8 @@ define([
 
     events: {
       'click .js-click-home': 'goHome',
-      'click .js-return': 'goReturn'
+      'click .js-return': 'goReturn',
+      'click .js-return-top': 'goReturntop'
     },
     
     preRender: function() {
@@ -51,6 +52,11 @@ define([
     },
 
     goReturn: function(event) {
+      var id = $(event.currentTarget).data('href');
+      Adapt.navigateToElement('.' + id, { replace: true });
+    },
+
+    goReturntop: function(event) {
       var id = $(event.currentTarget).data('href');
       Adapt.navigateToElement('.' + id, { replace: true });
     },

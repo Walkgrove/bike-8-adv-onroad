@@ -2175,8 +2175,8 @@
       "instruction": "",
       "_isOptional": true,
       "_graphic": {
-         "large": "course/en/images/05_01_010_image.png",
-         "small": "course/en/images/05_01_010_image.png",
+         "large": "course/en/images/05_01_010_image_v2.png",
+         "small": "course/en/images/05_01_010_image_v2.png",
          "alt": ""
       },
       "_pageLevelProgress": {
@@ -2854,6 +2854,34 @@
       }
    },
    {
+      "_id": "c-06_01_1_T_F",
+      "_parentId": "b-06_01_1_T_F",
+      "_type": "component",
+      "_component": "footer",
+      "_classes": "",
+      "_layout": "full",
+      "title": "",
+      "displayTitle": "",
+      "body": "",
+      "_styling": {
+         "_background-color": "#78d64a",
+         "_link-color": "#FFF"
+      },
+      "_buttons": true,
+      "_home": false,
+      "_links": [
+         {
+            "_name": "return",
+            "_href": "b-06_00_020",
+            "title": "Advanced on-road training activities"
+         }
+      ],
+      "_pageLevelProgress": {
+         "_isEnabled": false,
+         "_isCompletionIndicatorEnabled": false
+      }
+   },
+   {
       "_id": "c-06_01_010-t",
       "_parentId": "b-06_01_010",
       "_type": "component",
@@ -3034,7 +3062,7 @@
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2_Q1CP.mp4",
+               "mp4": "course/en/video/C2_Q1holdCP.mp4",
                "poster": "course/en/video/C2_Q1CP.png"
             },
             "_playerOptions": {
@@ -3149,7 +3177,7 @@
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2_Q4CP.mp4",
+               "mp4": "course/en/video/C2_Q4holdCP.mp4",
                "poster": "course/en/video/C2_Q4CP.png"
             },
             "_playerOptions": {
@@ -3204,7 +3232,7 @@
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_media": {
-               "mp4": "course/en/video/C2_Q5CP.mp4",
+               "mp4": "course/en/video/C2_Q5holdCP.mp4",
                "poster": "course/en/video/C2_Q5CP.png"
             },
             "_playerOptions": {
@@ -3233,7 +3261,7 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!</p><p>Consider this suggestion:<ul><li>if passing vehicles that start to move, the space between two queuing road users normally expands when the traffic moves off, creating a sort of ‘concertina’ effect. This is the rider’s opportunity to make eye contact with the road user behind and to drop back into the traffic flow</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved!</p><p>Consider this suggestion:<ul><li>if passing vehicles that start to move, the space between two queuing road users normally expands when the traffic moves off, creating a sort of ‘concertina’ effect. This is the rider’s opportunity to make eye contact with the road user behind and to drop back into the traffic flow</li></ul></p><p class='ins'>Select Play to watch the full video again or scroll down to continue.</p>",
                "_inline": false
             },
             "_activity": {
@@ -3305,7 +3333,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved! </p><p>Here are some suggestions to compare your ideas with: <ul><li>to give the riders the opportunity to practise filtering, deliver the activity as a point-to-point independent riding activity so that the riders are kept in sight by you observing and supporting them from the roadside</li><li>as a helpful way to promote active learning, have the riders attempt the activity one at a time with the other rider waiting and observing to review their peer\u2019s attempt before  having a go themselves</li><li>if you are riding as a group, remind the leading rider to check behind them regularly and ride at a speed that keeps the group together where possible</li></ul>Scroll down to continue.</p>",
+         "content": "<p>Your notes have been saved! </p><p>Here are some suggestions to compare your ideas with: <ul><li>to give the riders the opportunity to practise filtering, deliver the activity as a point-to-point independent riding activity so that the riders are kept in sight by you observing and supporting them from the roadside</li><li>as a helpful way to promote active learning, have the riders attempt the activity one at a time with the other rider waiting and observing to review their peer\u2019s attempt before  having a go themselves</li><li>if you are riding as a group, remind the leading rider to check behind them regularly and ride at a speed that keeps the group together where possible</li></ul></p>",
          "_inline": true
       },
       "_activity": {
@@ -3334,7 +3362,7 @@
       "title": "",
       "displayTitle": "",
       "body": "",
-      "instruction": "<p>Select the forward arrow to return.</p>",
+      "instruction": "<p>Select the back arrow to return and select another example along the journey.</p>",
       "_pageLevelProgress": {
          "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
@@ -3343,6 +3371,34 @@
    {
       "_id": "c-06_01_1_F",
       "_parentId": "b-06_01_1_F",
+      "_type": "component",
+      "_component": "footer",
+      "_classes": "",
+      "_layout": "full",
+      "title": "",
+      "displayTitle": "",
+      "body": "",
+      "_styling": {
+         "_background-color": "#78d64a",
+         "_link-color": "#FFF"
+      },
+      "_buttons": true,
+      "_home": false,
+      "_links": [
+         {
+            "_name": "return",
+            "_href": "b-06_00_020",
+            "title": "Advanced on-road training activities"
+         }
+      ],
+      "_pageLevelProgress": {
+         "_isEnabled": false,
+         "_isCompletionIndicatorEnabled": false
+      }
+   },
+   {
+      "_id": "c-06_02_2_T_F",
+      "_parentId": "b-06_02_2_T_F",
       "_type": "component",
       "_component": "footer",
       "_classes": "",
@@ -3550,7 +3606,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved! </p>Here are some suggestions to compare your ideas with:<ul><li>First, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this <strong>differentiated</strong> and inclusive approach helps all the riders develop their cycling</li></ul><p>Three possible questions to ask your riders:<div class='speechmarks more-padding'>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</div></p><p> Scroll down to continue.</p>",
+         "content": "<p>Your notes have been saved! </p>Here are some suggestions to compare your ideas with:<ul><li>First, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this <strong>differentiated</strong> and inclusive approach helps all the riders develop their cycling</li></ul><p>Three possible questions to ask your riders:<div class='speechmarks more-padding'>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</div></p>",
          "_inline": true
       },
       "_activity": {
@@ -3584,7 +3640,7 @@
       "title": "",
       "displayTitle": "",
       "body": "",
-      "instruction": "<p>Select the forward arrow to return.</p>",
+      "instruction": "<p>Select the back arrow to return and select another example along the journey.</p>",
       "_pageLevelProgress": {
          "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
@@ -3593,6 +3649,34 @@
    {
       "_id": "c-06_01_2_F",
       "_parentId": "b-06_01_2_F",
+      "_type": "component",
+      "_component": "footer",
+      "_classes": "",
+      "_layout": "full",
+      "title": "",
+      "displayTitle": "",
+      "body": "",
+      "_styling": {
+         "_background-color": "#78d64a",
+         "_link-color": "#FFF"
+      },
+      "_buttons": true,
+      "_home": false,
+      "_links": [
+         {
+            "_name": "return",
+            "_href": "b-06_00_020",
+            "title": "Advanced on-road training activities"
+         }
+      ],
+      "_pageLevelProgress": {
+         "_isEnabled": false,
+         "_isCompletionIndicatorEnabled": false
+      }
+   },
+   {
+      "_id": "c-06_03_3_T_F",
+      "_parentId": "b-06_03_3_T_F",
       "_type": "component",
       "_component": "footer",
       "_classes": "",
@@ -4071,7 +4155,7 @@
       "title": "",
       "displayTitle": "",
       "body": "",
-      "instruction": "<p>Select the forward arrow to return.</p>",
+      "instruction": "<p>Select the back arrow to return and select another example along the journey.</p>",
       "_pageLevelProgress": {
          "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
@@ -4080,6 +4164,34 @@
    {
       "_id": "c-06_01_3_F",
       "_parentId": "b-06_01_3_F",
+      "_type": "component",
+      "_component": "footer",
+      "_classes": "",
+      "_layout": "full",
+      "title": "",
+      "displayTitle": "",
+      "body": "",
+      "_styling": {
+         "_background-color": "#78d64a",
+         "_link-color": "#FFF"
+      },
+      "_buttons": true,
+      "_home": false,
+      "_links": [
+         {
+            "_name": "return",
+            "_href": "b-06_00_020",
+            "title": "Advanced on-road training activities"
+         }
+      ],
+      "_pageLevelProgress": {
+         "_isEnabled": false,
+         "_isCompletionIndicatorEnabled": false
+      }
+   },
+   {
+      "_id": "c-06_04_4_T_F",
+      "_parentId": "b-06_04_4_T_F",
       "_type": "component",
       "_component": "footer",
       "_classes": "",
@@ -4420,7 +4532,7 @@
       "title": "",
       "displayTitle": "",
       "body": "",
-      "instruction": "<p>Select the forward arrow to return.</p>",
+      "instruction": "<p>Select the back arrow to return and select another example along the journey.</p>",
       "_pageLevelProgress": {
          "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
@@ -4429,6 +4541,34 @@
    {
       "_id": "c-06_01_4_F",
       "_parentId": "b-06_01_4_F",
+      "_type": "component",
+      "_component": "footer",
+      "_classes": "",
+      "_layout": "full",
+      "title": "",
+      "displayTitle": "",
+      "body": "",
+      "_styling": {
+         "_background-color": "#78d64a",
+         "_link-color": "#FFF"
+      },
+      "_buttons": true,
+      "_home": false,
+      "_links": [
+         {
+            "_name": "return",
+            "_href": "b-06_00_020",
+            "title": "Advanced on-road training activities"
+         }
+      ],
+      "_pageLevelProgress": {
+         "_isEnabled": false,
+         "_isCompletionIndicatorEnabled": false
+      }
+   },
+   {
+      "_id": "c-06_05_5_T_F",
+      "_parentId": "b-06_05_5_T_F",
       "_type": "component",
       "_component": "footer",
       "_classes": "",
@@ -4619,7 +4759,7 @@
       "title": "",
       "displayTitle": "",
       "body": "",
-      "instruction": "<p>Select the forward arrow to return.</p>",
+      "instruction": "<p>Select the back arrow to return and select another example along the journey.</p>",
       "_pageLevelProgress": {
          "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false

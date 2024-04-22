@@ -88,12 +88,12 @@
     }
   },
   "_trickle": {
-    "_isEnabled": false
+    "_isEnabled": true
   },
   "_languagePicker": {
     "navigationBarLabel": "Select course language"
   },
-  "_latestTrackingId": 116,
+  "_latestTrackingId": 121,
   "_start": {
     "_isEnabled": true,
     "_startIds": {
@@ -198,5 +198,5 @@
       "no": "No"
     }
   },
-  "_lockType": ""
+  "_lockType": "sequential"
 }
