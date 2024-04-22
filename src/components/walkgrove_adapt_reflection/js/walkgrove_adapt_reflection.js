@@ -10,7 +10,8 @@ define([
     events: {
       'click .js-reflection-save-click': 'onSaveSelected',
       'click .js-reflection-export-click': 'onExportPDF',
-      'input .reflection__item-textbox': 'onSaveActive'
+      'input .reflection__item-textbox': 'onSaveActive',
+      'click .js-reflection-feedback-click': 'onShowFeedback',
     },
 
     _data: '',
@@ -235,6 +236,12 @@ define([
       }
     },
 
+    onShowFeedback: function() {
+      Adapt.trigger('notify:popup', {
+        body: this.model.get('_message').content  
+      });
+    },
+
     onSaveData: function() {
 
         this.model.set('_isAnswered', true);
@@ -355,6 +362,7 @@ define([
           Adapt.trigger('notify:popup', {
             body: this.model.get('_message').content  
           });
+          this.$('.js-reflection-feedback-click').addClass('is-visible');
         }
 
         // show export button - if required
@@ -714,6 +722,7 @@ define([
                   // }
                   this.model.set('_isAnswered', true);
                   this.model.set('_isComplete', true);
+                  this.$('.js-reflection-feedback-click').addClass('is-visible');
                   if(this.model.get('_message')._inline === true) {
                     // ... inline
                     this.$('.reflection__message').addClass('is-visible');

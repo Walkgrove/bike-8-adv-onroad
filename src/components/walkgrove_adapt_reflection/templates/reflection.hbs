@@ -38,6 +38,11 @@
         {{{_buttons.export}}}
       </button>
       {{/if_eq}}
+       {{#if_eq _message._inline false}}
+      <button class="reflection__btn button secondary js-reflection-feedback-click" role="button" aria-label="{{{_buttons.feedback}}}">
+        {{{_buttons.feedback}}}
+      </button>
+      {{/if_eq}}
     </div>
 
     <div class="reflection__message" >

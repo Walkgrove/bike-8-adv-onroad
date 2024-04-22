@@ -3055,7 +3055,8 @@
             "_isNested": true,
             "_buttons": {
                "save": "Save",
-               "_exportEnabled": false
+               "_exportEnabled": false,
+               "feedback": "Show feedback"
             },
             "_styling": {
                "_input-width": "100%"
@@ -3109,7 +3110,8 @@
             "_isNested": true,
             "_buttons": {
                "save": "Save",
-               "_exportEnabled": false
+               "_exportEnabled": false,
+               "feedback": "Show feedback"
             },
             "_styling": {
                "_input-width": "50%"
@@ -3168,7 +3170,8 @@
             "_isNested": true,
             "_buttons": {
                "save": "Save",
-               "_exportEnabled": false
+               "_exportEnabled": false,
+               "feedback": "Show feedback"
             },
             "_styling": {
                "_input-width": "100%"
@@ -3222,7 +3225,8 @@
             "_isNested": true,
             "_buttons": {
                "save": "Save",
-               "_exportEnabled": false
+               "_exportEnabled": false,
+               "feedback": "Show feedback"
             },
             "_styling": {
                "_input-width": "100%"
