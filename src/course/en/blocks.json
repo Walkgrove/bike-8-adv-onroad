@@ -529,6 +529,29 @@
     "_trackingId": 22
   },
   {
+    "_id": "b-03_01_075",
+    "_parentId": "a-01_03",
+    "_type": "block",
+    "_classes": "no-padding-top",
+    "title": "b-03_01_075",
+    "displaytitle": "",
+    "body": "",
+    "instruction": "",
+    "_onScreen": {
+      "_isEnabled": true,
+      "_classes": "",
+      "_percentInviewVertical": 25
+    },
+    "_trickle": {
+      "_isEnabled": true,
+      "_autoScroll": false,
+      "_button": {
+        "_isEnabled": false
+      }
+    },
+    "_trackingId": 22
+  },
+  {
     "_id": "b-03_01_080",
     "_parentId": "a-01_03",
     "_type": "block",
