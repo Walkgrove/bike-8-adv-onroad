@@ -65,7 +65,7 @@ define([
       this.allowNextStep();
       var ins = this._models[this._stepIndex].get('instructionAfter');
       if(ins){
-        $('.interactivevideo__content-instruction').html(ins);
+        this.$('.interactivevideo__content-instruction').html(ins);
       }
     },
 
@@ -80,7 +80,7 @@ define([
 
       //remove Models
       this.model.get('_items').forEach((item, index) => {
-        $(".interactivevideo__widget").eq(index).html("");
+        this.$(".interactivevideo__widget").eq(index).html("");
       });
 
       this.setUpSteps();
@@ -131,10 +131,13 @@ define([
 
             this.addStepModel(index, newComponent.$el);
 
-            console.log(Adapt.device.screenSize === 'small', model.stepInstructionMobile, newComponent.find('.component__instruction').html());
-            if(Adapt.device.screenSize === 'small' && model.stepInstructionMobile) {
-              newComponent.find('.component__instruction').html(model.stepInstructionMobile);
-            }
+            _.delay(() => {
+              if(Adapt.device.screenSize === 'small' && model.get('stepInstructionMobile')) {
+                this.$('.interactivevideo__content-instruction').html(model.get('stepInstructionMobile'));
+              }
+              // console.log(index, Adapt.device.screenSize === 'small', this.$('.interactivevideo__content-instruction').html());
+            }, 500);
+            
             break;
 
           case "reflection":
@@ -159,7 +162,7 @@ define([
                 console.log("text completed");
                 var ins = model.get('instructionAfter');
                 if(ins){
-                  $('.interactivevideo__content-instruction').html(ins);
+                  this.$('.interactivevideo__content-instruction').html(ins);
                 }
                 this.allowNextStep();
               }
@@ -176,7 +179,7 @@ define([
     },
 
     addStepModel: function (_index, _el) {
-      var $container = $(".interactivevideo__widget").eq(_index);
+      var $container = this.$(".interactivevideo__widget").eq(_index);
       $container.append(_el);  
     },
 
@@ -210,14 +213,14 @@ define([
         }
         this.model.get('_items').forEach((item, index) => {
           if(this._stepIndex === index) {
-            $("." + item._id).removeClass('u-visibility-hidden');
-            $("." + item._id).removeClass('hide');
+            this.$("." + item._id).removeClass('u-visibility-hidden');
+            this.$("." + item._id).removeClass('hide');
 
             this.setContent(item);
 
           } else {
-            $("." + item._id).addClass('u-visibility-hidden');
-            $("." + item._id).addClass('hide');
+            this.$("." + item._id).addClass('u-visibility-hidden');
+            this.$("." + item._id).addClass('hide');
           }
         });
         
@@ -239,14 +242,14 @@ define([
         this._stepIndex = this._stepIndex-2;
         this.model.get('_items').forEach((item, index) => {
           if(this._stepIndex === index) {
-            $("." + item._id).removeClass('u-visibility-hidden');
-            $("." + item._id).removeClass('hide');
+            this.$("." + item._id).removeClass('u-visibility-hidden');
+            this.$("." + item._id).removeClass('hide');
 
             this.setContent(item);
 
           } else {
-            $("." + item._id).addClass('u-visibility-hidden');
-            $("." + item._id).addClass('hide');
+            this.$("." + item._id).addClass('u-visibility-hidden');
+            this.$("." + item._id).addClass('hide');
           }
         });
         this.updateProgress();
@@ -258,14 +261,14 @@ define([
         this._stepIndex--;
         this.model.get('_items').forEach((item, index) => {
           if(this._stepIndex === index) {
-            $("." + item._id).removeClass('u-visibility-hidden');
-            $("." + item._id).removeClass('hide');
+            this.$("." + item._id).removeClass('u-visibility-hidden');
+            this.$("." + item._id).removeClass('hide');
 
             this.setContent(item);
 
           } else {
-            $("." + item._id).addClass('u-visibility-hidden');
-            $("." + item._id).addClass('hide');
+            this.$("." + item._id).addClass('u-visibility-hidden');
+            this.$("." + item._id).addClass('hide');
           }
         });
         this.updateProgress();
@@ -295,6 +298,12 @@ define([
         _.delay(() => {
           this.$('.interactivevideo__widget').eq(this._stepIndex).css({ height: 'auto' });
           this.$('.interactivevideo__bg-img').css({ opacity: 0 });
+
+          console.log(this._models[this._stepIndex].get('_component'), this._models[this._stepIndex].get('stepInstructionMobile'));
+          if(this._models[this._stepIndex].get('_component') === 'media' && this._models[this._stepIndex].get('stepInstructionMobile')) {
+            this.$('.interactivevideo__content-instruction').html(this._models[this._stepIndex].get('stepInstructionMobile'));
+          }
+          // console.log(index, Adapt.device.screenSize === 'small', this.$('.interactivevideo__content-instruction').html());
         }, 1000);
 
       } else {
