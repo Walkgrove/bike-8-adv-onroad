@@ -130,6 +130,11 @@ define([
             });
 
             this.addStepModel(index, newComponent.$el);
+
+            console.log(Adapt.device.screenSize === 'small', model.stepInstructionMobile, newComponent.find('.component__instruction').html());
+            if(Adapt.device.screenSize === 'small' && model.stepInstructionMobile) {
+              newComponent.find('.component__instruction').html(model.stepInstructionMobile);
+            }
             break;
 
           case "reflection":

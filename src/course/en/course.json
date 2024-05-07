@@ -88,7 +88,7 @@
     }
   },
   "_trickle": {
-    "_isEnabled": true
+    "_isEnabled": false
   },
   "_languagePicker": {
     "navigationBarLabel": "Select course language"
@@ -161,6 +161,11 @@
         "_type": "link",
         "title": "Risk management guidance",
         "_link": "https://www.bikeability.org.uk/for-instructors/risk-benefit-assessment/"
+      },
+      {
+        "_type": "link",
+        "title": "Instructor portal*",
+        "_link": "#"
       }
     ]
   },

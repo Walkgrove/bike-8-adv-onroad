@@ -86,8 +86,9 @@ html, body {
 
 // small side graphics!
 .c-01_01_060, .c-02_01_040, .c-03_01_020, .c-03_01_080, .c-03_01_130, 
-.c-04_01_030, .c-04_01_100, .c-04_01_140, .c-04_01_170, .c-05_01_070, .c-05_01_090,
-.c-06_00_030, .c-06_03_010, .c-07_01_060 {  //, .c-06_01_010-t
+.c-04_01_030, .c-04_01_060-t, .c-04_01_100, .c-04_01_140, .c-04_01_170, .c-05_01_070, .c-05_01_090,
+.c-06_00_030, .c-06_03_010, .c-07_01_060,
+.c-03_01_120-t, .c-06_03_080-t, .c-06_04_060-t {  //, .c-06_01_010-t
     width: 70%!important;
     @media (max-width: @device-width-medium) {
         width: 60%!important;
@@ -99,8 +100,9 @@ html, body {
 }
 
 .c-01_01_060-g, .c-02_01_040-g, .c-03_01_020-g, .c-03_01_080-g, .c-03_01_130-g, 
-.c-04_01_030-g, .c-04_01_100-g, .c-04_01_140-g, .c-04_01_170-g, .c-05_01_070-g, .c-05_01_090-g,
-.c-06_00_030-g, .c-06_03_010-g, .c-07_01_060-g { //, .c-06_01_010-g
+.c-04_01_030-g, .c-04_01_060-g, .c-04_01_100-g, .c-04_01_140-g, .c-04_01_170-g, .c-05_01_070-g, .c-05_01_090-g,
+.c-06_00_030-g, .c-06_03_010-g, .c-07_01_060-g,
+.c-03_01_120-g, .c-06_03_080-g, .c-06_04_060-g { //, .c-06_01_010-g
     width: 30%!important;
     @media (max-width: @device-width-medium) {
         width: 40%!important;
@@ -113,7 +115,7 @@ html, body {
 //full width on smaller resolutions
 .c-01_01_020, .c-04_01_020, .c-05_01_010, 
 .c-06_04_010, .c-06_05_010, .c-07_01_010, 
-.c-08_01_010, .c-08_01_030{
+.c-08_01_010, .c-08_01_030 {
     @media (max-width: @device-width-phoneland) {
         width: 100%!important;
     }
@@ -127,7 +129,18 @@ html, body {
     }
 }
 
+.c-03_01_120, .c-06_03_080, .c-06_04_060 {
+    margin-top: 2rem;
+}
 
+
+.c-04_01_080-g {
+    max-width: 65%!important;
+    @media (max-width: @device-width-small) {
+        max-width: calc(100% - 2rem)!important;
+        margin: 0 auto;
+    }
+}
 
 // -----------------------------------
 // COMPONENTS
@@ -227,6 +240,15 @@ html, body {
 }
 
 .c-06_00_010 {
+
+    .hotgraphic__pin:not(.has-pin-image) {
+        background-color: @bike-black!important;
+    
+        &.is-visited {
+            background-color: @primary-colour-visited!important;
+        }
+    }
+
     .hotgraphic__widget {
         max-width: 75%;
         margin: 0 auto;
@@ -424,20 +446,23 @@ a {
     }
 }
 
-/// CUSOMT STYLES
+/// CUSTOM STYLES
 
-.narrative-quote, .timeline-quote, .flow-quote {
+.narrative-quote, .timeline-quote, .flow-quote, .excerpt-quote {
     .quote;
 }
 .narrative-quote {
-    font-size: 105%;
-    background-color: rgba(@white, @opacity-70);
-    padding: 1rem;
-    border-radius: 1rem;
+    font-size: 125%;
+    margin-top: 2rem;
+    color: @black;
+    line-height: 1.4;
 }
-.timeline-quote, .flow-quote {
+.timeline-quote, .flow-quote, .excerpt-quote {
     font-size: 120%;
     color: @black;
+}
+.excerpt-quote {
+    text-align: left;
 }
 
 .speechmarks {
@@ -501,7 +526,7 @@ a {
     font-size: 150%;
     font-weight: @font-weight-bold;
     text-align: center;
-    color: @bike-dark-green;
+    // color: @bike-dark-green;
 }
 
 .quote-ann {
@@ -964,9 +989,15 @@ a {
 .b-01_01_040a, .b-08_01_020a {
     .rangeslider__handle {
         background-size: contain;
-        transform: translate(-25%,-100%);
+        transform: translate(-25%,-130%);
+        @media (max-width: 1280px) {
+            transform: translate(0%,-125%);
+        }
+        @media (max-width: @device-width-medium) {
+            transform: translate(0%,-117.5%);
+        }
         @media (max-width: @device-width-small) {
-            transform: translate(0%,-100%);
+            transform: translate(0%,-105%);
         }
         background-repeat: no-repeat;
         background-position: bottom left;
@@ -1014,7 +1045,7 @@ a {
 // REFLECTION
 //------------------------------------
 
-.c-03_01_050, .c-06_02_040 {
+.c-06_02_040 {
     .reflection__item-question {
         // padding: 1rem;
         // background-color: @item-color;
@@ -1086,6 +1117,10 @@ a {
 // CLICK-SHOW
 //------------------------------------
 
+.cs-title {
+    font-size: 125%;
+    font-weight: @font-weight-bold;
+}
 
 // .c-03_02_040, .c-03_04_060 {
 
