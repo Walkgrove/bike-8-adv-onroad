@@ -248,33 +248,33 @@
       "_id": "c-01_01_050",
       "_parentId": "b-01_01_050",
       "_type": "component",
-      "_component": "flow",
+      "_component": "timeline",
       "_classes": "",
       "_layout": "full",
       "title": "Learning objectives",
       "displayTitle": "Learning objectives",
       "body": "<p>There are five learning objectives for this module. By the end of the module you should:</p>",
       "instruction": "<p>Select the \u2018+\u2019 button to find out what these are.</p>",
-      "_hideInitial": true,
+      "buttonMore": " ",
       "_items": [
          {
-            "content": "Understand how cycle training in advanced on-road environments links to the National Standard for Cycle Training and The Bikeability Trust delivery guidance.",
+            "body": "Understand how cycle training in advanced on-road environments links to the National Standard for Cycle Training and The Bikeability Trust delivery guidance.",
             "_layout": "no-image-full"
          },
          {
-            "content": "Be able to assess rider readiness and build rider confidence for advanced on-road training.",
+            "body": "Be able to assess rider readiness and build rider confidence for advanced on-road training.",
             "_layout": "no-image-full"
          },
          {
-            "content": "Be able to use different approaches for delivering advanced on-road training, and plan sessions that involve a smooth transition into more complex activities.",
+            "body": "Be able to use different approaches for delivering advanced on-road training, and plan sessions that involve a smooth transition into more complex activities.",
             "_layout": "no-image-full"
          },
          {
-            "content": "Have the knowledge and confidence to deliver training in advanced environments including multi-lane roads and complex junctions, where traffic volume and speed are often higher.",
+            "body": "Have the knowledge and confidence to deliver training in advanced environments including multi-lane roads and complex junctions, where traffic volume and speed are often higher.",
             "_layout": "no-image-full"
          },
          {
-            "content": "Understand good practice considerations for inclusivity in cycle training and for carrying out risk benefit assessments (RBAs).",
+            "body": "Understand good practice considerations for inclusivity in cycle training and for carrying out risk benefit assessments (RBAs).",
             "_layout": "no-image-full"
          }
       ],
@@ -393,8 +393,12 @@
                "src": "course/en/images/02_01_010/02_01_010_item01.png",
                "alt": "Front cover of the Cycle Training Delivery Guide"
             },
-            "_top": 25,
-            "_left": 60
+            "_pin": {
+                "src": "course/en/images/02_01_010/02_01_010_select01.png",
+                "alt": "Front cover of the Cycle Training Delivery Guide"
+            },
+            "_top": 0,
+            "_left": 38.5
          },
          {
             "title": "Cycle Activity Templates",
@@ -404,8 +408,12 @@
                "src": "course/en/images/02_01_010/02_01_010_item02.png",
                "alt": "Front cover of the Cycle Activity Templates"
             },
+            "_pin": {
+               "src": "course/en/images/02_01_010/02_01_010_select02.png",
+               "alt": "Front cover of the Cycle Activity Templates"
+            },
             "_top": 56.5,
-            "_left": 82.5
+            "_left": 60.5
          },
          {
             "title": "Ride Guide",
@@ -415,8 +423,12 @@
                "src": "course/en/images/02_01_010/02_01_010_item03.png",
                "alt": "Front cover of the Ride Guide"
             },
-            "_top": 54.5,
-            "_left": 17
+            "_pin": {
+               "src": "course/en/images/02_01_010/02_01_010_select03.png",
+               "alt": "Front cover of the Ride Guide"
+            },
+            "_top": 28,
+            "_left": 19.5
          }
       ],
       "_pageLevelProgress": {
@@ -773,8 +785,8 @@
                 "src": "course/en/images/03_01_040/03_01_040_item01.png",
                 "alt": "cone 1"
             },
-            "_top": 15,
-            "_left": 18
+            "_top": 21,
+            "_left": 17
          },
          {
             "body": "\u201CCan you look over your shoulder at the person behind you?\u201D",
@@ -787,8 +799,8 @@
                 "src": "course/en/images/03_01_040/03_01_040_item02.png",
                 "alt": "cone 2"
             },
-            "_top": 60,
-            "_left": 32
+            "_top": 35,
+            "_left": 36
          },
          {
             "body": "\u201CTake your hand off the handlebars\u2026 now try the other hand.\u201D",
@@ -801,8 +813,8 @@
                 "src": "course/en/images/03_01_040/03_01_040_item03.png",
                 "alt": "cone 3"
             },
-            "_top": 11.5,
-            "_left": 31.5
+            "_top": 21,
+            "_left": 62
          },
          {
             "body": "\u201CCan you look behind while signalling at the same time?\u201D",
@@ -815,8 +827,8 @@
                 "src": "course/en/images/03_01_040/03_01_040_item04.png",
                 "alt": "cone 4"
             },
-            "_top": 67.5,
-            "_left": 60
+            "_top": 54,
+            "_left": 12
          },
          {
             "body": "\u201CCan you change to a suitable gear for stopping?\u201D",
@@ -829,8 +841,8 @@
                 "src": "course/en/images/03_01_040/03_01_040_item05.png",
                 "alt": "cone 5"
             },
-            "_top": 20,
-            "_left": 56.5
+            "_top": 51,
+            "_left": 60
          },
          {
             "body": "\u201CCan you double up?\u201D",
@@ -843,8 +855,8 @@
                 "src": "course/en/images/03_01_040/03_01_040_item06.png",
                 "alt": "cone 6"
             },
-            "_top": 60,
-            "_left": 82
+            "_top": 71,
+            "_left": 35
          }
       ],
       "_pageLevelProgress": {
@@ -3096,6 +3108,9 @@
             "title": "Part 4"
          },
          {
+            "title": "Part 5"
+         },
+         {
             "title": "Conclusion"
          }
       ],
@@ -3106,11 +3121,12 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "stepInstructionMobile": "<p>Select Play to watch the video. After each video finishes, you may need to close the video window to answer the question.</p>",
-            "_background": "course/en/video/C2_Q1CP.png",
+            "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
+            "_background": "course/en/video/C2_Q2_3CP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
+            "_playsinline": true,
             "_media": {
                "mp4": "course/en/video/C2_Q1holdCP.mp4",
                "poster": "course/en/video/C2_Q1CP.png"
@@ -3162,11 +3178,12 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "stepInstructionMobile": "<p>Select Play to watch the video. After each video finishes, you may need to close the video window to answer the question.</p>",
-            "_background": "course/en/video/C2_Q2_3CP.png",
+            "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
+            "_background": "course/en/video/C2_Q4holdCP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
+            "_playsinline": true,
             "_media": {
                "mp4": "course/en/video/C2_Q2_3CP.mp4",
                "poster": "course/en/video/C2_Q2_3CP.png"
@@ -3223,14 +3240,15 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "stepInstructionMobile": "<p>Select Play to watch the video. After each video finishes, you may need to close the video window to answer the question.</p>",
-            "_background": "course/en/video/C2_Q4CP.png",
+            "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
+            "_background": "course/en/video/C2_Q5holdCP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
+            "_playsinline": true,
             "_media": {
                "mp4": "course/en/video/C2_Q4holdCP.mp4",
-               "poster": "course/en/video/C2_Q4CP.png"
+               "poster": "course/en/video/C2_Q4holdCP.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3279,14 +3297,15 @@
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "stepInstructionMobile": "<p>Select Play to watch the video. After each video finishes, you may need to close the video window to answer the question.</p>",
-            "_background": "course/en/video/C2_Q5CP.png",
+            "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
+            "_background": "course/en/video/C2_ENDCP.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
+            "_playsinline": true,
             "_media": {
                "mp4": "course/en/video/C2_Q5holdCP.mp4",
-               "poster": "course/en/video/C2_Q5CP.png"
+               "poster": "course/en/video/C2_Q5holdCP.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3330,16 +3349,50 @@
             ]
          },
          {
-            "_id": "c-06_01_030i",
+            "_id": "c-06_01_030j",
             "_parentId": "b-06_01_030",
             "_type": "component",
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
-            "stepInstructionMobile": "<p>Select Play to watch the video. After each video finishes, you may need to close the video window to answer the question.</p>",
+            "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
+            "_background": "course/en/video/C2_ENDCP_final.png",
+            "_setCompletionOn": "ended",
+            "_useClosedCaptions": false,
+            "_allowFullScreen": false,
+            "_playsinline": true,
+            "_media": {
+               "mp4": "course/en/video/C2_EndCP.mp4",
+               "poster": "course/en/video/C2_ENDCP.png"
+            },
+            "_playerOptions": {
+               "alwaysShowControls": false,
+               "toggleCaptionsButtonWhenOnlyOne": true,
+               "iPadUseNativeControls": true,
+               "iPhoneUseNativeControls": true,
+               "AndroidUseNativeControls": true
+            }
+         },
+         {
+            "_id": "c-06_01_030k",
+            "_parentId": "b-06_01_030",
+            "_type": "component",
+            "_component": "text",
+            "stepInstruction": "",
+            "instruction": "<p><strong>Select the arrow to view the video as a whole, or scroll down to continue.</strong></p>",
+            "body": ""
+         },
+         {
+            "_id": "c-06_01_030l",
+            "_parentId": "b-06_01_030",
+            "_type": "component",
+            "_component": "media",
+            "stepInstruction": "<p>Select Play to watch the video.</p>",
+            "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
             "_background": "course/en/video/C2-Passing_Queuing_Traffic.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
+            "_playsinline": true,
             "_media": {
                "mp4": "course/en/video/C2-Passing_Queuing_Traffic.mp4",
                "poster": "course/en/video/C2-Passing_Queuing_Traffic.png"
@@ -3353,7 +3406,7 @@
             }
          },
          {
-            "_id": "c-06_01_030j",
+            "_id": "c-06_01_030m",
             "_parentId": "b-06_01_030",
             "_type": "component",
             "_component": "text",
@@ -5378,6 +5431,22 @@
       "displayTitle": "Summary",
       "body": "<p>Well done! You have now completed the main content for this advanced on-road cycle training module and should have developed your knowledge and understanding of:<ul><li>why advanced on-road training is so important</li><li>how advanced on-road cycling relates to the National Standard for Cycle Training and The Bikeability Trust delivery guidance</li><li>how to assess riders\u2019 readiness for advanced on-road training and how to transition into more  complex activities</li><li>how to build rider confidence for cycling in advanced on-road environments</li><li>various strategies for delivering effective training</li><li>specific advanced on-road training activities and some of the important instructing points to cover</li><li>good practice considerations such as those around RBA and inclusive training</li></ul></p>",
       "instruction": "<p>Scroll down to continue.</p>",
+      "_pageLevelProgress": {
+         "_isEnabled": true,
+         "_isCompletionIndicatorEnabled": false
+      }
+   },
+   {
+      "_id": "c-08_01_015",
+      "_parentId": "b-08_01_015",
+      "_type": "component",
+      "_component": "text",
+      "_classes": "",
+      "_layout": "full",
+      "title": "Remember",
+      "displayTitle": "",
+      "body": "<p class='quote'>\"Remember that, even as an instructor, you never stop learning as a rider. You will need to regularly reflect on your practice to continue to improve.    Reflecting on your practice and developing your technique will make cycling even more enjoyable. This, in turn, will help you pass on your skills, knowledge and enthusiasm to other riders, of all abilities, on any cycle.\"</p><p class='quote-ann'>(Ride Guide page 61)</p>",
+      "instruction": "",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false

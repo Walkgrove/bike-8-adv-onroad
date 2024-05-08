@@ -132,6 +132,10 @@ define([
       if(this.model.get('_buttons') && this.model.get('_buttons').save === "") {
         this.$('.js-reflection-export-click').addClass('is-visible');
         this.$('.js-reflection-save-click').addClass('is-hidden');
+
+        if(this.model.get('_isNested') && this.model.get('_isNested') === true) {
+          // Adapt.trigger('intvid:unlock');
+        }
       }
 
       
@@ -246,7 +250,9 @@ define([
 
         this.model.set('_isAnswered', true);
         this.model.set('_isComplete', true);
-        Adapt.trigger('intvid:unlock');
+        if(this.model.get('_isNested') && this.model.get('_isNested') === true) {
+          Adapt.trigger('intvid:unlock');
+        }
 
         // save to scorm data
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';

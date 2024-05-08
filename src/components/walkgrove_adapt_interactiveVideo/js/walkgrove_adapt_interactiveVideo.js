@@ -157,7 +157,11 @@ define([
 
             newComponent = new TextView({ model: model });
           
+            model.set('_isComplete', false);
+            console.log(model);
+
             this.model.listenTo(model,  'change', ()=> {
+              console.log(model);
               if(model.get('_isComplete') === true) {
                 console.log("text completed");
                 var ins = model.get('instructionAfter');
@@ -227,8 +231,10 @@ define([
         this.updateProgress();
 
         _.delay(() => {
+          const nextModelNum = Number(this._stepIndex);
+          // console.log(this._models[nextModelNum].get('_component'), this._stepIndex, this.model.get('_items').length-2);
           // console.log(this._models[this._stepIndex].get('_isAnswered'));
-          if(this._models[this._stepIndex].get('_isAnswered') === true) {
+          if(this._models[this._stepIndex].get('_isAnswered') === true || (this._models[nextModelNum].get('_component') === 'text' && this._stepIndex < this.model.get('_items').length-2)) {
             this.allowNextStep();
             this.enableNext();
           }
