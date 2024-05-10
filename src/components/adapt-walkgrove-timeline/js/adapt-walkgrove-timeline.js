@@ -32,6 +32,8 @@ define([
           this.$('.timeline__widget').eq(index).addClass('is-hidden');
         });
 
+      } else {
+        this.setCompletionStatus();
       }
 
     },
