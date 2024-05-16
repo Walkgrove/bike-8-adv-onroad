@@ -150,7 +150,7 @@
       {
         "_type": "link",
         "title": "The Highway Code",
-        "_link": "https://www.gov.uk/guidance/the-highway-code/rules-for-cyclists-59-to-82"
+        "_link": "https://www.gov.uk/guidance/the-highway-code"
       },
       {
         "_type": "link",
@@ -164,7 +164,7 @@
       },
       {
         "_type": "link",
-        "title": "Instructor portal",
+        "title": "Instructor portal (Link)",
         "_link": "https://link.bikeability.org.uk/login"
       }
     ]

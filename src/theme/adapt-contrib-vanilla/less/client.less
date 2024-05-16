@@ -427,6 +427,13 @@ a {
     background-color: @bike-green-light;
 }
 
+.box-pink {
+    border: 2px solid @bike-red;
+    padding: 1rem;
+    background-color: @bike-pink;
+    font-weight: normal;
+}
+
 .box-orange-text {
     display: flex;
     align-items: center;
@@ -1257,6 +1264,18 @@ a {
     .js-graphicbuild-prev-click {
         right: auto;
         left: 0%;
+    }
+
+    @media (max-width: @device-width-small) {
+        .graphicbuild__item-bg-graphic, .graphicbuild__item-content:nth-of-type(1) {
+            display: none;
+        }
+        .graphicbuild__widget .graphicbuild__item-content:nth-of-type(1) {
+            display: block;
+        }
+        .graphicbuild__widget:nth-of-type(3), .graphicbuild__widget:nth-of-type(5), .graphicbuild__widget:nth-of-type(7) {
+            display: none;
+        }
     }
 }
 

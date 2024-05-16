@@ -39,19 +39,25 @@
       "body": "<p>Welcome to this module on advanced on-road cycle training, which is often an integral part of the work that instructors carry out. Being able to ride in more complex environments opens up a range of new cycling opportunities and promotes positive behaviour change. This module will guide you as an instructor to help riders develop the knowledge, skills and confidence they require.</p><p>Let\u2019s hear a little more about the module from Megan Giglia of The Bikeability Trust.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/A1-Megan_L3_Intro.mp4",
-         "poster": "course/en/video/A1-Megan_L3_Intro.png"
+         "poster": "course/en/video/A1-Megan_L3_Intro.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/A1-Megan_L3_Intro.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- Hello and welcome to this online course developed for you, the instructor, to help teach advanced on road cycle skills. This course has been developed to provide you with strategies and examples of good practice in any cycle training environment. For example, complex infrastructure, multi-lane roundabouts, junctions controlled by traffic lights. This will give you the confidence to do this well. There's loads of reasons why people may need this training. They may want to explore the countryside, commute to work, go for a ride with their family, or go shopping even. We really do hope you enjoy the training and learn lots along the way.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -398,7 +404,7 @@
                 "alt": "Front cover of the Cycle Training Delivery Guide"
             },
             "_top": 0,
-            "_left": 38.5
+            "_left": 61
          },
          {
             "title": "Cycle Activity Templates",
@@ -427,8 +433,8 @@
                "src": "course/en/images/02_01_010/02_01_010_select03.png",
                "alt": "Front cover of the Ride Guide"
             },
-            "_top": 28,
-            "_left": 19.5
+            "_top": 22.5,
+            "_left": 16.5
          }
       ],
       "_pageLevelProgress": {
@@ -446,7 +452,7 @@
       "title": "The National Standard for Cycle Training",
       "displayTitle": "The National Standard for Cycle Training",
       "body": "<p>Of the six Roles in the National Standard, Role 4 contains several statements that relate to riding in more complex environments.</p><p>Take a few minutes to read the National Standard, in particular Role 4, and imagine you are about to ride in a busy, complex on-road environment.</p><p>You can find the National Standard in the <strong>Resources</strong> tab.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -456,7 +462,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -725,7 +731,7 @@
       "title": "Off-road assessment",
       "displayTitle": "Off-road assessment",
       "body": "<p>Consider this scenario.</p><p>You need to assess \u2013 in an off-road (traffic-free) environment \u2013 your riders\u2019 control skills in preparation for cycling on the road together.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -735,7 +741,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -874,7 +880,7 @@
       "title": "On-road assessment",
       "displayTitle": "On-road assessment",
       "body": "<p>On-road assessment is essential before transitioning to more challenging environments. It may have been a long time since riders attended prior training (if any), and the sites to be used in the advanced on-road training may be significantly more challenging than what they have experienced before.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -884,7 +890,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -893,7 +899,7 @@
       },
       "_items": [
          {
-            "question": "What on-road activities could you use to recap any prior learning, and also assess rider readiness to carry out more complex training activities?",
+            "question": "What on-road activities could you use to recap any prior learning and to assess rider readiness to carry out more complex training activities?",
             "_colour": "#fff",
             "_bgcolour": "#000"
          }
@@ -959,19 +965,25 @@
       "body": "<p>Watch this video for an example of an instructor coaching and checking riders\u2019 on-road skills.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/A2-The_Recap_On-Road.mp4",
-         "poster": "course/en/video/A2-The_Recap_On-Road.png"
+         "poster": "course/en/video/A2-The_Recap_On-Road.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/A2-The_Recap_On-Road.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- In a moment we're gonna ride out. We're gonna do a left hand turn out of this side road.</p><p>- [Farrah] Okay.</p><p>- Right up there, maybe do a U-turn by that pilon. Don't go any further by that pilon there. And then come back down, and turn right back into the side road from the main road. Do another U-turn sort of down by the end of that wall somewhere there. Don't go any further. Okay, what sort of position do you think is a good position to be in when you're negotiating a junction? Do you think it's good to be right next to the curb?</p><p>- [Farrah] No.</p><p>- No, that's the pass position. Do you think it's better to be in the following position where you're in control of your side of the lane? Remember we discussed that before?</p><p>- Yes.</p><p>- Yeah, so you're in the middle of your lane okay? Another thing you have to do, obviously, which is what all these drivers are doing as well, is do lots of looking. So observations are really key for us. Do lots of looking when you're about to join the main road, and then when you're about to turn back into the side road. Think about who goes first. You know what priority means, or right of way, yeah? We have exactly the same rules as other road users. As drivers you would know, you know how the road system works. How can you also let other road users know what you're going to do if you're going to do a turn?</p><p>- A signal?</p><p>- Yeah. Communicate to them. Make eye contact with them by looking over your shoulder. Communicate to them with hand signals, and that kind of thing, okay? So think about looking, think about priority. Think about whether it's you who goes first, or whether it's the other road user who goes first. Think about communicating or signalling to other road users, and think about your road position, okay? Shall we have a go at it?</p><p>- [Farrah] Yeah.</p><p>- Brilliant. Hands back on the handlebar, Matt, before you make the turn. Good road position. Check behind you again, Farrah before you turn. That's it. Well done. Great road position, Matt. Well done.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -996,7 +1008,7 @@
       "_layout": "full",
       "title": "Checking on-road skills",
       "displayTitle": "",
-      "body": "On occasion you may feel that a rider is not fully ready to progress to more complex activities. Here are some suggested actions you could take:<ul><li>assess the potential impact on the rest of the group</li><li>is another instructor available as an inclusion strategy?</li><li>ride with them, whilst challenging the other riders</li><li>use strengths of other riders to support (e.g. demonstrating and riding with them)</li><li>adapt your planned route where needed. Consider using more point-to-point rides and have your rider observe from the roadside</li><li>supply them with supporting resources (videos, diagrams, training guidance)</li><li>consider whether the rider would be better served by a different session</li><li>suggest practise activities for the rider</li></ul>",
+      "body": "<div class='box-pink'>On some occasions you may feel that a rider is not ready to progress to more complex activities. If this is the case, here are some options and things to think about:<ul><li>what is the potential impact on the rest of the group?</li><li>is another instructor available as an inclusion strategy?</li><li>do you need to adapt your planned route? </li><li>can you still ride with them whilst providing progressive training activities for others in the group?</li><li>can you use the strengths of other riders in the group to support them?</li><li>should you consider using more point-to-point independent riding activities and have the rider observe from the roadside? </li><li>can you supply them with supporting resources so they can still learn and feel included (videos, images, training guidance)?</li><li>would the rider be better served by a separate session?</li><li>are there activities the rider should practise in their spare time?</li></ul></div>",
       "instruction": "",
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -1102,19 +1114,25 @@
       "body": "<p>Watch this video for an example of what you could say or suggest to a rider who is nervous about riding in a more challenging environment.</p>",
       "instruction": "<p>Select Play to watch the video for some ideas.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/B3-Dealing_With_Nerves.mp4",
-         "poster": "course/en/video/B3-Dealing_With_Nerves.png"
+         "poster": "course/en/video/B3-Dealing_With_Nerves.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/B3-Dealing_With_Nerves.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- Okay guys, how you feeling? Yeah?</p><p>- Yeah.</p><p>- Wanna do some more riding? Not too tired?</p><p>- No, I'm okay.</p><p>- Brilliant. We're gonna move on now to another part of the course where we might go to somewhere that's potentially busier. Big roundabout in the middle of town. It's potentially got more traffic, faster moving traffic. Okay, is that something that you're feeling comfortable doing?</p><p>- Yeah, I think I'll be alright with that.</p><p>- Yeah? Good. What about you, Farrah?</p><p>- I'm a little bit uncertain.</p><p>- Oh, okay.</p><p>- Yeah.</p><p>- Yeah.</p><p>- Just because how busy it is.</p><p>- How busy it is. It will be a little bit busier, but you've done brilliantly so far, so, if you remember some of the road positions that we've done and remember do lots of looking, we're well within our right to be there, 'cause we're traffic users as well, okay? We'll stay together as a group. I'll be with you the whole time and we'll take it nice and steady.</p><p>- Okay.</p><p>- And if you ever got any worries or anything, just let me know and we'll take it nice and slowly. Fancy giving it a go?</p><p>- Yeah.</p><p>- Brilliant. Let's go ride.</p><p>- [Farrah] Okay.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -1197,7 +1215,7 @@
       "title": "Good practice example: Positive relationships on the road",
       "displayTitle": "Good practice example: Positive relationships on the road",
       "body": "<p>You can teach your riders to treat each interaction with other people on the road as a brief relationship, where they can use positive facial expressions and body language to help build rapport.</p><p>Watch this video, which shows how a rider interacts with other road users in order to build positive relationships. Note how the rider uses nods, smiles, their hands, and body language when sharing the road with others.</p>",
-      "instruction": "<p>Select Play to watch the video for some ideas.</p>",
+      "instruction": "<p>Select Play to watch the video.</p>",
       "_pageLevelProgress": {
          "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
@@ -1245,7 +1263,7 @@
          "poster": "course/en/video/C1-Positive_Relationships.png"
       },
       "_transcript": {
-         "_inlineTranscript": true,
+         "_inlineTranscript": false,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
@@ -1488,19 +1506,25 @@
       "body": "<p>This video shows an instructor and two riders using buddy riding as a strategy. Take note of how the instructor approaches it each time.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/Buddy_Riding_Part_1.mp4",
-         "poster": "course/en/video/Buddy_Riding_Part_1.png"
+         "poster": "course/en/video/Buddy_Riding_Part_1.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/Buddy_Riding_Part_1.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- Moving to follow me position, round the roundabout. That's it, good, follow me. Check to the right if it's clear. Off we go, stay in following position. Stay in follow me position and then move over towards the exit. Let them know which way we're going to go. Good road position guys, well done.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -1528,19 +1552,25 @@
       "body": "<p>Watch below to see the same instructor working with two individual riders.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/Buddy_Riding_Part_2.mp4",
-         "poster": "course/en/video/Buddy_Riding_Part_2.png"
+         "poster": "course/en/video/Buddy_Riding_Part_2.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/Buddy_Riding_Part_2.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- And we check to the right. If it's clear for us, on we go. Well done. Well done. And now I'm just gonna pop in behind you in the cycle lane, and you carry on. Okay? Well done. Okay, good \"pass me\" position, Matt. Before we get to the traffic lights, we're going to move into the \"follow me\" position. So have a look around, check behind you, move into the \"follow me\" position. We might even go into the cycle lane and go 'round these cars into the advanced box. Do that if you're comfortable. And we're gonna go left. Well done, well done. Good road position. Well done. Stay in the \"follow me\" position all the way 'round the corner buddy. Comfortable, Matt?</p><p>- Yep.</p><p>- Good.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -1566,7 +1596,7 @@
       "title": "How could you support these riders?",
       "displayTitle": "How could you support these riders?",
       "body": "<p>You are working alone with three riders who are carrying out advanced on-road training.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false
@@ -1613,7 +1643,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -1691,7 +1721,7 @@
       "title": "How could you enhance the learning experience for these riders? (Continued)",
       "displayTitle": "How could you enhance the learning experience for these riders?",
       "body": "<p>You are delivering advanced on-road training to five riders with a co-instructor using a buddy-riding approach. Here is a picture showing you both moving the group in a more passive fashion.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false
@@ -1738,7 +1768,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -1811,7 +1841,7 @@
       "_layout": "left",
       "title": "Good practice example: Observation and anticipation",
       "displayTitle": "Good practice example: Observation and anticipation",
-      "body": "<p>Being able to carry out continuous observations, and to anticipate and think about what comes next on one\u2019s journey, is an important skill when cycling on the road. One simple way to promote this when you cycle behind riders can be through regularly asking, \u201CWhat comes next?\u201D.</p><p>This can prompt your riders to carry out their observations and apply the four key skills whenever they are cycling.</p>",
+      "body": "<p>Being able to carry out continuous observations, and to anticipate and think about what comes next on one\u2019s journey, is an important skill when cycling on the road. One simple way to promote this when you cycle behind riders can be through regularly asking, \u201CWhat comes next?\u201D.</p><p>This can prompt your riders to carry out their observations and apply the four key skills whenever they need to.</p>",
       "instruction": "",
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -1962,7 +1992,7 @@
          },
          {
             "title": "Give both riders a chance to lead",
-            "body": "<p>Ensure both riders have the opportunity to lead at the front and that they support and communicate with each other as they would do if riding to school together.</p>",
+            "body": "<p>Ensure both riders have the opportunity to lead at the front and support and communicate with each other as they would do if riding to school together.</p>",
             "strapline": "Give both riders a chance to lead",
             "_graphic": {
                "src": "course/en/images/04_01_130/04_01_130_item03.jpg",
@@ -2026,19 +2056,25 @@
       "body": "<p>This video shows an example of a point-to-point independent riding activity.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/A8-Point-To-Point_Ind_Ride.mp4",
-         "poster": "course/en/video/A8-Point-To-Point_Ind_Ride.png"
+         "poster": "course/en/video/A8-Point-To-Point_Ind_Ride.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/A8-Point-To-Point_Ind_Ride.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- So what what we're gonna do is we're gonna ride around the gyratory. which is like a giant roundabout, okay. So it works the same way as a roundabout, and it's a one-way system. You can see from the sign there that it's a one-way system. Which way do you think the traffic approach is from?</p><p>- [Matt] The right.</p><p>- Yeah, it's the same as the roundabout. So the traffic approaches from the right hand side. So if you are joining the gyratory at any stage, you have to check to the right before you join it, okay. There's a few options here. You can ride around the gyratory, or you could use the bike path. You see it's got the shared bike path there. So if you're not comfortable riding on the road with all this traffic, you can ride on the bike path as well. So there's a few options. Just use the traffic lights as other road users would do so. So if it's, you know, obviously, if it's green, it's go. If it's red, it's stop. When we ride around a traffic roundabout or this gyratory, we like to ride in the middle of our lane. And if you ride in the middle of the lane that you are in, you are in control of that lane. And it means that nobody can overtake you on the roundabout. You're in a strong position and it means that you're in control of your lane. That's the best place to be in.</p><p>- [Matt and Farrah] Yeah.</p><p>- And you see traffic is giving way to the right. So it's just works the same as you would work with a normal roundabout.</p><p>- He's in the middle of the lane, look.</p><p>- In the middle of the lane.</p><p>- Like just like he told us.</p><p>- Yeah.</p><p>- This case. Oh yeah, he's stopping in the bike box.</p><p>- [Farrah] Yeah.</p><p>- [Matt] Pedal ready.</p><p>- [Farrah] Yeah, brakes on, oh.</p><p>- [Matt] And off he goes. Oh, there he is. Oh, he's going into a different lane this time.</p><p>- [Farrah] He was in the middle. Oh, he's trying to get out and around.</p><p>- [Matt] Ah, yes.</p><p>- [Farrah] Yes.</p><p>- [Matt] There he goes.</p><p>- [Farrah] And he's...</p><p>- [Matt] Checking over his shoulder a lot.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -2216,7 +2252,7 @@
       "_layout": "left",
       "title": "The pre-ride discussion",
       "displayTitle": "The pre-ride discussion",
-      "body": "<p>Training should start with a pre-ride discussion \u2013 ideally away from cycles \u2013 where you and your riders discuss and plan the journey to be taken during the session and the specific training activities to be covered. The training activities will need to reflect your riders\u2019 cycling ability, and you should consider including scenarios that they will encounter in future.</p><p>You can use the <strong>Cycle Activity Templates</strong> for the session-planning process where this is helpful.</p><p>Remember you will need to be flexible and work with what you have and don\u2019t always need to stick to the order and combination of activities as is presented in the Templates.</p><p>Be careful not to spend too much time on the pre-ride planning activities \u2013 the majority of the training time should be for actual cycling.</p>",
+      "body": "<p>Training should start with a pre-ride discussion \u2013 ideally away from cycles \u2013 where you and your riders discuss and plan the journey to be taken during the session and the specific training activities to be covered. The training activities will need to reflect your riders\u2019 cycling ability, and you should consider including scenarios that they will encounter in future.</p><p class='box-green'>You can use the <strong>Cycle Activity Templates</strong> for the session-planning process where this is helpful. You can find these under the <strong>Resources</strong> tab.<br/><br/>Remember you will need to be flexible and work with what you have and don\u2019t always need to stick to the order and combination of activities as is presented in the Templates.</p><p>Be careful not to spend too much time on the pre-ride planning activities \u2013 the majority of the training time should be for actual cycling.</p>",
       "instruction": "<p>Scroll down to continue.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -2257,19 +2293,25 @@
       "body": "<p>Watch this video for an example of an instructor having a pre-ride discussion with riders.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/A1-Planning_Activities.mp4",
-         "poster": "course/en/video/A1-Planning_Activities.png"
+         "poster": "course/en/video/A1-Planning_Activities.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/A1-Planning_Activities.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- Okay guys, what kind of riding do you want to do today? You gonna ride to work? Ride to the station?</p><p>- I'd say at work and into town?</p><p>- Yeah? Into town?</p><p>- Yeah.</p><p>- Okay, do you wanna ride on the cycle path or do you wanna ride on the roads? 'Cause we have quite a few choices.</p><p>- Hmm.</p><p>- I prefer cycle path.</p><p>- Yeah? Is that because they're quieter?</p><p>- Yeah.</p><p>- Okay. They can be a little bit further, but obviously they're very quiet. But I think</p><p>- Should we learn to ride on the road as well? Get some skills to learn on the ride.</p><p>- Yeah, I prefer on the road, but yeah, I can understand it can get busy.</p><p>- Yeah. Yeah, it can, but it's</p><p>- You've quite a direct route, often, on the road. Okay. Brilliant. How might you plan your journey?</p><p>- I usually use Google Maps?</p><p>- Okay. So you take your phone with you?</p><p>- Mm-hmm.</p><p>- Do you always take your phone with you when you go riding? Yeah. It's a good decision,</p><p>- Yeah.</p><p>- I think. Yeah,</p><p>- Yeah.</p><p>- it's a good decision. So what sort of other things might you take with you when you go riding?</p><p>- A water bottle.</p><p>- Water bottle. Brilliant. Yeah, having a drink of water is a good idea.</p><p>- Some tools.</p><p>- Some tools? What kind of things, Matt? Allen keys, puncture repair kit.</p><p>- [Instructor] Brilliant. Yeah. Okay. What if you get a flat tyre?</p><p>- Well, you know.</p><p>- Inner tube?</p><p>- Inner tube. How you gonna inflate it?</p><p>- [Together] A pump.</p><p>- Yeah. Brilliant. With a pump. Fantastic. Anything else you might take?</p><p>- I take a lock.</p><p>- Okay. Lock. Yeah. So if you wanna stop at the shops or anything like that, pick your lunch up or whatever. You can lock your bike outside. It's a really good idea. Do you lock it through the wheels or through the frame? I do both.</p><p>- Okay. Yeah, good, good. If you can, do both. If you can't, I think just lock it through the frame's probably the best idea. What about our changeable weather in the UK? What might you have in your-</p><p>- Oh, a jacket.</p><p>- Yeah! Jacket's a really good idea. Make sure you are dressed appropriately for the conditions. 'Cause they can change quite quickly. Absolutely. And if you are carrying this kind of stuff, 'cause it sounds like you've got quite a lot of stuff with you, if you're carrying it, how might you carry it?</p><p>- [Matt] Oh, backpack.</p><p>- Backpack. Brilliant. Yeah. Do you think it's a good idea to have that backpack on your handlebars?</p><p>- No.</p><p>- No? No, it's not good to control your bike, is it? So, backpack or maybe a frame bag or something like that to carry everything. Yeah. Great. Okay. Brilliant, should we do some riding?</p><p>- Yeah.</p><p>- Yeah. Let's go.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -2295,7 +2337,7 @@
       "title": "How can you help your riders plan?",
       "displayTitle": "How can you help your riders plan?",
       "body": "<p>Using your observations from the video and ideas of your own, make a note of ...</p>",
-      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -2305,7 +2347,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -2398,7 +2440,7 @@
       "title": "Ensuring inclusivity",
       "displayTitle": "Ensuring inclusivity",
       "body": "<p>Advanced on-road training must be delivered in a rider-centred and inclusive fashion that embraces, as far as possible, riders of all abilities.</p><p>Think about this scenario and answer the question that follows.</p><p><strong>You are planning a session for two riders who have additional needs. One of the riders has cerebral palsy and will be using a hand-powered adapted cycle that is wider than most cycles, and the other rider will be using a recumbent, which is low to the ground. They are both experienced in using these adapted cycles. Both riders have restricted mobility that affects their ability to look behind when cycling.</strong></p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -2408,7 +2450,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -2540,19 +2582,25 @@
       "body": "<h3>From the REPPROC Principles: \"Progressive\"</h3><div class='excerpt-quote'><ul><li>riders experience more challenging cycling environments as their skills and confidence grow. Training is delivered in a logical way with activities and manoeuvres becoming more complex</li><li>once riders feel comfortable with a set of skills, they can be challenged further during the next round of activities</li><li>each rider can progress at their own pace and according to their learning needs</li></ul></div><p>In this video, the instructor watches and encourages riders through a transitional activity where riders negotiate a road narrowing. This is a good example of previously learnt skills being practised in a more complex environment.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/A7-Pinch_Point.mp4",
-         "poster": "course/en/video/A7-Pinch_Point.png"
+         "poster": "course/en/video/A7-Pinch_Point.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/A7-Pinch_Point.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- [Instructor] Yeah, great road position, Matt. Really great road position. Great road position, Farrah. Well done.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -2990,7 +3038,7 @@
       "title": "• cont.",
       "displayTitle": "",
       "body": "",
-      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Enter your thoughts in the box below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -3000,7 +3048,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -3129,7 +3177,7 @@
             "_playsinline": true,
             "_media": {
                "mp4": "course/en/video/C2_Q1holdCP.mp4",
-               "poster": "course/en/video/C2_Q1CP.png"
+               "poster": "course/en/video/C2_Q1holdCP.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3145,7 +3193,7 @@
             "_type": "component",
             "_component": "reflection",
             "stepInstruction": "",
-            "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
             "_isNested": true,
             "_buttons": {
                "save": "Save",
@@ -3157,7 +3205,7 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!<p><p>Did you consider these suggestions?<ul><li>when will the traffic set off again? If everyone will move off again shortly, it’s probably best to wait in the traffic queue. The rider should only filter here if there is time to reach the front. It’s important to pass queuing traffic slowly. Is there a pedestrian countdown timer that shows when the lights will change?</li><li>is there is enough space to get to the front and on which side? The rider should not filter unless there is time and space to do so.</li><li>are there any additional hazards? Might drivers be about to turn or change lanes? Are they indicating, and if so, on which side? Might people cross the road? Could vehicle doors open?</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.<p><p>Did you consider these suggestions?<ul><li>when will the traffic set off again? If everyone will move off again shortly, it’s probably best to wait in the traffic queue. The rider should only filter here if there is time to reach the front (it's important to pass queuing traffic slowly). Is there a pedestrian countdown timer that shows when the lights will change?</li><li>is there enough space to get to the front and on which side? The rider should not filter unless there is time and space to do so</li><li>are there any additional hazards? Might drivers be about to turn or change lanes? Are they indicating, and if so, on which side? Might people cross the road? Could vehicle doors open?</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
@@ -3202,7 +3250,7 @@
             "_type": "component",
             "_component": "reflection",
             "stepInstruction": "",
-            "instruction": "<p>Answer the questions below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "instruction": "<p>Answer the questions below and select \u2018Save\u2019.</p>",
             "_isNested": true,
             "_buttons": {
                "save": "Save",
@@ -3214,7 +3262,7 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!</p><p>Compare your thoughts with these ideas:<ul><li>for single lanes of queuing traffic, it will normally be better to filter on the right-hand side of the queuing traffic, but not always</li><li>on multi-lane roads with queuing traffic, it can be best to filter in between the two lanes, but again, not always</li><li>as this clip will show, there is not enough space to reach the front in between the two lanes. As there is enough time and space on the left-hand side to filter to the front, the rider sensibly (in this case) decides to use that side. If there had been insufficient time to get to the front, the cycle lane would normally be best avoided due to the possibility of road users behind overtaking and turning left at the junction</li><li>riders should usually adopt the primary position when riding through junctions. This helps to create and maintain a ‘safe riding space’ –  in clear sight of others and preventing hazardous overtaking</li><li>riders should take extra care if using cycle lanes to filter up to the front at left-turning junctions</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><p>Compare your thoughts with these ideas:<ul><li>for single lanes of queuing traffic, it will normally be better to filter on the right-hand side of the queuing traffic, but not always</li><li>on multi-lane roads with queuing traffic, it can be best to filter in between the two lanes, but again, not always</li><li>as this clip will show, there is not enough space to reach the front in between the two lanes. As there is enough time and space on the left-hand side to filter to the front, the rider sensibly (in this case) decides to use that side. If there had been insufficient time to get to the front, the cycle lane would normally be best avoided due to the possibility of road users behind overtaking and turning left at the junction</li><li>riders should usually adopt the primary position when riding through junctions. This helps to create and maintain a ‘safe riding space’ –  in clear sight of others and preventing hazardous overtaking</li><li>riders should take extra care if using cycle lanes to filter up to the front at left-turning junctions</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
@@ -3264,7 +3312,7 @@
             "_type": "component",
             "_component": "reflection",
             "stepInstruction": "",
-            "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
             "_isNested": true,
             "_buttons": {
                "save": "Save",
@@ -3276,7 +3324,7 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!</p><p>Here are some ideas to consider:<ul><li>in this example, it is unclear when the lights will change and, in any case, the rider is already quite close to the front </li><li>in addition, due to the size of the queuing vehicles and lack of available space, and clear signs that road users in front are about to turn right, the rider makes the sensible decision to not filter any further and to wait in the traffic queue</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
+               "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><p>Here are some ideas to consider:<ul><li>in this example, it is unclear when the lights will change and, in any case, the rider is already quite close to the front </li><li>in addition, due to the size of the queuing vehicles and lack of available space, and clear signs that road users in front are about to turn right, the rider makes the sensible decision to not filter any further and to wait in the traffic queue</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
@@ -3321,7 +3369,7 @@
             "_type": "component",
             "_component": "reflection",
             "stepInstruction": "",
-            "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+            "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
             "_isNested": true,
             "_buttons": {
                "save": "Save",
@@ -3333,7 +3381,7 @@
             },
             "placeholder": "Type your notes in here\u2026",
             "_message": {
-               "content": "<p>Your notes have been saved!</p><p>Consider this suggestion:<ul><li>if passing vehicles that start to move, the space between two queuing road users normally expands when the traffic moves off, creating a sort of ‘concertina’ effect. This is the rider’s opportunity to make eye contact with the road user behind and to drop back into the traffic flow</li></ul></p><p class='ins'>Select Play to watch the full video again or scroll down to continue.</p>",
+               "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><p>Consider this suggestion:<ul><li>if passing vehicles that start to move, the space between two queuing road users normally expands when the traffic moves off, creating a sort of ‘concertina’ effect. This is the rider’s opportunity to make eye contact with the road user behind and to drop back into the traffic flow</li></ul></p><p class='ins'>Now close this window and select the arrow to continue with the video.</p>",
                "_inline": false
             },
             "_activity": {
@@ -3430,7 +3478,7 @@
       "title": "How could you deliver this activity?",
       "displayTitle": "How could you deliver this activity?",
       "body": "<p>You want to cover the topic of filtering and are working alone with two riders in an environment with queuing traffic and junctions with traffic lights where the phases change quickly. This greatly increases the likelihood of riders becoming split.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -3440,7 +3488,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved!</p><div class='box-green'><p>Here are some suggestions to compare your ideas with: <ul><li>to give the riders the opportunity to practise filtering, deliver the activity as a point-to-point independent riding activity so that the riders are kept in sight by you observing and supporting them from the roadside</li><li>as a helpful way to promote active learning, have the riders attempt the activity one at a time with the other rider waiting and observing to review their peer\u2019s attempt before  having a go themselves</li><li>if you are riding as a group, remind the leading rider to check behind them regularly and ride at a speed that keeps the group together where possible</li></ul></p></div>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'><p>Here are some suggestions to compare your ideas with: <ul><li>to give the riders the opportunity to practise filtering, deliver the activity as a point-to-point independent riding activity so that the riders are kept in sight by you observing and supporting them from the roadside</li><li>as a helpful way to promote active learning, have the riders attempt the activity one at a time with the other rider waiting and observing to review their peer\u2019s attempt before  having a go themselves</li><li>if you are riding as a group, remind the leading rider to check behind them regularly and ride at a speed that keeps the group together where possible</li></ul></p></div>",
          "_inline": true
       },
       "_activity": {
@@ -3549,7 +3597,7 @@
       },
       "_items": [
          {
-            "content": "<p><strong>Priorities:</strong></p><p>Q: How many roads are there at this multi-lane roundabout? Which is the main road? <br/>A: There are four roads. The roundabout itself is the main road that has priority over all the others.</p><p>Q: On reaching the roundabout, which road users have priority? <br/>A: Those already on the roundabout have priority as do others entering from the right.</p>",
+            "content": "<p><strong>Priorities:</strong></p><p>Q: How many roads are there at this multi-lane roundabout? Which is the main road? <br/><strong>A: There are four roads. The roundabout itself is the main road that has priority over all the others.</strong></p><p>Q: On reaching the roundabout, which road users have priority? <br/><strong>A: Those already on the roundabout have priority as do others entering from the right.</strong></p>",
             "_graphic": {
                "src": "course/en/images/06_02_010/06_02_010_step01.png",
                "alt": ""
@@ -3563,7 +3611,7 @@
             }
          },
          {
-            "content": "<p><strong>Observation:</strong></p><p>Q: Where do you need to look when negotiating this roundabout?<br/>A: Look behind for any road users on the approach to the roundabout. On reaching the roundabout, look to the right for road users on the roundabout or those wishing to enter. As you cycle around the roundabout, look down the entry roads for any road users wishing to enter the roundabout. Check behind before changing lanes on the roundabout and before exiting.</p>",
+            "content": "<p><strong>Observation:</strong></p><p>Q: Where do you need to look when negotiating this roundabout?<br/><strong>A: Look behind for any road users on the approach to the roundabout. On reaching the roundabout, look to the right for road users on the roundabout or those wishing to enter. As you cycle around the roundabout, look down the entry roads for any road users wishing to enter the roundabout. Check behind before changing lanes on the roundabout and before exiting.</strong></p>",
             "_graphic": {
                "src": "course/en/images/06_02_010/06_02_010_step02.png",
                "alt": ""
@@ -3577,7 +3625,7 @@
             }
          },
          {
-            "content": "<p><strong>Communication: </strong></p><p>Q: Should you signal to road users behind you in advance of the roundabout?<br/>A: If turning left (first exit) or right (third exit) from the roundabout, you should signal your intentions in advance of the roundabout.</p><p>Q: When should you communicate your intention to leave the roundabout?<br/>A: You should prioritise control but can signal left to indicate your intention when needed.</p>",
+            "content": "<p><strong>Communication: </strong></p><p>Q: Should you signal to road users behind you in advance of the roundabout?<br/><strong>A: If turning left (first exit) or right (third exit) from the roundabout, you should signal your intentions in advance of the roundabout.</strong></p><p>Q: When should you communicate your intention to leave the roundabout?<br/><strong>A: You should prioritise control but can signal left to indicate your intention when needed.</strong></p>",
             "_graphic": {
                "src": "course/en/images/06_02_010/06_02_010_step03.png",
                "alt": ""
@@ -3591,7 +3639,7 @@
             }
          },
          {
-            "content": "<p><strong>Position:</strong></p><p>Q: What position should you ride in when negotiating the roundabout?<br/>A: Primary position (\u2018Follow me\u2019 position) is important to prevent hazardous overtaking.</p><p>Q: As you approach this multi-lane roundabout, which lane should you use if you are turning left at the first exit? What about for straight ahead? Which lane is best for turning right using the third exit?<br/>A: For the first or second exits, primary position in the left-hand lane is normally suitable. For the third exit, the right-hand lane is normally preferrable. Sometimes a painted line or sign will indicate which lane you should be in.</p>",
+            "content": "<p><strong>Position:</strong></p><p>Q: What position should you ride in when negotiating the roundabout?<br/><strong>A: Primary position (\u2018Follow me\u2019 position) is important to prevent hazardous overtaking.</strong></p><p>Q: As you approach this multi-lane roundabout, which lane should you use if you are turning left at the first exit? What about for straight ahead? Which lane is best for turning right using the third exit?<br/><strong>A: For the first or second exits, primary position in the left-hand lane is normally suitable. For the third exit, the right-hand lane is normally preferrable. Sometimes a painted line or sign will indicate which lane you should be in.</strong></p>",
             "_graphic": {
                "src": "course/en/images/06_02_010/06_02_010_step04.png",
                "alt": ""
@@ -3615,19 +3663,25 @@
       "body": "<p>This video shows an instructor coaching adult riders at a multi-lane roundabout. Take note of some of the questions they ask to encourage active learning.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
          "mp4": "course/en/video/Disc_At_Multi-Lane_Rounda.mp4",
-         "poster": "course/en/video/Disc_At_Multi-Lane_Rounda.png"
+         "poster": "course/en/video/Disc_At_Multi-Lane_Rounda.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/Disc_At_Multi-Lane_Rounda.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- Okay guys, what have we got in front of us?</p><p>- Roundabout.</p><p>- Roundabout.</p><p>- A roundabout. In a moment, we're going to come riding up here, and we are going to turn right and go round the roundabout. Okay. Do you know which direction the traffic is coming from? If you have a look, you can see.</p><p>- From the right?</p><p>- From the right. Okay. So which way is it going?</p><p>- Clockwise.</p><p>- Clockwise. Brilliant. Do you think it's a good idea, when you go round a roundabout, to be in the \"pass me\" position near the curbside? Or do you think it's a good idea to be in the \"follow me\" position in the middle of your lanes?</p><p>- \"Follow me\".</p><p>- Yeah. Be in the middle of your lane so you are in control of your lane. Okay. Do we need to do any signalling?</p><p>- Do we signal for the exit?</p><p>- Do you signal for the exit? If there's a car there, yeah. Have a good look around and signal it if there's a car there, okay? And then get your hands back on the handlebar before you make the turn. So make the signal nice and early, and then that lets other road users know which way you are going to go as well. Everybody feeling comfortable about it?</p><p>- Yeah.</p><p>- So just \"follow me\" position all the way around. Okay. Should we write it together as a group first?</p><p>- Yeah, let's do it.</p><p>- Excellent. Brilliant. Okay, let's go.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -3693,7 +3747,7 @@
       "title": "How could you support your riders in this scenario?",
       "displayTitle": "How could you support your riders in this scenario?",
       "body": "<p>You and another instructor are working with four riders. The training area includes a large multi-lane junction. The riders haven\u2019t ever negotiated a junction of that size and complexity before, and two of them appear nervous.</p>",
-      "instruction": "<p>Answer the questions below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the questions below and select \u2018Save\u2019.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false
@@ -3741,7 +3795,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved!</p><div class='box-green'>Here are some suggestions to compare your ideas with:<ul><li>First, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this <strong>differentiated</strong> and inclusive approach helps all the riders develop their cycling</li></ul><p>Three possible questions to ask your riders:<div class='speechmarks more-padding'>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</div></p></div>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'>Here are some suggestions to compare your ideas with:<ul><li>first, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this <strong>differentiated</strong> and inclusive approach helps all the riders develop their cycling</li></ul><p>Three possible questions to ask your riders:<div class='speechmarks more-padding'>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</div></p></div>",
          "_inline": true
       },
       "_activity": {
@@ -4094,14 +4148,14 @@
       },
       "_items": [
          {
-            "body": "This cycle lane provides segregated space for riders and clear markings that show the route.",
-            "strapline": "This cycle lane provides segregated space for riders and clear markings that show the route.",
+            "body": "Riders should give time and space to pedestrians crossing the road, including those crossing when cyclists have a green light.",
+            "strapline": "Riders should give time and space to pedestrians crossing the road, including those crossing when cyclists have a green light.",
             "_graphic": {
-               "src": "course/en/images/06_03_060/06_03_060_item01.png",
-               "alt": "button reveal just below the left-pointing arrow in the cycle lane"
+               "src": "course/en/images/06_03_060/06_03_060_item03.png",
+               "alt": "button reveal on the pedestrians crossing the road on the left"
             },
-            "_top": 72,
-            "_left": 48
+            "_top": 57,
+            "_left": 31
          },
          {
             "body": "This traffic light allows riders to negotiate this junction at a different time to pedestrians and other road users.",
@@ -4114,15 +4168,16 @@
             "_left": 47
          },
          {
-            "body": "Riders should give time and space to pedestrians crossing the road, including those crossing when cyclists have a green light.",
-            "strapline": "Riders should give time and space to pedestrians crossing the road, including those crossing when cyclists have a green light.",
+            "body": "This cycle lane provides segregated space for riders and clear markings that show the route.",
+            "strapline": "This cycle lane provides segregated space for riders and clear markings that show the route.",
             "_graphic": {
-               "src": "course/en/images/06_03_060/06_03_060_item03.png",
-               "alt": "button reveal on the pedestrians crossing the road on the left"
+               "src": "course/en/images/06_03_060/06_03_060_item01.png",
+               "alt": "button reveal just below the left-pointing arrow in the cycle lane"
             },
-            "_top": 57,
-            "_left": 31
+            "_top": 72,
+            "_left": 48
          }
+         
       ],
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -4150,26 +4205,26 @@
       },
       "_items": [
          {
-            "title": "This cycle lane invites riders to use the secondary position, despite road users at the junction often turning left.",
-            "body": "The cycle lane is therefore best ignored when riders negotiate the junction. Riders could remain in the traffic flow or, in situations where riders wish to filter up to the ASL in front, they should carefully consider which side to pass queuing traffic on.",
-            "strapline": "This cycle lane invites riders to use the secondary position, despite road users at the junction often turning left.",
-            "_graphic": {
-               "src": "course/en/images/06_03_070/06_03_070_item01.png",
-               "alt": "button on the cycle lane near to the junction"
-            },
-            "_top": 60,
-            "_left": 45
-         },
-         {
-            "title": "The ASL provides riders with space at the front and enables them to set off before other road users when the lights turn green.",
-            "body":"This can help riders to create and maintain a \u2018safe riding space\u2019 as they pass through the junction.",
-            "strapline": "The ASL provides riders with space at the front and enables them to set off before other road users when the lights turn green.",
+            "title": "",
+            "body":"<p>The ASL provides riders with space at the front and enables them to set off before other road users when the lights turn green.</p><p>This can help riders to create and maintain a \u2018safe riding space\u2019 as they pass through the junction.</p>",
+            "strapline": "",
             "_graphic": {
                "src": "course/en/images/06_03_070/06_03_070_item02.png",
                "alt": "button on the ASL"
             },
             "_top": 37,
             "_left": 47
+         },
+         {
+            "title": "",
+            "body": "<p>This cycle lane invites riders to use the secondary position, despite road users at the junction often turning left.</p><p>The cycle lane may therefore be best ignored when riders negotiate the junction. Riders could remain in the traffic flow or, in situations where riders wish to filter up to the ASL in front, they should carefully consider which side to pass queuing traffic on.</p>",
+            "strapline": "",
+            "_graphic": {
+               "src": "course/en/images/06_03_070/06_03_070_item01.png",
+               "alt": "button on the cycle lane near to the junction"
+            },
+            "_top": 60,
+            "_left": 45
          }
       ],
       "_pageLevelProgress": {
@@ -4235,7 +4290,7 @@
          "poster": "course/en/video/C3-Filtering_Up_To_An_Asl.png"
       },
       "_transcript": {
-         "_inlineTranscript": true,
+         "_inlineTranscript": false,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
@@ -4556,7 +4611,7 @@
          "poster": "course/en/video/C4-Bus_Lanes.png"
       },
       "_transcript": {
-         "_inlineTranscript": true,
+         "_inlineTranscript": false,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
@@ -4586,7 +4641,7 @@
       "title": "• Questions ...",
       "displayTitle": "",
       "body": "<p>Write down your answers to the questions below.</p>",
-      "instruction": "<p>Answer the questions below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the questions below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -4596,7 +4651,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -4697,7 +4752,7 @@
       "_items": [
          {
             "title": "Riding position",
-            "body": "<p>When cycling in a bus lane where there is insufficient space for a bus to overtake, use the primary riding position.</p><p>Should other road users behind catch up with you and have the desire and space to overtake, communicate with them through eye contact and consider moving into the secondary position to give them space to overtake.</p>",
+            "body": "<p>When cycling in a bus lane where there is insufficient space for a bus to overtake, use the primary riding position.</p><p>Should other road users behind catch up with you and have the time and space to overtake, communicate with them through eye contact and consider moving into the secondary position to give them space to overtake.</p>",
             "_image": "course/en/images/06_04_060/06_04_060_item01.png",
             "alt": ""
          },
@@ -4849,7 +4904,7 @@
       "_layout": "full",
       "title": "• Short film ...",
       "displayTitle": "",
-      "body": "<p>Watch this short film of a rider cycling on some faster and rural roads and then write down below some important things to discuss with your riders on how they should cycle in these environments.</p>",
+      "body": "<p>Watch this short film of two riders cycling on some faster and rural roads and then write down below some important things to discuss with your riders on how they should cycle in these environments. Bear in mind you and your riders may cycle slower than the riders in these clips.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
       "_useClosedCaptions": false,
@@ -4860,7 +4915,7 @@
          "poster": "course/en/video/C5-Roads_Over_30mph.png"
       },
       "_transcript": {
-         "_inlineTranscript": true,
+         "_inlineTranscript": false,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
@@ -4890,7 +4945,7 @@
       "title": "What will you discuss with your riders?",
       "displayTitle": "What will you discuss with your riders?",
       "body": "<p></p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -4900,7 +4955,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "Your notes have been saved!<br/>Scroll down and compare the points you have listed with those shown below.",
+         "content": "Your notes have been saved and can be downloaded as a PDF at the end of this module.<br/>Scroll down and compare the points you have listed with those shown below.",
          "_inline": true
       },
       "_activity": {
@@ -5048,7 +5103,7 @@
       "_layout": "full",
       "title": "Risk benefit assessment",
       "displayTitle": "",
-      "body": "<p class='quote left'>It is a fact that every journey by cycle involves certain risks and riders need support to understand what these are and how deal with them. Risk benefit assessment recognises these risks and how cycle training in real – not simulated – environments helps riders learn about how to manage their own risk in a progressive way.'</p><p class='quote-ann'>(Bikeability Trust Risk Management Guidance)</p><p>Let us look at a few different RBA scenarios.</p>",
+      "body": "<p class='quote'>\"It is a fact that every journey by cycle involves certain risks and riders need support to understand what these are and how deal with them. Risk benefit assessment recognises these risks and how cycle training in real – not simulated – environments helps riders learn about how to manage their own risk in a progressive way.\"</p><p class='quote-ann'>(From the Risk benefit statement in The Bikeability Trust Risk Management Guidance)</p><p>Let us look at a few different RBA scenarios.</p>",
       "instruction": "<p>Scroll down to continue.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -5065,7 +5120,7 @@
       "title": "Planning a longer distance ",
       "displayTitle": "Planning a longer distance ",
       "body": "<p>You are supporting a rider to plan a journey that will integrate part of their future commute to and from work. During the planning exercise, you discover that the journey is longer than was expected, and you are concerned that the rider may struggle with the distance.  The rider is unable to attend another session after this one.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
          "_isCompletionIndicatorEnabled": false
@@ -5113,7 +5168,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved!</p><div class='box-green'>Here are some suggestions to compare with yours:<ul><li>prompt the rider to bring a drink or snack along to the session and plan breaks in the journey at specific places of interest on the route</li><li>regularly check in with the rider to see how they are feeling at various points during the session</li><li>deliver the session in more of a continuous buddy-riding format as this will enable as much of the future commute to be ridden as possible </li><li>consider back-up route options in case it is not possible to reach the destination</li></ul></div><p>Scroll down to continue.</p>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'>Here are some suggestions to compare with yours:<ul><li>prompt the rider to bring a drink or snack along to the session and plan breaks in the journey at specific places of interest on the route</li><li>regularly check in with the rider to see how they are feeling at various points during the session</li><li>deliver the session in more of a continuous buddy-riding format as this will enable as much of the future commute to be ridden as possible </li><li>consider back-up route options in case it is not possible to reach the destination</li></ul></div><p>Scroll down to continue.</p>",
          "_inline": true
       },
       "_activity": {
@@ -5141,7 +5196,7 @@
       "_layout": "full",
       "title": "Concerns about speed",
       "displayTitle": "Concerns about speed",
-      "body": "<p>Prior to working with a rider, you carry out an on-road survey of an area to be used for independent riding exercises. The rider is building their fitness through cycling but currently struggles to ride at higher speeds. The speed differential between the rider and other traffic is much higher than expected, and you are concerned that this could put your rider at excessive risk. How could you manage this situation? </p>",
+      "body": "<p>Prior to working with a rider, you carry out an on-road survey of an area to be used for their session. The rider is building their fitness through cycling but currently struggles to ride at higher speeds. The speed differential between the rider and other traffic is much higher than expected, and you are concerned that this could put your rider at excessive risk. How could you manage this situation? </p>",
       "instruction": "<p>Select the arrow for potential solutions.</p>",
       "_setCompletionOn": "allItems",
       "mobileInstruction": "<p>Select the arrow for potential solutions.</p>",
@@ -5198,7 +5253,7 @@
       "title": "Promoting independence while managing risk",
       "displayTitle": "Promoting independence while managing risk",
       "body": "<p>You are working with one rider who is attempting an exercise where they ride straight ahead through a junction controlled by traffic lights. The rider wants to attempt the activity alone as the junction will be part of their future commute to work.</p><p>The activity involves attempting to move into the primary position in advance of the junction, and there are sight-line issues due to the brow of a hill near the start.</p>",
-      "instruction": "<p>Answer the question below and select \u2018Save\u2019. Your notes will be exported to your PDF course notes for you to download at the end of this module.</p>",
+      "instruction": "<p>Answer the question below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
          "_exportEnabled": false
@@ -5208,7 +5263,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved!</p><div class='box-green'>Compare your ideas with these potential solutions:<ul><li>if you assess the rider as not yet ready to attempt the activity on their own, you could offer to support them by buddy riding with them for their first attempt(s)</li><li>you could then potentially progress the activity by cycling further behind the rider to create a more independent riding experience</li><li>when you and the rider assess that they are ready to attempt the exercise more independently, you could, where possible, adopt a dynamic position on the pavement, supporting them where needed by being positioned near to the points of highest risk (for example, between the brow of the hill and the junction itself)</li></ul></div><p>Scroll down to continue.</p>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'>Compare your ideas with these potential solutions:<ul><li>if you assess the rider as not yet ready to attempt the activity on their own, you could offer to support them by buddy riding with them for their first attempt(s)</li><li>you could then potentially progress the activity by cycling further behind the rider to create a more independent riding experience</li><li>when you and the rider assess that they are ready to attempt the exercise more independently, you could, where possible, adopt a dynamic instructing position on the pavement, supporting them where needed by being positioned near to the points of highest risk (for example, between the brow of the hill and the junction itself)</li></ul></div><p>Scroll down to continue.</p>",
          "_inline": true
       },
       "_activity": {
@@ -5529,7 +5584,7 @@
       "_layout": "left",
       "title": "What\u2019s next?",
       "displayTitle": "What\u2019s next?",
-      "body": "<p><strong>Congratulations!</strong> You have completed this training module.</p><p>It\u2019s soon time for you to put into practice what you have learnt. You can work alongside an experienced instructor to do this or look out for practical continuing professional development opportunities from your training provider or recognised delivery centre.</p><p>You can access the documents or links referred to in the module by selecting the <strong>Resources</strong> tab on the top right-hand side of the screen.</p><p>Remember that your development as an instructor and rider never stops, and you will need to continue to evolve and stay up to date. This will ensure that you deliver the very best training possible to your riders!</p><p>You can download your certificate on the next page.</p>",
+      "body": "<p><strong>Congratulations!</strong> You have completed this training module.</p><p>It\u2019s now time for you to put into practice what you have learnt. You can work alongside an experienced instructor to do this or look out for practical continuing professional development opportunities from your training provider or recognised delivery centre.</p><p>You can access the documents or links referred to in the module by selecting the <strong>Resources</strong> tab on the top right-hand side of the screen.</p><p>Remember that your development as an instructor and rider never stops, and you will need to continue to evolve and stay up to date. This will ensure that you deliver the very best training possible to your riders!</p><p>You can download your certificate on the next page.</p>",
       "instruction": "<p class='box-orange-text'><span class='exclamation'></span>To ensure this module is now marked as complete, you must select the button below to download your course notes and reflections as a PDF.</p>",
       "_buttons": {
          "save": "",

@@ -144,6 +144,15 @@
         @media (max-width: @device-width-small) {
             flex-direction: column;
         }
+
+        &.no-image-full {
+            padding: 0rem 1rem;
+            width: 100%;
+            .timeline__item-body {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
     }
 
     &__item-body {
