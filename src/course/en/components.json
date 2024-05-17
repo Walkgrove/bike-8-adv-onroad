@@ -43,12 +43,12 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/A1-Megan_L3_Intro.mp4",
-         "poster": "course/en/video/A1-Megan_L3_Intro.png",
+         "mp4": "course/en/video/a1-megan_l3_intro.mp4",
+         "poster": "course/en/video/a1-megan_l3_intro.png",
          "cc": [
             {
                 "srclang": "en",
-                "src": "course/en/video/A1-Megan_L3_Intro.vtt"
+                "src": "course/en/video/a1-megan_l3_intro.vtt"
             }
         ]
       },
@@ -969,12 +969,12 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/A2-The_Recap_On-Road.mp4",
-         "poster": "course/en/video/A2-The_Recap_On-Road.png",
+         "mp4": "course/en/video/a2-the_recap_on-road.mp4",
+         "poster": "course/en/video/a2-the_recap_on-road.png",
          "cc": [
             {
                 "srclang": "en",
-                "src": "course/en/video/A2-The_Recap_On-Road.vtt"
+                "src": "course/en/video/a2-the_recap_on-road.vtt"
             }
         ]
       },
@@ -983,7 +983,7 @@
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>- In a moment we're gonna ride out. We're gonna do a left hand turn out of this side road.</p><p>- [Farrah] Okay.</p><p>- Right up there, maybe do a U-turn by that pilon. Don't go any further by that pilon there. And then come back down, and turn right back into the side road from the main road. Do another U-turn sort of down by the end of that wall somewhere there. Don't go any further. Okay, what sort of position do you think is a good position to be in when you're negotiating a junction? Do you think it's good to be right next to the curb?</p><p>- [Farrah] No.</p><p>- No, that's the pass position. Do you think it's better to be in the following position where you're in control of your side of the lane? Remember we discussed that before?</p><p>- Yes.</p><p>- Yeah, so you're in the middle of your lane okay? Another thing you have to do, obviously, which is what all these drivers are doing as well, is do lots of looking. So observations are really key for us. Do lots of looking when you're about to join the main road, and then when you're about to turn back into the side road. Think about who goes first. You know what priority means, or right of way, yeah? We have exactly the same rules as other road users. As drivers you would know, you know how the road system works. How can you also let other road users know what you're going to do if you're going to do a turn?</p><p>- A signal?</p><p>- Yeah. Communicate to them. Make eye contact with them by looking over your shoulder. Communicate to them with hand signals, and that kind of thing, okay? So think about looking, think about priority. Think about whether it's you who goes first, or whether it's the other road user who goes first. Think about communicating or signalling to other road users, and think about your road position, okay? Shall we have a go at it?</p><p>- [Farrah] Yeah.</p><p>- Brilliant. Hands back on the handlebar, Matt, before you make the turn. Good road position. Check behind you again, Farrah before you turn. That's it. Well done. Great road position, Matt. Well done.</p>",
+         "inlineTranscriptBody": "<p>- In a moment we're gonna ride out. We're gonna do a left hand turn out of this side road.</p><p>- [Farrah] Okay.</p><p>- Right up there, maybe do a U-turn by that pylon. Don't go any further by that pylon there. And then come back down, and turn right back into the side road from the main road. Do another U-turn sort of down by the end of that wall somewhere there. Don't go any further. Okay, what sort of position do you think is a good position to be in when you're negotiating a junction? Do you think it's good to be right next to the kerb?</p><p>- [Farrah] No.</p><p>- No, that's the pass position. Do you think it's better to be in the following position where you're in control of your side of the lane? Remember we discussed that before?</p><p>- Yes.</p><p>- Yeah, so you're in the middle of your lane okay? Another thing you have to do, obviously, which is what all these drivers are doing as well, is do lots of looking. So observations are really key for us. Do lots of looking when you're about to join the main road, and then when you're about to turn back into the side road. Think about who goes first. You know what priority means, or right of way, yeah? We have exactly the same rules as other road users. As drivers you would know, you know how the road system works. How can you also let other road users know what you're going to do if you're going to do a turn?</p><p>- A signal?</p><p>- Yeah. Communicate to them. Make eye contact with them by looking over your shoulder. Communicate to them with hand signals, and that kind of thing, okay? So think about looking, think about priority. Think about whether it's you who goes first, or whether it's the other road user who goes first. Think about communicating or signalling to other road users, and think about your road position, okay? Shall we have a go at it?</p><p>- [Farrah] Yeah.</p><p>- Brilliant. Hands back on the handlebar, Matt, before you make the turn. Good road position. Check behind you again, Farrah before you turn. That's it. Well done. Great road position, Matt. Well done.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -1259,8 +1259,8 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/C1-Positive_Relationships.mp4",
-         "poster": "course/en/video/C1-Positive_Relationships.png"
+         "mp4": "course/en/video/c1-positive_relationships.mp4",
+         "poster": "course/en/video/c1-positive_relationships.png"
       },
       "_transcript": {
          "_inlineTranscript": false,
@@ -1510,12 +1510,12 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/Buddy_Riding_Part_1.mp4",
-         "poster": "course/en/video/Buddy_Riding_Part_1.png",
+         "mp4": "course/en/video/buddy_riding_part_1.mp4",
+         "poster": "course/en/video/buddy_riding_part_1.png",
          "cc": [
             {
                 "srclang": "en",
-                "src": "course/en/video/Buddy_Riding_Part_1.vtt"
+                "src": "course/en/video/buddy_riding_part_1.vtt"
             }
         ]
       },
@@ -1556,12 +1556,12 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/Buddy_Riding_Part_2.mp4",
-         "poster": "course/en/video/Buddy_Riding_Part_2.png",
+         "mp4": "course/en/video/buddy_riding_part_2.mp4",
+         "poster": "course/en/video/buddy_riding_part_2.png",
          "cc": [
             {
                 "srclang": "en",
-                "src": "course/en/video/Buddy_Riding_Part_2.vtt"
+                "src": "course/en/video/buddy_riding_part_2.vtt"
             }
         ]
       },
@@ -2297,12 +2297,12 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/A1-Planning_Activities.mp4",
-         "poster": "course/en/video/A1-Planning_Activities.png",
+         "mp4": "course/en/video/a1-planning_activities.mp4",
+         "poster": "course/en/video/a1-planning_activities.png",
          "cc": [
             {
                 "srclang": "en",
-                "src": "course/en/video/A1-Planning_Activities.vtt"
+                "src": "course/en/video/a1-planning_activities.vtt"
             }
         ]
       },
@@ -2586,12 +2586,12 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/A7-Pinch_Point.mp4",
-         "poster": "course/en/video/A7-Pinch_Point.png",
+         "mp4": "course/en/video/a7-pinch_point.mp4",
+         "poster": "course/en/video/a7-pinch_point.png",
          "cc": [
             {
                 "srclang": "en",
-                "src": "course/en/video/A7-Pinch_Point.vtt"
+                "src": "course/en/video/a7-pinch_point.vtt"
             }
         ]
       },
@@ -3170,14 +3170,14 @@
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
             "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2_Q2_3CP.png",
+            "_background": "course/en/video/c2_q2_3cp.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_playsinline": true,
             "_media": {
-               "mp4": "course/en/video/C2_Q1holdCP.mp4",
-               "poster": "course/en/video/C2_Q1holdCP.png"
+               "mp4": "course/en/video/c2_q1holdcp.mp4",
+               "poster": "course/en/video/c2_q1holdcp.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3227,14 +3227,14 @@
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
             "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2_Q4holdCP.png",
+            "_background": "course/en/video/c2_q4holdcp.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_playsinline": true,
             "_media": {
-               "mp4": "course/en/video/C2_Q2_3CP.mp4",
-               "poster": "course/en/video/C2_Q2_3CP.png"
+               "mp4": "course/en/video/c2_q2_3cp.mp4",
+               "poster": "course/en/video/c2_q2_3cp.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3289,14 +3289,14 @@
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
             "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2_Q5holdCP.png",
+            "_background": "course/en/video/c2_q5holdcp.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_playsinline": true,
             "_media": {
-               "mp4": "course/en/video/C2_Q4holdCP.mp4",
-               "poster": "course/en/video/C2_Q4holdCP.png"
+               "mp4": "course/en/video/c2_q4holdcp.mp4",
+               "poster": "course/en/video/c2_q4holdcp.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3346,14 +3346,14 @@
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
             "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2_ENDCP.png",
+            "_background": "course/en/video/c2_endcp.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_playsinline": true,
             "_media": {
-               "mp4": "course/en/video/C2_Q5holdCP.mp4",
-               "poster": "course/en/video/C2_Q5holdCP.png"
+               "mp4": "course/en/video/c2_q5holdcp.mp4",
+               "poster": "course/en/video/c2_q5holdcp.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3403,14 +3403,14 @@
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
             "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2_ENDCP_final.png",
+            "_background": "course/en/video/c2_endcp_final.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_playsinline": true,
             "_media": {
-               "mp4": "course/en/video/C2_EndCP.mp4",
-               "poster": "course/en/video/C2_ENDCP.png"
+               "mp4": "course/en/video/c2_endcp.mp4",
+               "poster": "course/en/video/c2_endcp.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3436,14 +3436,14 @@
             "_component": "media",
             "stepInstruction": "<p>Select Play to watch the video.</p>",
             "stepInstructionMobile": "<p>Select Play to watch the video.</p>",
-            "_background": "course/en/video/C2-Passing_Queuing_Traffic.png",
+            "_background": "course/en/video/c2-passing_queuing_traffic.png",
             "_setCompletionOn": "ended",
             "_useClosedCaptions": false,
             "_allowFullScreen": false,
             "_playsinline": true,
             "_media": {
-               "mp4": "course/en/video/C2-Passing_Queuing_Traffic.mp4",
-               "poster": "course/en/video/C2-Passing_Queuing_Traffic.png"
+               "mp4": "course/en/video/c2-passing_queuing_traffic.mp4",
+               "poster": "course/en/video/c2-passing_queuing_traffic.png"
             },
             "_playerOptions": {
                "alwaysShowControls": false,
@@ -3588,7 +3588,7 @@
       "_layout": "full",
       "title": "Multi-lane roads and roundabouts",
       "displayTitle": "Multi-lane roads and roundabouts",
-      "body": "<p>Negotiating multi-lane roads and junctions is an important part of advanced on-road training and can be delivered in a progressive manner where riders experience changing lanes on roads with increasing traffic and approaching or leaving multi-lane junctions in different directions.</p><p>This activity relates very closely to the National Standard concepts of \u2018riding assertively\u2019 and the need to \u2019create and maintain a safe riding space\u2019.</p><p>Let\u2019s now take a closer look at this activity.</p><p>You can also find ideas in the <strong>Cycle Activity Templates: Using multi-lane roads and Using multi-lane roundabouts</strong>.</p>",
+      "body": "<p>Negotiating multi-lane roads and junctions is an important part of advanced on-road training and can be delivered in a progressive manner where riders experience changing lanes on roads with increasing traffic and approaching or leaving multi-lane junctions in different directions.</p><p>This activity relates very closely to the National Standard concepts of \u2018riding assertively\u2019 and the need to \u2019create and maintain a safe riding space\u2019.</p><p>Let's now take a closer look at how the four key skills are applied to this activity, together with sample questions you could ask your riders.</p><p>You can also find ideas in the <strong>Cycle Activity Templates: Using multi-lane roads and Using multi-lane roundabouts</strong>.</p>",
       "instruction": "<p>Please select the arrow to see how the 4 key skills are applied to this activity, together with sample questions you could ask your riders.</p>",
       "content": "<p><strong>Priorities:</strong></p><p>Q: How many roads are there at this multi-lane roundabout? Which is the main road? <br/></p><p>Q: On reaching the roundabout, which road users have priority? <br/></p>",
       "mobileInstruction": "<p>Find out more below.</p>",
@@ -3667,12 +3667,12 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/Disc_At_Multi-Lane_Rounda.mp4",
-         "poster": "course/en/video/Disc_At_Multi-Lane_Rounda.png",
+         "mp4": "course/en/video/disc_at_multi-lane_rounda.mp4",
+         "poster": "course/en/video/disc_at_multi-lane_rounda.png",
          "cc": [
             {
                 "srclang": "en",
-                "src": "course/en/video/Disc_At_Multi-Lane_Rounda.vtt"
+                "src": "course/en/video/disc_at_multi-lane_rounda.vtt"
             }
         ]
       },
@@ -3681,7 +3681,7 @@
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>- Okay guys, what have we got in front of us?</p><p>- Roundabout.</p><p>- Roundabout.</p><p>- A roundabout. In a moment, we're going to come riding up here, and we are going to turn right and go round the roundabout. Okay. Do you know which direction the traffic is coming from? If you have a look, you can see.</p><p>- From the right?</p><p>- From the right. Okay. So which way is it going?</p><p>- Clockwise.</p><p>- Clockwise. Brilliant. Do you think it's a good idea, when you go round a roundabout, to be in the \"pass me\" position near the curbside? Or do you think it's a good idea to be in the \"follow me\" position in the middle of your lanes?</p><p>- \"Follow me\".</p><p>- Yeah. Be in the middle of your lane so you are in control of your lane. Okay. Do we need to do any signalling?</p><p>- Do we signal for the exit?</p><p>- Do you signal for the exit? If there's a car there, yeah. Have a good look around and signal it if there's a car there, okay? And then get your hands back on the handlebar before you make the turn. So make the signal nice and early, and then that lets other road users know which way you are going to go as well. Everybody feeling comfortable about it?</p><p>- Yeah.</p><p>- So just \"follow me\" position all the way around. Okay. Should we write it together as a group first?</p><p>- Yeah, let's do it.</p><p>- Excellent. Brilliant. Okay, let's go.</p>",
+         "inlineTranscriptBody": "<p>- Okay guys, what have we got in front of us?</p><p>- Roundabout.</p><p>- Roundabout.</p><p>- A roundabout. In a moment, we're going to come riding up here, and we are going to turn right and go round the roundabout. Okay. Do you know which direction the traffic is coming from? If you have a look, you can see.</p><p>- From the right?</p><p>- From the right. Okay. So which way is it going?</p><p>- Clockwise.</p><p>- Clockwise. Brilliant. Do you think it's a good idea, when you go round a roundabout, to be in the \"pass me\" position near the kerbside? Or do you think it's a good idea to be in the \"follow me\" position in the middle of your lanes?</p><p>- \"Follow me\".</p><p>- Yeah. Be in the middle of your lane so you are in control of your lane. Okay. Do we need to do any signalling?</p><p>- Do we signal for the exit?</p><p>- Do you signal for the exit? If there's a car there, yeah. Have a good look around and signal it if there's a car there, okay? And then get your hands back on the handlebar before you make the turn. So make the signal nice and early, and then that lets other road users know which way you are going to go as well. Everybody feeling comfortable about it?</p><p>- Yeah.</p><p>- So just \"follow me\" position all the way around. Okay. Should we write it together as a group first?</p><p>- Yeah, let's do it.</p><p>- Excellent. Brilliant. Okay, let's go.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -3709,19 +3709,25 @@
       "body": "<p>In this video from the delivery guidance, some important coaching points are highlighted while the rider is on the road.</p><p>You can also find more coaching points detailed in the <strong>Cycle Activity Templates: Using multi-lane roads</strong> and <strong>Using multi-lane roundabouts</strong>.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
-      "_useClosedCaptions": false,
+      "_useClosedCaptions": true,
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/Multi-Lane_Roundabout.mp4",
-         "poster": "course/en/video/Multi-Lane_Roundabout.png"
+         "mp4": "course/en/video/multi-lane_roundabout.mp4",
+         "poster": "course/en/video/multi-lane_roundabout.png",
+         "cc": [
+            {
+                "srclang": "en",
+                "src": "course/en/video/multi-lane_roundabout.vtt"
+            }
+        ]
       },
       "_transcript": {
          "_inlineTranscript": true,
          "_externalTranscript": false,
          "inlineTranscriptButton": "Transcript",
          "inlineTranscriptCloseButton": "Close Transcript",
-         "inlineTranscriptBody": "<p>TBC </p>",
+         "inlineTranscriptBody": "<p>- [Instructor] Look over your shoulder to see what's behind you. Move into primary position for the appropriate lane. Control your speed and choose the most appropriate gear as you approach the junction. Signal if appropriate in the direction you wish to leave the roundabout. Give way to road users coming from your right. If necessary and appropriate, signal your intentions. Move left when there is enough space as you approach your exit. Look around before you exit the roundabout, checking for anyone undertaking.</p>",
          "transcriptLinkButton": "Transcript",
          "transcriptLink": ""
       },
@@ -3933,29 +3939,29 @@
       "_id": "c-06_03_020",
       "_parentId": "b-06_03_020",
       "_type": "component",
-      "_component": "flow",
+      "_component": "timeline",
       "_classes": "",
       "_layout": "full",
       "title": "• Some examples ...",
       "displayTitle": "",
       "body": "<p>There are many scenarios where you can cover this activity. For example:</p>",
       "instruction": "<p>Select the \u2018+\u2019 button for some examples.</p>",
-      "_hideInitial": true,
+      "buttonMore": " ",
       "_items": [
          {
-            "content": "Sampling good quality, segregated cycle lanes during training and pausing at certain points of the journey to discuss the potential benefits and disadvantages of using particular infrastructure.",
+            "body": "Sampling good quality, segregated cycle lanes during training and pausing at certain points of the journey to discuss the potential benefits and disadvantages of using particular infrastructure.",
             "_layout": "no-image-full"
          },
          {
-            "content": "Through activities where riders can cycle assertively and be coached, where appropriate, to dynamically move out of cycle lanes or to avoid poorly designed infrastructure altogether.",
+            "body": "Through activities where riders can cycle assertively and be coached, where appropriate, to dynamically move out of cycle lanes or to avoid poorly designed infrastructure altogether.",
             "_layout": "no-image-full"
          },
          {
-            "content": "Activities where riders may use advanced stop lines (ASLs) at traffic-light-controlled junctions.",
+            "body": "Activities where riders may use advanced stop lines (ASLs) at traffic-light-controlled junctions.",
             "_layout": "no-image-full"
          },
          {
-            "content": "Using roads that have contraflow cycle lanes.",
+            "body": "Using roads that have contraflow cycle lanes.",
             "_layout": "no-image-full"
          }
       ],
@@ -4286,8 +4292,8 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/C3-Filtering_Up_To_An_Asl.mp4",
-         "poster": "course/en/video/C3-Filtering_Up_To_An_Asl.png"
+         "mp4": "course/en/video/c3-filtering_up_to_an_asl.mp4",
+         "poster": "course/en/video/c3-filtering_up_to_an_asl.png"
       },
       "_transcript": {
          "_inlineTranscript": false,
@@ -4607,8 +4613,8 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/C4-Bus_Lanes.mp4",
-         "poster": "course/en/video/C4-Bus_Lanes.png"
+         "mp4": "course/en/video/c4-bus_lanes.mp4",
+         "poster": "course/en/video/c4-bus_lanes.png"
       },
       "_transcript": {
          "_inlineTranscript": false,
@@ -4640,7 +4646,7 @@
       "_layout": "full",
       "title": "• Questions ...",
       "displayTitle": "",
-      "body": "<p>Write down your answers to the questions below.</p>",
+      "body": "",
       "instruction": "<p>Answer the questions below and select \u2018Save\u2019.</p>",
       "_buttons": {
          "save": "Save",
@@ -4911,8 +4917,8 @@
       "_allowFullScreen": false,
       "_pauseWhenOffScreen": true,
       "_media": {
-         "mp4": "course/en/video/C5-Roads_Over_30mph.mp4",
-         "poster": "course/en/video/C5-Roads_Over_30mph.png"
+         "mp4": "course/en/video/c5-roads_over_30mph.mp4",
+         "poster": "course/en/video/c5-roads_over_30mph.png"
       },
       "_transcript": {
          "_inlineTranscript": false,
