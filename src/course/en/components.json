@@ -10,7 +10,7 @@
       "displayTitle": "",
       "body": "",
       "instruction": "",
-      "splashTitle": "<h1><span class='subtitle'>Level 3</span><br/>Advanced on-road cycle training</h1><div class='timer-container'><span class='timer-icon'></span> <div>Select Start to begin.</div></div>",
+      "splashTitle": "<h1><span class='subtitle'> </span><br/>Advanced on-road cycle training</h1><div class='timer-container'><span class='timer-icon'></span> <div>Select Start to begin.</div></div>",
       "buttonText": "Start",
       "_button": {
          "_normal": true
@@ -36,7 +36,7 @@
       "_layout": "full",
       "title": "Introduction",
       "displayTitle": "",
-      "body": "<p>Welcome to this module on advanced on-road cycle training, which is often an integral part of the work that instructors carry out. Being able to ride in more complex environments opens up a range of new cycling opportunities and promotes positive behaviour change. This module will guide you as an instructor to help riders develop the knowledge, skills and confidence they require.</p><p>Let\u2019s hear a little more about the module from Megan Giglia of The Bikeability Trust.</p>",
+      "body": "<p>Welcome to this module on advanced on-road cycle training, which is often an integral part of the work that instructors carry out. Being able to ride in more complex environments opens up a range of new cycling opportunities and promotes positive behaviour change. This module will guide you as an instructor to help riders develop the knowledge, skills and confidence they require.</p><p>This training is a result of good collaboration across the industry, with special thanks to Barnaby Eager who has contributed significantly to the content. Let\u2019s hear a little more about the module from Megan Giglia of The Bikeability Trust.</p>",
       "instruction": "<p>Select Play to watch the video.</p>",
       "_setCompletionOn": "play",
       "_useClosedCaptions": true,
@@ -423,7 +423,7 @@
          },
          {
             "title": "Ride Guide",
-            "body": "This is a description of cycling in a variety of scenarios, both on and off road, and includes topics such as how to perform certain manoeuvres when cycling. If you need to gain further understanding on good cycling practise on how to, for example, pass queuing traffic, ride in bus lanes or negotiate multi-lane junctions, then the Ride Guide is an essential resource to help you clarify understanding.",
+            "body": "This is a description of cycling in a variety of scenarios, both on and off road, and includes topics such as how to perform certain manoeuvres when cycling. If you need to gain further understanding on good cycling practice on how to, for example, pass queuing traffic, ride in bus lanes or negotiate multi-lane junctions, then the Ride Guide is an essential resource to help you clarify understanding.",
             "strapline": "Ride Guide",
             "_graphic": {
                "src": "course/en/images/02_01_010/02_01_010_item03.png",
@@ -1008,7 +1008,7 @@
       "_layout": "full",
       "title": "Checking on-road skills",
       "displayTitle": "",
-      "body": "<div class='box-pink'>On some occasions you may feel that a rider is not ready to progress to more complex activities. If this is the case, here are some options and things to think about:<ul><li>what is the potential impact on the rest of the group?</li><li>is another instructor available as an inclusion strategy?</li><li>do you need to adapt your planned route? </li><li>can you still ride with them whilst providing progressive training activities for others in the group?</li><li>can you use the strengths of other riders in the group to support them?</li><li>should you consider using more point-to-point independent riding activities and have the rider observe from the roadside? </li><li>can you supply them with supporting resources so they can still learn and feel included (videos, images, training guidance)?</li><li>would the rider be better served by a separate session?</li><li>are there activities the rider should practise in their spare time?</li></ul></div>",
+      "body": "<div class='box-orange'>On some occasions you may feel that a rider is not ready to progress to more complex activities. If this is the case, here are some options and things to think about:<ul><li>what is the potential impact on the rest of the group?</li><li>is another instructor available as an inclusion strategy?</li><li>do you need to adapt your planned route? </li><li>can you still ride with them whilst providing progressive training activities for others in the group?</li><li>can you use the strengths of other riders in the group to support them?</li><li>should you consider using more point-to-point independent riding activities and have the rider observe from the roadside? </li><li>can you supply them with supporting resources so they can still learn and feel included (videos, images, training guidance)?</li><li>would the rider be better served by a separate session?</li><li>are there activities the rider should practise in their spare time?</li></ul></div>",
       "instruction": "",
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -3488,7 +3488,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'><p>Here are some suggestions to compare your ideas with: <ul><li>to give the riders the opportunity to practise filtering, deliver the activity as a point-to-point independent riding activity so that the riders are kept in sight by you observing and supporting them from the roadside</li><li>as a helpful way to promote active learning, have the riders attempt the activity one at a time with the other rider waiting and observing to review their peer\u2019s attempt before  having a go themselves</li><li>if you are riding as a group, remind the leading rider to check behind them regularly and ride at a speed that keeps the group together where possible</li></ul></p></div>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-orange'><p>Here are some suggestions to compare your ideas with: <ul><li>to give the riders the opportunity to practise filtering, deliver the activity as a point-to-point independent riding activity so that the riders are kept in sight by you observing and supporting them from the roadside</li><li>as a helpful way to promote active learning, have the riders attempt the activity one at a time with the other rider waiting and observing to review their peer\u2019s attempt before  having a go themselves</li><li>if you are riding as a group, remind the leading rider to check behind them regularly and ride at a speed that keeps the group together where possible</li></ul></p></div>",
          "_inline": true
       },
       "_activity": {
@@ -3801,7 +3801,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'>Here are some suggestions to compare your ideas with:<ul><li>first, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this <strong>differentiated</strong> and inclusive approach helps all the riders develop their cycling</li></ul><p>Three possible questions to ask your riders:<div class='speechmarks more-padding'>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</div></p></div>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-orange'>Here are some suggestions to compare your ideas with:<ul><li>first, discuss the junction from the roadside to ensure the riders understand all the relevant instructing points. Your co-instructor can  perform a demonstration of the activity at the same time as you discuss the coaching points with the riders</li><li>when the riders are ready, you could first ride through the junction doubled up a single group \u2013 this helps build the riders\u2019 confidence</li><li>you could then progress the activity by splitting the group into two so that you and your co-instructor each support two riders, with each group not riding too close to each other.  This creates opportunities for all the riders to experience riding at the front</li><li>the more nervous riders can each be paired with a more confident rider, who they can follow initially, before they advance to riding at the front themselves when ready \u2013 this 'differentiated' and inclusive approach helps all the riders develop their cycling</li></ul><p>Three possible questions to ask your riders:<div class='speechmarks more-padding'>Q \u2013 What road position should you use at different points on this junction?<br/>Q \u2013 How should you negotiate a change of lane?<br/>Q \u2013 Thinking about the four key skills, how should you manage the relationship with other road users?</div></p></div>",
          "_inline": true
       },
       "_activity": {
@@ -4507,7 +4507,7 @@
             }
          },
          {
-            "body": "<p>The space up alongside lorries. Riders should avoid putting themselves alongside larger vehicles that may be about to turn at junctions. The vehicles require a longer turning circle and may swing in or out when turning.</p><p>Lorry drivers may be unable to see what is directly behind, so riders should not position themselves directly behind if the vehicle may be about to reverse.</p>",
+            "body": "<p>The space up alongside lorries. Riders should avoid putting themselves alongside larger vehicles that may be about to turn. The vehicles require a longer turning circle and may swing in or out when turning.</p><p>Lorry drivers may be unable to see what is directly behind, so riders should not position themselves directly behind if the vehicle may be about to reverse.</p>",
             "_graphic": {
                "src": "course/en/images/06_04_020/06_04_020_image02.jpg",
                "alt": ""
@@ -5109,7 +5109,7 @@
       "_layout": "full",
       "title": "Risk benefit assessment",
       "displayTitle": "",
-      "body": "<p class='quote'>\"It is a fact that every journey by cycle involves certain risks and riders need support to understand what these are and how deal with them. Risk benefit assessment recognises these risks and how cycle training in real – not simulated – environments helps riders learn about how to manage their own risk in a progressive way.\"</p><p class='quote-ann'>(From the Risk benefit statement in The Bikeability Trust Risk Management Guidance)</p><p>Let us look at a few different RBA scenarios.</p>",
+      "body": "<p class='quote'>\"It is a fact that every journey by cycle involves certain risks and riders need support to understand what these are and how to deal with them. Risk benefit assessment recognises these risks and how cycle training in real – not simulated – environments helps riders learn about how to manage their own risk in a progressive way.\"</p><p class='quote-ann'>(From the Risk benefit statement in The Bikeability Trust Risk Management Guidance)</p><p>Let us look at a few different RBA scenarios.</p>",
       "instruction": "<p>Scroll down to continue.</p>",
       "_pageLevelProgress": {
          "_isEnabled": true,
@@ -5174,7 +5174,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'>Here are some suggestions to compare with yours:<ul><li>prompt the rider to bring a drink or snack along to the session and plan breaks in the journey at specific places of interest on the route</li><li>regularly check in with the rider to see how they are feeling at various points during the session</li><li>deliver the session in more of a continuous buddy-riding format as this will enable as much of the future commute to be ridden as possible </li><li>consider back-up route options in case it is not possible to reach the destination</li></ul></div><p>Scroll down to continue.</p>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-orange'>Here are some suggestions to compare with yours:<ul><li>prompt the rider to bring a drink or snack along to the session and plan breaks in the journey at specific places of interest on the route</li><li>regularly check in with the rider to see how they are feeling at various points during the session</li><li>deliver the session in more of a continuous buddy-riding format as this will enable as much of the future commute to be ridden as possible </li><li>consider back-up route options in case it is not possible to reach the destination</li></ul></div><p>Scroll down to continue.</p>",
          "_inline": true
       },
       "_activity": {
@@ -5269,7 +5269,7 @@
       },
       "placeholder": "Type your notes in here\u2026",
       "_message": {
-         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-pink'>Compare your ideas with these potential solutions:<ul><li>if you assess the rider as not yet ready to attempt the activity on their own, you could offer to support them by buddy riding with them for their first attempt(s)</li><li>you could then potentially progress the activity by cycling further behind the rider to create a more independent riding experience</li><li>when you and the rider assess that they are ready to attempt the exercise more independently, you could, where possible, adopt a dynamic instructing position on the pavement, supporting them where needed by being positioned near to the points of highest risk (for example, between the brow of the hill and the junction itself)</li></ul></div><p>Scroll down to continue.</p>",
+         "content": "<p>Your notes have been saved and can be downloaded as a PDF at the end of this module.</p><div class='box-orange'>Compare your ideas with these potential solutions:<ul><li>if you assess the rider as not yet ready to attempt the activity on their own, you could offer to support them by buddy riding with them for their first attempt(s)</li><li>you could then potentially progress the activity by cycling further behind the rider to create a more independent riding experience</li><li>when you and the rider assess that they are ready to attempt the exercise more independently, you could, where possible, adopt a dynamic instructing position on the pavement, supporting them where needed by being positioned near to the points of highest risk (for example, between the brow of the hill and the junction itself)</li></ul></div><p>Scroll down to continue.</p>",
          "_inline": true
       },
       "_activity": {

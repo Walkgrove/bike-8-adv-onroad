@@ -3,7 +3,7 @@
   "_courseVersion": "0_1",
   "_id": "course",
   "_type": "course",
-  "_dev": true,
+  "_dev": false,
   "_isLXP": true,
   "_classes": "",
   "_htmlClasses": "",
