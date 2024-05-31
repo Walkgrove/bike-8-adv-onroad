@@ -64,58 +64,62 @@ define([
           }
         }
       }
-      if(!activityFound) {
+      if(!activityFound && Adapt.course.get('_isLXP') === true) {
         _xapiID = new Date().valueOf();
         reflectionData += "_apiID^" + _xapiID + ""  + "$$"; 
         Adapt.offlineStorage.set('r', reflectionData);
       }
       
-      this._activityId += "" + this._courseid + "",
-      this._stateId = this._activityId + "/" + _xapiID,
+      if(Adapt.course.get('_isLXP') === true) {
+        this._activityId += "" + this._courseid + "",
+        this._stateId = this._activityId + "/" + _xapiID,
 
-      // console.log(this._stateId);
+        // console.log(this._stateId);
 
-      require(['https://unpkg.com/@xapi/xapi'], (XAPI) => {
-        const learnerdata = Adapt.offlineStorage.get("learnerinfo");
+        require(['https://unpkg.com/@xapi/xapi'], (XAPI) => {
+          const learnerdata = Adapt.offlineStorage.get("learnerinfo");
 
-        let _endpoint = "https://cloud.scorm.com/lrs/DQKRU0EHDD/";
-        let _auth = `Basic ${btoa('tbBmy5FNh0-AOScGIdE:CeJeS3Q7pWIKBFlND-M')}`; // `Basic ${btoa('accounts@walkgrove.co.uk:Trap3z1um$22')}`;
+          let _endpoint = "https://cloud.scorm.com/lrs/DQKRU0EHDD/";
+          let _auth = `Basic ${btoa('tbBmy5FNh0-AOScGIdE:CeJeS3Q7pWIKBFlND-M')}`; // `Basic ${btoa('accounts@walkgrove.co.uk:Trap3z1um$22')}`;
 
-        let agentName = learnerdata.name;
-        let agentMbox = "mailto:" + learnerdata.id;
+          let agentName = learnerdata.name;
+          let agentMbox = "mailto:" + learnerdata.id;
 
-        const queryParamsString = location.search;
-        const queryParamsObject = XAPI.getSearchQueryParamsAsObject(queryParamsString);
-        // if there is an activity id, i.e. on an LRS
-        if(queryParamsObject.activity_id) {
+          const queryParamsString = location.search;
+          const queryParamsObject = XAPI.getSearchQueryParamsAsObject(queryParamsString);
+          // if there is an activity id, i.e. on an LRS
+          if(queryParamsObject.activity_id) {
 
-          _endpoint = queryParamsObject.endpoint;
-          _auth = queryParamsObject.auth; 
-          // actorDetails = queryParamsObject.actor;
-          // registration = queryParamsObject.registration;
+            _endpoint = queryParamsObject.endpoint;
+            _auth = queryParamsObject.auth; 
+            // actorDetails = queryParamsObject.actor;
+            // registration = queryParamsObject.registration;
 
-          agentName = queryParamsObject.actor.name;
-          if(queryParamsObject.actor.mbox){
-            agentMbox = queryParamsObject.actor.mbox;
-          } else if(queryParamsObject.actor.account && queryParamsObject.actor.account.name) {
-            const res = queryParamsObject.actor.account.name.split("|");
-            agentMbox = "mailto:" + res[1];
-          }
-        } 
+            agentName = queryParamsObject.actor.name;
+            if(queryParamsObject.actor.mbox){
+              agentMbox = queryParamsObject.actor.mbox;
+            } else if(queryParamsObject.actor.account && queryParamsObject.actor.account.name) {
+              const res = queryParamsObject.actor.account.name.split("|");
+              agentMbox = "mailto:" + res[1];
+            }
+          } 
 
-        this._xapi = new XAPI({
-          endpoint: _endpoint,
-          auth: _auth
-        });
+          this._xapi = new XAPI({
+            endpoint: _endpoint,
+            auth: _auth
+          });
 
-        this._actorDetails = {
-          objectType: "Agent",
-          name: agentName,
-          mbox: agentMbox
-        };
+          this._actorDetails = {
+            objectType: "Agent",
+            name: agentName,
+            mbox: agentMbox
+          };
 
+          this.onGetXAPIState();
+        })
+      } else {
         this.onGetXAPIState();
-      })
+      }
     },
 
     postRender: function() {
@@ -142,39 +146,48 @@ define([
     },
 
     onGetXAPIState: function() {
-      this.$('.reflection__loader').removeClass('is-hidden');
-      // GET the xAPI state ...
-      this._xapi.getState({
-        agent: this._actorDetails,
-        activityId: this._activityId,
-        stateId: this._stateId
-      }).then((result) => {
-        console.log('>>>> getState', result.data);
-        this._reflectdata = result.data;
-        this._state = true;
-        this.$('.reflection__loader').addClass('is-hidden');
+      if(Adapt.course.get('_isLXP') === true) {
+        this.$('.reflection__loader').removeClass('is-hidden');
+        // GET the xAPI state ...
+        this._xapi.getState({
+          agent: this._actorDetails,
+          activityId: this._activityId,
+          stateId: this._stateId
+        }).then((result) => {
+          console.log('>>>> getState', result.data);
+          this._reflectdata = result.data;
+          this._state = true;
+          this.checkIfResetOnRevisit();
+        }).catch((error) => {
+          // console.log("no coursestate");
+          this._state = false;
+          this.$('.reflection__loader').addClass('is-hidden');
+          this.onCreateXAPIState();
+        });
+      } else {
+        this._reflectdata = Adapt.offlineStorage.get('reflection_data');
         this.checkIfResetOnRevisit();
-      }).catch((error) => {
-        // console.log("no coursestate");
-        this._state = false;
-        this.$('.reflection__loader').addClass('is-hidden');
-        this.onCreateXAPIState();
-      });
+      }
     },
 
     onGetSaveXAPIState: function() {
-      // GET the xAPI state ...
-      this._xapi.getState({
-        agent: this._actorDetails,
-        activityId: this._activityId,
-        stateId: this._stateId
-      }).then((result) => {
-        console.log('>>>> getState', result.data);
-        this._reflectdata = result.data;
+      if(Adapt.course.get('_isLXP') === true) {
+        // GET the xAPI state ...
+        this._xapi.getState({
+          agent: this._actorDetails,
+          activityId: this._activityId,
+          stateId: this._stateId
+        }).then((result) => {
+          console.log('>>>> getState', result.data);
+          this._reflectdata = result.data;
+          this.onSaveData();
+        }).catch((error) => {
+          this.onSaveData();
+        });
+      } else {
         this.onSaveData();
-      }).catch((error) => {
-        this.onSaveData();
-      });
+        console.log("saving ...");
+      }
     },
 
     onCreateXAPIState: function() {
@@ -193,12 +206,12 @@ define([
     onSaveXAPIState: function() {
       // SET
       this._xapi.setState({
-        agent: this._actorDetails, 
-        activityId: this._activityId, 
-        stateId: this._stateId, 
+        agent: this._actorDetails,
+        activityId: this._activityId,
+        stateId: this._stateId,
         state: this._reflectdata
       });
-    },        
+    },
 
     onSaveActive: function() {
 
@@ -242,7 +255,7 @@ define([
 
     onShowFeedback: function() {
       Adapt.trigger('notify:popup', {
-        body: this.model.get('_message').content  
+        body: this.model.get('_message').content
       });
     },
 
@@ -257,7 +270,12 @@ define([
         // save to scorm data
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
         // this.onGetXAPIState();
-        let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
+        let reflectionData;
+        if(Adapt.course.get('_isLXP') === true) {
+          reflectionData = this._reflectdata; 
+        } else {
+          reflectionData = Adapt.offlineStorage.get('reflection_data');
+        }
 
         let dataFound = true;
         if (reflectionData === 'undefined' || reflectionData === null || reflectionData === "") {
@@ -351,13 +369,15 @@ define([
         reflectionDataNew += newData;
 
         this._data = reflectionDataNew;
-        // save to SCORM
-        this._reflectdata = this._data; //Adapt.offlineStorage.set('r', this._data);
-        // if(this._state === false) {
-        //   this.onCreateXAPIState();
-        // } else {
+        if(Adapt.course.get('_isLXP') === true) {
           this.onSaveXAPIState();
-        // }
+        }
+        this._reflectdata = this._data;
+        console.log("save", this._reflectdata);
+
+        if(Adapt.course.get('_isLXP') === false) {
+          Adapt.offlineStorage.set('r', this._reflectdata);
+        }
 
         // show as saved ...
         if(this.model.get('_message')._inline === true) {
@@ -376,7 +396,7 @@ define([
           this.$('.js-reflection-export-click').addClass('is-visible');
         }
         
-        this.setCompletionStatus();     
+        this.setCompletionStatus();
 
     },
 
@@ -401,7 +421,11 @@ define([
       //set the up-to-date content/data to use in the creation of the PDF
       // if (this._data === '') {
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
-        let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
+        // if(Adapt.course.get('_isLXP') === true) {
+          reflectionData = this._reflectdata; 
+        // } else {
+        //   reflectionData = Adapt.offlineStorage.get('reflection_data');
+        // }
         this._data = reflectionData;
       // }
 
@@ -687,7 +711,13 @@ define([
 
       _.delay(() => {
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
-        let reflectionData = this._reflectdata; //Adapt.offlineStorage.get('reflection_data');
+        let reflectionData;
+        if(Adapt.course.get('_isLXP') === true) {
+          reflectionData = this._reflectdata; 
+        } else {
+          reflectionData = Adapt.offlineStorage.get('reflection_data');
+        }
+        // console.log(reflectionData);
 
         if (reflectionData !== 'undefined' && reflectionData !== null && reflectionData !== "") {
 
@@ -740,6 +770,10 @@ define([
 
           }
 
+          this.$('.reflection__loader').addClass('is-hidden');
+
+        } else {
+          this.$('.reflection__loader').addClass('is-hidden');
         }
       }, 1000);
 
