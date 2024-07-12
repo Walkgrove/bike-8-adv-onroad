@@ -12,6 +12,7 @@
       "instruction": "",
       "splashTitle": "<h1><span class='subtitle'> </span><br/>Advanced on-road cycle training</h1><div class='timer-container'><span class='timer-icon'></span> <div>Select Start to begin.</div></div>",
       "buttonText": "Start",
+      "_isOptional": true,
       "_button": {
          "_normal": true
       },
@@ -5699,6 +5700,7 @@
       "displayTitle": "",
       "body": "",
       "instruction": "<p>Exit the module by selecting the window/tab close button, or select the home button to return to the module contents screen.</p>",
+      "_isOptional": true,
       "_pageLevelProgress": {
          "_isEnabled": false,
          "_isCompletionIndicatorEnabled": false
@@ -5714,6 +5716,7 @@
       "title": "",
       "displayTitle": "",
       "body": "",
+      "_isOptional": true,
       "_styling": {
          "_background-color": "#78d64a",
          "_link-color": "#FFF"

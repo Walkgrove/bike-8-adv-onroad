@@ -4,7 +4,7 @@
   "_id": "course",
   "_type": "course",
   "_dev": false,
-  "_isLXP": true,
+  "_isLXP": false,
   "_classes": "",
   "_htmlClasses": "",
   "title": "Advanced on-road cycle training",
@@ -95,7 +95,7 @@
   },
   "_latestTrackingId": 123,
   "_start": {
-    "_isEnabled": true,
+    "_isEnabled": false,
     "_startIds": {
       "_id": "co-01_00",
       "_skipIfComplete": true,

@@ -8,6 +8,7 @@
     "displaytitle": "",
     "body": "",
     "instruction": "",
+    "_isOptional": true,
     "_onScreen": {
       "_isEnabled": true,
       "_classes": "",
@@ -2814,6 +2815,7 @@
     "displaytitle": "",
     "body": "",
     "instruction": "",
+    "_isOptional": true,
     "_onScreen": {
       "_isEnabled": true,
       "_classes": "",
@@ -2837,6 +2839,7 @@
     "displaytitle": "",
     "body": "",
     "instruction": "",
+    "_isOptional": true,
     "_onScreen": {
       "_isEnabled": true,
       "_classes": "",

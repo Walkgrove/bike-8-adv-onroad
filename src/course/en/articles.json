@@ -6,7 +6,8 @@
       "_classes": "",
       "title": "a-01_00",
       "body": "",
-      "instruction": ""
+      "instruction": "",
+      "_isOptional": true
    },
    {
       "_id": "a-01_01",
