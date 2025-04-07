@@ -64,13 +64,13 @@ define([
           }
         }
       }
-      if(!activityFound && Adapt.course.get('_isLXP') === true) {
+      if(!activityFound && Adapt.course.get('_isLXPRefl') === true) {
         _xapiID = new Date().valueOf();
         reflectionData += "_apiID^" + _xapiID + ""  + "$$"; 
         Adapt.offlineStorage.set('r', reflectionData);
       }
       
-      if(Adapt.course.get('_isLXP') === true) {
+      if(Adapt.course.get('_isLXPRefl') === true) {
         this._activityId += "" + this._courseid + "",
         this._stateId = this._activityId + "/" + _xapiID,
 
@@ -146,7 +146,7 @@ define([
     },
 
     onGetXAPIState: function() {
-      if(Adapt.course.get('_isLXP') === true) {
+      if(Adapt.course.get('_isLXPRefl') === true) {
         this.$('.reflection__loader').removeClass('is-hidden');
         // GET the xAPI state ...
         this._xapi.getState({
@@ -171,7 +171,7 @@ define([
     },
 
     onGetSaveXAPIState: function() {
-      if(Adapt.course.get('_isLXP') === true) {
+      if(Adapt.course.get('_isLXPRefl') === true) {
         // GET the xAPI state ...
         this._xapi.getState({
           agent: this._actorDetails,
@@ -271,7 +271,7 @@ define([
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
         // this.onGetXAPIState();
         let reflectionData;
-        if(Adapt.course.get('_isLXP') === true) {
+        if(Adapt.course.get('_isLXPRefl') === true) {
           reflectionData = this._reflectdata; 
         } else {
           reflectionData = Adapt.offlineStorage.get('reflection_data');
@@ -369,13 +369,13 @@ define([
         reflectionDataNew += newData;
 
         this._data = reflectionDataNew;
-        if(Adapt.course.get('_isLXP') === true) {
+        if(Adapt.course.get('_isLXPRefl') === true) {
           this.onSaveXAPIState();
         }
         this._reflectdata = this._data;
         console.log("save", this._reflectdata);
 
-        if(Adapt.course.get('_isLXP') === false) {
+        if(Adapt.course.get('_isLXPRefl') === false) {
           Adapt.offlineStorage.set('r', this._reflectdata);
         }
 
@@ -421,7 +421,7 @@ define([
       //set the up-to-date content/data to use in the creation of the PDF
       // if (this._data === '') {
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
-        // if(Adapt.course.get('_isLXP') === true) {
+        // if(Adapt.course.get('_isLXPRefl') === true) {
           reflectionData = this._reflectdata; 
         // } else {
         //   reflectionData = Adapt.offlineStorage.get('reflection_data');
@@ -712,7 +712,7 @@ define([
       _.delay(() => {
         //let reflectionData = 'c-182^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^D$$c-180^Reflection 1^Info about the refection for the PDF export ...$0^Step 1^Subtitle content goes in here ...^What are we asking ...?^A$1^Step 2^ ^What are we asking for this reflection input ...?^B$2^ ^ ^Question ...?^C$$';
         let reflectionData;
-        if(Adapt.course.get('_isLXP') === true) {
+        if(Adapt.course.get('_isLXPRefl') === true) {
           reflectionData = this._reflectdata; 
         } else {
           reflectionData = Adapt.offlineStorage.get('reflection_data');

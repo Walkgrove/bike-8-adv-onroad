@@ -93,7 +93,7 @@
             "_resetStatusOnLanguageChange": false
         },
         "_advancedSettings": {
-           "_scormVersion": "1.2",
+           "_scormVersion": "2004",
            "_suppressErrors": true
         }
     },
