@@ -444,7 +444,7 @@ further modified by Philip Hutchison
                                 success = scorm.set("cmi.core.exit", "logout");
                                 break;
                             case "2004":
-                                success = scorm.set("cmi.exit", "normal");
+                                success = scorm.set("cmi.exit", null);
                                 break;
                         }
 
